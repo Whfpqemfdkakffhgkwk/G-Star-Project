@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 108
+  controlID: 130
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 109
+  controlID: 90
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 110
+  controlID: 54
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -361,7 +361,7 @@ MonoBehaviour:
     m_VAllowExceedBaseRangeMax: 1
     m_ScaleWithWindow: 0
     m_HSlider: 0
-    m_VSlider: 0
+    m_VSlider: 1
     m_IgnoreScrollWheelUntilClicked: 0
     m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
@@ -374,20 +374,20 @@ MonoBehaviour:
       y: 21
       width: 212.40002
       height: 390.8
-    m_Scale: {x: 0.16503377, y: 0.16503377}
-    m_Translation: {x: 106.200005, y: 195.4}
+    m_Scale: {x: 0.17390202, y: 0.17390202}
+    m_Translation: {x: 106.20001, y: 195.4}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -643.5047
-      y: -1184
-      width: 1287.0094
-      height: 2368
+      x: -610.6888
+      y: -1123.6212
+      width: 1221.3776
+      height: 2247.2424
     m_MinimalGUI: 1
-  m_defaultScale: 0.16503377
+  m_defaultScale: 0.17390202
   m_LastWindowPixelSize: {x: 265.50003, y: 514.75}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
@@ -425,7 +425,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: ce600000
+      m_SelectedIDs: be600000
       m_LastClickedID: 0
       m_ExpandedIDs: 28fbffff
       m_RenameOverlay:
@@ -698,9 +698,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.2867257, y: 0.01742763, z: 0.0015811496}
+    m_Target: {x: 0.12497291, y: 0.0017172508, z: -0.0015692301}
     speed: 2
-    m_Value: {x: 0.2867257, y: 0.01742763, z: 0.0015811496}
+    m_Value: {x: 0.12497291, y: 0.0017172508, z: -0.0015692301}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -751,9 +751,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 0.56256026
+    m_Target: 0.9061808
     speed: 2
-    m_Value: 0.56256026
+    m_Value: 0.9061808
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -819,22 +819,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/HyeonSu/Scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/HyeonSu/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\ASUS\G-Star-Project\EnterpriseProject
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: a0600000
-    m_LastClickedID: 24736
-    m_ExpandedIDs: 00000000a0600000c060000000ca9a3b
+    m_SelectedIDs: b6600000
+    m_LastClickedID: 24758
+    m_ExpandedIDs: 00000000a0600000a260000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -862,7 +862,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a0600000
+    m_ExpandedIDs: 00000000a0600000a2600000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
