@@ -5,10 +5,21 @@ using DG.Tweening;
 using UnityEngine.EventSystems;
 public class ButtonManager : MonoBehaviour
 {
-    Vector2 OnPos = new Vector2(0, 0), OffPos = new Vector2(0, -3000);
+    [SerializeField] Transform OnPos, OffPos;
 
     [SerializeField] private GameObject TouchWindow;
     
+    SaveVariables SaveVariables;
+
+    private void Start()
+    {
+        SaveVariables = GameManager.Instance.saveVariables;
+    }
+    public void MainClick()
+    {
+        SaveVariables.gold += SaveVariables.totalTouchGold;
+    }
+
     public void Facility()
     {
         OpenProduction(TouchWindow);    
@@ -17,7 +28,6 @@ public class ButtonManager : MonoBehaviour
     {
 
     }
-
     public void Exit()
     {
         CloseProduction(EventSystem.current.currentSelectedGameObject.transform.parent.gameObject);
@@ -25,11 +35,11 @@ public class ButtonManager : MonoBehaviour
     //창 열리는 연출
     void OpenProduction(GameObject Window)
     {
-        Window.transform.DOLocalMove(OnPos, 0.75f);
+        Window.transform.DOLocalMove(OnPos.localPosition, 0.75f);
     }
     //창 닫히는 연출
     void CloseProduction(GameObject Window)
     {
-        Window.transform.DOLocalMove(OffPos, 0.75f);
+        Window.transform.DOLocalMove(OffPos.localPosition, 0.75f);
     }
 }

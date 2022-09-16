@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameManager : Singleton<GameManager>                           
 {
     public SaveVariables saveVariables;
 
@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     public IEnumerator AutoSave()
     {
         SaveJson();
-        yield return new WaitForSeconds(30);
+        yield return new WaitForSeconds(10);
         StartCoroutine(AutoSave());
     }
     #endregion  
@@ -47,11 +47,7 @@ public class SaveVariables
     public int roomUpgrade; //업그레이드 단계
     public int roomUpgradePrice; //업그레이드 가격
     public ulong roomUpgradePriceMagnification; //업그레이드 배율
-    [Header("Teacher")]
-    public int TeacherUpgrade1;
-    public int TeacherUpgrade2;
-    public int TeacherUpgrade3; 
-    public int TeacherUpgrade4; 
-    public int TeacherUpgrade5; 
-    public int TeacherUpgrade6;
+    //[Header("Teacher")]
+    [Header("TotalUpgrade")]
+    public ulong totalTouchGold;
 }
