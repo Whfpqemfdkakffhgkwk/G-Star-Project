@@ -2181,15 +2181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 207356d53b5cba94fb9ced245ab2025c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  saveVariables:
-    gold: 0
-    facilityUpgrade: 0
-    facilityUpgradePrice: 0
-    facilityUpgradePriceMagnification: 0
-    roomUpgrade: 0
-    roomUpgradePrice: 0
-    roomUpgradePriceMagnification: 0
-    totalTouchGold: 0
+  saveVariables: {fileID: 11400000, guid: 8fb977b3369c27f42a8ce4c4f3ec7c39, type: 2}
 --- !u!4 &1682526256
 Transform:
   m_ObjectHideFlags: 0
@@ -2899,6 +2891,7 @@ MonoBehaviour:
   OnPos: {fileID: 1245653526}
   OffPos: {fileID: 1437111320}
   TouchWindow: {fileID: 2145480970}
+  SaveVariables: {fileID: 11400000, guid: 7279bc6fc075dc049acc570dba44bf9d, type: 2}
 --- !u!1 &2005408281
 GameObject:
   m_ObjectHideFlags: 0

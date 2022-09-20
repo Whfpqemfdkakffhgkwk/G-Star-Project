@@ -9,15 +9,11 @@ public class ButtonManager : MonoBehaviour
 
     [SerializeField] private GameObject TouchWindow;
     
-    SaveVariables SaveVariables;
+    public SaveVariables SaveVariables;
 
-    private void Start()
-    {
-        SaveVariables = GameManager.Instance.saveVariables;
-    }
     public void MainClick()
     {
-        SaveVariables.gold += SaveVariables.totalTouchGold;
+        //SaveVariables.gold += SaveVariables.totalTouchGold;
     }
 
     public void Facility()
