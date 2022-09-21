@@ -12,4 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b45f88197feb43045b156003d10e3ff1, type: 3}
   m_Name: Stat
   m_EditorClassIdentifier: 
-  upgradeType: []
+  gold: 0
+  diamond: 0
+  upgradeType:
+  - UpgradeStep: 1
+    UpgradeCost: 50
+    UpgradeMagnification: 3.6
+  - UpgradeStep: 58
+    UpgradeCost: 0
+    UpgradeMagnification: 0
