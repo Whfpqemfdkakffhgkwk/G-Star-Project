@@ -12,12 +12,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b45f88197feb43045b156003d10e3ff1, type: 3}
   m_Name: Stat
   m_EditorClassIdentifier: 
-  gold: 0
+  AllTouchMonmey: 5
+  AllSecondMoney: 0
+  gold: 3101004545630
   diamond: 0
-  upgradeType:
+  TouchType:
   - UpgradeStep: 1
     UpgradeCost: 50
-    UpgradeMagnification: 3.6
-  - UpgradeStep: 58
-    UpgradeCost: 0
-    UpgradeMagnification: 0
+  - UpgradeStep: 0
+    UpgradeCost: 500
+  - UpgradeStep: 0
+    UpgradeCost: 5000
+  - UpgradeStep: 0
+    UpgradeCost: 50000
+  - UpgradeStep: 0
+    UpgradeCost: 500000
+  - UpgradeStep: 0
+    UpgradeCost: 5000000
+  - UpgradeStep: 0
+    UpgradeCost: 50000000
+  - UpgradeStep: 0
+    UpgradeCost: 500000000
+  SecondType:
+  - UpgradeStep: 0
+    UpgradeCost: 300
+  - UpgradeStep: 0
+    UpgradeCost: 3600
+  - UpgradeStep: 0
+    UpgradeCost: 36900
+  - UpgradeStep: 0
+    UpgradeCost: 36900
+  - UpgradeStep: 0
+    UpgradeCost: 36900
+  - UpgradeStep: 0
+    UpgradeCost: 36900
+  - UpgradeStep: 0
+    UpgradeCost: 36900
+  - UpgradeStep: 0
+    UpgradeCost: 36900

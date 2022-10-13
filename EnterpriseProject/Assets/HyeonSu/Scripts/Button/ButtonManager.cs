@@ -3,42 +3,65 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.EventSystems;
+using static SaveVariables;
+
 public class ButtonManager : MonoBehaviour
 {
     [SerializeField] Transform OnPos, OffPos;
 
     [SerializeField] private GameObject TouchWindow;
+    [SerializeField] private GameObject[] TouchBtns;
+    [SerializeField] private GameObject[] SecondBtns;
 
     public SaveVariables saveVariables;
 
     public void MainClick()
     {
-        saveVariables.gold += (ulong)saveVariables.upgradeType[0].UpgradeStep * (ulong)Mathf.Pow((ulong)saveVariables.upgradeType[0].UpgradeMagnification, 2);
-        //SaveVariables.gold += SaveVariables.totalTouchGold;
+        saveVariables.gold += saveVariables.AllTouchMonmey;
     }
-    public void UpgradeBtns()
+    public IEnumerator MainSecond()
     {
-        //type은 1부터 step은 0부터 시작
-        int type = EventSystem.current.currentSelectedGameObject.GetComponent<ButtonRelease>().type;
-        int step = EventSystem.current.currentSelectedGameObject.GetComponent<ButtonRelease>().step;
-        switch (type)
+        saveVariables.gold += saveVariables.AllSecondMoney;
+        yield return new WaitForSeconds(1);
+        StartCoroutine(MainSecond());
+    }
+    public void UpgradePressBtns()
+    {
+        bool typeCheck = false;
+        GameObject ClickObj = EventSystem.current.currentSelectedGameObject;
+        for (int i = 0; i < TouchBtns.Length; i++)
         {
-            case 1:
-                switch (step)
-                {
-                    case 0:
-                        if (saveVariables.gold >= (ulong)saveVariables.upgradeType[step].UpgradeCost)
-                        {
-                            //강화 수치(n강)
-                            saveVariables.upgradeType[step].UpgradeStep++;
-                            //강화 비용 깎기
-                            saveVariables.gold -= (ulong)saveVariables.upgradeType[step].UpgradeCost;
-                            //강화 비용 배율 올리기
-                            saveVariables.upgradeType[step].UpgradeCost *= (ulong)saveVariables.upgradeType[step].UpgradeMagnification;
-                        }
-                            break;
-                }
+            if (TouchBtns[i] == ClickObj)
+            {
+                typeCheck = true;
+                UpgradeBtn(saveVariables.TouchType, i);
                 break;
+            }
+        }
+        if (typeCheck)
+        {
+            for (int i = 0; i < SecondBtns.Length; i++)
+            {
+                if (SecondBtns[i] == ClickObj)
+                {
+                    UpgradeBtn(saveVariables.SecondType, i);
+                    break;
+                }
+            }
+        }
+    }
+    void UpgradeBtn(GoodsList[] list, int arr)
+    {
+        if (saveVariables.gold >= (ulong)list[arr].UpgradeCost)
+        {
+            //강화 비용 깎기
+            saveVariables.gold -= (ulong)list[arr].UpgradeCost;
+            //강화 수치(n강)
+            list[arr].UpgradeStep++;
+            //강화 비용 늘리기
+            list[arr].UpgradeCost += (ulong)(list[arr].UpgradeCost * ((ulong)list[arr].UpgradeStep));
+            //강화 적용하기
+            SaveManager.Instance.Combine();
         }
     }
     public void Facility()

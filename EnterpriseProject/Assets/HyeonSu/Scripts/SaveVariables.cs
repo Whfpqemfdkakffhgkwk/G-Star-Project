@@ -4,15 +4,18 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Stat", menuName = "Scriptable Object Asset/Stat")]
 public class SaveVariables : ScriptableObject
 {
-    public ulong gold;
-    public ulong diamond;
-    public UpgradeType[] upgradeType;
+    public double AllTouchMonmey, AllSecondMoney;
+    public double gold;
+    public double diamond;
+    public GoodsList[] TouchType;
+    public GoodsList[] SecondType;
+
+
     [System.Serializable]
-    public struct UpgradeType
+    public struct GoodsList
     {
         public int UpgradeStep;
-        public ulong UpgradeCost;
-        public double UpgradeMagnification;
+        public double UpgradeCost;
     }
     //[Header("Money")]
     //public ulong gold;
