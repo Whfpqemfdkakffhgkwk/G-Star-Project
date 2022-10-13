@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.EventSystems;
+using DG.Tweening;
 using static SaveVariables;
 
 public class ButtonManager : MonoBehaviour
@@ -15,13 +16,17 @@ public class ButtonManager : MonoBehaviour
 
     public SaveVariables saveVariables;
 
+    private bool OnQuest = false;
+
     public void MainClick()
     {
         saveVariables.gold += saveVariables.AllTouchMonmey;
+        saveVariables.QU_Gold += (int)saveVariables.AllTouchMonmey;
     }
     public IEnumerator MainSecond()
     {
         saveVariables.gold += saveVariables.AllSecondMoney;
+        saveVariables.QU_Gold += (int)saveVariables.AllSecondMoney;
         yield return new WaitForSeconds(1);
         StartCoroutine(MainSecond());
     }
@@ -31,10 +36,11 @@ public class ButtonManager : MonoBehaviour
         GameObject ClickObj = EventSystem.current.currentSelectedGameObject;
         for (int i = 0; i < TouchBtns.Length; i++)
         {
+            typeCheck = true;
             if (TouchBtns[i] == ClickObj)
             {
-                typeCheck = true;
                 UpgradeBtn(saveVariables.TouchType, i);
+                saveVariables.QU_Touch++;
                 break;
             }
         }
@@ -45,6 +51,7 @@ public class ButtonManager : MonoBehaviour
                 if (SecondBtns[i] == ClickObj)
                 {
                     UpgradeBtn(saveVariables.SecondType, i);
+                    saveVariables.QU_Second++;
                     break;
                 }
             }
@@ -64,26 +71,18 @@ public class ButtonManager : MonoBehaviour
             SaveManager.Instance.Combine();
         }
     }
-    public void Facility()
+    public void QuestMove()
     {
-        OpenProduction(TouchWindow);
-    }
-    public void GoToDormitory()
-    {
-
-    }
-    public void Exit()
-    {
-        CloseProduction(EventSystem.current.currentSelectedGameObject.transform.parent.gameObject);
-    }
-    //창 열리는 연출
-    void OpenProduction(GameObject Window)
-    {
-        Window.transform.DOLocalMove(OnPos.localPosition, 0.75f);
-    }
-    //창 닫히는 연출
-    void CloseProduction(GameObject Window)
-    {
-        Window.transform.DOLocalMove(OffPos.localPosition, 0.75f);
+        GameObject ClickObj = EventSystem.current.currentSelectedGameObject;
+        if (OnQuest == false)
+        {
+            ClickObj.transform.DOLocalMoveX(-233, 1f);
+            OnQuest = true;
+        }
+        else if(OnQuest == true)
+        {
+            ClickObj.transform.DOLocalMoveX(850, 1f);
+            OnQuest= false;
+        }
     }
 }

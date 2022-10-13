@@ -7,6 +7,9 @@ public class SaveVariables : ScriptableObject
     public double AllTouchMonmey, AllSecondMoney;
     public double gold;
     public double diamond;
+    public int QU_Touch;
+    public int QU_Second;
+    public int QU_Gold;
     public GoodsList[] TouchType;
     public GoodsList[] SecondType;
 
