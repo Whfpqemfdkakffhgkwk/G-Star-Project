@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using System;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 using Random = UnityEngine.Random;
 
@@ -41,12 +42,13 @@ public class Roll : MonoBehaviour
 			if (TimerEnd == default)
 			{
 				RemainTIme.text = "Roll Ready";
-				ResultWindow.SetActive(false);
+				RollButton.gameObject.SetActive(true);
 				ResultButton.gameObject.SetActive(false);
 			}
 			else
 			{
 				RemainTIme.text = "Roll End";
+				RollButton.gameObject.SetActive(false);
 				ResultButton.gameObject.SetActive(true);
 			}
 		}
@@ -79,6 +81,12 @@ public class Roll : MonoBehaviour
 
 	public void CloseResult()
 	{
+		Refresh();
 		ResultWindow.SetActive(false);
+	}
+
+	public void GoHome()
+	{
+		SceneManager.LoadScene("NeglectTest");
 	}
 }
