@@ -1,17 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using System;
+using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+
+using Random = UnityEngine.Random;
 
 public class Roll : MonoBehaviour
 {
 	DateTime TimerEnd;
 	public TextMeshProUGUI RemainTIme;
 	public Button RollButton;
+	public Button ResultButton;
+	public TextMeshProUGUI ResultText;
+	public GameObject ResultWindow;
+
 	void Start()
 	{
+		TimerEnd = default;
 		InvokeRepeating("Refresh", 0, 1);
 	}
 
@@ -31,7 +38,17 @@ public class Roll : MonoBehaviour
 		}
 		else
 		{
-			RemainTIme.text = "Roll End";
+			if (TimerEnd == default)
+			{
+				RemainTIme.text = "Roll Ready";
+				ResultWindow.SetActive(false);
+				ResultButton.gameObject.SetActive(false);
+			}
+			else
+			{
+				RemainTIme.text = "Roll End";
+				ResultButton.gameObject.SetActive(true);
+			}
 		}
 	}
 
@@ -50,5 +67,18 @@ public class Roll : MonoBehaviour
 			RollButton.GetComponentInChildren<TextMeshProUGUI>().text = "Start Roll";
 			Refresh();
 		}
+	}
+
+	public void GetRoll()
+	{
+		TimerEnd = default;
+		int RollResult = Random.Range(0, 11);
+		ResultText.text = RollResult.ToString();
+		ResultWindow.SetActive(true);
+	}
+
+	public void CloseResult()
+	{
+		ResultWindow.SetActive(false);
 	}
 }
