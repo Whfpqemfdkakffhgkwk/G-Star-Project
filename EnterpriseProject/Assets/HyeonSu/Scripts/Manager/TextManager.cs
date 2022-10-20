@@ -18,8 +18,6 @@ public class TextManager : MonoBehaviour
     [SerializeField] private Text[] SecondStep = new Text[8]; //클릭 단계 배열
     [SerializeField] private Text[] SecondInc = new Text[8]; //클릭 증가량 배열
 
-    [SerializeField] private Text[] QuestTexts; //
-
     [SerializeField] private Text GoldText;
     [SerializeField] private Text TouchText;
     [SerializeField] private Text PerSecText;
@@ -66,9 +64,5 @@ public class TextManager : MonoBehaviour
     void GoodsText(Text text, double good)
     {
         text.text = good.ToString();
-    }
-    void QuestText(Text[] texts)
-    {
-       // texts[0].text = 
     }
 }

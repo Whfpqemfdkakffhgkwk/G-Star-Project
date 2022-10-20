@@ -22,12 +22,14 @@ public class ButtonManager : MonoBehaviour
     {
         saveVariables.gold += saveVariables.AllTouchMonmey;
         saveVariables.QU_Gold += (int)saveVariables.AllTouchMonmey;
+        saveVariables.QU_Click++;
     }
     public IEnumerator MainSecond()
     {
         saveVariables.gold += saveVariables.AllSecondMoney;
         saveVariables.QU_Gold += (int)saveVariables.AllSecondMoney;
         yield return new WaitForSeconds(1);
+        saveVariables.QU_PlayTime++;
         StartCoroutine(MainSecond());
     }
     public void UpgradePressBtns()
@@ -40,7 +42,7 @@ public class ButtonManager : MonoBehaviour
             if (TouchBtns[i] == ClickObj)
             {
                 UpgradeBtn(saveVariables.TouchType, i);
-                saveVariables.QU_Touch++;
+                saveVariables.QU_Touch[i]++;
                 break;
             }
         }
@@ -51,7 +53,7 @@ public class ButtonManager : MonoBehaviour
                 if (SecondBtns[i] == ClickObj)
                 {
                     UpgradeBtn(saveVariables.SecondType, i);
-                    saveVariables.QU_Second++;
+                    saveVariables.QU_Second[i]++;
                     break;
                 }
             }

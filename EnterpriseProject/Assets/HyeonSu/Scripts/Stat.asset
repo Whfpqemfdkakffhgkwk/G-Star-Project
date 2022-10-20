@@ -13,9 +13,15 @@ MonoBehaviour:
   m_Name: Stat
   m_EditorClassIdentifier: 
   AllTouchMonmey: 180
-  AllSecondMoney: 60
+  AllSecondMoney: 0
   gold: 2355
   diamond: 0
+  QU_Touch: 0000000000000000000000000000000000000000000000000000000000000000
+  QU_Second: 0000000000000000000000000000000000000000000000000000000000000000
+  QU_Gold: 0
+  QU_Click: 0
+  QU_PlayTime: 0
+  QU_Draw: 0
   TouchType:
   - UpgradeStep: 3
     UpgradeCost: 600

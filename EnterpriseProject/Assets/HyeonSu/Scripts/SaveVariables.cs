@@ -4,12 +4,18 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Stat", menuName = "Scriptable Object Asset/Stat")]
 public class SaveVariables : ScriptableObject
 {
+    [Header("재화")]
     public double AllTouchMonmey, AllSecondMoney;
     public double gold;
     public double diamond;
-    public int QU_Touch;
-    public int QU_Second;
+    [Header("퀘스트")]
+    public int[] QU_Touch;
+    public int[] QU_Second;
     public int QU_Gold;
+    public int QU_Click;
+    public int QU_PlayTime;
+    public int QU_Draw; //아직 안함
+    [Space(10)]
     public GoodsList[] TouchType;
     public GoodsList[] SecondType;
 
