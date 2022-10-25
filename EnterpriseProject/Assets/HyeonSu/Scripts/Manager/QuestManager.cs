@@ -5,14 +5,13 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 public class QuestManager : MonoBehaviour
 {
-    [SerializeField] Text[] QuestStatus;
-
     [SerializeField] private Text[] Touch, Second;
     [SerializeField] private Text Gold, Click, PlayTime, Draw;
 
     [SerializeField] private Image[] TouchBtns, SecondBtns;
     [SerializeField] private Image GoldBtn, ClickBtn, PlayTimeBtn, DrawBtn;
 
+    [Header("Save")]
     [SerializeField] private SaveVariables saveVariables;
 
     private void Update()
@@ -25,13 +24,17 @@ public class QuestManager : MonoBehaviour
         {
             Touch[i].text = saveVariables.QU_Touch[i].ToString() + " / " + ((10 * saveVariables.QUN_Touch[i]) + 10).ToString();
             if (saveVariables.QU_Touch[i] >= ((10 * saveVariables.QUN_Touch[i]) + 10))
-            {
                 TouchBtns[i].color = new Color(1, 1, 1, 1);
-            }
         }
         for (int i = 0; i < Second.Length; i++)
-            Touch[i].text = saveVariables.QU_Second[i].ToString() + " / " + ((10 * saveVariables.QUN_Second[i]) + 10).ToString();
+        {
+            Second[i].text = saveVariables.QU_Second[i].ToString() + " / " + ((10 * saveVariables.QUN_Second[i]) + 10).ToString();
+            if (saveVariables.QU_Second[i] >= ((10 * saveVariables.QUN_Second[i]) + 10))
+                SecondBtns[i].color = new Color(1, 1, 1, 1);
+        }
         Gold.text = saveVariables.QU_Gold.ToString() + " / " + ((5000 * saveVariables.QUN_Gold) + 5000).ToString();
+        if (saveVariables.QU_Gold >= ((5000 * saveVariables.QUN_Gold) + 5000))
+            GoldBtn.color = new Color(1, 1, 1, 1);
         Click.text = saveVariables.QU_Click.ToString() + " / " + ((300 * saveVariables.QUN_Click) + 300).ToString();
         PlayTime.text = saveVariables.QU_PlayTime.ToString() + " / " + ((100 * saveVariables.QUN_PlayTime) + 100).ToString();
         Draw.text = saveVariables.QU_Draw.ToString() + " / " + ((1 * saveVariables.QUN_Draw) + 1).ToString();
