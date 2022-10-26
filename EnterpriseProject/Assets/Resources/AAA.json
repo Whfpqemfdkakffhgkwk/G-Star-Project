@@ -1,0 +1,54 @@
+{
+  "talks": [
+    {
+      "Talker": "캐릭 1",
+      "Background": "2",
+      "talk": "첫번째 대화 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    {
+      "Talker": "캐릭 2",
+      "Background": "",
+      "talk": "두번째 대화 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    {
+      "Talker": "캐릭 3",
+      "Background": "",
+      "talk": "세번째 대화 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    {
+      "Talker": "캐릭 2",
+      "Background": "",
+      "talk": "네번째 대화 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    {
+      "Talker": "캐릭 1",
+      "Background": "",
+      "talk": "다섯번째 대화 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    {
+      "Talker": "캐릭 1",
+      "Background": "",
+      "talk": "여셧번째 대화 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    {
+      "Talker": "주인공",
+      "Background": "",
+      "talk": "일곱번째 대화 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    {
+      "Talker": "캐릭 3",
+      "Background": "",
+      "talk": "여덟번째 대화 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    {
+      "Talker": "캐릭 1",
+      "Background": "",
+      "talk": "아홉번째 대화 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    {
+      "Talker": "주인공",
+      "Background": "",
+      "talk": "열번째 대화 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    }
+  ]
+}
