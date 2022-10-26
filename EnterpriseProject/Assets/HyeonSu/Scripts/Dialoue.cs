@@ -19,8 +19,11 @@ public struct TalkDatas
 }
 public class Dialoue : MonoBehaviour
 {
-    [SerializeField]private Text TalkTxt;
+    [SerializeField] private Text TalkTxt;
     [SerializeField] private Text NameTxt;
+    [SerializeField] private Image Background;
+    [SerializeField] private Sprite[] BKspr;
+    [SerializeField] private Image[] Character;
     private void Start()
     {
         StartCoroutine(StoryStart());
@@ -33,6 +36,8 @@ public class Dialoue : MonoBehaviour
         for (int i = 0; i < StoryData.talks.Count; i++)
         {
             //각 대화마다 실행해야 할 내용 여기다가
+            TalkerChange(StoryData.talks[i].Talker);
+            BackgroundChange(StoryData.talks[i].Background);
             NameTxt.text = StoryData.talks[i].Talker;
             yield return StartCoroutine(Typing(TalkTxt, StoryData.talks[i].talk));
 
@@ -47,7 +52,7 @@ public class Dialoue : MonoBehaviour
         for (int i = 0; i <= str.Length; i++)
         {
             text.text = str.Substring(0, i);
-            if(Input.GetMouseButton(0))
+            if (Input.GetMouseButton(0))
             {
                 text.text = str.Substring(0, str.Length);
                 break;
@@ -66,6 +71,34 @@ public class Dialoue : MonoBehaviour
                 yield break;
             }
             yield return new WaitForSeconds(0.001f);
+        }
+    }
+    void BackgroundChange(int num)
+    {
+        Background.sprite = BKspr[num];
+    }
+    void TalkerChange(string talker)
+    {
+        switch (talker)
+        {
+            case "캐릭 1":
+                Character[0].color = new Color(50 / 255f, 50 / 255f, 50 / 255f, 1);
+                Character[0].rectTransform.localScale = new Vector2(0.8f, 0.8f);
+                Character[1].color = new Color(1, 1, 1, 1);
+                Character[1].rectTransform.localScale = new Vector2(1, 1);
+                break;
+            case "캐릭 2":
+                Character[1].color = new Color(50 / 255f, 50 / 255f, 50 / 255f, 1);
+                Character[1].rectTransform.localScale = new Vector2(0.8f, 0.8f);
+                Character[0].color = new Color(1, 1, 1, 1);
+                Character[0].rectTransform.localScale = new Vector2(1, 1);
+                break;
+            case "주인공":
+                Character[0].color = new Color(50 / 255f, 50 / 255f, 50 / 255f, 1);
+                Character[0].rectTransform.localScale = new Vector2(0.8f, 0.8f);
+                Character[1].color = new Color(50 / 255f, 50 / 255f, 50 / 255f, 1);
+                Character[1].rectTransform.localScale = new Vector2(0.8f, 0.8f);
+                break;
         }
     }
 }

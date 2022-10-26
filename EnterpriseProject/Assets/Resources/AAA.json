@@ -2,52 +2,52 @@
   "talks": [
     {
       "Talker": "캐릭 1",
-      "Background": "2",
+      "Background": "0",
       "talk": "첫번째 대화 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
     },
     {
       "Talker": "캐릭 2",
-      "Background": "",
+      "Background": "0",
       "talk": "두번째 대화 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
     },
     {
-      "Talker": "캐릭 3",
-      "Background": "",
+      "Talker": "캐릭 1",
+      "Background": "0",
       "talk": "세번째 대화 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
     },
     {
       "Talker": "캐릭 2",
-      "Background": "",
+      "Background": "1",
       "talk": "네번째 대화 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
     },
     {
       "Talker": "캐릭 1",
-      "Background": "",
+      "Background": "1",
       "talk": "다섯번째 대화 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
     },
     {
       "Talker": "캐릭 1",
-      "Background": "",
+      "Background": "1",
       "talk": "여셧번째 대화 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
     },
     {
       "Talker": "주인공",
-      "Background": "",
+      "Background": "1",
       "talk": "일곱번째 대화 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
     },
     {
-      "Talker": "캐릭 3",
-      "Background": "",
+      "Talker": "캐릭 2",
+      "Background": "2",
       "talk": "여덟번째 대화 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
     },
     {
       "Talker": "캐릭 1",
-      "Background": "",
+      "Background": "2",
       "talk": "아홉번째 대화 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
     },
     {
       "Talker": "주인공",
-      "Background": "",
+      "Background": "2",
       "talk": "열번째 대화 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
     }
   ]
