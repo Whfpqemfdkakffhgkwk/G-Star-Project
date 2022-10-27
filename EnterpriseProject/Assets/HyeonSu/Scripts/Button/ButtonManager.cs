@@ -78,7 +78,7 @@ public class ButtonManager : MonoBehaviour
         GameObject ClickObj = EventSystem.current.currentSelectedGameObject;
         if (OnQuest == false)
         {
-            ClickObj.transform.DOLocalMoveX(-233, 1f);
+            ClickObj.transform.DOLocalMoveX(152, 1f);
             OnQuest = true;
         }
         else if(OnQuest == true)
