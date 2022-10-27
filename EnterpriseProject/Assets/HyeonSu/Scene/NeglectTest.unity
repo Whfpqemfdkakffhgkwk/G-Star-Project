@@ -148,13 +148,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2442171}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 409152141}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
@@ -1003,7 +1003,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1864762624}
         m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: UpgradePressBtns
+        m_MethodName: QuestClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1693,7 +1693,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1864762624}
         m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: UpgradePressBtns
+        m_MethodName: QuestClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2351,6 +2351,7 @@ RectTransform:
   - {fileID: 1864762621}
   - {fileID: 923494287}
   - {fileID: 409152141}
+  - {fileID: 1485770840}
   - {fileID: 2031208350}
   - {fileID: 2064736755}
   m_Father: {fileID: 0}
@@ -4998,21 +4999,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 409152140}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 465083207}
   - {fileID: 2442172}
-  - {fileID: 1485770840}
   m_Father: {fileID: 108474010}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 151, y: 1037}
-  m_SizeDelta: {x: 522.0256, y: 288.9246}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 880.17773, y: 1037}
+  m_SizeDelta: {x: 531.2033, y: 288.9246}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &409152142
 MonoBehaviour:
@@ -5484,42 +5483,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 461618526}
   m_CullTransparentMesh: 1
---- !u!1 &465083206
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 465083207}
-  m_Layer: 5
-  m_Name: Quest
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &465083207
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 465083206}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 409152141}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -593.0128, y: -918.03784}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &479019893
 GameObject:
   m_ObjectHideFlags: 0
@@ -7507,7 +7470,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1864762624}
         m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: UpgradePressBtns
+        m_MethodName: QuestClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8584,7 +8547,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1864762624}
         m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: UpgradePressBtns
+        m_MethodName: QuestClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8717,7 +8680,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1864762624}
         m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: UpgradePressBtns
+        m_MethodName: QuestClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9906,7 +9869,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1864762624}
         m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: UpgradePressBtns
+        m_MethodName: QuestClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10901,7 +10864,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1864762624}
         m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: UpgradePressBtns
+        m_MethodName: QuestClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11451,7 +11414,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 923494286}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -12136,7 +12099,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1864762624}
         m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: UpgradePressBtns
+        m_MethodName: QuestClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12429,7 +12392,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1864762624}
         m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: UpgradePressBtns
+        m_MethodName: QuestClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14639,7 +14602,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1864762624}
         m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: UpgradePressBtns
+        m_MethodName: QuestClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15083,7 +15046,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1864762624}
         m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: UpgradePressBtns
+        m_MethodName: QuestClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15298,7 +15261,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1864762624}
         m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: UpgradePressBtns
+        m_MethodName: QuestClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16173,7 +16136,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1864762624}
         m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: UpgradePressBtns
+        m_MethodName: QuestClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18397,7 +18360,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1864762624}
         m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: UpgradePressBtns
+        m_MethodName: QuestClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18763,7 +18726,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1864762624}
         m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: UpgradePressBtns
+        m_MethodName: QuestClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19053,7 +19016,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1864762624}
         m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: UpgradePressBtns
+        m_MethodName: QuestClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19404,7 +19367,7 @@ GameObject:
   - component: {fileID: 1485770842}
   - component: {fileID: 1485770841}
   m_Layer: 5
-  m_Name: BackGround
+  m_Name: QuestBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19423,12 +19386,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 500677872}
-  m_Father: {fileID: 409152141}
-  m_RootOrder: 2
+  m_Father: {fileID: 108474010}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 391, y: -575}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 728, y: 462}
   m_SizeDelta: {x: 699.1162, y: 1437.0723}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1485770841
@@ -20101,7 +20064,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1864762624}
         m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: UpgradePressBtns
+        m_MethodName: QuestClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -21240,7 +21203,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1864762624}
         m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: UpgradePressBtns
+        m_MethodName: QuestClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -22970,7 +22933,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1864762624}
         m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: UpgradePressBtns
+        m_MethodName: QuestClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -24551,6 +24514,7 @@ MonoBehaviour:
   OnPos: {fileID: 0}
   OffPos: {fileID: 0}
   TouchWindow: {fileID: 0}
+  QuestWindow: {fileID: 1485770839}
   TouchBtns:
   - {fileID: 479019893}
   - {fileID: 511694247}
@@ -24569,6 +24533,7 @@ MonoBehaviour:
   - {fileID: 2026506684}
   - {fileID: 285205294}
   - {fileID: 1903015766}
+  questManager: {fileID: 409152145}
   saveVariables: {fileID: 11400000, guid: 8fb977b3369c27f42a8ce4c4f3ec7c39, type: 2}
 --- !u!1 &1870146642
 GameObject:
@@ -25863,7 +25828,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1864762624}
         m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: UpgradePressBtns
+        m_MethodName: QuestClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -26802,7 +26767,7 @@ RectTransform:
   - {fileID: 26295341}
   - {fileID: 575606478}
   m_Father: {fileID: 108474010}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -27552,7 +27517,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 108474010}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}

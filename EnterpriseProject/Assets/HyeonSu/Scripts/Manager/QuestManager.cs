@@ -37,16 +37,16 @@ public class QuestManager : MonoBehaviour
         if (saveVariables.QU_Gold >= ((5000 * saveVariables.QUN_Gold) + 5000))
             GoldBtn.color = new Color(1, 1, 1, 1);
         Click.text = "클릭 횟수 : " + saveVariables.QU_Click.ToString() + " / " + ((300 * saveVariables.QUN_Click) + 300).ToString();
-        if (saveVariables.QU_Click >= ((300 * saveVariables.QU_Click) + 300))
+        if (saveVariables.QU_Click >= ((300 * saveVariables.QUN_Click) + 300))
             ClickBtn.color = new Color(1, 1, 1, 1);
         PlayTime.text = "플레이 타임 : " + saveVariables.QU_PlayTime.ToString() + " / " + ((100 * saveVariables.QUN_PlayTime) + 100).ToString();
         if (saveVariables.QU_PlayTime >= ((100 * saveVariables.QUN_PlayTime) + 100))
-            ClickBtn.color = new Color(1, 1, 1, 1);
+            PlayTimeBtn.color = new Color(1, 1, 1, 1);
         Draw.text = "캐릭터 뽑은 횟수 : " + saveVariables.QU_Draw.ToString() + " / " + ((1 * saveVariables.QUN_Draw) + 1).ToString();
         if (saveVariables.QU_Draw >= ((1 * saveVariables.QUN_Draw) + 1))
             DrawBtn.color = new Color(1, 1, 1, 1);
     }
-    protected virtual void ButtonState(Image PressObj)//<- 누른 오브젝트
+    public void ButtonState(Image PressObj)//<- 누른 오브젝트
     {
         if (PressObj.color == new Color(1, 1, 1, 1))
         {

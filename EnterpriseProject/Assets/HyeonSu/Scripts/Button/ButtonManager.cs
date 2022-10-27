@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 using DG.Tweening;
 using static SaveVariables;
 
@@ -11,8 +12,11 @@ public class ButtonManager : MonoBehaviour
     [SerializeField] Transform OnPos, OffPos;
 
     [SerializeField] private GameObject TouchWindow;
+    [SerializeField] private GameObject QuestWindow;
     [SerializeField] private GameObject[] TouchBtns;
     [SerializeField] private GameObject[] SecondBtns;
+
+    [SerializeField] private QuestManager questManager;
 
     public SaveVariables saveVariables;
 
@@ -78,13 +82,20 @@ public class ButtonManager : MonoBehaviour
         GameObject ClickObj = EventSystem.current.currentSelectedGameObject;
         if (OnQuest == false)
         {
-            ClickObj.transform.DOLocalMoveX(152, 1f);
+            ClickObj.transform.DOLocalMoveX(190, 1f);
+            QuestWindow.transform.DOLocalMoveX(24, 1f);
             OnQuest = true;
         }
         else if(OnQuest == true)
         {
             ClickObj.transform.DOLocalMoveX(850, 1f);
-            OnQuest= false;
+            QuestWindow.transform.DOLocalMoveX(726, 1f);
+            OnQuest = false;
         }
+    }
+    public void QuestClick()
+    {
+        Image ClickImg = EventSystem.current.currentSelectedGameObject.GetComponent<Image>();
+        questManager.ButtonState(ClickImg);
     }
 }
