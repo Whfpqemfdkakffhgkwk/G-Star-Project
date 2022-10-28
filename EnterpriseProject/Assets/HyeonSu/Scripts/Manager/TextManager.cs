@@ -8,14 +8,14 @@ using static SaveVariables;
 
 public class TextManager : MonoBehaviour
 {
-    [SerializeField, Tooltip("Å¬¸¯ °¡°İ ¹è¿­")] private Text[] ClickPrice = new Text[8];
-    [SerializeField, Tooltip("Å¬¸¯ ´Ü°è ¹è¿­")] private Text[] ClickStep = new Text[8];
-    [SerializeField, Tooltip("Å¬¸¯ Áõ°¡·® ¹è¿­")] private Text[] ClickInc = new Text[8];
-    [SerializeField, Tooltip("Å¬¸¯ Àá±İÀÌ¹ÌÁö ¹è¿­")] private GameObject[] ClickRock = new GameObject[8];
+    [SerializeField, Tooltip("í´ë¦­ ê°€ê²© ë°°ì—´")] private Text[] ClickPrice = new Text[8];
+    [SerializeField, Tooltip("í´ë¦­ ë‹¨ê³„ ë°°ì—´")] private Text[] ClickStep = new Text[8];
+    [SerializeField, Tooltip("í´ë¦­ ì¦ê°€ëŸ‰ ë°°ì—´")] private Text[] ClickInc = new Text[8];
+    [SerializeField, Tooltip("í´ë¦­ ì ê¸ˆì´ë¯¸ì§€ ë°°ì—´")] private GameObject[] ClickRock = new GameObject[8];
 
-    [SerializeField, Tooltip("ÃÊ´ç °¡°İ ¹è¿­")] private Text[] SecondPrice = new Text[8];
-    [SerializeField, Tooltip("ÃÊ´ç ´Ü°è ¹è¿­")] private Text[] SecondStep = new Text[8];
-    [SerializeField, Tooltip("ÃÊ´ç Áõ°¡·® ¹è¿­")] private Text[] SecondInc = new Text[8];
+    [SerializeField, Tooltip("ì´ˆë‹¹ ê°€ê²© ë°°ì—´")] private Text[] SecondPrice = new Text[8];
+    [SerializeField, Tooltip("ì´ˆë‹¹ ë‹¨ê³„ ë°°ì—´")] private Text[] SecondStep = new Text[8];
+    [SerializeField, Tooltip("ì´ˆë‹¹ ì¦ê°€ëŸ‰ ë°°ì—´")] private Text[] SecondInc = new Text[8];
 
     [SerializeField] private Text GoldText;
     [SerializeField] private Text TouchText;
@@ -34,7 +34,7 @@ public class TextManager : MonoBehaviour
         GoodsText(GoldText, saveVariables.gold);
         GoodsText(TouchText, saveVariables.AllTouchMonmey);
         GoodsText(PerSecText, saveVariables.AllSecondMoney);
-        //´ÙÀÌ¾Æ
+        //ë‹¤ì´ì•„
     }
     void PriceText(Text[] CKtexts, Text[] SPtexts, GameObject[] RockImg, GoodsList[] Goods)
     {
@@ -43,7 +43,7 @@ public class TextManager : MonoBehaviour
             CKtexts[i].text = Goods[i].UpgradeCost.ToString();
             if (Goods[i].UpgradeStep == 0)
             {
-                SPtexts[i].text = "Àá±İ";
+                SPtexts[i].text = "ì ê¸ˆ";
                 //RockImg[i].SetActive(true);
             }
             else

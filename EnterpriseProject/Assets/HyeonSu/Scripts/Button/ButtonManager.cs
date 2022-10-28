@@ -67,13 +67,13 @@ public class ButtonManager : MonoBehaviour
     {
         if (saveVariables.gold >= (ulong)list[arr].UpgradeCost)
         {
-            //°­È­ ºñ¿ë ±ğ±â
+            //ê°•í™” ë¹„ìš© ê¹ê¸°
             saveVariables.gold -= (ulong)list[arr].UpgradeCost;
-            //°­È­ ¼öÄ¡(n°­)
+            //ê°•í™” ìˆ˜ì¹˜(nê°•)
             list[arr].UpgradeStep++;
-            //°­È­ ºñ¿ë ´Ã¸®±â
+            //ê°•í™” ë¹„ìš© ëŠ˜ë¦¬ê¸°
             list[arr].UpgradeCost += (ulong)(list[arr].UpgradeCost * ((ulong)list[arr].UpgradeStep));
-            //°­È­ Àû¿ëÇÏ±â
+            //ê°•í™” ì ìš©í•˜ê¸°
             SaveManager.Instance.Combine();
         }
     }
@@ -86,7 +86,7 @@ public class ButtonManager : MonoBehaviour
             QuestWindow.transform.DOLocalMoveX(24, 1f);
             OnQuest = true;
         }
-        else if(OnQuest == true)
+        else if (OnQuest == true)
         {
             ClickObj.transform.DOLocalMoveX(850, 1f);
             QuestWindow.transform.DOLocalMoveX(726, 1f);
