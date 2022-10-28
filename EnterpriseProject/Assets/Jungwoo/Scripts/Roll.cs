@@ -11,7 +11,7 @@ using Random = UnityEngine.Random;
 public class Roll : MonoBehaviour
 {
 	DateTime TimerEnd;
-	public TextMeshProUGUI RemainTIme;
+	public TextMeshProUGUI RemainTime;
 	public Button RollButton;
 	public Button ResultButton;
 	public TextMeshProUGUI ResultText;
@@ -20,6 +20,7 @@ public class Roll : MonoBehaviour
 	void Start()
 	{
 		TimerEnd = default;
+		//1초마다 숫자 변경하게 반복
 		InvokeRepeating("Refresh", 0, 1);
 	}
 
@@ -34,20 +35,20 @@ public class Roll : MonoBehaviour
 		{
 			DateTime NowTime = DateTime.Now;
 			TimeSpan Timercalc = TimerEnd - NowTime;
-			RemainTIme.text = Timercalc.Hours + " : " + Timercalc.Minutes + " : " + Timercalc.Seconds;
+			RemainTime.text = Timercalc.Hours + " : " + Timercalc.Minutes + " : " + Timercalc.Seconds;
 			//Debug.Log(Timercalc.Hours+" : "+ Timercalc.Minutes+" : "+ Timercalc.Seconds);
 		}
 		else
 		{
 			if (TimerEnd == default)
 			{
-				RemainTIme.text = "Roll Ready";
+				RemainTime.text = "Roll Ready";
 				RollButton.gameObject.SetActive(true);
 				ResultButton.gameObject.SetActive(false);
 			}
 			else
 			{
-				RemainTIme.text = "Roll End";
+				RemainTime.text = "Roll End";
 				RollButton.gameObject.SetActive(false);
 				ResultButton.gameObject.SetActive(true);
 			}
