@@ -7,15 +7,12 @@ using UnityEngine;
 public class GameManager : Singleton<GameManager>                           
 {
     [SerializeField]
-    private ButtonManager buttonManager;
-    [SerializeField]
     private SaveManager saveManager;
 
-    private void Awake()
+    void Start()
     {
         saveManager.Combine();
         StartCoroutine(saveManager.AutoSave());
-        StartCoroutine(buttonManager.MainSecond());
     }
 }
 

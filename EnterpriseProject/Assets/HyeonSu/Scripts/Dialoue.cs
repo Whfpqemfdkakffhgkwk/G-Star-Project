@@ -4,6 +4,8 @@ using UnityEngine;
 using System;
 using UnityEngine.UI;
 using Unity.VisualScripting;
+using UnityEngine.EventSystems;
+using DG.Tweening;
 
 [Serializable]
 public struct TalkData
@@ -24,6 +26,9 @@ public class Dialoue : MonoBehaviour
     [SerializeField] private Image Background;
     [SerializeField] private Sprite[] BKspr;
     [SerializeField] private Image[] Character;
+
+
+    [SerializeField] private GameObject GoldDirectingObj;
     private void Start()
     {
         StartCoroutine(StoryStart());
@@ -101,4 +106,23 @@ public class Dialoue : MonoBehaviour
                 break;
         }
     }
+    #region 메인씬에서 쓸 연출
+    public void DirectingMoney()
+    {
+        Transform ClickPos = EventSystem.current.currentSelectedGameObject.transform;
+        for (int i = 0; i < 50; i++)
+        {
+            GameObject SummonedObject = Instantiate(GoldDirectingObj, ClickPos);
+            Vector2 RandomPos = new Vector2(SummonedObject.transform.position.x + UnityEngine.Random.Range(100f, 400f),
+                                            SummonedObject.transform.position.y + UnityEngine.Random.Range(-100f, -400f));
+            SummonedObject.transform.DOMove(RandomPos, 1.0f);
+            StartCoroutine(DirectingMoneyCor(SummonedObject));
+        }
+    }
+    IEnumerator DirectingMoneyCor(GameObject obj)
+    {
+        yield return new WaitForSeconds(1.0f);
+        obj.transform.DOLocalMove(new Vector2(100, 1400), 0.5f);
+    }
+    #endregion
 }

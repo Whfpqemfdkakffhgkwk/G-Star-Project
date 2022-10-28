@@ -6,8 +6,7 @@ using UnityEngine;
 
 public class SaveManager : Singleton<SaveManager>
 {
-    [SerializeField]
-    private SaveVariables saveVariables;
+    public SaveVariables saveVariables;
     //수정 필요
     #region 저장기능
     void LoadJson()
