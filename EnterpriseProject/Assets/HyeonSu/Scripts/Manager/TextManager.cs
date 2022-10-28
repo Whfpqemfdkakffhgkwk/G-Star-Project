@@ -21,8 +21,12 @@ public class TextManager : MonoBehaviour
     [SerializeField] private Text TouchText;
     [SerializeField] private Text PerSecText;
 
-    [SerializeField]
-    private SaveVariables saveVariables;
+    SaveVariables saveVariables;
+
+    private void Start()
+    {
+        saveVariables = SaveManager.Instance.saveVariables;
+    }
     private void FixedUpdate()
     {
         PriceText(ClickPrice, ClickStep, ClickRock, saveVariables.TouchType);

@@ -11,25 +11,43 @@ public class QuestManager : MonoBehaviour
     [SerializeField] private Image[] TouchBtns, SecondBtns;
     [SerializeField] private Image GoldBtn, ClickBtn, PlayTimeBtn, DrawBtn;
 
-    [Header("Save")]
-    [SerializeField] private SaveVariables saveVariables;
+    Dictionary<int, string> TouchName = new Dictionary<int, string>();
+    Dictionary<int, string> SecondName = new Dictionary<int, string>();
 
+    SaveVariables saveVariables;
+
+    private void Start()
+    {
+        AddDictionary();
+        saveVariables = SaveManager.Instance.saveVariables;
+    }
     private void Update()
     {
         OrganizeStatusText();
+    }
+    void AddDictionary()
+    {
+        TouchName.Add(0, "피시방");
+        TouchName.Add(1, "노래방");
+        TouchName.Add(2, "헬스장");
+        TouchName.Add(3, "도서실");
+        SecondName.Add(0, "옥탑방");
+        SecondName.Add(1, "스탠다드룸");
+        SecondName.Add(2, "딜럭스룸");
+        SecondName.Add(3, "스위트룸");
     }
     void OrganizeStatusText()
     {
         //터치, 초당 업그레이드들 이름 나오면 딕셔너리로 바꿔서 이름 바꿀 것
         for (int i = 0; i < Touch.Length; i++)
         {
-            Touch[i].text = $"터치 업그레이드 - {i + 1} : " + saveVariables.QU_Touch[i].ToString() + " / " + ((10 * saveVariables.QUN_Touch[i]) + 10).ToString();
+            Touch[i].text = $"{TouchName[i]} 업그레이드 : " + saveVariables.QU_Touch[i].ToString() + " / " + ((10 * saveVariables.QUN_Touch[i]) + 10).ToString();
             if (saveVariables.QU_Touch[i] >= ((10 * saveVariables.QUN_Touch[i]) + 10))
                 TouchBtns[i].color = new Color(1, 1, 1, 1);
         }
         for (int i = 0; i < Second.Length; i++)
         {
-            Second[i].text = $"초당 업그레이드 - {i + 1} : " + saveVariables.QU_Second[i].ToString() + " / " + ((10 * saveVariables.QUN_Second[i]) + 10).ToString();
+            Second[i].text = $"{SecondName[i]} 업그레이드 : " + saveVariables.QU_Second[i].ToString() + " / " + ((10 * saveVariables.QUN_Second[i]) + 10).ToString();
             if (saveVariables.QU_Second[i] >= ((10 * saveVariables.QUN_Second[i]) + 10))
                 SecondBtns[i].color = new Color(1, 1, 1, 1);
         }

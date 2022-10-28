@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using DG.Tweening;
 using static SaveVariables;
+using UnityEditor;
 
 public class ButtonManager : MonoBehaviour
 {
@@ -16,11 +17,20 @@ public class ButtonManager : MonoBehaviour
     [SerializeField] private GameObject[] TouchBtns;
     [SerializeField] private GameObject[] SecondBtns;
 
+    [SerializeField] private GameObject DiamondDirectingObj;
+
+    [SerializeField] private GameObject canvas;
+
     [SerializeField] private QuestManager questManager;
 
-    public SaveVariables saveVariables;
+    SaveVariables saveVariables;
 
     private bool OnQuest = false;
+    private void Start()
+    {
+        saveVariables = SaveManager.Instance.saveVariables;
+        StartCoroutine(MainSecond());
+    }
 
     public void MainClick()
     {
@@ -97,5 +107,23 @@ public class ButtonManager : MonoBehaviour
     {
         Image ClickImg = EventSystem.current.currentSelectedGameObject.GetComponent<Image>();
         questManager.ButtonState(ClickImg);
+        DirectingDiamond(EventSystem.current.currentSelectedGameObject.transform);
+    }
+    void DirectingDiamond(Transform cur)
+    {
+        for (int i = 0; i < 50; i++)
+        {
+            
+            GameObject SummonedObject = Instantiate(DiamondDirectingObj, cur);
+            Vector2 RandomPos = new Vector2(SummonedObject.transform.position.x + UnityEngine.Random.Range(-200f, 200f),
+                                            SummonedObject.transform.position.y + UnityEngine.Random.Range(-100f, -400f));
+            SummonedObject.transform.DOMove(RandomPos, 1.0f);
+            StartCoroutine(DirectingDiamondCor(SummonedObject));
+        }
+    }
+    IEnumerator DirectingDiamondCor(GameObject obj)
+    {
+        yield return new WaitForSeconds(1.0f);
+        obj.transform.DOLocalMove(new Vector2(264, 1347), 0.5f);
     }
 }
