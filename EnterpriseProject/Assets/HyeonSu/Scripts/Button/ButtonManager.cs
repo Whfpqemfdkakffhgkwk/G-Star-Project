@@ -113,12 +113,13 @@ public class ButtonManager : MonoBehaviour
     {
         for (int i = 0; i < 50; i++)
         {
-            
             GameObject SummonedObject = Instantiate(DiamondDirectingObj, cur);
+            SummonedObject.transform.SetParent(canvas.transform);
             Vector2 RandomPos = new Vector2(SummonedObject.transform.position.x + UnityEngine.Random.Range(-200f, 200f),
                                             SummonedObject.transform.position.y + UnityEngine.Random.Range(-100f, -400f));
             SummonedObject.transform.DOMove(RandomPos, 1.0f);
             StartCoroutine(DirectingDiamondCor(SummonedObject));
+            Destroy(SummonedObject, 1.4f);
         }
     }
     IEnumerator DirectingDiamondCor(GameObject obj)

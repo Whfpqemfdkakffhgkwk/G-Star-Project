@@ -18,6 +18,7 @@ public class TextManager : MonoBehaviour
     [SerializeField, Tooltip("초당 증가량 배열")] private Text[] SecondInc = new Text[8];
 
     [SerializeField] private Text GoldText;
+    [SerializeField] private Text DiamondText;
     [SerializeField] private Text TouchText;
     [SerializeField] private Text PerSecText;
 
@@ -36,9 +37,9 @@ public class TextManager : MonoBehaviour
         IncrementText(SecondInc, saveVariables.SecondType);
 
         GoodsText(GoldText, saveVariables.gold);
+        GoodsText(DiamondText, saveVariables.diamond);
         GoodsText(TouchText, saveVariables.AllTouchMonmey);
         GoodsText(PerSecText, saveVariables.AllSecondMoney);
-        //다이아
     }
     void PriceText(Text[] CKtexts, Text[] SPtexts, GameObject[] RockImg, GoodsList[] Goods)
     {

@@ -74,6 +74,7 @@ public class QuestManager : MonoBehaviour
                 {
                     TouchBtns[i].color = new Color(50 / 255, 50 / 255, 50 / 255, 1);
                     saveVariables.QUN_Touch[i]++;
+                    StartCoroutine(QuestReward(10));
                     return;
                 }
             }
@@ -83,6 +84,7 @@ public class QuestManager : MonoBehaviour
                 {
                     SecondBtns[i].color = new Color(50 / 255, 50 / 255, 50 / 255, 1);
                     saveVariables.QUN_Second[i]++;
+                    StartCoroutine(QuestReward(10));
                     return;
                 }
             }
@@ -91,26 +93,35 @@ public class QuestManager : MonoBehaviour
             {
                 GoldBtn.color = new Color(50 / 255, 50 / 255, 50 / 255, 1);
                 saveVariables.QUN_Gold++;
+                StartCoroutine(QuestReward(10));
             }
             else if (PressObj == ClickBtn)
             {
                 ClickBtn.color = new Color(50 / 255, 50 / 255, 50 / 255, 1);
                 saveVariables.QUN_Click++;
+                StartCoroutine(QuestReward(10));
             }
             else if (PressObj == PlayTimeBtn)
             {
                 PlayTimeBtn.color = new Color(50 / 255, 50 / 255, 50 / 255, 1);
                 saveVariables.QUN_PlayTime++;
+                StartCoroutine(QuestReward(10));
             }
             else if (PressObj == DrawBtn)
             {
                 DrawBtn.color = new Color(50 / 255, 50 / 255, 50 / 255, 1);
                 saveVariables.QUN_Draw++;
+                StartCoroutine(QuestReward(10));
             }
         }
         //if 누른 오브젝트가 색이 1,1,1,1이면
         //누른 오브젝트 찾고
         //색 50/255로 바꾸고
         //카운트 1추가한다
+    }
+    IEnumerator QuestReward(int GetDia)
+    {
+        yield return new WaitForSeconds(1.4f);
+        saveVariables.diamond += GetDia;
     }
 }
