@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b45f88197feb43045b156003d10e3ff1, type: 3}
   m_Name: Stat
   m_EditorClassIdentifier: 
-  AllTouchMonmey: 180
+  AllTouchMonmey: 1200
   AllSecondMoney: 0
-  gold: 16690
-  diamond: 20
-  QU_Touch: 0000000000000000000000000000000000000000000000000000000000000000
+  gold: 16090
+  diamond: 30
+  QU_Touch: 0100000000000000000000000000000000000000000000000000000000000000
   QU_Second: 0000000000000000000000000000000000000000000000000000000000000000
   QU_Gold: 7560
   QU_Click: 42
-  QU_PlayTime: 2552
+  QU_PlayTime: 2925
   QU_Draw: 0
   QUN_Touch: 0000000000000000000000000000000000000000000000000000000000000000
   QUN_Second: 0000000000000000000000000000000000000000000000000000000000000000
@@ -29,8 +29,8 @@ MonoBehaviour:
   QUN_PlayTime: 0
   QUN_Draw: 0
   TouchType:
-  - UpgradeStep: 3
-    UpgradeCost: 600
+  - UpgradeStep: 4
+    UpgradeCost: 3000
   - UpgradeStep: 0
     UpgradeCost: 500
   - UpgradeStep: 0

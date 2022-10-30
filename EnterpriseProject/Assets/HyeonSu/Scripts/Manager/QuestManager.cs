@@ -74,7 +74,7 @@ public class QuestManager : MonoBehaviour
                 {
                     TouchBtns[i].color = new Color(50 / 255, 50 / 255, 50 / 255, 1);
                     saveVariables.QUN_Touch[i]++;
-                    StartCoroutine(QuestReward(10));
+                    StartCoroutine(QuestReward(10 *(i + 1)));
                     return;
                 }
             }
@@ -84,7 +84,7 @@ public class QuestManager : MonoBehaviour
                 {
                     SecondBtns[i].color = new Color(50 / 255, 50 / 255, 50 / 255, 1);
                     saveVariables.QUN_Second[i]++;
-                    StartCoroutine(QuestReward(10));
+                    StartCoroutine(QuestReward(10 * (i + 1)));
                     return;
                 }
             }
@@ -111,7 +111,7 @@ public class QuestManager : MonoBehaviour
             {
                 DrawBtn.color = new Color(50 / 255, 50 / 255, 50 / 255, 1);
                 saveVariables.QUN_Draw++;
-                StartCoroutine(QuestReward(10));
+                StartCoroutine(QuestReward(50));
             }
         }
         //if 누른 오브젝트가 색이 1,1,1,1이면
