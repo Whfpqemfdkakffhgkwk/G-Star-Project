@@ -105,9 +105,12 @@ public class ButtonManager : MonoBehaviour
     }
     public void QuestClick()
     {
-        Image ClickImg = EventSystem.current.currentSelectedGameObject.GetComponent<Image>();
+        Image ClickImg = EventSystem.current.currentSelectedGameObject.transform.GetChild(1).GetComponent<Image>();
+        if (ClickImg.color == new Color(1, 1, 1, 1))
+        {
+            DirectingDiamond(EventSystem.current.currentSelectedGameObject.transform);
+        }
         questManager.ButtonState(ClickImg);
-        DirectingDiamond(EventSystem.current.currentSelectedGameObject.transform);
     }
     void DirectingDiamond(Transform cur)
     {

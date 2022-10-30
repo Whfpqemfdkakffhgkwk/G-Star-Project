@@ -8,11 +8,14 @@ public class QuestManager : MonoBehaviour
     [SerializeField] private Text[] Touch, Second;
     [SerializeField] private Text Gold, Click, PlayTime, Draw;
 
-    [SerializeField] private Image[] TouchBtns, SecondBtns;
-    [SerializeField] private Image GoldBtn, ClickBtn, PlayTimeBtn, DrawBtn;
+    [SerializeField] private Image[] TouchStatus, SecondStatus;
+    [SerializeField] private Image GoldStatus, ClickStatus, PlayTimeStatus, DrawStatus;
 
     [SerializeField] private Slider[] TouchSliders, SecondSliders;
     [SerializeField] private Slider GoldSlider, ClickSlider, PlayTimeSlider, DrawSlider;
+
+    [SerializeField] private Text[] TouchLists, SecondLists;
+    [SerializeField] private Text GoldList, ClickList, PlayTimeList, DrawList;
 
     Dictionary<int, string> TouchName = new Dictionary<int, string>();
     Dictionary<int, string> SecondName = new Dictionary<int, string>();
@@ -44,33 +47,44 @@ public class QuestManager : MonoBehaviour
         for (int i = 0; i < Touch.Length; i++)
         {
             Touch[i].text = saveVariables.QU_Touch[i].ToString() + "/" + ((10 * saveVariables.QUN_Touch[i]) + 10).ToString();
+            TouchLists[i].text = $"'{TouchName[i]}' 레벨을 {(10 * saveVariables.QUN_Touch[i]) + 10}레벨 올리기";
             TouchSliders[i].value = (saveVariables.QU_Touch[i] - 10f * saveVariables.QUN_Touch[i]) / 10;
             if (saveVariables.QU_Touch[i] >= ((10 * saveVariables.QUN_Touch[i]) + 10))
-                TouchBtns[i].color = new Color(1, 1, 1, 1);
+                TouchStatus[i].color = new Color(1, 1, 1, 1);
         }
+
         for (int i = 0; i < Second.Length; i++)
         {
             Second[i].text = saveVariables.QU_Second[i].ToString() + "/" + ((10 * saveVariables.QUN_Second[i]) + 10).ToString();
+            SecondLists[i].text = $"'{SecondName[i]}' 레벨을 {(10 * saveVariables.QUN_Second[i]) + 10}레벨 올리기";
             SecondSliders[i].value = (saveVariables.QU_Second[i] - 10f * saveVariables.QUN_Second[i]) / 10;
             if (saveVariables.QU_Second[i] >= ((10 * saveVariables.QUN_Second[i]) + 10))
-                SecondBtns[i].color = new Color(1, 1, 1, 1);
+                SecondStatus[i].color = new Color(1, 1, 1, 1);
         }
+
         Gold.text = saveVariables.QU_Gold.ToString() + "/" + ((5000 * saveVariables.QUN_Gold) + 5000).ToString();
+        GoldList.text = $"골드를 {((5000 * saveVariables.QUN_Gold) + 5000)}원 획득하기";
         GoldSlider.value = (saveVariables.QU_Gold - 5000f * saveVariables.QUN_Gold) / 5000;
         if (saveVariables.QU_Gold >= ((5000 * saveVariables.QUN_Gold) + 5000))
-            GoldBtn.color = new Color(1, 1, 1, 1);
+            GoldStatus.color = new Color(1, 1, 1, 1);
+
         Click.text = saveVariables.QU_Click.ToString() + "/" + ((300 * saveVariables.QUN_Click) + 300).ToString();
+        ClickList.text = $"터치를 {(300 * saveVariables.QUN_Click) + 300}번 하기";
         ClickSlider.value = (saveVariables.QU_Click - 300 * saveVariables.QU_Click) / 300;
         if (saveVariables.QU_Click >= ((300 * saveVariables.QUN_Click) + 300))
-            ClickBtn.color = new Color(1, 1, 1, 1);
+            ClickStatus.color = new Color(1, 1, 1, 1);
+
         PlayTime.text = saveVariables.QU_PlayTime.ToString() + "/" + ((100 * saveVariables.QUN_PlayTime) + 100).ToString();
+        PlayTimeList.text = $"{(100 * saveVariables.QUN_PlayTime) + 100}초 플레이하기";
         PlayTimeSlider.value = (saveVariables.QU_PlayTime - 100 * saveVariables.QUN_PlayTime) / 100;
         if (saveVariables.QU_PlayTime >= ((100 * saveVariables.QUN_PlayTime) + 100))
-            PlayTimeBtn.color = new Color(1, 1, 1, 1);
+            PlayTimeStatus.color = new Color(1, 1, 1, 1);
+
         Draw.text = saveVariables.QU_Draw.ToString() + "/" + ((1 * saveVariables.QUN_Draw) + 1).ToString();
+        DrawList.text = $"캐릭터를 {(1 * saveVariables.QUN_Draw) + 1}번 뽑으세요";
         DrawSlider.value = (saveVariables.QU_Draw - 1f * saveVariables.QUN_Draw) / 1;
         if (saveVariables.QU_Draw >= ((1 * saveVariables.QUN_Draw) + 1))
-            DrawBtn.color = new Color(1, 1, 1, 1);
+            DrawStatus.color = new Color(1, 1, 1, 1);
     }
     public void ButtonState(Image PressObj)//<- 누른 오브젝트
     {
@@ -78,46 +92,46 @@ public class QuestManager : MonoBehaviour
         {
             for (int i = 0; i < Touch.Length; i++)
             {
-                if (PressObj == TouchBtns[i])
+                if (PressObj == TouchStatus[i])
                 {
-                    TouchBtns[i].color = new Color(50 / 255, 50 / 255, 50 / 255, 1);
+                    TouchStatus[i].color = new Color(1, 1, 1, 0);
                     saveVariables.QUN_Touch[i]++;
-                    StartCoroutine(QuestReward(10 *(i + 1)));
+                    StartCoroutine(QuestReward(10 * (i + 1)));
                     return;
                 }
             }
             for (int i = 0; i < Second.Length; i++)
             {
-                if (PressObj == SecondBtns[i])
+                if (PressObj == SecondStatus[i])
                 {
-                    SecondBtns[i].color = new Color(50 / 255, 50 / 255, 50 / 255, 1);
+                    SecondStatus[i].color = new Color(1, 1, 1, 0);
                     saveVariables.QUN_Second[i]++;
                     StartCoroutine(QuestReward(10 * (i + 1)));
                     return;
                 }
             }
 
-            if (PressObj == GoldBtn)
+            if (PressObj == GoldStatus)
             {
-                GoldBtn.color = new Color(50 / 255, 50 / 255, 50 / 255, 1);
+                GoldStatus.color = new Color(1, 1, 1, 0);
                 saveVariables.QUN_Gold++;
                 StartCoroutine(QuestReward(10));
             }
-            else if (PressObj == ClickBtn)
+            else if (PressObj == ClickStatus)
             {
-                ClickBtn.color = new Color(50 / 255, 50 / 255, 50 / 255, 1);
+                ClickStatus.color = new Color(1, 1, 1, 0);
                 saveVariables.QUN_Click++;
                 StartCoroutine(QuestReward(10));
             }
-            else if (PressObj == PlayTimeBtn)
+            else if (PressObj == PlayTimeStatus)
             {
-                PlayTimeBtn.color = new Color(50 / 255, 50 / 255, 50 / 255, 1);
+                PlayTimeStatus.color = new Color(1, 1, 1, 0);
                 saveVariables.QUN_PlayTime++;
                 StartCoroutine(QuestReward(10));
             }
-            else if (PressObj == DrawBtn)
+            else if (PressObj == DrawStatus)
             {
-                DrawBtn.color = new Color(50 / 255, 50 / 255, 50 / 255, 1);
+                DrawStatus.color = new Color(1, 1, 1, 0);
                 saveVariables.QUN_Draw++;
                 StartCoroutine(QuestReward(50));
             }
