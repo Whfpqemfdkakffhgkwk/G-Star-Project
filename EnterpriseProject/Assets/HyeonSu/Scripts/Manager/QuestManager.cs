@@ -11,6 +11,9 @@ public class QuestManager : MonoBehaviour
     [SerializeField] private Image[] TouchBtns, SecondBtns;
     [SerializeField] private Image GoldBtn, ClickBtn, PlayTimeBtn, DrawBtn;
 
+    [SerializeField] private Slider[] TouchSliders, SecondSliders;
+    [SerializeField] private Slider GoldSlider, ClickSlider, PlayTimeSlider, DrawSlider;
+
     Dictionary<int, string> TouchName = new Dictionary<int, string>();
     Dictionary<int, string> SecondName = new Dictionary<int, string>();
 
@@ -38,29 +41,34 @@ public class QuestManager : MonoBehaviour
     }
     void OrganizeStatusText()
     {
-        //터치, 초당 업그레이드들 이름 나오면 딕셔너리로 바꿔서 이름 바꿀 것
         for (int i = 0; i < Touch.Length; i++)
         {
-            Touch[i].text = $"{TouchName[i]} 업그레이드 : " + saveVariables.QU_Touch[i].ToString() + " / " + ((10 * saveVariables.QUN_Touch[i]) + 10).ToString();
+            Touch[i].text = saveVariables.QU_Touch[i].ToString() + "/" + ((10 * saveVariables.QUN_Touch[i]) + 10).ToString();
+            TouchSliders[i].value = (saveVariables.QU_Touch[i] - 10f * saveVariables.QUN_Touch[i]) / 10;
             if (saveVariables.QU_Touch[i] >= ((10 * saveVariables.QUN_Touch[i]) + 10))
                 TouchBtns[i].color = new Color(1, 1, 1, 1);
         }
         for (int i = 0; i < Second.Length; i++)
         {
-            Second[i].text = $"{SecondName[i]} 업그레이드 : " + saveVariables.QU_Second[i].ToString() + " / " + ((10 * saveVariables.QUN_Second[i]) + 10).ToString();
+            Second[i].text = saveVariables.QU_Second[i].ToString() + "/" + ((10 * saveVariables.QUN_Second[i]) + 10).ToString();
+            SecondSliders[i].value = (saveVariables.QU_Second[i] - 10f * saveVariables.QUN_Second[i]) / 10;
             if (saveVariables.QU_Second[i] >= ((10 * saveVariables.QUN_Second[i]) + 10))
                 SecondBtns[i].color = new Color(1, 1, 1, 1);
         }
-        Gold.text = "획득 골드 : " + saveVariables.QU_Gold.ToString() + " / " + ((5000 * saveVariables.QUN_Gold) + 5000).ToString();
+        Gold.text = saveVariables.QU_Gold.ToString() + "/" + ((5000 * saveVariables.QUN_Gold) + 5000).ToString();
+        GoldSlider.value = (saveVariables.QU_Gold - 5000f * saveVariables.QUN_Gold) / 5000;
         if (saveVariables.QU_Gold >= ((5000 * saveVariables.QUN_Gold) + 5000))
             GoldBtn.color = new Color(1, 1, 1, 1);
-        Click.text = "클릭 횟수 : " + saveVariables.QU_Click.ToString() + " / " + ((300 * saveVariables.QUN_Click) + 300).ToString();
+        Click.text = saveVariables.QU_Click.ToString() + "/" + ((300 * saveVariables.QUN_Click) + 300).ToString();
+        ClickSlider.value = (saveVariables.QU_Click - 300 * saveVariables.QU_Click) / 300;
         if (saveVariables.QU_Click >= ((300 * saveVariables.QUN_Click) + 300))
             ClickBtn.color = new Color(1, 1, 1, 1);
-        PlayTime.text = "플레이 타임 : " + saveVariables.QU_PlayTime.ToString() + " / " + ((100 * saveVariables.QUN_PlayTime) + 100).ToString();
+        PlayTime.text = saveVariables.QU_PlayTime.ToString() + "/" + ((100 * saveVariables.QUN_PlayTime) + 100).ToString();
+        PlayTimeSlider.value = (saveVariables.QU_PlayTime - 100 * saveVariables.QUN_PlayTime) / 100;
         if (saveVariables.QU_PlayTime >= ((100 * saveVariables.QUN_PlayTime) + 100))
             PlayTimeBtn.color = new Color(1, 1, 1, 1);
-        Draw.text = "캐릭터 뽑은 횟수 : " + saveVariables.QU_Draw.ToString() + " / " + ((1 * saveVariables.QUN_Draw) + 1).ToString();
+        Draw.text = saveVariables.QU_Draw.ToString() + "/" + ((1 * saveVariables.QUN_Draw) + 1).ToString();
+        DrawSlider.value = (saveVariables.QU_Draw - 1f * saveVariables.QUN_Draw) / 1;
         if (saveVariables.QU_Draw >= ((1 * saveVariables.QUN_Draw) + 1))
             DrawBtn.color = new Color(1, 1, 1, 1);
     }
