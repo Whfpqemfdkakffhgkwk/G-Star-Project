@@ -22,6 +22,12 @@ public class SaveVariables : ScriptableObject
     [Tooltip("보상횟수 - 클릭횟수")] public int QUN_Click;
     [Tooltip("보상횟수 - 플레이타임")] public int QUN_PlayTime;
     [Tooltip("보상횟수 - 뽑은횟수")] public int QUN_Draw;
+    [Header("호감도 퀘스트")]
+    public bool[] LeeTaeyeon;
+    public bool[] JeongSeoYoon;
+    public bool[] LeeYerin;
+    public bool[] SongYeonHa;
+    public bool[] SeongJunAh;
     [Space(10)]
     public GoodsList[] TouchType;
     public GoodsList[] SecondType;
