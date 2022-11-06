@@ -12,10 +12,12 @@ public class Roll : MonoBehaviour
 {
 	DateTime TimerEnd;
 	public TextMeshProUGUI RemainTime;
-	public Button RollButton;
-	public Button ResultButton;
 	public TextMeshProUGUI ResultText;
 	public GameObject ResultWindow;
+	public GameObject RollGetButtonOff;
+	public GameObject RollGetButton;
+
+	public bool RollReady;
 
 	void Start()
 	{
@@ -37,57 +39,47 @@ public class Roll : MonoBehaviour
 			TimeSpan Timercalc = TimerEnd - NowTime;
 			RemainTime.text = Timercalc.Hours + " : " + Timercalc.Minutes + " : " + Timercalc.Seconds;
 			//Debug.Log(Timercalc.Hours+" : "+ Timercalc.Minutes+" : "+ Timercalc.Seconds);
+			RollGetButtonOff.SetActive(true);
+			RollGetButton.SetActive(false);
+		}
+		else if (RollReady == false)
+		{
+			RemainTime.text = "Roll End";
+			RollGetButtonOff.SetActive(false);
+			RollGetButton.SetActive(true);
 		}
 		else
 		{
-			if (TimerEnd == default)
-			{
-				RemainTime.text = "Roll Ready";
-				RollButton.gameObject.SetActive(true);
-				ResultButton.gameObject.SetActive(false);
-			}
-			else
-			{
-				RemainTime.text = "Roll End";
-				RollButton.gameObject.SetActive(false);
-				ResultButton.gameObject.SetActive(true);
-			}
+			RemainTime.text = "Roll Ready";
 		}
 	}
 
-	public void PressRoll()
+	public void RollStart()
 	{
-		if (RollButton.GetComponentInChildren<TextMeshProUGUI>().text == "Start Roll")
-		{
-			TimerEnd = DateTime.Now.AddHours(9);
-			RollButton.GetComponentInChildren<TextMeshProUGUI>().text = "Skip Roll";
-			Refresh();
-		}
-		else if (RollButton.GetComponentInChildren<TextMeshProUGUI>().text == "Skip Roll")
-		{
-			//대충 광고 본 후
-			TimerEnd = DateTime.Now.AddSeconds(-1);
-			RollButton.GetComponentInChildren<TextMeshProUGUI>().text = "Start Roll";
-			Refresh();
-		}
+		TimerEnd = DateTime.Now.AddHours(9);
+		RollReady = false;
+		Refresh();
 	}
 
-	public void GetRoll()
+	public void RollSkip()
+	{
+		//대충 광고 본 후
+		TimerEnd = DateTime.Now.AddSeconds(-1);
+		Refresh();
+	}
+
+	public void RollGet()
 	{
 		TimerEnd = default;
 		int RollResult = Random.Range(0, 11);
 		ResultText.text = RollResult.ToString();
 		ResultWindow.SetActive(true);
+		RollReady = true;
+		Refresh();
 	}
 
 	public void CloseResult()
 	{
-		Refresh();
 		ResultWindow.SetActive(false);
-	}
-
-	public void GoHome()
-	{
-		SceneManager.LoadScene("NeglectTest");
 	}
 }
