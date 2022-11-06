@@ -50,6 +50,7 @@ public class Dialoue : MonoBehaviour
     [SerializeField] private Text NameTxt;
     [SerializeField] private Image Background;
     [SerializeField] private Sprite[] BKspr;
+    [SerializeField, Tooltip("이태연, 정서윤, 이예린, 송연하, 성준아")] private Sprite[] CharacterSpr;
     [SerializeField] private Image[] Character;
     Dictionary<string, List<TalkData>> TalkDic = new Dictionary<string, List<TalkData>>();
 
@@ -90,9 +91,9 @@ public class Dialoue : MonoBehaviour
         #endregion
         StartCoroutine(StoryStart("JeongSeoYoon5"));
     }
-    IEnumerator StoryStart(string TalkSelect)
+    public IEnumerator StoryStart(string TalkSelect)
     {
-        
+        FirstTalkerChange(TalkSelect);
         for (int i = 0; i < TalkDic[TalkSelect].Count; i++)
         {
             //각 대화마다 실행해야 할 내용 여기다가
@@ -104,6 +105,7 @@ public class Dialoue : MonoBehaviour
             if (i + 1 == TalkDic[TalkSelect].Count) continue;
             yield return StartCoroutine(Waiting());
         }
+        //창끄기
     }
     IEnumerator Typing(Text text, string str)
     {
@@ -137,49 +139,60 @@ public class Dialoue : MonoBehaviour
     {
         Background.sprite = BKspr[num];
     }
+    void FirstTalkerChange(string TalkSelect)
+    {
+        for (int i = 0; i < 10; i++)
+        {
+            if(TalkDic[TalkSelect][i].Talker != "주인공")
+            {
+                TalkerChange(TalkDic[TalkSelect][i].Talker);
+                break;
+            }
+        }
+    }
     void TalkerChange(string talker)
     {
         switch (talker)
         {
             case "이태연":
-                //Character[0].sprite = 
-                Character[1].color = new Color(50 / 255f, 50 / 255f, 50 / 255f, 1);
-                Character[1].rectTransform.localScale = new Vector2(0.8f, 0.8f);
+                Character[0].gameObject.SetActive(true);
+                Character[1].gameObject.SetActive(false);
+                Character[0].sprite = CharacterSpr[0];
                 Character[0].color = new Color(1, 1, 1, 1);
                 Character[0].rectTransform.localScale = new Vector2(1, 1);
                 break;
             case "정서윤":
-                //Character[0].sprite = 
-                Character[1].color = new Color(50 / 255f, 50 / 255f, 50 / 255f, 1);
-                Character[1].rectTransform.localScale = new Vector2(0.8f, 0.8f);
+                Character[0].gameObject.SetActive(true);
+                Character[1].gameObject.SetActive(false);
+                Character[0].sprite = CharacterSpr[1];
                 Character[0].color = new Color(1, 1, 1, 1);
                 Character[0].rectTransform.localScale = new Vector2(1, 1);
                 break;
             case "이예린":
-                //Character[0].sprite = 
-                Character[1].color = new Color(50 / 255f, 50 / 255f, 50 / 255f, 1);
-                Character[1].rectTransform.localScale = new Vector2(0.8f, 0.8f);
+                Character[0].gameObject.SetActive(true);
+                Character[1].gameObject.SetActive(false);
+                Character[0].sprite = CharacterSpr[2];
                 Character[0].color = new Color(1, 1, 1, 1);
                 Character[0].rectTransform.localScale = new Vector2(1, 1);
                 break;
             case "이예린 집사":
-                //Character[0].sprite = 
-                Character[1].color = new Color(50 / 255f, 50 / 255f, 50 / 255f, 1);
-                Character[1].rectTransform.localScale = new Vector2(0.8f, 0.8f);
+                Character[0].gameObject.SetActive(true);
+                Character[1].gameObject.SetActive(true);
+                Character[0].sprite = CharacterSpr[0];
                 Character[0].color = new Color(1, 1, 1, 1);
                 Character[0].rectTransform.localScale = new Vector2(1, 1);
                 break;
             case "송연하":
-                //Character[0].sprite = 
-                Character[1].color = new Color(50 / 255f, 50 / 255f, 50 / 255f, 1);
-                Character[1].rectTransform.localScale = new Vector2(0.8f, 0.8f);
+                Character[0].gameObject.SetActive(true);
+                Character[1].gameObject.SetActive(false);
+                Character[0].sprite = CharacterSpr[3];
                 Character[0].color = new Color(1, 1, 1, 1);
                 Character[0].rectTransform.localScale = new Vector2(1, 1);
                 break;
             case "성준아":
-                //Character[0].sprite = 
-                Character[1].color = new Color(50 / 255f, 50 / 255f, 50 / 255f, 1);
-                Character[1].rectTransform.localScale = new Vector2(0.8f, 0.8f);
+                Character[0].gameObject.SetActive(true);
+                Character[1].gameObject.SetActive(false);
+                Character[0].sprite = CharacterSpr[4];
                 Character[0].color = new Color(1, 1, 1, 1);
                 Character[0].rectTransform.localScale = new Vector2(1, 1);
                 break;

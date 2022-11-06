@@ -23,6 +23,8 @@ public class ButtonManager : MonoBehaviour
 
     [SerializeField] private QuestManager questManager;
 
+    [SerializeField] private Dialoue dialoue;
+
     SaveVariables saveVariables;
 
     private bool OnQuest = false;
@@ -123,6 +125,54 @@ public class ButtonManager : MonoBehaviour
             SummonedObject.transform.DOMove(RandomPos, 1.0f);
             StartCoroutine(DirectingDiamondCor(SummonedObject));
             Destroy(SummonedObject, 1.4f);
+        }
+    }
+    public void TalkClick()
+    {
+        for (int i = 0; i < saveVariables.LeeTaeyeon.Length; i++)
+        {
+            if (saveVariables.LeeTaeyeon[i])
+            {
+                saveVariables.LeeTaeyeon[i] = false;
+                StartCoroutine(dialoue.StoryStart($"LeeTaeyeon{i + 1}"));
+                return;
+            }
+        }
+        for (int i = 0; i < saveVariables.JeongSeoYoon.Length; i++)
+        {
+            if (saveVariables.JeongSeoYoon[i])
+            {
+                saveVariables.JeongSeoYoon[i] = false;
+                StartCoroutine(dialoue.StoryStart($"JeongSeoYoon{i + 1}"));
+                return;
+            }
+        }
+        for (int i = 0; i < saveVariables.LeeYerin.Length; i++)
+        {
+            if (saveVariables.LeeYerin[i])
+            {
+                saveVariables.LeeYerin[i] = false;
+                StartCoroutine(dialoue.StoryStart($"LeeYerin{i + 1}"));
+                return;
+            }
+        }
+        for (int i = 0; i < saveVariables.SongYeonHa.Length; i++)
+        {
+            if (saveVariables.SongYeonHa[i])
+            {
+                saveVariables.SongYeonHa[i] = false;
+                StartCoroutine(dialoue.StoryStart($"SongYeonHa{i + 1}"));
+                return;
+            }
+        }
+        for (int i = 0; i < saveVariables.SeongJunAh.Length; i++)
+        {
+            if (saveVariables.SeongJunAh[i])
+            {
+                saveVariables.SeongJunAh[i] = false;
+                StartCoroutine(dialoue.StoryStart($"SeongJunAh{i + 1}"));
+                return;
+            }
         }
     }
     IEnumerator DirectingDiamondCor(GameObject obj)
