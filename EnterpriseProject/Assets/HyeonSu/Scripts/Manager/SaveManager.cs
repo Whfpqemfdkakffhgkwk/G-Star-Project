@@ -36,12 +36,12 @@ public class SaveManager : Singleton<SaveManager>
         for (int i = 0; i < saveVariables.TouchType.Length; i++)
         {
             saveVariables.AllTouchMonmey +=
-                    (ulong)(saveVariables.TouchType[i].UpgradeCost * ((ulong)saveVariables.TouchType[i].UpgradeStep / 10.0f));
+                    ((ulong)saveVariables.TouchType[i].UpgradeStep * 3 * (ulong)(i + 1));
         }
         for (int i = 0; i < saveVariables.SecondType.Length; i++)
         {
             saveVariables.AllSecondMoney +=
-                    (ulong)(saveVariables.SecondType[i].UpgradeCost * ((ulong)saveVariables.SecondType[i].UpgradeStep / 10.0f));
+                    ((ulong)saveVariables.SecondType[i].UpgradeStep * 10 * (ulong)(i + 1));
         }
     }
     public IEnumerator AutoSave()
