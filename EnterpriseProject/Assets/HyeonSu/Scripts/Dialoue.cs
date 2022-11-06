@@ -106,7 +106,7 @@ public class Dialoue : MonoBehaviour
             yield return StartCoroutine(Waiting());
         }
         //Ã¢²ô±â
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1.5f);
         EndBtn.onClick.Invoke();
         gameObject.SetActive(false);
     }
