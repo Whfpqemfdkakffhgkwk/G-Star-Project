@@ -224,24 +224,24 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 9e2a0300
-      m_LastClickedID: 207518
-      m_ExpandedIDs: a2b0ffff06b1ffffc2d1ffffdee9ffffc6f7ffff48f9ffff28fbffffacaa000038ab0000ceaf00001eb9000044bc0000e2400100c432020060390200f63902009e2a0300
+      scrollPos: {x: 0, y: 13.200012}
+      m_SelectedIDs: f8cb0400
+      m_LastClickedID: 314360
+      m_ExpandedIDs: 2a8bffff048cffff028effff728effffa2b0ffff06b1ffffc2d1ffffdee9ffffc6f7ffff48f9ffff28fbffffacaa000038ab0000ceaf00001eb9000044bc0000e2400100c432020060390200f63902009e2a030076b6040046b704007abc040040c304000ac80400fcc80400
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Background
+        m_OriginalName: Background
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 309832
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 5}
       m_SearchString: 
@@ -270,8 +270,8 @@ MonoBehaviour:
     y: 0
     width: 607.19995
     height: 428.8
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 8}
   m_Panes:
   - {fileID: 8}
@@ -524,9 +524,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -35.18051, y: 1209.0715, z: 112.75252}
+    m_Target: {x: 823.95483, y: 643.7383, z: -4.3265605}
     speed: 2
-    m_Value: {x: 34.980553, y: 1163.0803, z: 113.687996}
+    m_Value: {x: 817.58746, y: 663.3586, z: -4.680471}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -577,9 +577,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 2172.3928
+    m_Target: 751.06726
     speed: 2
-    m_Value: 2078.8447
+    m_Value: 786.4579
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -698,22 +698,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resource/Character
+    - Assets
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Resource/Character
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\ASUS\G-Star-Project\EnterpriseProject
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 59}
-    m_SelectedIDs: 5e2f0400
-    m_LastClickedID: 274270
-    m_ExpandedIDs: 00000000887000008a7000008c7000008e700000ae70000000ca9a3b
+    m_SelectedIDs: 88700000
+    m_LastClickedID: 28808
+    m_ExpandedIDs: 00000000887000008a7000008c7000008e70000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -766,10 +766,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 9e2a0300
-    m_LastClickedInstanceID: 207518
+    m_SelectedInstanceIDs: f8cb0400
+    m_LastClickedInstanceID: 314360
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c623000000000000d26b0000
+    m_ExpandedInstanceIDs: c6230000d26b000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

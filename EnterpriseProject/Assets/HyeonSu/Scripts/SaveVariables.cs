@@ -28,6 +28,12 @@ public class SaveVariables : ScriptableObject
     public bool[] LeeYerin;
     public bool[] SongYeonHa;
     public bool[] SeongJunAh;
+    [Header("호감도 퀘스트 단계")]
+    public int LeeTaeyeonStep;
+    public int JeongSeoYoonStep;
+    public int LeeYerinStep;
+    public int SongYeonHaStep;
+    public int SeongJunAhStep;
     [Space(10)]
     public GoodsList[] TouchType;
     public GoodsList[] SecondType;

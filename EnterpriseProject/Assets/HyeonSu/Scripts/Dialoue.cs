@@ -52,9 +52,10 @@ public class Dialoue : MonoBehaviour
     [SerializeField] private Sprite[] BKspr;
     [SerializeField, Tooltip("이태연, 정서윤, 이예린, 송연하, 성준아")] private Sprite[] CharacterSpr;
     [SerializeField] private Image[] Character;
+    [SerializeField] private Button EndBtn;
     Dictionary<string, List<TalkData>> TalkDic = new Dictionary<string, List<TalkData>>();
 
-    private void Start()
+    private void Awake()
     {
         var loadedJson = Resources.Load<TextAsset>("TalkData");
         var StoryData = JsonUtility.FromJson<TalkDatas>(loadedJson.ToString());
@@ -89,7 +90,6 @@ public class Dialoue : MonoBehaviour
         TalkDic.Add("SeongJunAh4", StoryData.SeongJunAh4);
         TalkDic.Add("SeongJunAh5", StoryData.SeongJunAh5);
         #endregion
-        StartCoroutine(StoryStart("JeongSeoYoon5"));
     }
     public IEnumerator StoryStart(string TalkSelect)
     {
@@ -106,6 +106,9 @@ public class Dialoue : MonoBehaviour
             yield return StartCoroutine(Waiting());
         }
         //창끄기
+        yield return new WaitForSeconds(0.5f);
+        EndBtn.onClick.Invoke();
+        gameObject.SetActive(false);
     }
     IEnumerator Typing(Text text, string str)
     {

@@ -17,6 +17,9 @@ public class QuestManager : MonoBehaviour
     [SerializeField] private Text[] TouchLists, SecondLists;
     [SerializeField] private Text GoldList, ClickList, PlayTimeList, DrawList;
 
+    [SerializeField] private Button TalkBtn;
+    [SerializeField] private GameObject Notice;
+
     Dictionary<int, string> TouchName = new Dictionary<int, string>();
     Dictionary<int, string> SecondName = new Dictionary<int, string>();
 
@@ -29,6 +32,7 @@ public class QuestManager : MonoBehaviour
     }
     private void Update()
     {
+        TalkQuest();
         OrganizeStatusText();
     }
     void AddDictionary()
@@ -85,6 +89,45 @@ public class QuestManager : MonoBehaviour
         DrawSlider.value = (saveVariables.QU_Draw - 1f * saveVariables.QUN_Draw) / 1;
         if (saveVariables.QU_Draw >= ((1 * saveVariables.QUN_Draw) + 1))
             DrawStatus.color = new Color(1, 1, 1, 1);
+    }
+    void TalkQuest()
+    {
+        if(saveVariables.LeeTaeyeonStep == saveVariables.QUN_Touch[0])
+        {
+            TalkBtn.interactable = true;
+            saveVariables.LeeTaeyeon[saveVariables.LeeTaeyeonStep - 1] = true;
+            
+            Notice.SetActive(true);
+        }
+        else if(saveVariables.JeongSeoYoonStep == saveVariables.QUN_Touch[1])
+        {
+            TalkBtn.interactable = true;
+            saveVariables.JeongSeoYoon[saveVariables.JeongSeoYoonStep - 1] = true;
+            Notice.SetActive(true);
+        }
+        else if(saveVariables.LeeYerinStep == saveVariables.QUN_Touch[2])
+        {
+            TalkBtn.interactable = true;
+            saveVariables.LeeYerin[saveVariables.LeeYerinStep - 1] = true;
+            Notice.SetActive(true);
+        }
+        else if (saveVariables.SongYeonHaStep == saveVariables.QUN_Touch[3])
+        {
+            TalkBtn.interactable = true;
+            saveVariables.SongYeonHa[saveVariables.SongYeonHaStep - 1] = true;
+            Notice.SetActive(true);
+        }
+        else if (saveVariables.SeongJunAhStep == saveVariables.QUN_Second[0])
+        {
+            TalkBtn.interactable = true;
+            saveVariables.SeongJunAh[saveVariables.SeongJunAhStep - 1] = true;
+            Notice.SetActive(true);
+        }
+        else
+        {
+            TalkBtn.interactable = false;
+            Notice.SetActive(false);
+        }
     }
     public void ButtonState(Image PressObj)//<- 누른 오브젝트
     {

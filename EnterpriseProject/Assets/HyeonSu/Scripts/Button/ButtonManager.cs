@@ -135,6 +135,7 @@ public class ButtonManager : MonoBehaviour
             {
                 saveVariables.LeeTaeyeon[i] = false;
                 StartCoroutine(dialoue.StoryStart($"LeeTaeyeon{i + 1}"));
+                saveVariables.LeeTaeyeonStep++;
                 return;
             }
         }
@@ -144,6 +145,7 @@ public class ButtonManager : MonoBehaviour
             {
                 saveVariables.JeongSeoYoon[i] = false;
                 StartCoroutine(dialoue.StoryStart($"JeongSeoYoon{i + 1}"));
+                saveVariables.JeongSeoYoonStep++;
                 return;
             }
         }
@@ -153,6 +155,7 @@ public class ButtonManager : MonoBehaviour
             {
                 saveVariables.LeeYerin[i] = false;
                 StartCoroutine(dialoue.StoryStart($"LeeYerin{i + 1}"));
+                saveVariables.LeeYerinStep++;
                 return;
             }
         }
@@ -162,6 +165,7 @@ public class ButtonManager : MonoBehaviour
             {
                 saveVariables.SongYeonHa[i] = false;
                 StartCoroutine(dialoue.StoryStart($"SongYeonHa{i + 1}"));
+                saveVariables.SongYeonHaStep++;
                 return;
             }
         }
@@ -171,6 +175,7 @@ public class ButtonManager : MonoBehaviour
             {
                 saveVariables.SeongJunAh[i] = false;
                 StartCoroutine(dialoue.StoryStart($"SeongJunAh{i + 1}"));
+                saveVariables.SeongJunAhStep++;
                 return;
             }
         }
