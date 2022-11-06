@@ -37,10 +37,10 @@ public class QuestManager : MonoBehaviour
     }
     void AddDictionary()
     {
-        TouchName.Add(0, "피시방");
-        TouchName.Add(1, "노래방");
+        TouchName.Add(0, "노래방");
+        TouchName.Add(1, "도서실");
         TouchName.Add(2, "헬스장");
-        TouchName.Add(3, "도서실");
+        TouchName.Add(3, "피시방");
         SecondName.Add(0, "옥탑방");
         SecondName.Add(1, "스탠다드룸");
         SecondName.Add(2, "딜럭스룸");
