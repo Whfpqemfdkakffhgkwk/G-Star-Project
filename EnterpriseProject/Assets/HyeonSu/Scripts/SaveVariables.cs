@@ -34,6 +34,12 @@ public class SaveVariables : ScriptableObject
     public int LeeYerinStep;
     public int SongYeonHaStep;
     public int SeongJunAhStep;
+    [Header("캐릭터 잠금")]
+    [Tooltip("캐릭터 뽑았는지 확인하는 bool값")]public bool isLeeTaeyeon;
+    [Tooltip("캐릭터 뽑았는지 확인하는 bool값")]public bool isJeongSeoYoon;
+    [Tooltip("캐릭터 뽑았는지 확인하는 bool값")]public bool isLeeYerin;
+    [Tooltip("캐릭터 뽑았는지 확인하는 bool값")]public bool isSongYeonHa;
+    [Tooltip("캐릭터 뽑았는지 확인하는 bool값")]public bool isSeongJunAh;
     [Space(10)]
     public GoodsList[] TouchType;
     public GoodsList[] SecondType;

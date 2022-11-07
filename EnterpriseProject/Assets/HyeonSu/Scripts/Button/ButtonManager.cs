@@ -120,8 +120,8 @@ public class ButtonManager : MonoBehaviour
         {
             GameObject SummonedObject = Instantiate(DiamondDirectingObj, cur);
             SummonedObject.transform.SetParent(canvas.transform);
-            Vector2 RandomPos = new Vector2(SummonedObject.transform.position.x + UnityEngine.Random.Range(-200f, 200f),
-                                            SummonedObject.transform.position.y + UnityEngine.Random.Range(-100f, -400f));
+            Vector2 RandomPos = new Vector2(SummonedObject.transform.position.x + Random.Range(-200f, 200f),
+                                            SummonedObject.transform.position.y + Random.Range(-100f, -400f));
             SummonedObject.transform.DOMove(RandomPos, 1.0f);
             StartCoroutine(DirectingDiamondCor(SummonedObject));
             Destroy(SummonedObject, 1.4f);

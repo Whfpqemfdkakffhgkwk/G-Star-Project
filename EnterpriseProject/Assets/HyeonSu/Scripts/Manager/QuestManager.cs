@@ -92,32 +92,32 @@ public class QuestManager : MonoBehaviour
     }
     void TalkQuest()
     {
-        if(saveVariables.LeeTaeyeonStep == saveVariables.QUN_Touch[0])
+        if(saveVariables.LeeTaeyeonStep == saveVariables.QUN_Touch[0] && saveVariables.isLeeTaeyeon)
         {
             TalkBtn.interactable = true;
             saveVariables.LeeTaeyeon[saveVariables.LeeTaeyeonStep - 1] = true;
             
             Notice.SetActive(true);
         }
-        else if(saveVariables.JeongSeoYoonStep == saveVariables.QUN_Touch[1])
+        else if(saveVariables.JeongSeoYoonStep == saveVariables.QUN_Touch[1] && saveVariables.isJeongSeoYoon)
         {
             TalkBtn.interactable = true;
             saveVariables.JeongSeoYoon[saveVariables.JeongSeoYoonStep - 1] = true;
             Notice.SetActive(true);
         }
-        else if(saveVariables.LeeYerinStep == saveVariables.QUN_Touch[2])
+        else if(saveVariables.LeeYerinStep == saveVariables.QUN_Touch[2] && saveVariables.isLeeYerin)
         {
             TalkBtn.interactable = true;
             saveVariables.LeeYerin[saveVariables.LeeYerinStep - 1] = true;
             Notice.SetActive(true);
         }
-        else if (saveVariables.SongYeonHaStep == saveVariables.QUN_Touch[3])
+        else if (saveVariables.SongYeonHaStep == saveVariables.QUN_Touch[3] && saveVariables.isSongYeonHa)
         {
             TalkBtn.interactable = true;
             saveVariables.SongYeonHa[saveVariables.SongYeonHaStep - 1] = true;
             Notice.SetActive(true);
         }
-        else if (saveVariables.SeongJunAhStep == saveVariables.QUN_Second[0])
+        else if (saveVariables.SeongJunAhStep == saveVariables.QUN_Second[0] && saveVariables.isSeongJunAh)
         {
             TalkBtn.interactable = true;
             saveVariables.SeongJunAh[saveVariables.SeongJunAhStep - 1] = true;
