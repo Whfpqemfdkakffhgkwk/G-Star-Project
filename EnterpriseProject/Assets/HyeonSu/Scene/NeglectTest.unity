@@ -39683,6 +39683,8 @@ MonoBehaviour:
   - {fileID: 285205294}
   - {fileID: 1903015766}
   DiamondDirectingObj: {fileID: 596646213900474176, guid: 37320f0205b24064fb489b77770a472f, type: 3}
+  GoldDirectingObj: {fileID: 2300394061862537319, guid: b7eb06fe03601b34a8454c1cf61565a1, type: 3}
+  ParticleObj: {fileID: 100000, guid: c9fda59c7a8ae6541ba43453ee86c60e, type: 3}
   canvas: {fileID: 108474005}
   questManager: {fileID: 409152145}
   dialoue: {fileID: 1564213726}

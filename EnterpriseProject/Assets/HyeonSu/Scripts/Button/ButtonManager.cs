@@ -4,10 +4,8 @@ using UnityEngine;
 using DG.Tweening;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using DG.Tweening;
 using static SaveVariables;
-using UnityEditor;
-using Unity.Burst.Intrinsics;
+using System.Runtime.ConstrainedExecution;
 
 public class ButtonManager : MonoBehaviour
 {
@@ -18,7 +16,7 @@ public class ButtonManager : MonoBehaviour
     [SerializeField] private GameObject[] TouchBtns;
     [SerializeField] private GameObject[] SecondBtns;
 
-    [SerializeField] private GameObject DiamondDirectingObj;
+    [SerializeField] private GameObject DiamondDirectingObj, GoldDirectingObj, ParticleObj;
 
     [SerializeField] private GameObject canvas;
 
@@ -37,9 +35,12 @@ public class ButtonManager : MonoBehaviour
 
     public void MainClick()
     {
-        saveVariables.gold += saveVariables.AllTouchMonmey;
-        saveVariables.QU_Gold += (int)saveVariables.AllTouchMonmey;
-        saveVariables.QU_Click++;
+        DirectingGold(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+        StartCoroutine(GoldDelay());
+        GameObject particle = Instantiate(ParticleObj, canvas.transform);
+        particle.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        particle.transform.position = new Vector3(particle.transform.position.x, particle.transform.position.y, 0);
+        Destroy(particle, 0.8f);
     }
     public IEnumerator MainSecond()
     {
@@ -59,10 +60,6 @@ public class ButtonManager : MonoBehaviour
             if (TouchBtns[i] == ClickObj)
             {
                 UpgradeBtn(saveVariables.TouchType, i);
-                if (saveVariables.gold >= (ulong)saveVariables.TouchType[i].UpgradeCost)
-                {
-                    saveVariables.QU_Touch[i]++;
-                }
                 break;
             }
         }
@@ -73,10 +70,6 @@ public class ButtonManager : MonoBehaviour
                 if (SecondBtns[i] == ClickObj)
                 {
                     UpgradeBtn(saveVariables.SecondType, i);
-                    if (saveVariables.gold >= (ulong)saveVariables.SecondType[i].UpgradeCost)
-                    {
-                        saveVariables.QU_Second[i]++;
-                    }
                     break;
                 }
             }
@@ -86,6 +79,8 @@ public class ButtonManager : MonoBehaviour
     {
         if (saveVariables.gold >= (ulong)list[arr].UpgradeCost)
         {
+            //퀘스트 업그레이드
+            saveVariables.QU_Touch[arr]++;
             //강화 비용 깎기
             saveVariables.gold -= (ulong)list[arr].UpgradeCost;
             //강화 수치(n강)
@@ -132,6 +127,20 @@ public class ButtonManager : MonoBehaviour
             SummonedObject.transform.DOLocalMove(RandomPos, 1.0f);
             StartCoroutine(DirectingDiamondCor(SummonedObject));
             Destroy(SummonedObject, 1.4f);
+        }
+    }
+    void DirectingGold(Vector3 cur)
+    {
+        for (int i = 0; i < 25; i++)
+        {
+            GameObject SummonedObject = Instantiate(GoldDirectingObj, canvas.transform);
+            SummonedObject.transform.position = cur;
+            //SummonedObject.transform.SetParent(canvas.transform);
+            Vector2 RandomPos = new Vector2(SummonedObject.transform.localPosition.x + Random.Range(-200f, 200f),
+                                            SummonedObject.transform.localPosition.y + Random.Range(-100f, -400f));
+            SummonedObject.transform.DOLocalMove(RandomPos, 0.7f);
+            StartCoroutine(DirectingGoldCor(SummonedObject));
+            Destroy(SummonedObject, 1.1f);
         }
     }
     public void TalkClick()
@@ -191,5 +200,17 @@ public class ButtonManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1.0f);
         obj.transform.DOLocalMove(new Vector2(264, 1347), 0.5f);
+    }
+    IEnumerator DirectingGoldCor(GameObject obj)
+    {
+        yield return new WaitForSeconds(0.7f);
+        obj.transform.DOLocalMove(new Vector2(-298, 1344), 0.5f);
+    }
+    IEnumerator GoldDelay()
+    {
+        yield return new WaitForSeconds(1.1f);
+        saveVariables.gold += saveVariables.AllTouchMonmey;
+        saveVariables.QU_Gold += (int)saveVariables.AllTouchMonmey;
+        saveVariables.QU_Click++;
     }
 }
