@@ -7,6 +7,7 @@ using UnityEngine.UI;
 using DG.Tweening;
 using static SaveVariables;
 using UnityEditor;
+using Unity.Burst.Intrinsics;
 
 public class ButtonManager : MonoBehaviour
 {
@@ -58,7 +59,10 @@ public class ButtonManager : MonoBehaviour
             if (TouchBtns[i] == ClickObj)
             {
                 UpgradeBtn(saveVariables.TouchType, i);
-                saveVariables.QU_Touch[i]++;
+                if (saveVariables.gold >= (ulong)saveVariables.TouchType[i].UpgradeCost)
+                {
+                    saveVariables.QU_Touch[i]++;
+                }
                 break;
             }
         }
@@ -69,7 +73,10 @@ public class ButtonManager : MonoBehaviour
                 if (SecondBtns[i] == ClickObj)
                 {
                     UpgradeBtn(saveVariables.SecondType, i);
-                    saveVariables.QU_Second[i]++;
+                    if (saveVariables.gold >= (ulong)saveVariables.SecondType[i].UpgradeCost)
+                    {
+                        saveVariables.QU_Second[i]++;
+                    }
                     break;
                 }
             }
@@ -120,9 +127,9 @@ public class ButtonManager : MonoBehaviour
         {
             GameObject SummonedObject = Instantiate(DiamondDirectingObj, cur);
             SummonedObject.transform.SetParent(canvas.transform);
-            Vector2 RandomPos = new Vector2(SummonedObject.transform.position.x + Random.Range(-200f, 200f),
-                                            SummonedObject.transform.position.y + Random.Range(-100f, -400f));
-            SummonedObject.transform.DOMove(RandomPos, 1.0f);
+            Vector2 RandomPos = new Vector2(SummonedObject.transform.localPosition.x + Random.Range(-200f, 200f),
+                                            SummonedObject.transform.localPosition.y + Random.Range(-100f, -400f));
+            SummonedObject.transform.DOLocalMove(RandomPos, 1.0f);
             StartCoroutine(DirectingDiamondCor(SummonedObject));
             Destroy(SummonedObject, 1.4f);
         }

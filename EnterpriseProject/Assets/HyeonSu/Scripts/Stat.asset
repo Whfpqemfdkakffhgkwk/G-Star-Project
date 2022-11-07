@@ -12,42 +12,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b45f88197feb43045b156003d10e3ff1, type: 3}
   m_Name: Stat
   m_EditorClassIdentifier: 
-  AllTouchMonmey: 3
-  AllSecondMoney: 0
-  gold: 39
-  diamond: 0
-  QU_Touch: 0200000000000000000000000000000000000000000000000000000000000000
+  AllTouchMonmey: 33
+  AllSecondMoney: 10
+  gold: 9754
+  diamond: 200
+  QU_Touch: 0a00000000000000000000000000000000000000000000000000000000000000
   QU_Second: 0000000000000000000000000000000000000000000000000000000000000000
-  QU_Gold: 39
-  QU_Click: 13
-  QU_PlayTime: 415
+  QU_Gold: 18366
+  QU_Click: 393
+  QU_PlayTime: 1967
   QU_Draw: 0
-  QUN_Touch: 0000000000000000000000000000000000000000000000000000000000000000
+  QUN_Touch: 0200000000000000010000000000000000000000000000000000000000000000
   QUN_Second: 0000000000000000000000000000000000000000000000000000000000000000
-  QUN_Gold: 0
-  QUN_Click: 0
-  QUN_PlayTime: 0
+  QUN_Gold: 3
+  QUN_Click: 1
+  QUN_PlayTime: 9
   QUN_Draw: 0
   LeeTaeyeon: 0000000000
   JeongSeoYoon: 0000000000
   LeeYerin: 0000000000
   SongYeonHa: 0000000000
   SeongJunAh: 0000000000
-  LeeTaeyeonStep: 2
+  LeeTaeyeonStep: 3
   JeongSeoYoonStep: 1
-  LeeYerinStep: 1
+  LeeYerinStep: 2
   SongYeonHaStep: 1
   SeongJunAhStep: 1
-  isLeeTaeyeon: 0
+  isLeeTaeyeon: 1
   isJeongSeoYoon: 0
-  isLeeYerin: 0
+  isLeeYerin: 1
   isSongYeonHa: 0
-  isSeongJunAh: 0
+  isSeongJunAh: 1
   TouchType:
-  - UpgradeStep: 1
-    UpgradeCost: 50
-  - UpgradeStep: 0
-    UpgradeCost: 500
+  - UpgradeStep: 5
+    UpgradeCost: 18000
+  - UpgradeStep: 3
+    UpgradeCost: 12000
   - UpgradeStep: 0
     UpgradeCost: 5000
   - UpgradeStep: 0
@@ -61,8 +61,8 @@ MonoBehaviour:
   - UpgradeStep: 0
     UpgradeCost: 500000000
   SecondType:
-  - UpgradeStep: 0
-    UpgradeCost: 300
+  - UpgradeStep: 1
+    UpgradeCost: 600
   - UpgradeStep: 0
     UpgradeCost: 3600
   - UpgradeStep: 0
