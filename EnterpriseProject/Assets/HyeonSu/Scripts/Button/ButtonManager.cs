@@ -5,7 +5,6 @@ using DG.Tweening;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using static SaveVariables;
-using System.Runtime.ConstrainedExecution;
 
 public class ButtonManager : MonoBehaviour
 {
@@ -13,8 +12,10 @@ public class ButtonManager : MonoBehaviour
 
     [SerializeField] private GameObject TouchWindow;
     [SerializeField] private GameObject QuestWindow;
-    [SerializeField] private GameObject[] TouchBtns;
-    [SerializeField] private GameObject[] SecondBtns;
+    [SerializeField] private GameObject[] TouchBtns, SecondBtns;
+
+    [SerializeField] private Image[] TalkBtnImages;
+    [SerializeField] private Sprite TalkBtnSpr;
 
     [SerializeField] private GameObject DiamondDirectingObj, GoldDirectingObj, ParticleObj;
 
@@ -33,6 +34,10 @@ public class ButtonManager : MonoBehaviour
         StartCoroutine(MainSecond());
     }
 
+    private void FixedUpdate()
+    {
+        TalkBtnOpen();
+    }
     public void MainClick()
     {
         DirectingGold(Camera.main.ScreenToWorldPoint(Input.mousePosition));
@@ -143,7 +148,7 @@ public class ButtonManager : MonoBehaviour
             Destroy(SummonedObject, 1.1f);
         }
     }
-    public void TalkClick()
+    public void TalkClick() //누른 버튼이 누구 버튼인지 알아내고 각 캐릭터의 for문 돌리면 될듯
     {
         for (int i = 0; i < saveVariables.LeeTaeyeon.Length; i++)
         {
@@ -151,7 +156,7 @@ public class ButtonManager : MonoBehaviour
             {
                 saveVariables.LeeTaeyeon[i] = false;
                 StartCoroutine(dialoue.StoryStart($"LeeTaeyeon{i + 1}"));
-                saveVariables.LeeTaeyeonStep++;
+                saveVariables.LeeTaeyeonCrush++;
                 return;
             }
         }
@@ -161,7 +166,7 @@ public class ButtonManager : MonoBehaviour
             {
                 saveVariables.JeongSeoYoon[i] = false;
                 StartCoroutine(dialoue.StoryStart($"JeongSeoYoon{i + 1}"));
-                saveVariables.JeongSeoYoonStep++;
+                saveVariables.JeongSeoYoonCrush++;
                 return;
             }
         }
@@ -171,7 +176,7 @@ public class ButtonManager : MonoBehaviour
             {
                 saveVariables.LeeYerin[i] = false;
                 StartCoroutine(dialoue.StoryStart($"LeeYerin{i + 1}"));
-                saveVariables.LeeYerinStep++;
+                saveVariables.LeeYerinCrush++;
                 return;
             }
         }
@@ -181,7 +186,7 @@ public class ButtonManager : MonoBehaviour
             {
                 saveVariables.SongYeonHa[i] = false;
                 StartCoroutine(dialoue.StoryStart($"SongYeonHa{i + 1}"));
-                saveVariables.SongYeonHaStep++;
+                saveVariables.SongYeonHaCrush++;
                 return;
             }
         }
@@ -191,9 +196,37 @@ public class ButtonManager : MonoBehaviour
             {
                 saveVariables.SeongJunAh[i] = false;
                 StartCoroutine(dialoue.StoryStart($"SeongJunAh{i + 1}"));
-                saveVariables.SeongJunAhStep++;
+                saveVariables.SeongJunAhCrush++;
                 return;
             }
+        }
+    }
+    void TalkBtnOpen()
+    {
+        if(saveVariables.isLeeTaeyeon)
+        {
+            TalkBtnImages[0].sprite = TalkBtnSpr;
+            TalkBtnImages[0].gameObject.GetComponentInChildren<Text>().color = new Color(1,1,1, 1);
+        }
+        if (saveVariables.isJeongSeoYoon)
+        {
+            TalkBtnImages[1].sprite = TalkBtnSpr;
+            TalkBtnImages[0].gameObject.GetComponentInChildren<Text>().color = new Color(1,1,1,1);
+        }
+        if (saveVariables.isLeeYerin)
+        {
+            TalkBtnImages[2].sprite = TalkBtnSpr;
+            TalkBtnImages[0].gameObject.GetComponentInChildren<Text>().color = new Color(1,1,1,1);
+        }
+        if (saveVariables.isSongYeonHa)
+        {
+            TalkBtnImages[3].sprite = TalkBtnSpr;
+            TalkBtnImages[0].gameObject.GetComponentInChildren<Text>().color = new Color(1,1,1,1);
+        }
+        if (saveVariables.isSeongJunAh)
+        {
+            TalkBtnImages[4].sprite = TalkBtnSpr;
+            TalkBtnImages[0].gameObject.GetComponentInChildren<Text>().color = new Color(1,1,1,1);
         }
     }
     IEnumerator DirectingDiamondCor(GameObject obj)

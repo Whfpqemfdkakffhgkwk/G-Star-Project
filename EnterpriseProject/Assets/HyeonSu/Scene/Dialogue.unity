@@ -19353,14 +19353,15 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 09f90385c42164f45b1ba5f89fb76d96, type: 3}
   - {fileID: 21300000, guid: 62d32c44df971c1488fff7abeb887531, type: 3}
   CharacterSpr:
-  - {fileID: 21300000, guid: 360dbf0fb3649e5438216f8a3e42d31c, type: 3}
-  - {fileID: 21300000, guid: 360dbf0fb3649e5438216f8a3e42d31c, type: 3}
-  - {fileID: 21300000, guid: 360dbf0fb3649e5438216f8a3e42d31c, type: 3}
-  - {fileID: 21300000, guid: 360dbf0fb3649e5438216f8a3e42d31c, type: 3}
+  - {fileID: 21300000, guid: c9488859752c3b34880673e3199293df, type: 3}
+  - {fileID: 21300000, guid: c75b131b1834e6c4188578b0b7404216, type: 3}
+  - {fileID: 21300000, guid: f7cc06ee17223e645a3d1e6292289871, type: 3}
+  - {fileID: 21300000, guid: 8517eef361af3e847a4b09f566adf808, type: 3}
   - {fileID: 21300000, guid: 360dbf0fb3649e5438216f8a3e42d31c, type: 3}
   Character:
   - {fileID: 1913442891}
   - {fileID: 1332439037}
+  EndBtn: {fileID: 0}
 --- !u!1 &1375518112
 GameObject:
   m_ObjectHideFlags: 0

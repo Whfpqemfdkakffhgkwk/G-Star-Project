@@ -28,12 +28,12 @@ public class SaveVariables : ScriptableObject
     public bool[] LeeYerin;
     public bool[] SongYeonHa;
     public bool[] SeongJunAh;
-    [Header("호감도 퀘스트 단계")]
-    public int LeeTaeyeonStep;
-    public int JeongSeoYoonStep;
-    public int LeeYerinStep;
-    public int SongYeonHaStep;
-    public int SeongJunAhStep;
+    [Header("호감도 퀘스트 단계")] //하트 말풍선 클릭시 호감도 오르면 될듯
+    public float LeeTaeyeonCrush;
+    public float JeongSeoYoonCrush;
+    public float LeeYerinCrush;
+    public float SongYeonHaCrush;
+    public float SeongJunAhCrush;
     [Header("캐릭터 잠금")]
     [Tooltip("캐릭터 뽑았는지 확인하는 bool값")]public bool isLeeTaeyeon;
     [Tooltip("캐릭터 뽑았는지 확인하는 bool값")]public bool isJeongSeoYoon;

@@ -20,7 +20,7 @@ MonoBehaviour:
   QU_Second: 0000000000000000000000000000000000000000000000000000000000000000
   QU_Gold: 0
   QU_Click: 0
-  QU_PlayTime: 0
+  QU_PlayTime: 232
   QU_Draw: 0
   QUN_Touch: 0000000000000000000000000000000000000000000000000000000000000000
   QUN_Second: 0000000000000000000000000000000000000000000000000000000000000000
@@ -33,12 +33,12 @@ MonoBehaviour:
   LeeYerin: 0000000000
   SongYeonHa: 0000000000
   SeongJunAh: 0000000000
-  LeeTaeyeonStep: 1
-  JeongSeoYoonStep: 1
-  LeeYerinStep: 1
-  SongYeonHaStep: 1
-  SeongJunAhStep: 1
-  isLeeTaeyeon: 0
+  LeeTaeyeonCrush: 0
+  JeongSeoYoonCrush: 0
+  LeeYerinCrush: 0
+  SongYeonHaCrush: 0
+  SeongJunAhCrush: 0
+  isLeeTaeyeon: 1
   isJeongSeoYoon: 0
   isLeeYerin: 0
   isSongYeonHa: 0

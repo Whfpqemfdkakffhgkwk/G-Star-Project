@@ -161,49 +161,49 @@ public class Dialoue : MonoBehaviour
                 Character[0].gameObject.SetActive(true);
                 Character[1].gameObject.SetActive(false);
                 Character[0].sprite = CharacterSpr[0];
-                Character[0].color = new Color(1, 1, 1, 1);
-                Character[0].rectTransform.localScale = new Vector2(1, 1);
+                Character[0].DOColor(new Color(1, 1, 1, 1), 0.5f);
+                Character[0].rectTransform.DOScale(new Vector2(1, 1), 0.5f);
                 break;
             case "정서윤":
                 Character[0].gameObject.SetActive(true);
                 Character[1].gameObject.SetActive(false);
                 Character[0].sprite = CharacterSpr[1];
-                Character[0].color = new Color(1, 1, 1, 1);
-                Character[0].rectTransform.localScale = new Vector2(1, 1);
+                Character[0].DOColor(new Color(1, 1, 1, 1), 0.5f);
+                Character[0].rectTransform.DOScale(new Vector2(1, 1), 0.5f);
                 break;
             case "이예린":
                 Character[0].gameObject.SetActive(true);
                 Character[1].gameObject.SetActive(false);
                 Character[0].sprite = CharacterSpr[2];
-                Character[0].color = new Color(1, 1, 1, 1);
-                Character[0].rectTransform.localScale = new Vector2(1, 1);
+                Character[0].DOColor(new Color(1, 1, 1, 1), 0.5f);
+                Character[0].rectTransform.DOScale(new Vector2(1, 1), 0.5f);
                 break;
             case "이예린 집사":
                 Character[0].gameObject.SetActive(true);
                 Character[1].gameObject.SetActive(true);
                 Character[0].sprite = CharacterSpr[0];
-                Character[0].color = new Color(1, 1, 1, 1);
-                Character[0].rectTransform.localScale = new Vector2(1, 1);
+                Character[0].DOColor(new Color(1, 1, 1, 1), 0.5f);
+                Character[0].rectTransform.DOScale(new Vector2(1, 1), 0.5f);
                 break;
             case "송연하":
                 Character[0].gameObject.SetActive(true);
                 Character[1].gameObject.SetActive(false);
                 Character[0].sprite = CharacterSpr[3];
-                Character[0].color = new Color(1, 1, 1, 1);
-                Character[0].rectTransform.localScale = new Vector2(1, 1);
+                Character[0].DOColor(new Color(1, 1, 1, 1), 0.5f);
+                Character[0].rectTransform.DOScale(new Vector2(1, 1), 0.5f);
                 break;
             case "성준아":
                 Character[0].gameObject.SetActive(true);
                 Character[1].gameObject.SetActive(false);
                 Character[0].sprite = CharacterSpr[4];
-                Character[0].color = new Color(1, 1, 1, 1);
-                Character[0].rectTransform.localScale = new Vector2(1, 1);
+                Character[0].DOColor(new Color(1, 1, 1, 1), 0.5f);
+                Character[0].rectTransform.DOScale(new Vector2(1, 1), 0.5f);
                 break;
             case "주인공":
-                Character[0].color = new Color(50 / 255f, 50 / 255f, 50 / 255f, 1);
-                Character[0].rectTransform.localScale = new Vector2(0.8f, 0.8f);
-                Character[1].color = new Color(50 / 255f, 50 / 255f, 50 / 255f, 1);
-                Character[1].rectTransform.localScale = new Vector2(0.8f, 0.8f);
+                Character[0].DOColor(new Color(180 / 255f, 180 / 255f, 180 / 255f, 0.8f), 0.5f);
+                Character[0].rectTransform.DOScale(new Vector2(0.9f, 0.9f), 0.5f);
+                Character[1].DOColor(new Color(180 / 255f, 180 / 255f, 180 / 255f, 0.8f), 0.5f);
+                Character[1].rectTransform.DOScale(new Vector2(0.9f, 0.9f), 0.5f);
                 break;
         }
     }

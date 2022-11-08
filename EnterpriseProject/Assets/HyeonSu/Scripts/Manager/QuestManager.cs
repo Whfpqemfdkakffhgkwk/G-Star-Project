@@ -20,6 +20,8 @@ public class QuestManager : MonoBehaviour
     [SerializeField] private Button TalkBtn;
     [SerializeField] private GameObject Notice;
 
+    [SerializeField] private Slider[] CrushSliders;
+
     Dictionary<int, string> TouchName = new Dictionary<int, string>();
     Dictionary<int, string> SecondName = new Dictionary<int, string>();
 
@@ -32,8 +34,8 @@ public class QuestManager : MonoBehaviour
     }
     private void Update()
     {
-        TalkQuest();
         OrganizeStatusText();
+        CrushUpdate();
     }
     void AddDictionary()
     {
@@ -45,6 +47,14 @@ public class QuestManager : MonoBehaviour
         SecondName.Add(1, "½ºÅÄ´Ùµå·ë");
         SecondName.Add(2, "µô·°½º·ë");
         SecondName.Add(3, "½ºÀ§Æ®·ë");
+    }
+    void CrushUpdate()
+    {
+        CrushSliders[0].value = saveVariables.LeeTaeyeonCrush;
+        CrushSliders[1].value = saveVariables.JeongSeoYoonCrush;
+        CrushSliders[2].value = saveVariables.LeeYerinCrush;
+        CrushSliders[3].value = saveVariables.SongYeonHaCrush;
+        CrushSliders[4].value = saveVariables.SeongJunAhCrush;
     }
     void OrganizeStatusText()
     {
@@ -89,45 +99,6 @@ public class QuestManager : MonoBehaviour
         DrawSlider.value = (saveVariables.QU_Draw - 1f * saveVariables.QUN_Draw) / 1;
         if (saveVariables.QU_Draw >= ((1 * saveVariables.QUN_Draw) + 1))
             DrawStatus.color = new Color(1, 1, 1, 1);
-    }
-    void TalkQuest()
-    {
-        if(saveVariables.LeeTaeyeonStep == saveVariables.QUN_Touch[0] && saveVariables.isLeeTaeyeon)
-        {
-            TalkBtn.interactable = true;
-            saveVariables.LeeTaeyeon[saveVariables.LeeTaeyeonStep - 1] = true;
-            
-            Notice.SetActive(true);
-        }
-        else if(saveVariables.JeongSeoYoonStep == saveVariables.QUN_Touch[1] && saveVariables.isJeongSeoYoon)
-        {
-            TalkBtn.interactable = true;
-            saveVariables.JeongSeoYoon[saveVariables.JeongSeoYoonStep - 1] = true;
-            Notice.SetActive(true);
-        }
-        else if(saveVariables.LeeYerinStep == saveVariables.QUN_Touch[2] && saveVariables.isLeeYerin)
-        {
-            TalkBtn.interactable = true;
-            saveVariables.LeeYerin[saveVariables.LeeYerinStep - 1] = true;
-            Notice.SetActive(true);
-        }
-        else if (saveVariables.SongYeonHaStep == saveVariables.QUN_Touch[3] && saveVariables.isSongYeonHa)
-        {
-            TalkBtn.interactable = true;
-            saveVariables.SongYeonHa[saveVariables.SongYeonHaStep - 1] = true;
-            Notice.SetActive(true);
-        }
-        else if (saveVariables.SeongJunAhStep == saveVariables.QUN_Second[0] && saveVariables.isSeongJunAh)
-        {
-            TalkBtn.interactable = true;
-            saveVariables.SeongJunAh[saveVariables.SeongJunAhStep - 1] = true;
-            Notice.SetActive(true);
-        }
-        else
-        {
-            TalkBtn.interactable = false;
-            Notice.SetActive(false);
-        }
     }
     public void ButtonState(Image PressObj)//<- ´©¸¥ ¿ÀºêÁ§Æ®
     {
