@@ -150,55 +150,68 @@ public class ButtonManager : MonoBehaviour
     }
     public void TalkClick() //누른 버튼이 누구 버튼인지 알아내고 각 캐릭터의 for문 돌리면 될듯
     {
-        for (int i = 0; i < saveVariables.LeeTaeyeon.Length; i++)
+        switch(EventSystem.current.currentSelectedGameObject.name)
         {
-            if (saveVariables.LeeTaeyeon[i])
-            {
-                saveVariables.LeeTaeyeon[i] = false;
-                StartCoroutine(dialoue.StoryStart($"LeeTaeyeon{i + 1}"));
-                saveVariables.LeeTaeyeonCrush++;
-                return;
-            }
-        }
-        for (int i = 0; i < saveVariables.JeongSeoYoon.Length; i++)
-        {
-            if (saveVariables.JeongSeoYoon[i])
-            {
-                saveVariables.JeongSeoYoon[i] = false;
-                StartCoroutine(dialoue.StoryStart($"JeongSeoYoon{i + 1}"));
-                saveVariables.JeongSeoYoonCrush++;
-                return;
-            }
-        }
-        for (int i = 0; i < saveVariables.LeeYerin.Length; i++)
-        {
-            if (saveVariables.LeeYerin[i])
-            {
-                saveVariables.LeeYerin[i] = false;
-                StartCoroutine(dialoue.StoryStart($"LeeYerin{i + 1}"));
-                saveVariables.LeeYerinCrush++;
-                return;
-            }
-        }
-        for (int i = 0; i < saveVariables.SongYeonHa.Length; i++)
-        {
-            if (saveVariables.SongYeonHa[i])
-            {
-                saveVariables.SongYeonHa[i] = false;
-                StartCoroutine(dialoue.StoryStart($"SongYeonHa{i + 1}"));
-                saveVariables.SongYeonHaCrush++;
-                return;
-            }
-        }
-        for (int i = 0; i < saveVariables.SeongJunAh.Length; i++)
-        {
-            if (saveVariables.SeongJunAh[i])
-            {
-                saveVariables.SeongJunAh[i] = false;
-                StartCoroutine(dialoue.StoryStart($"SeongJunAh{i + 1}"));
-                saveVariables.SeongJunAhCrush++;
-                return;
-            }
+            case "LeeTaeyeon":
+                for (int i = 0; i < saveVariables.LeeTaeyeon.Length; i++)
+                {
+                    if (saveVariables.LeeTaeyeon[i])
+                    {
+                        saveVariables.LeeTaeyeon[i] = false;
+                        StartCoroutine(dialoue.StoryStart($"LeeTaeyeon{i + 1}"));
+                        saveVariables.LeeTaeyeonCrush++;
+                        return;
+                    }
+                }
+                break;
+            case "JeongSeoYoon":
+                for (int i = 0; i < saveVariables.JeongSeoYoon.Length; i++)
+                {
+                    if (saveVariables.JeongSeoYoon[i])
+                    {
+                        saveVariables.JeongSeoYoon[i] = false;
+                        StartCoroutine(dialoue.StoryStart($"JeongSeoYoon{i + 1}"));
+                        saveVariables.JeongSeoYoonCrush++;
+                        return;
+                    }
+                }
+                break;
+            case "LeeYerin":
+                for (int i = 0; i < saveVariables.LeeYerin.Length; i++)
+                {
+                    if (saveVariables.LeeYerin[i])
+                    {
+                        saveVariables.LeeYerin[i] = false;
+                        StartCoroutine(dialoue.StoryStart($"LeeYerin{i + 1}"));
+                        saveVariables.LeeYerinCrush++;
+                        return;
+                    }
+                }
+                break;
+            case "SongYeonHa":
+                for (int i = 0; i < saveVariables.SongYeonHa.Length; i++)
+                {
+                    if (saveVariables.SongYeonHa[i])
+                    {
+                        saveVariables.SongYeonHa[i] = false;
+                        StartCoroutine(dialoue.StoryStart($"SongYeonHa{i + 1}"));
+                        saveVariables.SongYeonHaCrush++;
+                        return;
+                    }
+                }
+                break;
+            case "SeongJunAh":
+                for (int i = 0; i < saveVariables.SeongJunAh.Length; i++)
+                {
+                    if (saveVariables.SeongJunAh[i])
+                    {
+                        saveVariables.SeongJunAh[i] = false;
+                        StartCoroutine(dialoue.StoryStart($"SeongJunAh{i + 1}"));
+                        saveVariables.SeongJunAhCrush++;
+                        return;
+                    }
+                }
+                break;
         }
     }
     void TalkBtnOpen()

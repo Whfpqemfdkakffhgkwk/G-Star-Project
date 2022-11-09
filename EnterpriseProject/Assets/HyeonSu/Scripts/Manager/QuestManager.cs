@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 public class QuestManager : MonoBehaviour
 {
@@ -27,10 +28,14 @@ public class QuestManager : MonoBehaviour
 
     SaveVariables saveVariables;
 
+    private void Awake()
+    {
+        saveVariables = SaveManager.Instance.saveVariables;
+    }
+
     private void Start()
     {
         AddDictionary();
-        saveVariables = SaveManager.Instance.saveVariables;
     }
     private void Update()
     {
@@ -50,6 +55,42 @@ public class QuestManager : MonoBehaviour
     }
     void CrushUpdate()
     {
+        Notice.SetActive(false);
+        for (int i = 0; i < saveVariables.LeeTaeyeon.Length; i++)
+        {
+            if (saveVariables.LeeTaeyeon[i])
+            {
+                Notice.SetActive(true);
+            }
+        }
+        for (int i = 0; i < saveVariables.JeongSeoYoon.Length; i++)
+        {
+            if (saveVariables.JeongSeoYoon[i])
+            {
+                Notice.SetActive(true);
+            }
+        }
+        for (int i = 0; i < saveVariables.LeeYerin.Length; i++)
+        {
+            if (saveVariables.LeeYerin[i])
+            {
+                Notice.SetActive(true);
+            }
+        }
+        for (int i = 0; i < saveVariables.SongYeonHa.Length; i++)
+        {
+            if (saveVariables.SongYeonHa[i])
+            {
+                Notice.SetActive(true);
+            }
+        }
+        for (int i = 0; i < saveVariables.SeongJunAh.Length; i++)
+        {
+            if (saveVariables.SeongJunAh[i])
+            {
+                Notice.SetActive(true);
+            }
+        }
         CrushSliders[0].value = saveVariables.LeeTaeyeonCrush;
         CrushSliders[1].value = saveVariables.JeongSeoYoonCrush;
         CrushSliders[2].value = saveVariables.LeeYerinCrush;
