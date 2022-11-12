@@ -1704,7 +1704,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -105.99999, y: -54.000015}
+  m_AnchoredPosition: {x: -105.99999, y: -54.00006}
   m_SizeDelta: {x: 241.5123, y: 84.29999}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &46007994
@@ -5527,8 +5527,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0.000005722046, y: -407.351}
-  m_SizeDelta: {x: 1278, y: 1160.3}
+  m_AnchoredPosition: {x: 0.000005722046, y: -1219.6499}
+  m_SizeDelta: {x: 1278, y: 1972.6}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &221556055
 MonoBehaviour:
@@ -9441,6 +9441,14 @@ MonoBehaviour:
   DrawList: {fileID: 336622679}
   TalkBtn: {fileID: 750667495}
   Notice: {fileID: 673504238}
+  TalkBtnImages:
+  - {fileID: 1741869117}
+  - {fileID: 1053259595}
+  - {fileID: 1444412474}
+  - {fileID: 608777846}
+  - {fileID: 1202061632}
+  OnTalkBtnSpr: {fileID: 21300000, guid: e8b1424d1f10c9b4b980be52822aa58a, type: 3}
+  TalkBtnSpr: {fileID: 21300000, guid: 4c6d45301c2cfc546abcc6e61cadf07f, type: 3}
   CrushSliders:
   - {fileID: 1998215993}
   - {fileID: 720123304}
@@ -13012,6 +13020,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1564213725}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &608777846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13032,7 +13052,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e8b1424d1f10c9b4b980be52822aa58a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4c6d45301c2cfc546abcc6e61cadf07f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -14653,7 +14673,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 53, y: 58}
+  m_AnchoredPosition: {x: 53, y: 58.00006}
   m_SizeDelta: {x: 536.4, y: 117.7}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &684345033
@@ -22423,7 +22443,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -105.99999, y: -54.000015}
+  m_AnchoredPosition: {x: -105.99999, y: -54.00006}
   m_SizeDelta: {x: 241.5123, y: 84.29999}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1022931067
@@ -23256,6 +23276,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1564213725}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1053259595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23276,7 +23308,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e8b1424d1f10c9b4b980be52822aa58a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4c6d45301c2cfc546abcc6e61cadf07f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -26521,6 +26553,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1564213725}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1202061632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26541,7 +26585,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e8b1424d1f10c9b4b980be52822aa58a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4c6d45301c2cfc546abcc6e61cadf07f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -27719,7 +27763,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -106, y: -54}
+  m_AnchoredPosition: {x: -106, y: -54.00006}
   m_SizeDelta: {x: 241.5123, y: 84.29999}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1260534933
@@ -32846,6 +32890,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1564213725}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1444412474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32866,7 +32922,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e8b1424d1f10c9b4b980be52822aa58a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4c6d45301c2cfc546abcc6e61cadf07f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -36483,7 +36539,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1564213726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36796,7 +36852,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -105.99999, y: -54.000015}
+  m_AnchoredPosition: {x: -105.99999, y: -54.00006}
   m_SizeDelta: {x: 241.5123, y: 84.29999}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1579111780
@@ -40795,6 +40851,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1564213725}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1741869117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40815,7 +40883,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e8b1424d1f10c9b4b980be52822aa58a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4c6d45301c2cfc546abcc6e61cadf07f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -42234,7 +42302,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -105.99999, y: -54.000015}
+  m_AnchoredPosition: {x: -105.99999, y: -54.00006}
   m_SizeDelta: {x: 241.5123, y: 84.29999}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1796036414
@@ -43711,13 +43779,15 @@ MonoBehaviour:
   - {fileID: 2026506684}
   - {fileID: 285205294}
   - {fileID: 1903015766}
-  TalkBtnImages:
-  - {fileID: 1741869117}
-  - {fileID: 1053259595}
-  - {fileID: 1444412474}
-  - {fileID: 608777846}
-  - {fileID: 1202061632}
-  TalkBtnSpr: {fileID: 21300000, guid: 62d32c44df971c1488fff7abeb887531, type: 3}
+  TalkerImages:
+  - {fileID: 331394919}
+  - {fileID: 2015380737}
+  - {fileID: 1201975604}
+  - {fileID: 1218845258}
+  TalkerSprs:
+  - {fileID: 21300000, guid: 596f5eea93ca00343b7fcc84ccd0bc20, type: 3}
+  - {fileID: 21300000, guid: 72d364ea7769ff84e8bac72c2a283f2a, type: 3}
+  - {fileID: 21300000, guid: 298e9bc37933d864595edcbc4c8fabe5, type: 3}
   DiamondDirectingObj: {fileID: 596646213900474176, guid: 37320f0205b24064fb489b77770a472f, type: 3}
   GoldDirectingObj: {fileID: 2300394061862537319, guid: b7eb06fe03601b34a8454c1cf61565a1, type: 3}
   ParticleObj: {fileID: 100000, guid: c9fda59c7a8ae6541ba43453ee86c60e, type: 3}

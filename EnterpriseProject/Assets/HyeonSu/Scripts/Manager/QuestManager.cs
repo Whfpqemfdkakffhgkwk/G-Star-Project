@@ -21,6 +21,9 @@ public class QuestManager : MonoBehaviour
     [SerializeField] private Button TalkBtn;
     [SerializeField] private GameObject Notice;
 
+    [SerializeField] private Image[] TalkBtnImages;
+    [SerializeField] private Sprite OnTalkBtnSpr, TalkBtnSpr;
+
     [SerializeField] private Slider[] CrushSliders;
 
     Dictionary<int, string> TouchName = new Dictionary<int, string>();
@@ -55,12 +58,17 @@ public class QuestManager : MonoBehaviour
     }
     void CrushUpdate()
     {
+        for (int i = 0; i < saveVariables.LeeTaeyeon.Length; i++)
+        {
+            TalkBtnImages[i].sprite = TalkBtnSpr;
+        }
         Notice.SetActive(false);
         for (int i = 0; i < saveVariables.LeeTaeyeon.Length; i++)
         {
             if (saveVariables.LeeTaeyeon[i])
             {
                 Notice.SetActive(true);
+                TalkBtnImages[0].sprite = OnTalkBtnSpr;
             }
         }
         for (int i = 0; i < saveVariables.JeongSeoYoon.Length; i++)
@@ -68,6 +76,7 @@ public class QuestManager : MonoBehaviour
             if (saveVariables.JeongSeoYoon[i])
             {
                 Notice.SetActive(true);
+                TalkBtnImages[1].sprite = OnTalkBtnSpr;
             }
         }
         for (int i = 0; i < saveVariables.LeeYerin.Length; i++)
@@ -75,6 +84,7 @@ public class QuestManager : MonoBehaviour
             if (saveVariables.LeeYerin[i])
             {
                 Notice.SetActive(true);
+                TalkBtnImages[2].sprite = OnTalkBtnSpr;
             }
         }
         for (int i = 0; i < saveVariables.SongYeonHa.Length; i++)
@@ -82,6 +92,7 @@ public class QuestManager : MonoBehaviour
             if (saveVariables.SongYeonHa[i])
             {
                 Notice.SetActive(true);
+                TalkBtnImages[3].sprite = OnTalkBtnSpr;
             }
         }
         for (int i = 0; i < saveVariables.SeongJunAh.Length; i++)
@@ -89,6 +100,7 @@ public class QuestManager : MonoBehaviour
             if (saveVariables.SeongJunAh[i])
             {
                 Notice.SetActive(true);
+                TalkBtnImages[4].sprite = OnTalkBtnSpr;
             }
         }
         CrushSliders[0].value = saveVariables.LeeTaeyeonCrush;

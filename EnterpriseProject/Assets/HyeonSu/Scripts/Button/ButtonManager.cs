@@ -14,8 +14,8 @@ public class ButtonManager : MonoBehaviour
     [SerializeField] private GameObject QuestWindow;
     [SerializeField] private GameObject[] TouchBtns, SecondBtns;
 
-    [SerializeField] private Image[] TalkBtnImages;
-    [SerializeField] private Sprite TalkBtnSpr;
+    [SerializeField] private Image[] TalkerImages;
+    [SerializeField] private Sprite[] TalkerSprs;
 
     [SerializeField] private GameObject DiamondDirectingObj, GoldDirectingObj, ParticleObj;
 
@@ -36,7 +36,7 @@ public class ButtonManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        TalkBtnOpen();
+        TalkerOpen();
     }
     public void MainClick()
     {
@@ -214,33 +214,16 @@ public class ButtonManager : MonoBehaviour
                 break;
         }
     }
-    void TalkBtnOpen()
+    void TalkerOpen()
     {
-        if(saveVariables.isLeeTaeyeon)
-        {
-            TalkBtnImages[0].sprite = TalkBtnSpr;
-            TalkBtnImages[0].gameObject.GetComponentInChildren<Text>().color = new Color(1,1,1, 1);
-        }
         if (saveVariables.isJeongSeoYoon)
-        {
-            TalkBtnImages[1].sprite = TalkBtnSpr;
-            TalkBtnImages[0].gameObject.GetComponentInChildren<Text>().color = new Color(1,1,1,1);
-        }
+            TalkerImages[0].sprite = TalkerSprs[0];
         if (saveVariables.isLeeYerin)
-        {
-            TalkBtnImages[2].sprite = TalkBtnSpr;
-            TalkBtnImages[0].gameObject.GetComponentInChildren<Text>().color = new Color(1,1,1,1);
-        }
+            TalkerImages[1].sprite = TalkerSprs[1];
         if (saveVariables.isSongYeonHa)
-        {
-            TalkBtnImages[3].sprite = TalkBtnSpr;
-            TalkBtnImages[0].gameObject.GetComponentInChildren<Text>().color = new Color(1,1,1,1);
-        }
+            TalkerImages[2].sprite = TalkerSprs[2];
         if (saveVariables.isSeongJunAh)
-        {
-            TalkBtnImages[4].sprite = TalkBtnSpr;
-            TalkBtnImages[0].gameObject.GetComponentInChildren<Text>().color = new Color(1,1,1,1);
-        }
+            TalkerImages[3].sprite = TalkerSprs[3];
     }
     IEnumerator DirectingDiamondCor(GameObject obj)
     {

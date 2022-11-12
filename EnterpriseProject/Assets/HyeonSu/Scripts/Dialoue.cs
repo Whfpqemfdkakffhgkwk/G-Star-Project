@@ -90,9 +90,11 @@ public class Dialoue : MonoBehaviour
         TalkDic.Add("SeongJunAh4", StoryData.SeongJunAh4);
         TalkDic.Add("SeongJunAh5", StoryData.SeongJunAh5);
         #endregion
+        this.gameObject.SetActive(false);
     }
     public IEnumerator StoryStart(string TalkSelect)
     {
+        this.gameObject.SetActive(true);
         FirstTalkerChange(TalkSelect);
         for (int i = 0; i < TalkDic[TalkSelect].Count; i++)
         {
