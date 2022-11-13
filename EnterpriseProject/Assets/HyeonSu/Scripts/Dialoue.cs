@@ -13,7 +13,7 @@ public struct TalkData
     public string Talker;
     public int Background;
     public string talk;
-    public string Emotion;
+    public int Emotion;
 }
 [Serializable]
 public struct TalkDatas
@@ -156,9 +156,21 @@ public class Dialoue : MonoBehaviour
             }
         }
     }
-    void EmotionChange()
+    void EmotionChange(string TalkSelect)
     {
-
+        for (int i = 0; i < 5; i++)
+        {
+            if(TalkSelect == $"LeeTaeyeon{i + 1}")
+            {
+                for (int v = 0; v < 4; v++)//표정 개수 변동 필요
+                {
+                    if(TalkDic[TalkSelect][i].Emotion == v)
+                    {
+                        //캐릭터 표정 바꾸기
+                    }
+                }
+            }
+        }
     }
     void TalkerChange(string talker)
     {
