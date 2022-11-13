@@ -101,14 +101,14 @@ public class ButtonManager : MonoBehaviour
         GameObject ClickObj = EventSystem.current.currentSelectedGameObject;
         if (OnQuest == false)
         {
-            ClickObj.transform.DOLocalMoveX(-153, 1f);
-            QuestWindow.transform.DOLocalMoveX(-336, 1f);
+            ClickObj.transform.DOLocalMoveX(720, 1f);
+            QuestWindow.transform.DOLocalMoveX(696, 1f);
             OnQuest = true;
         }
         else if (OnQuest == true)
         {
-            ClickObj.transform.DOLocalMoveX(913, 1f);
-            QuestWindow.transform.DOLocalMoveX(730, 1f);
+            ClickObj.transform.DOLocalMoveX(-295, 1f);
+            QuestWindow.transform.DOLocalMoveX(-315, 1f);
             OnQuest = false;
         }
     }
