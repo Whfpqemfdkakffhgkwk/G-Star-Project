@@ -4,61 +4,61 @@
       "Talker": "이태연",
       "Background": "0",
       "talk": "고마워",
-      "Emotion": ""
+      "Emotion": "0"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "뭐가?",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "이태연",
       "Background": "0",
       "talk": "시설 말이야",
-      "Emotion": ""
+      "Emotion": "0"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "아",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "이태연",
       "Background": "0",
       "talk": "덕분에 운동하기 쉬워졌어",
-      "Emotion": ""
+      "Emotion": "0"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "마땅히 해야 할 일이지!",
-      "Emotion": ""
+      "Emotion": "0"
     },
     {
       "Talker": "이태연",
       "Background": "0",
       "talk": "그건 그렇고 너는 운동이 필요해 보여",
-      "Emotion": ""
+      "Emotion": "2"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "응?",
-      "Emotion": ""
+      "Emotion": "2"
     },
     {
       "Talker": "이태연",
       "Background": "0",
       "talk": "매일 헬스장에 오도록 해",
-      "Emotion": ""
+      "Emotion": "3"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "생각해볼게. ㅎㅎ ...",
-      "Emotion": ""
+      "Emotion": "3"
     }
   ],
   "LeeTaeyeon2": [
@@ -66,43 +66,43 @@
       "Talker": "이태연",
       "Background": "0",
       "talk": "덕분에 여러 가지로 도움을 받고 있네",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "기숙사생들이 윤택한 생활을 하도록 돕는 게 내 일이니까 더 필요한게 있으면 문의해줘",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "이태연",
       "Background": "0",
       "talk": "아 그러면 추가로 들어올 기숙사생들을 위해서 러닝머신을 2대만 더 추가해줘 그리고 바벨 종류가 좀 더 다양해지면 좋겠어 좀 더 부분적으로 나눠서 공략할 필요가 있거든 아 파워랙을 헬스장에 들이는 건 탁월한 선택이었어 이거 없는 헬스장은 다니는 게 아니거든 아 맞다 그리고",
-      "Emotion": ""
+      "Emotion": "2"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "잠... 잠만 문의는 문자로 보내줘 내 기억력이 그렇게 좋지는 않거든",
-      "Emotion": ""
+      "Emotion": "2"
     },
     {
       "Talker": "이태연",
       "Background": "0",
       "talk": "그래 알았어 어쨌든 신경 써줘서 고마워",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "이태연",
       "Background": "0",
       "talk": "운동에 관한 거라면 물어봐도 좋아",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "알았어 운동이 필요하다 싶으면 물어볼게.",
-      "Emotion": ""
+      "Emotion": "1"
     }
   ],
   "LeeTaeyeon3": [
@@ -110,115 +110,115 @@
       "Talker": "이태연",
       "Background": "0",
       "talk": "너 살찌고 있지 않아?",
-      "Emotion": ""
+      "Emotion": "2"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "윽!",
-      "Emotion": ""
+      "Emotion": "2"
     },
     {
       "Talker": "이태연",
       "Background": "0",
       "talk": "기숙사 전체를 관리하는 기숙사장이라는 자가 자기 하나 관리 못 하면 어떡해!",
-      "Emotion": ""
+      "Emotion": "3"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "미... 미안",
-      "Emotion": ""
+      "Emotion": "0"
     },
     {
       "Talker": "이태연",
       "Background": "0",
       "talk": "으이구 어쩔 수 없지, 내일부터 헬스장에 나오도록 해 내가 도와줄게.",
-      "Emotion": ""
+      "Emotion": "2"
     },
     {
       "Talker": "이태연",
       "Background": "0",
       "talk": "아니다 오늘부터 당장!",
-      "Emotion": ""
+      "Emotion": "3"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "어? 어?! 잠만 아직 마음의 준비가...",
-      "Emotion": ""
+      "Emotion": "2"
     },
     {
       "Talker": "이태연",
       "Background": "0",
       "talk": "입 다물고 따라와 내가 하나하나 고쳐줄게.",
-      "Emotion": ""
+      "Emotion": "3"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "으아아아악!!!",
-      "Emotion": ""
+      "Emotion": "2"
     },
     {
       "Talker": "이태연",
       "Background": "0",
       "talk": "자! 하나! 둘! 하나! 둘!",
-      "Emotion": ""
+      "Emotion": "3"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "으윽! 으악! 으윽! 크아아악!",
-      "Emotion": ""
+      "Emotion": "2"
     },
     {
       "Talker": "이태연",
       "Background": "0",
       "talk": "자 마지막! 하나! 둘! 하나! 둘!",
-      "Emotion": ""
+      "Emotion": "3"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "으윽! 으아아악! 크윽! 아아아악!",
-      "Emotion": ""
+      "Emotion": "2"
     },
     {
       "Talker": "이태연",
       "Background": "0",
       "talk": "진짜 마지막 하나! 둘! 하나! 둘!",
-      "Emotion": ""
+      "Emotion": "3"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "아니 헥헥 방금 마지막이라고!",
-      "Emotion": ""
+      "Emotion": "2"
     },
     {
       "Talker": "이태연",
       "Background": "0",
       "talk": "빨리빨리! 하나! 둘! 하나! 둘!",
-      "Emotion": ""
+      "Emotion": "3"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "하느아아악! 두을윽! 하느아아악! 드으을윽! 크아악!",
-      "Emotion": ""
+      "Emotion": "2"
     },
     {
       "Talker": "이태연",
       "Background": "0",
       "talk": "좋아 좋아 건강해지고 있어! 하나! 둘! 하나! 둘!",
-      "Emotion": ""
+      "Emotion": "3"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "살려줘~!!!!",
-      "Emotion": ""
+      "Emotion": "2"
     }
   ],
   "LeeTaeyeon4": [
@@ -226,97 +226,97 @@
       "Talker": "이태연",
       "Background": "0",
       "talk": "몸 좋아지고 있네",
-      "Emotion": ""
+      "Emotion": "0"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "누구 덕분에요... (우물우물)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "이태연",
       "Background": "0",
       "talk": "그래도 도움이 되고 있지?",
-      "Emotion": ""
+      "Emotion": "0"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "당연하지, 최근에는 날아다녀!",
-      "Emotion": ""
+      "Emotion": "3"
     },
     {
       "Talker": "이태연",
       "Background": "0",
       "talk": "그래? 근데 입에 씹고 있는 건 뭐야?",
-      "Emotion": ""
+      "Emotion": "2"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "아... 닭가슴살...",
-      "Emotion": ""
+      "Emotion": "2"
     },
     {
       "Talker": "이태연",
       "Background": "0",
       "talk": "너 입에 튀김가루 묻어있어",
-      "Emotion": ""
+      "Emotion": "2"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "........",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "이태연",
       "Background": "0",
       "talk": "........",
-      "Emotion": ""
+      "Emotion": "2"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "저.....",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "죄송합니다",
-      "Emotion": ""
+      "Emotion": "2"
     },
     {
       "Talker": "이태연",
       "Background": "0",
       "talk": "휴우... 따라와",
-      "Emotion": ""
+      "Emotion": "0"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "네",
-      "Emotion": ""
+      "Emotion": "2"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "하나! 으윽! 두울! 으윽!",
-      "Emotion": ""
+      "Emotion": "2"
     },
     {
       "Talker": "이태연",
       "Background": "0",
       "talk": "먹은 만큼 운동한다! 실시!",
-      "Emotion": ""
+      "Emotion": "3"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "으아아아악!!!",
-      "Emotion": ""
+      "Emotion": "2"
     }
   ],
   "LeeTaeyeon5": [
@@ -324,43 +324,55 @@
       "Talker": "주인공",
       "Background": "0",
       "talk": "(운동하다가 우울한 표정으로 쉬는 혜연을 발견한 주인공)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "무슨 일 있어?",
-      "Emotion": ""
+      "Emotion": "0"
     },
     {
       "Talker": "이태연",
       "Background": "0",
       "talk": "... 그냥",
-      "Emotion": ""
+      "Emotion": "2"
     },
     {
       "Talker": "이태연 ",
       "Background": "0",
       "talk": "고마워서",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "이태연",
       "Background": "0",
       "talk": "나를 이해해 주는 사람은 적었어",
-      "Emotion": ""
+      "Emotion": "2"
     },
     {
       "Talker": "이태연",
       "Background": "0",
-      "talk": "바뀌기 전에도 바뀐 후에도 바뀌기 전에 내 모습이 맘에 들지 않아 하던 사람들은 바뀐 내 모습조차 이해해주지 않았어 질투심일까? 아니면 괴리감 때문에? 나는 모르겠지만 아무도 진심으로 다가와 주지 않던 일상에서 네가 나에게 다가와 준 것이 기뻤어 그러니까 고마워!",
-      "Emotion": ""
+      "talk": "바뀌기 전에도 바뀐 후에도 바뀌기 전에 내 모습이 맘에 들지 않아 하던 사람들은 바뀐 내 모습조차 이해해주지 않았어 질투심일까? 아니면 괴리감 때문에? 나는 모르겠지만 아무도 진심으로 다가와 주지 않던 일상에서 네가 나에게 다가와 준 것이 기뻤어",
+      "Emotion": "2"
+    },
+    {
+      "Talker": "이태연",
+      "Background": "0",
+      "talk": "그러니까 고마워!",
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
-      "talk": "( 나는 나도 모르는 사이 한 사람에게 큰 도움을 준 모양이다 당연하게 생각한 호의가 누군가에게 희망과 기쁨이 될 수 있다는 사실이 무엇보다 기뻤다 )",
-      "Emotion": ""
+      "talk": "( 나는 나도 모르는 사이 한 사람에게 큰 도움을 준 모양이다 )",
+      "Emotion": "0"
+    },
+    {
+      "Talker": "주인공",
+      "Background": "0",
+      "talk": "( 당연하게 생각한 호의가 누군가에게 희망과 기쁨이 될 수 있다는 사실이 무엇보다 기뻤다 )",
+      "Emotion": "3"
     }
   ],
   "JeongSeoYoon1": [
@@ -368,37 +380,37 @@
       "Talker": "주인공",
       "Background": "0",
       "talk": "저... 저기",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "정서윤",
       "Background": "0",
       "talk": "뭐야? 바쁜데 비켜줄래? (콜록콜록)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(한달에 한 번 있는 모두가 같이하는 대청소 시간이라서 부르러 왔지만 누가 봐도 피로에 쩔어있는 얼굴이라서 섣불리 말을 걸 수 없었다)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "정서윤",
       "Background": "0",
       "talk": "거기 너 한가하면 저기 선반에 놓인 약품 좀 집어 와줄래? 가지러 가기 번거로워서 (콜록콜록)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "어? 어...",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "다음에 말을 걸어보자...",
-      "Emotion": ""
+      "Emotion": "1"
     }
   ],
   "JeongSeoYoon2": [
@@ -406,55 +418,55 @@
       "Talker": "주인공",
       "Background": "0",
       "talk": "(이번에도 대청소에 부르러 왔지만, 이 집에서 가장 청소가 필요해 보이는 건 정서윤의 이 방이라 생각해서 청소를 시작했다)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "정서윤",
       "Background": "0",
       "talk": "뭐야?",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "으악! 깜짝이야!",
-      "Emotion": ""
+      "Emotion": "2"
     },
     {
       "Talker": "정서윤",
       "Background": "0",
       "talk": "나도 방에 오니 모르는 사람이 방을 뒤지고 있어서 놀랐거든 그래서 뭔데 내 방을 멋대로 치우고 있는 거야? (콜록콜록)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "말없이 청소해서 미안해 이 방에 먼지랑 쓰레기가 너무 많다고 생각해서 너 기관지 안 좋잖아? 그래서 치우려고 했어",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "정서윤",
       "Background": "0",
       "talk": "그래? 그래도 나는 내 물건 위치가 바뀌는 건 별로 안 좋아해 청소는 필요 없으니 나가줄래?",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "괜찮아 바닥에 먼지랑 쓰레기통만 비우고 환기하고 나가려고 했거든 책상은 안 건드려",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "정서윤",
       "Background": "0",
       "talk": "그래? 네 마음대로해",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(그렇게 정서윤의 방을 대청소했다)",
-      "Emotion": ""
+      "Emotion": "1"
     }
   ],
   "JeongSeoYoon3": [
@@ -462,55 +474,55 @@
       "Talker": "주인공",
       "Background": "0",
       "talk": "(이번에도 어질러진 정서윤에 방을 청소하고 있다)",
-      "Emotion": ""
+      "Emotion": "0"
     },
     {
       "Talker": "정서윤",
       "Background": "0",
       "talk": "저기 위에 병 좀 가져다 줄래?",
-      "Emotion": ""
+      "Emotion": "3"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "그래 잠만",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "정서윤",
       "Background": "0",
       "talk": "아 스푼도 가져다줘",
-      "Emotion": ""
+      "Emotion": "3"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "오케이",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(뭔가 당연하게 내가 청소하면서 정서윤을 도와주는 게 일상이 되었다)",
-      "Emotion": ""
+      "Emotion": "0"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(이상한 상황이라고 생각하지만 그래도 나쁘지는 않았다)",
-      "Emotion": ""
+      "Emotion": "0"
     },
     {
       "Talker": "정서윤",
       "Background": "0",
       "talk": "빨리!",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "알았어!",
-      "Emotion": ""
+      "Emotion": "2"
     }
   ],
   "JeongSeoYoon4": [
@@ -518,79 +530,79 @@
       "Talker": "주인공",
       "Background": "0",
       "talk": "오늘도 어김없이 정서윤의 서포터다",
-      "Emotion": ""
+      "Emotion": "0"
     },
     {
       "Talker": "정서윤",
       "Background": "0",
       "talk": "비커!",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "여기",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "정서윤",
       "Background": "0",
       "talk": "족집게!",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "여기",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(이제는 물건의 정확한 위치를 외울 정도로 익숙해진 모양이다. 마치 의사와 그 조수 뭔가 멋지군)",
-      "Emotion": ""
+      "Emotion": "0"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(어김없이 부려 먹히는 상황이지만 정서윤은 사람은 싫다고 말해도 막상 같이 있으면 편안한 모양이라서 괜스레 도와주고 싶어진다)",
-      "Emotion": ""
+      "Emotion": "0"
     },
     {
       "Talker": "정서윤",
       "Background": "0",
       "talk": "콘센트 좀 분리해줘 전기가 있으면 곤란해",
-      "Emotion": ""
+      "Emotion": "3"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "오케이",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "정서윤",
       "Background": "0",
       "talk": "고마워 네가 있으니 편하네",
-      "Emotion": ""
+      "Emotion": "0"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "당연하지 내가 누군데",
-      "Emotion": ""
+      "Emotion": "3"
     },
     {
       "Talker": "정서윤",
       "Background": "0",
       "talk": "이상한 놈",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": ".............",
-      "Emotion": ""
+      "Emotion": "1"
     }
   ],
   "JeongSeoYoon5": [
@@ -598,73 +610,79 @@
       "Talker": "주인공",
       "Background": "0",
       "talk": "(어김없이 청소하러 갔을 때 정서윤은 혼자서 멍하니 누워있었다 들어가기 뭐해서 나가려는 순간 그녀는 말을 걸어왔다)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "정서윤",
       "Background": "0",
       "talk": "다시야 또다시 과거로 돌아온 기분이야",
-      "Emotion": ""
+      "Emotion": "3"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "뭐가?",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "정서윤",
       "Background": "0",
       "talk": "....... 사실 예전부터 부모에게 높은 성적을 강요받았어 그게 당연한거로 생각했지 공부만 하느라 사교성이 없어 주위 친구들에게 무시를 받아도 공부에만 전념했어 그게 옳은 거라고 배워서 그렇게 사고했기에 당연히 미움받았고 무시강하고 욕을 먹으면 먹을수록 정신은 무너지고 더 이상 버티기 힘들어졌어",
-      "Emotion": ""
+      "Emotion": "3"
     },
     {
       "Talker": "정서윤",
       "Background": "0",
       "talk": "뉴스라든지 어디에서나 보이는 인간에 추악함을 증명할 방법은 나는 방법을 몰랐고 최선책으로 과학이라는 그릇된 길을 택했어",
-      "Emotion": ""
+      "Emotion": "3"
     },
     {
       "Talker": "정서윤",
       "Background": "0",
       "talk": "과학이 증명하지 못할 것은 없다고 생각했으니까 도덕성과 윤리적 가치관을 나에게 알려줄 사람은 주위에 없었으니 당연한 거지",
-      "Emotion": ""
+      "Emotion": "3"
     },
     {
       "Talker": "정서윤",
       "Background": "0",
       "talk": "그렇게 과학에 빠진 나는 과학으로 구축된 사상으로 인간을 본능대로 움직이는 추악한 원숭이로 규정했고 그렇게 나는 모든 인간을 황증평향적으로 바라봤지",
-      "Emotion": ""
+      "Emotion": "3"
     },
     {
       "Talker": "정서윤",
       "Background": "0",
       "talk": "지금도 대부분의 인간이 그저 가치 없는 짐승으로 보여 애초부터 추악한 인간들이 자신들의 죄악을 정당화할 때 자주 사용하는 본능이라는 도덕적 윤리관을 벗어난 비윤리적 사상이 과학이라는 변명거리로 만들어진 에고이즘에서 나온 것을 봤을 때 과학이라는 하나의 렌즈로 세상을 바라본 결과는 뻔히 보였지",
-      "Emotion": ""
+      "Emotion": "3"
     },
     {
       "Talker": "정서윤",
       "Background": "0",
       "talk": "하지만 너는 좀 달랐어 짐승처럼 이윤만을 위해서 행동하지 않고 나에게 없던 윤리적 사상과 올바른 지식을 받아들일 수 있는 유동적인 수용적 가치관이 있었으니까 그래서 너를 받아들인 거야",
-      "Emotion": ""
+      "Emotion": "0"
     },
     {
       "Talker": "정서윤",
       "Background": "0",
       "talk": "여태까지 직접 행동으로 신용을 부여해준 너라면 얼마든지 올바른 사람으로 변화할 수 있을 거라고 믿을 수 있으니까",
-      "Emotion": ""
+      "Emotion": "2"
     },
     {
       "Talker": "주인공",
       "Background": "0",
-      "talk": "믿어줘서 고마워, 하지만 너또한 옳다고 생각해 힘들어도 새로운 사상을 수용하고 수용된 사상이 잘못되어 있어도 문제를 인식하고 개선할 수 있으니까 그러니까 너도 옳은 사람이야",
-      "Emotion": ""
+      "talk": "믿어줘서 고마워, 하지만 너또한 옳다고 생각해 힘들어도 새로운 사상을 수용하고 수용된 사상이 잘못되어 있어도 문제를 인식하고 개선할 수 있으니까",
+      "Emotion": "1"
+    },
+    {
+      "Talker": "주인공",
+      "Background": "0",
+      "talk": "그러니까 너도 옳은 사람이야",
+      "Emotion": "3"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(학교에서의 선생님의 압박 친구들의 그늘진 시선 등 다시 시작된 편협된 사고로 나온 사상들이 정서윤을 다시 힘들게 하는 게 느껴졌다, 그리고 그런 정서윤을 도와주고 싶다고 나는 생각하게 되었다)",
-      "Emotion": ""
+      "Emotion": "3"
     }
   ],
   "LeeYerin1": [
@@ -672,7 +690,7 @@
       "Talker": "이예린",
       "Background": "0",
       "talk": "안녕하세요~",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
@@ -684,7 +702,7 @@
       "Talker": "이예린",
       "Background": "0",
       "talk": "어머 지금 청소 중이세요?",
-      "Emotion": ""
+      "Emotion": "0"
     },
     {
       "Talker": "주인공",
@@ -696,7 +714,7 @@
       "Talker": "이예린",
       "Background": "0",
       "talk": "저는 붕어빵을 싫어해요",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
@@ -708,7 +726,7 @@
       "Talker": "이예린",
       "Background": "0",
       "talk": "그렇다고요~",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
@@ -722,7 +740,7 @@
       "Talker": "이예린",
       "Background": "0",
       "talk": "안녕하세요~",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
@@ -734,7 +752,7 @@
       "Talker": "이예린",
       "Background": "0",
       "talk": "어머 커피 드세요?",
-      "Emotion": ""
+      "Emotion": "2"
     },
     {
       "Talker": "주인공",
@@ -746,7 +764,7 @@
       "Talker": "이예린",
       "Background": "0",
       "talk": "ㅇㅇㅇ커피 맛있죠~?",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
@@ -758,7 +776,7 @@
       "Talker": "이예린",
       "Background": "0",
       "talk": "그냥요~",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",

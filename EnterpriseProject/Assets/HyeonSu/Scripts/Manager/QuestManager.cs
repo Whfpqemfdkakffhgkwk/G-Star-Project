@@ -65,7 +65,7 @@ public class QuestManager : MonoBehaviour
         Notice.SetActive(false);
         for (int i = 0; i < saveVariables.LeeTaeyeon.Length; i++)
         {
-            if (saveVariables.LeeTaeyeon[i])
+            if (saveVariables.LeeTaeyeon[i] && saveVariables.isLeeTaeyeon)
             {
                 Notice.SetActive(true);
                 TalkBtnImages[0].sprite = OnTalkBtnSpr;
@@ -73,7 +73,7 @@ public class QuestManager : MonoBehaviour
         }
         for (int i = 0; i < saveVariables.JeongSeoYoon.Length; i++)
         {
-            if (saveVariables.JeongSeoYoon[i])
+            if (saveVariables.JeongSeoYoon[i] && saveVariables.isJeongSeoYoon)
             {
                 Notice.SetActive(true);
                 TalkBtnImages[1].sprite = OnTalkBtnSpr;
@@ -81,7 +81,7 @@ public class QuestManager : MonoBehaviour
         }
         for (int i = 0; i < saveVariables.LeeYerin.Length; i++)
         {
-            if (saveVariables.LeeYerin[i])
+            if (saveVariables.LeeYerin[i] && saveVariables.isLeeYerin)
             {
                 Notice.SetActive(true);
                 TalkBtnImages[2].sprite = OnTalkBtnSpr;
@@ -89,7 +89,7 @@ public class QuestManager : MonoBehaviour
         }
         for (int i = 0; i < saveVariables.SongYeonHa.Length; i++)
         {
-            if (saveVariables.SongYeonHa[i])
+            if (saveVariables.SongYeonHa[i] && saveVariables.isSongYeonHa)
             {
                 Notice.SetActive(true);
                 TalkBtnImages[3].sprite = OnTalkBtnSpr;
@@ -97,7 +97,7 @@ public class QuestManager : MonoBehaviour
         }
         for (int i = 0; i < saveVariables.SeongJunAh.Length; i++)
         {
-            if (saveVariables.SeongJunAh[i])
+            if (saveVariables.SeongJunAh[i] && saveVariables.isSeongJunAh)
             {
                 Notice.SetActive(true);
                 TalkBtnImages[4].sprite = OnTalkBtnSpr;
