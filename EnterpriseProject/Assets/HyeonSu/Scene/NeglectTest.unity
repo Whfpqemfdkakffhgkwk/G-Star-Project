@@ -37122,21 +37122,26 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f7cc06ee17223e645a3d1e6292289871, type: 3}
   - {fileID: 21300000, guid: 8517eef361af3e847a4b09f566adf808, type: 3}
   LeeTaeyeonSpr:
+  - {fileID: 21300000, guid: c9488859752c3b34880673e3199293df, type: 3}
   - {fileID: 21300000, guid: 9e9112d1a42c3994aa7aba0131e93e49, type: 3}
   - {fileID: 21300000, guid: d25e57bd2ec96e741a55978d4415dfd9, type: 3}
   - {fileID: 21300000, guid: 975aebe1170531a48aff183cd9be2429, type: 3}
   JeongSeoYoonSpr:
+  - {fileID: 21300000, guid: c75b131b1834e6c4188578b0b7404216, type: 3}
   - {fileID: 21300000, guid: 44df4b72c3c3bbd4d96038c671caaaa5, type: 3}
   - {fileID: 21300000, guid: cdc22f4a6359cc841befdb2abd4510ef, type: 3}
   - {fileID: 21300000, guid: 03c0b7444ba107b4da48f0a3eaa4c9f0, type: 3}
   LeeYerinSpr:
+  - {fileID: 21300000, guid: f7cc06ee17223e645a3d1e6292289871, type: 3}
   - {fileID: 21300000, guid: e566cdc9bcd9b31428b4930e7a0b7617, type: 3}
   - {fileID: 21300000, guid: a3afaa00b338a434fad17e60cee28d26, type: 3}
   SongYeonHaSpr:
+  - {fileID: 21300000, guid: 8517eef361af3e847a4b09f566adf808, type: 3}
   - {fileID: 21300000, guid: b52216dafa373f346b8ef61c77bacddc, type: 3}
   - {fileID: 21300000, guid: de64ab6b5af74b04ab42040ce212b014, type: 3}
   SeongJunAhSpr: []
   HeroSpr:
+  - {fileID: 21300000, guid: bcdaf6f39ac80cc4ea284bc763e75cdb, type: 3}
   - {fileID: 21300000, guid: cf759e9321fb21d4f9f5d7e972d0fb67, type: 3}
   - {fileID: 21300000, guid: a3fdcdfcf334cf84ba9bc6f818dc1e51, type: 3}
   - {fileID: 21300000, guid: c2123012c3f0bef499cbd7d3b5e15112, type: 3}

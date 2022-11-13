@@ -690,7 +690,7 @@
       "Talker": "이예린",
       "Background": "0",
       "talk": "안녕하세요~",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
@@ -702,7 +702,7 @@
       "Talker": "이예린",
       "Background": "0",
       "talk": "어머 지금 청소 중이세요?",
-      "Emotion": ""
+      "Emotion": "0"
     },
     {
       "Talker": "주인공",
@@ -714,7 +714,7 @@
       "Talker": "이예린",
       "Background": "0",
       "talk": "저는 붕어빵을 싫어해요",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
@@ -726,7 +726,7 @@
       "Talker": "이예린",
       "Background": "0",
       "talk": "그렇다고요~",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
@@ -740,7 +740,7 @@
       "Talker": "이예린",
       "Background": "0",
       "talk": "안녕하세요~",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
@@ -752,7 +752,7 @@
       "Talker": "이예린",
       "Background": "0",
       "talk": "어머 커피 드세요?",
-      "Emotion": ""
+      "Emotion": "2"
     },
     {
       "Talker": "주인공",
@@ -764,7 +764,7 @@
       "Talker": "이예린",
       "Background": "0",
       "talk": "ㅇㅇㅇ커피 맛있죠~?",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
@@ -776,7 +776,7 @@
       "Talker": "이예린",
       "Background": "0",
       "talk": "그냥요~",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
