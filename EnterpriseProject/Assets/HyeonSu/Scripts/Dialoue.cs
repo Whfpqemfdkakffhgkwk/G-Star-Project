@@ -13,6 +13,7 @@ public struct TalkData
     public string Talker;
     public int Background;
     public string talk;
+    public string Emotion;
 }
 [Serializable]
 public struct TalkDatas
@@ -71,7 +72,7 @@ public class Dialoue : MonoBehaviour
         TalkDic.Add("JeongSeoYoon3", StoryData.JeongSeoYoon3);
         TalkDic.Add("JeongSeoYoon4", StoryData.JeongSeoYoon4);
         TalkDic.Add("JeongSeoYoon5", StoryData.JeongSeoYoon5);
-        
+
         TalkDic.Add("LeeYerin1", StoryData.LeeYerin1);
         TalkDic.Add("LeeYerin2", StoryData.LeeYerin2);
         TalkDic.Add("LeeYerin3", StoryData.LeeYerin3);
@@ -148,12 +149,16 @@ public class Dialoue : MonoBehaviour
     {
         for (int i = 0; i < 10; i++)
         {
-            if(TalkDic[TalkSelect][i].Talker != "주인공")
+            if (TalkDic[TalkSelect][i].Talker != "주인공")
             {
                 TalkerChange(TalkDic[TalkSelect][i].Talker);
                 break;
             }
         }
+    }
+    void EmotionChange()
+    {
+
     }
     void TalkerChange(string talker)
     {
