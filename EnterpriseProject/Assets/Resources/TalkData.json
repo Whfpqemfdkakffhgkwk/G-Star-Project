@@ -696,7 +696,7 @@
       "Talker": "주인공",
       "Background": "0",
       "talk": "안녕하세요?",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "이예린",
@@ -708,7 +708,7 @@
       "Talker": "주인공",
       "Background": "0",
       "talk": "네",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "이예린",
@@ -720,7 +720,7 @@
       "Talker": "주인공",
       "Background": "0",
       "talk": "네?",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "이예린",
@@ -732,7 +732,7 @@
       "Talker": "주인공",
       "Background": "0",
       "talk": "(이예린은 그렇게 알 수 없는 소리를 하고 사라졌다)",
-      "Emotion": ""
+      "Emotion": "1"
     }
   ],
   "LeeYerin2": [
@@ -746,7 +746,7 @@
       "Talker": "주인공",
       "Background": "0",
       "talk": "안녕하세요?",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "이예린",
@@ -758,7 +758,7 @@
       "Talker": "주인공",
       "Background": "0",
       "talk": "아... 예",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "이예린",
@@ -770,7 +770,7 @@
       "Talker": "주인공",
       "Background": "0",
       "talk": "ㅇㅇㅇ커피인거 어떻게 아셨어요?",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "이예린",
@@ -782,49 +782,49 @@
       "Talker": "주인공",
       "Background": "0",
       "talk": "예린씨도 커피 좋아하시나 봐요?",
-      "Emotion": ""
+      "Emotion": "0"
     },
     {
       "Talker": "이예린",
       "Background": "0",
       "talk": "아뇨 저는 커피 마시지 않아요~",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(역시나 이상한 사람이라고 생각했다 그리고 저번에 있었던 일에 대한 복수처럼 나는 말했다)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "저는 사실 푸딩을 싫어해요",
-      "Emotion": ""
+      "Emotion": "0"
     },
     {
       "Talker": "이예린",
       "Background": "0",
       "talk": "하지만 저번 주 화요일 ○○마트에서 ○○푸딩을 5개나 사셨잖아요",
-      "Emotion": ""
+      "Emotion": "2"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "그걸 어떻게?",
-      "Emotion": ""
+      "Emotion": "2"
     },
     {
       "Talker": "이예린",
       "Background": "0",
       "talk": "그냥요~",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
-      "Talker": "이예린",
+      "Talker": "주인공",
       "Background": "0",
       "talk": "(그녀는 정말 알 수 없다)",
-      "Emotion": ""
+      "Emotion": "1"
     }
   ],
   "LeeYerin3": [
@@ -832,73 +832,73 @@
       "Talker": "주인공",
       "Background": "0",
       "talk": "안녕하세요~",
-      "Emotion": ""
+      "Emotion": "3"
     },
     {
       "Talker": "이예린",
       "Background": "0",
       "talk": ".....",
-      "Emotion": ""
+      "Emotion": "2"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "?",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "이예린",
       "Background": "0",
       "talk": "안녕하세요!!!",
-      "Emotion": ""
+      "Emotion": "0"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "으악!",
-      "Emotion": ""
+      "Emotion": "2"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(그녀는 만족스러운 표정으로 넘어진 나를 바라봤다)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "이예린",
       "Background": "0",
       "talk": "괜찮으세요~",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(누가 봐도 괜찮지 않은 자세로 넘어진 나를 보며 괜찮냐고 물어보는 그녀의 모습이 너무나 당당해서 물어봤다)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "괜찮아 보이세요?",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "이예린",
       "Background": "0",
       "talk": "아뇨~",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(그러면서 그녀는 푸딩이 가득 담긴 비닐봉지를 손에 쥐여주고 사라졌다)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "역시 이 여자를 나는 알 수 없다",
-      "Emotion": ""
+      "Emotion": "1"
     }
   ],
   "LeeYerin4": [
@@ -906,19 +906,19 @@
       "Talker": "주인공",
       "Background": "0",
       "talk": "안녕하세요!!!",
-      "Emotion": ""
+      "Emotion": "3"
     },
     {
       "Talker": "이예린",
       "Background": "0",
       "talk": ".....",
-      "Emotion": ""
+      "Emotion": "3"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(오늘은 또 뭐지 하는 찰나 이예린은 뒤를 돌아봤고 나는 화들짝 놀랐다)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "이예린 집사",
@@ -930,13 +930,13 @@
       "Talker": "주인공",
       "Background": "0",
       "talk": "(나는 당황을 감출 수 없었다 그녀가 그녀가 아니고 왠 이상한 할아버지가 여자 가발을 쓰고 기다리고 있었으니까)",
-      "Emotion": ""
+      "Emotion": "2"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "저.... 어째서 그런 차림으로?",
-      "Emotion": ""
+      "Emotion": "2"
     },
     {
       "Talker": "이예린 집사",
@@ -948,61 +948,61 @@
       "Talker": "주인공",
       "Background": "0",
       "talk": "아....",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "이예린",
       "Background": "0",
       "talk": "안녕하세요!!!",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "으악!!!",
-      "Emotion": ""
+      "Emotion": "2"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(갑자기 나타난 그녀는 능숙한 솜씨로 놀라 자빠지는 나를 붙잡아 주었다 마치 왕자님처럼 아니아니 잠만)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "이예린",
       "Background": "0",
       "talk": "재밌네요~ (괜찮으세요~)",
-      "Emotion": ""
+      "Emotion": "0"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(누가 봐도 생각과 말이 바뀐 그녀는 당당하게 말했다)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "이예린",
       "Background": "0",
       "talk": "혹시 조만간 저랑 외출 안 하실래요?",
-      "Emotion": ""
+      "Emotion": "0"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "네?",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "이예린",
       "Background": "0",
       "talk": "약속이에요~",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(그렇게 내가 선택하지 않은 약속이 잡혔다)",
-      "Emotion": ""
+      "Emotion": "1"
     }
   ],
   "LeeYerin5": [
@@ -1010,151 +1010,151 @@
       "Talker": "주인공",
       "Background": "0",
       "talk": "(아침에 일어나보니 이예린이 옆에서 집사랑 차를 마시고 있었다 개그만화에서나 볼법한 기묘한 광경에 그만 우울한 표정을 지어버렸다)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "이예린",
       "Background": "0",
       "talk": "일어나셨나요?",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(나는 빠르게 창문을 열고 창문 밖으로 뛰어내렸다 이예린도 집사도 놀라서 나를 붙잡으려고 했지만 나는 예상보다 빨랐다)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(창문 밖으로 뛰어내린 나를 내려다보며 이예린은 말했다)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "이예린",
       "Background": "0",
       "talk": "당했네요~",
-      "Emotion": ""
+      "Emotion": "0"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(안전하게 밑에 준비한 매트리스 위로 낙하한 나의 승리였다 감격적이군)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "이예린",
       "Background": "0",
       "talk": "그건 그렇고 빨리 준비해 주세요. 나가야 하거든요",
-      "Emotion": ""
+      "Emotion": "0"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "예히~",
-      "Emotion": ""
+      "Emotion": "3"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(그녀와 함께 밖에 나가니 기다랗고 새하얀 리무진이 기다리고 있었다 부자의 상징인 리무진이 왜 갑자기 여기에 나타났는지는 묻지 않아도 뻔히 알 수 있었다)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(쇼핑은 고르는 모든 것의 가격 단위가 기본으로 내 1년 치 용돈을 넘어가는 걸 확인하며 놀라지 않기로 했지만, 그녀가 나에게 사준 롱패딩의 가격을 보면서 놀람과 부담스러움을 감출 수 없었다)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "이예린",
       "Background": "0",
       "talk": "제가 좋아하는 레스토랑 이에요~",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "식사 예절이라도 배워올 걸 그랬나요?",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "이예린",
       "Background": "0",
       "talk": "이곳에 제가 개를 대려와도 아무도 뭐라 안 하니 괜찮아요~",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "아하~(그거참 잘된 일인지는 모르겠다)",
-      "Emotion": ""
+      "Emotion": "0"
     },
     {
       "Talker": "이예린",
       "Background": "0",
       "talk": "어때요? 입에 맞는가요~?",
-      "Emotion": ""
+      "Emotion": "0"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "부자들은 치사하네요",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "이예린",
       "Background": "0",
       "talk": "그런가요~?",
-      "Emotion": ""
+      "Emotion": "0"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "이런 맛있는 걸 자기들 끼리만 먹었다니 치사해요",
-      "Emotion": ""
+      "Emotion": "0"
     },
     {
       "Talker": "이예린",
       "Background": "0",
       "talk": "푸핫!",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(그녀가 이렇게 웃는 건 처음이었다 항상 가식적이라고 생각되는 웃음 속에서 이런 웃음을 보니 순간적으로 마음을 뺏겼다)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "예린 씨는 이렇게 장난을 좋아하게 된 계기가 있나요?",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(그 순간 그녀의 표정은 처음 보는 무서운 표정으로 바뀌었다 아주 짧은 순간이었지만 온몸에 소름이 돋았다)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "이예린",
       "Background": "0",
       "talk": "궁금한가요~?",
-      "Emotion": ""
+      "Emotion": "2"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(꿀꺽)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(나는 나중에 그녀에게 사실을 알게되었다)",
-      "Emotion": ""
+      "Emotion": "1"
     }
   ],
   "SongYeonHa1": [
@@ -1162,61 +1162,61 @@
       "Talker": "주인공",
       "Background": "0",
       "talk": "(고등학교 2학년 항상 옆자리를 보면 그녀가 자고 있다 로맨틱한 상상을 하면 곤란하다)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(그녀는 누구보다 일찍 학교에와 항상 좀비처럼 자고 있다 곤란할 정도로)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(이동수업이 있어서 불러 깨워도 잠시 노려보고 잠을 잔다.)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(반장은 나이기에 이 녀석을 두고 가도 쌤이 챙겨오란다 그렇게 나는 이 녀석을 짊어지고 교실로 이동한다 항상 이 역할이다 진짜 곤란하다)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(덤으로 이 녀석은 잠만 자도 상당한 인싸라서 일어나있는 시간에는 친구들이 몰려있다 다른 반 놈들은 왜 여기까지 와서 시끄럽게 하는지...)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "야",
-      "Emotion": ""
+      "Emotion": "2"
     },
     {
       "Talker": "송연하",
       "Background": "0",
       "talk": ".......",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "어이",
-      "Emotion": ""
+      "Emotion": "2"
     },
     {
       "Talker": "송연하",
       "Background": "0",
       "talk": "(퍽)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(상당히 나약한 펀치가 날아왔다 어휴 그냥 내버려 두자)",
-      "Emotion": ""
+      "Emotion": "1"
     }
   ],
   "SongYeonHa2": [
@@ -1224,67 +1224,67 @@
       "Talker": "주인공",
       "Background": "0",
       "talk": "(오늘도 어김없이 송연하를 짊어지고 이동이다 몸이 상당히 가벼워 그렇게 무겁지는 않지만, 시종이라도 된 기분이다)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "교과서는 챙겼어?",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "송연하",
       "Background": "0",
       "talk": "..... 아",
-      "Emotion": ""
+      "Emotion": "0"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(그렇게 내가 교과서를 대신 챙겨줬다)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(그냥 내버려 두면 되지 않나? 하지만 그냥 내버려 둘 경우에는 평생 잠만 잘 녀석이다)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "송연하",
       "Background": "0",
       "talk": "잠만....",
-      "Emotion": ""
+      "Emotion": "0"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "왜",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "송연하",
       "Background": "0",
       "talk": "화장실..",
-      "Emotion": ""
+      "Emotion": "0"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "아쉽지만 거기는 내가 출입할 수 없는 구역이다 가끔은 혼자의 힘으로 걸어보자",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "송연하",
       "Background": "0",
       "talk": "네가 여자였으면 좋을 텐데...",
-      "Emotion": ""
+      "Emotion": "0"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "조용히 하고 걸으세요",
-      "Emotion": ""
+      "Emotion": "2"
     }
   ],
   "SongYeonHa3": [
@@ -1292,85 +1292,85 @@
       "Talker": "주인공",
       "Background": "0",
       "talk": "(나는 오늘도 어김없는 송연하의 하인이다. 이 녀석은 밥도 조금 먹어서 급식실에도 가지 않는다 하루에 한 끼 아무리 그래도 사람이 그렇게 살면 죽지않을까? 생각하기에 내가 억지로 데려가서 밥을 먹인다)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "입 열어",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "송연하",
       "Background": "0",
       "talk": "아",
-      "Emotion": ""
+      "Emotion": "0"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(하인이라 생각했는데 개 주인이 아닐까 생각해 본다 아니 이렇게 충성심 없는 개가 어디 있는가 역시 하인이 맞다)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "입 열어",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "송연하",
       "Background": "0",
       "talk": "버섯 싫어....",
-      "Emotion": ""
+      "Emotion": "0"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "여기에 너 버리고 갈 거야",
-      "Emotion": ""
+      "Emotion": "2"
     },
     {
       "Talker": "송연하",
       "Background": "0",
       "talk": "(끄응)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(점점 주인님을 부리는 요령이 생겨나기 시작했다 자랑스러워해야 할까 잠시 고민된다)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "주인님 드시죠",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "송연하",
       "Background": "0",
       "talk": "윽",
-      "Emotion": ""
+      "Emotion": "0"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "자 아앙",
-      "Emotion": ""
+      "Emotion": "2"
     },
     {
       "Talker": "송연하",
       "Background": "0",
       "talk": "으으윽",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(돌겠다 진짜)",
-      "Emotion": ""
+      "Emotion": "1"
     }
   ],
   "SongYeonHa4": [
@@ -1378,115 +1378,115 @@
       "Talker": "주인공",
       "Background": "0",
       "talk": "(나에 아주 근사한 하루를 소개해 볼까 한다.)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(아침에 일어나 주인님에게 적량에 밥을 대령하고 주인님을 자전거에 태워서 등교, 등교 후에는 이동수업에 주인님을 끌고 다니고 억지로 점심을 먹인다.)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(수업 후에는 주인님을 자전거에 태워서 기숙사에 데려다 놓는다)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(저녁도 대령하고 스스로 해야 할 일은 스스로 시킨다)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(아니 학교 가는 것도 스스로 해야 한다고 생각한다)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(어쨌든 그렇게 주인님을 데리고 생활하다 보면 나는 2인분을 하는 인간이 된다 물론 주인님은 1인분조차 못하는 인간이 되지만)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "송연하",
       "Background": "0",
       "talk": "배고파",
-      "Emotion": ""
+      "Emotion": "0"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(보이는가? 저녁 이외에는 음식에 손조차 가져다 대지 않던 주인님이 아침을 찾는다)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(그리고 조금씩 주인님의 키가 커지고 있다 덤으로 몸무게도 늘어나서 들고 다니기 힘들어졌다)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(마치 육아를 하는 기분이다 아니 이 정도면 육아가 아닌가 슬슬 자립을 준비해야 할 주인님이다)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "오늘 저녁은 스스로 만들어볼까요?",
-      "Emotion": ""
+      "Emotion": "2"
     },
     {
       "Talker": "송연하",
       "Background": "0",
       "talk": "시러",
-      "Emotion": ""
+      "Emotion": "0"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "괜찮습니다. 제가 도울 테니까요 그리고 싫다고 해도 제가 억지로 시킬겁니다. 주체적인 인간을 사회는 필요로 하니까요",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "송연하",
       "Background": "0",
       "talk": "으윽",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "도망치지 마세요. 자립을 위한 준비가 필요합니다",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "송연하",
       "Background": "0",
       "talk": "(후다닥)",
-      "Emotion": ""
+      "Emotion": "0"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(주인님이 달린다. 저렇게 달리는 건 처음 보는데... 저러다 넘어지기라도 하는지 모르겠다)",
-      "Emotion": ""
+      "Emotion": "2"
     },
     {
       "Talker": "송연하",
       "Background": "0",
       "talk": "(쿵!)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(장난스럽게 투정하던 나는 갑작스러운 쿵 소리에 송연하 쪽으로 달려갔다)",
-      "Emotion": ""
+      "Emotion": "1"
     }
   ],
   "SongYeonHa5": [
@@ -1494,103 +1494,103 @@
       "Talker": "주인공",
       "Background": "0",
       "talk": "괜찮아?",
-      "Emotion": ""
+      "Emotion": "2"
     },
     {
       "Talker": "송연하",
       "Background": "0",
       "talk": "아니",
-      "Emotion": ""
+      "Emotion": "0"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "기본적인 생존 활동조차도 건성이던 녀석이 갑자기 달릴 때부터 알아봤어야 했는데 나의 실책이야",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "송연하",
       "Background": "0",
       "talk": "죽고 싶었어",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(그녀의 심리상태를 들었을 뿐인데 정신적으로 흔들리는 기분이다)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "송연하",
       "Background": "0",
       "talk": "살아봤자 더 고통스러워 그냥 대충 살고 대충 죽고싶었어 사람이랑 관계를 맺는게 별것도 아닌 감정싸움으로 서로 상처 주고 멀어져 버리는 게 아팠어",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "송연하",
       "Background": "0",
       "talk": "집에서는 안전하지 않으니까 친구 관계를 통해서 치유하고 싶었지만  친구라고 생각한 사람들 모두 그저 옅은 필요관계로 이어진 존재니까 상처받는 게 두려워 버림받는 게 두려워",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "송연하",
       "Background": "0",
       "talk": "그래서 누구랑도 친해지지 않았어 그런데 너는 다가왔어 일부러 말을 걸지 않아도 너는 말을 걸어줬어",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "송연하",
       "Background": "0",
       "talk": "그저 지나쳐도 되는 걸 너는 굳이 돌아봐서 도와줬어 그래서 고맙게 생각해 처음으로 나를 버리지 않는다고 생각하고 안심할 수 있었어",
-      "Emotion": ""
+      "Emotion": "2"
     },
     {
       "Talker": "송연하",
       "Background": "0",
       "talk": "혹시 너한테 까지도 버림받는 게 두려워져서 조금이라도 더 노력할 수 있었어 고마워...",
-      "Emotion": ""
+      "Emotion": "2"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(남들은 그녀를 그냥 두는 게 돕는 거라고 했다 대충대충 살아가는 그녀를 도와봤자 그녀가 더 게을러질 뿐이라고 하지만 아니었다)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(그녀는 약해진 것이었다)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(보살핌 받아야 할 집에서도 학교에서도 친구에게도 상처받은 그녀가 삶의 의미를 잃고 죽고 싶다고 생각할 정도로 그녀는 많이 아주 많이 약해진 상태였다)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(그러기에 건성으로 살아갔다 살아야 할 의미도 이유도 없었기에 그저 처음에는 반장으로서의 책임감으로 다음에는 서서히 무기력한 그녀에게 도움을 주고 싶다고 생각하게 되어서 그저 우연으로 맺어진 이 관계가 그녀에게 삶을 바꿀 새로운 희망이 되었다)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(할머니가 돌아가신 뒤로 바뀌겠다고 다짐한 내가 노력해도 아무것도 바뀌지 못한 내가 많이 부족한 내가 그녀에게 도움을 줄 수 있었다는 사실이 이러한 나라도 누군가에겐 희망이 될 수 있다는 사실이 흘러나오는 눈물을 막을 수 없게 만들었다)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "(그저 말없이 그녀를 껴안으면서 나는 울었다)",
-      "Emotion": ""
+      "Emotion": "1"
     },
     {
       "Talker": "주인공",
       "Background": "0",
       "talk": "나야말고 고마워",
-      "Emotion": ""
+      "Emotion": "3"
     }
   ],
   "SeongJunAh1": [
