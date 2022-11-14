@@ -33,16 +33,16 @@ MonoBehaviour:
   LeeYerin: 0000000000
   SongYeonHa: 0000000000
   SeongJunAh: 0000000000
-  LeeTaeyeonCrush: 0
-  JeongSeoYoonCrush: 0
-  LeeYerinCrush: 2
-  SongYeonHaCrush: 0
-  SeongJunAhCrush: 0
   isLeeTaeyeon: 1
   isJeongSeoYoon: 0
   isLeeYerin: 0
   isSongYeonHa: 0
   isSeongJunAh: 0
+  MaxLeeTaeyeon: 20
+  MaxJeongSeoYoon: 20
+  MaxLeeYerin: 20
+  MaxSongYeonHa: 20
+  MaxSeongJunAh: 20
   TouchType:
   - UpgradeStep: 1
     UpgradeCost: 50
