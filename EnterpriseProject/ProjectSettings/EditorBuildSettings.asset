@@ -11,7 +11,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/HyeonSu/Scene/NeglectTest.unity
     guid: 6ad7fedc46ba6fa4d9a23746bd98446a
-  - enabled: 1
-    path: Assets/Jungwoo/Scene/Roll.unity
-    guid: 6dad241d57119ff4d85ea8dcabae1024
   m_configObjects: {}
