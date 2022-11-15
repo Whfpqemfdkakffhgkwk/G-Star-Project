@@ -25,6 +25,8 @@ public class ButtonManager : MonoBehaviour
 
 	[SerializeField] private Dialoue dialoue;
 
+	[SerializeField] private GameObject QuitWindow;
+
 	SaveVariables saveVariables;
 
 	private bool OnQuest = false;
@@ -37,17 +39,40 @@ public class ButtonManager : MonoBehaviour
 	private void FixedUpdate()
 	{
 		TalkerOpen();
+		QuitCheck();
 	}
 	public void MainClick()
 	{
-		DirectingGold(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+        SoundManager.Instance.PlaySoundClip("SFX_MainClick", SoundType.SFX);
+        DirectingGold(Camera.main.ScreenToWorldPoint(Input.mousePosition));
 		StartCoroutine(GoldDelay());
 		GameObject particle = Instantiate(ParticleObj, canvas.transform);
 		particle.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 		particle.transform.position = new Vector3(particle.transform.position.x, particle.transform.position.y, 0);
 		Destroy(particle, 0.8f);
 	}
-	public IEnumerator MainSecond()
+	void QuitCheck()
+	{
+		if (Application.platform == RuntimePlatform.Android)
+		{
+			if(Input.GetKeyDown(KeyCode.Escape))
+			{
+				QuitWindow.transform.localScale = new Vector2(0, 0);
+				QuitWindow.SetActive(true);
+				QuitWindow.transform.DOScale(new Vector2(1, 1), 0.7f);
+			}
+		}
+	}
+	public void QuitOrCancel()
+	{
+		if (EventSystem.current.currentSelectedGameObject.name.Equals("Quit"))
+		{
+			Application.Quit();
+		}
+		else
+			QuitWindow.SetActive(false);
+	}
+    public IEnumerator MainSecond()
 	{
 		saveVariables.gold += saveVariables.AllSecondMoney;
 		saveVariables.QU_Gold += (int)saveVariables.AllSecondMoney;

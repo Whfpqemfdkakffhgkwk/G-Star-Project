@@ -6,7 +6,7 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 {
     public static T Instance = null;
 
-    protected virtual void Awake()
+    public virtual void Awake()
     {
         T t;
         t = FindObjectOfType(typeof(T)) as T;
