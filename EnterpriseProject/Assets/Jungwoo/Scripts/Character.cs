@@ -213,7 +213,7 @@ public class Character : MonoBehaviour
 
 	public void LeeTaeyeonEv()
 	{
-		LeeTaeyeonEvCount++;
+		//LeeTaeyeonEvCount++;
 	}
 	public void LeeTaeyeonEvTouch()
 	{
@@ -222,7 +222,7 @@ public class Character : MonoBehaviour
 	}
 	public void JeongSeoYoonEv()
 	{
-		JeongSeoYoonEvCount++;
+		//JeongSeoYoonEvCount++;
 	}
 	public void JeongSeoYoonEvTouch()
 	{
@@ -231,7 +231,7 @@ public class Character : MonoBehaviour
 	}
 	public void LeeYerinEv()
 	{
-		LeeYerinEvCount++;
+		//LeeYerinEvCount++;
 	}
 	public void LeeYerinEvTouch()
 	{
@@ -240,7 +240,7 @@ public class Character : MonoBehaviour
 	}
 	public void SongYeonHaEv()
 	{
-		SongYeonHaEvCount++;
+		//SongYeonHaEvCount++;
 	}
 	public void SongYeonHaEvTouch()
 	{
