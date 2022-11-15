@@ -145,35 +145,31 @@ public class Roll : MonoBehaviour
 
 	public void RollGet()
 	{
-		SaveVariables SaveMG = SaveManager.Instance.saveVariables;
+		bool[] SaveMG = { true, false, false, false, false };
+		SaveMG[0] = SaveManager.Instance.saveVariables.isLeeTaeyeon;
+		SaveMG[1] = SaveManager.Instance.saveVariables.isJeongSeoYoon;
+		SaveMG[2] = SaveManager.Instance.saveVariables.isLeeYerin;
+		SaveMG[3] = SaveManager.Instance.saveVariables.isSongYeonHa;
+		SaveMG[4] = SaveManager.Instance.saveVariables.isSeongJunAh;
+		string[] CharacterName = { "RLeeTaeyeon", "RJeongSeoYoon", "RLeeYerin", "RSongYeonHa", "RSeongJunAh" };
 		TimerEnd = default;
 		int RollResult = Random.Range(0, 4);
-		if (RollResult == 0)
+		if (SaveMG[RollResult] == false)
 		{
-			SaveMG.isLeeTaeyeon = true;
-			GameObject.Find("RLeeTaeyeon").GetComponent<Animator>().SetTrigger("Happy");
+			SaveMG[RollResult] = true;
+			GameObject.Find(CharacterName[RollResult]).GetComponent<Animator>().SetTrigger("Happy");
+			SaveManager.Instance.saveVariables.isLeeTaeyeon = SaveMG[0];
+			SaveManager.Instance.saveVariables.isJeongSeoYoon = SaveMG[1];
+			SaveManager.Instance.saveVariables.isLeeYerin = SaveMG[2];
+			SaveManager.Instance.saveVariables.isSongYeonHa = SaveMG[3];
+			SaveManager.Instance.saveVariables.isSeongJunAh = SaveMG[4];
+			RollReady = true;
+			Refresh();
 		}
-		if (RollResult == 1)
+		else
 		{
-			SaveMG.isJeongSeoYoon = true;
-			GameObject.Find("RJeongSeoYoon").GetComponent<Animator>().SetTrigger("Happy");
+			RollGet();
 		}
-		if (RollResult == 2)
-		{
-			SaveMG.isLeeYerin = true;
-			GameObject.Find("RLeeYerin").GetComponent<Animator>().SetTrigger("Happy");
-		}
-		if (RollResult == 3)
-		{
-			SaveMG.isSongYeonHa = true;
-			GameObject.Find("RSongYeonHa").GetComponent<Animator>().SetTrigger("Happy");
-		}
-		if (RollResult == 4)
-		{
-			SaveMG.isSeongJunAh = true;
-		}
-		RollReady = true;
-		Refresh();
 	}
 
 	public void HourUp()
