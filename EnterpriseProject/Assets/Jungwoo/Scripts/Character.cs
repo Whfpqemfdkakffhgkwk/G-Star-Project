@@ -13,6 +13,11 @@ public class Character : MonoBehaviour
 	public GameObject CLeeYerin;
 	public GameObject CSongYeonHa;
 
+	private int LeeTaeyeonEvCount;
+	private int JeongSeoYoonEvCount;
+	private int LeeYerinEvCount;
+	private int SongYeonHaEvCount;
+
 	void Awake()
 	{
 		if (name == "Character")
@@ -22,7 +27,11 @@ public class Character : MonoBehaviour
 	}
 	void Start()
 	{
-		StartCoroutine(MoveCharacter());
+		if (name != "Character")
+		{
+			StartCoroutine(MoveCharacter());
+			StartCoroutine(Event());
+		}
 	}
 
 	void Update()
@@ -103,6 +112,49 @@ public class Character : MonoBehaviour
 			}
 			GetComponent<Animator>().SetTrigger("Idle");
 			yield return new WaitForSeconds(Random.Range(1.5f, 3f));
+		}
+	}
+
+	IEnumerator Event()
+	{
+
+		yield return new WaitForSeconds(Random.Range(10f, 20f));
+	}
+
+	public void LeeTaeyeonEv()
+	{
+		LeeTaeyeonEvCount++;
+		if (LeeTaeyeonEvCount > 10)
+		{
+			SM.LeeTaeyeonCrush += 20;
+			LeeTaeyeonEvCount = 0;
+		}
+	}
+	public void JeongSeoYoonEv()
+	{
+		JeongSeoYoonEvCount++;
+		if (JeongSeoYoonEvCount > 10)
+		{
+			SM.JeongSeoYoonCrush += 20;
+			JeongSeoYoonEvCount = 0;
+		}
+	}
+	public void LeeYerinEv()
+	{
+		LeeYerinEvCount++;
+		if (LeeYerinEvCount > 10)
+		{
+			SM.LeeYerinCrush += 20;
+			LeeYerinEvCount = 0;
+		}
+	}
+	public void SongYeonHaEv()
+	{
+		SongYeonHaEvCount++;
+		if (SongYeonHaEvCount > 10)
+		{
+			SM.SongYeonHaCrush += 20;
+			SongYeonHaEvCount = 0;
 		}
 	}
 }
