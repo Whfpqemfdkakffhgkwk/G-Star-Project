@@ -51,7 +51,7 @@ public class QuestManager : MonoBehaviour
         TouchName.Add(1, "도서실");
         TouchName.Add(2, "헬스장");
         TouchName.Add(3, "피시방");
-        SecondName.Add(0, "옥탑방");
+        SecondName.Add(0, "반지하");
         SecondName.Add(1, "스탠다드룸");
         SecondName.Add(2, "딜럭스룸");
         SecondName.Add(3, "스위트룸");

@@ -19,7 +19,7 @@ public class ButtonManager : MonoBehaviour
 
 	[SerializeField] private GameObject DiamondDirectingObj, GoldDirectingObj, ParticleObj;
 
-	[SerializeField] private GameObject canvas;
+	[SerializeField] private GameObject canvas, DiamondCanvas;
 
 	[SerializeField] private QuestManager questManager;
 
@@ -40,7 +40,6 @@ public class ButtonManager : MonoBehaviour
 	}
 	public void MainClick()
 	{
-		GameObject.Find("Character").GetComponent<Character>().LeeTaeyeonEvCount += 5;
 		DirectingGold(Camera.main.ScreenToWorldPoint(Input.mousePosition));
 		StartCoroutine(GoldDelay());
 		GameObject particle = Instantiate(ParticleObj, canvas.transform);
@@ -94,7 +93,7 @@ public class ButtonManager : MonoBehaviour
 			//강화 비용 늘리기
 			list[arr].UpgradeCost += (ulong)(list[arr].UpgradeCost * ((ulong)list[arr].UpgradeStep));
 			//강화 적용하기
-			SaveManager.Instance.Combine();
+			SaveManager.Instance.AllGoodPlus(list, arr);
 		}
 	}
 	public void QuestMove()
@@ -127,7 +126,7 @@ public class ButtonManager : MonoBehaviour
 		for (int i = 0; i < 50; i++)
 		{
 			GameObject SummonedObject = Instantiate(DiamondDirectingObj, cur);
-			SummonedObject.transform.SetParent(canvas.transform);
+			SummonedObject.transform.SetParent(DiamondCanvas.transform);
 			Vector2 RandomPos = new Vector2(SummonedObject.transform.localPosition.x + Random.Range(-200f, 200f),
 											SummonedObject.transform.localPosition.y + Random.Range(-100f, -400f));
 			SummonedObject.transform.DOLocalMove(RandomPos, 1.0f);
