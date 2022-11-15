@@ -147,22 +147,26 @@ public class Roll : MonoBehaviour
 	{
 		SaveVariables SaveMG = SaveManager.Instance.saveVariables;
 		TimerEnd = default;
-		int RollResult = Random.Range(0, 5);
+		int RollResult = Random.Range(0, 4);
 		if (RollResult == 0)
 		{
 			SaveMG.isLeeTaeyeon = true;
+			GameObject.Find("RLeeTaeyeon").GetComponent<Animator>().SetTrigger("Happy");
 		}
 		if (RollResult == 1)
 		{
 			SaveMG.isJeongSeoYoon = true;
+			GameObject.Find("RJeongSeoYoon").GetComponent<Animator>().SetTrigger("Happy");
 		}
 		if (RollResult == 2)
 		{
 			SaveMG.isLeeYerin = true;
+			GameObject.Find("RLeeYerin").GetComponent<Animator>().SetTrigger("Happy");
 		}
 		if (RollResult == 3)
 		{
 			SaveMG.isSongYeonHa = true;
+			GameObject.Find("RSongYeonHa").GetComponent<Animator>().SetTrigger("Happy");
 		}
 		if (RollResult == 4)
 		{

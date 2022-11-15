@@ -6,6 +6,20 @@ public class Character : MonoBehaviour
 {
 	public GameObject InformationPannel;
 	public GameObject CharacterObj;
+
+	private SaveVariables SM;
+	public GameObject CLeeTaeyeon;
+	public GameObject CJeongSeoYoon;
+	public GameObject CLeeYerin;
+	public GameObject CSongYeonHa;
+
+	void Awake()
+	{
+		if (name == "Character")
+		{
+			SM = SaveManager.Instance.saveVariables;
+		}
+	}
 	void Start()
 	{
 		StartCoroutine(MoveCharacter());
@@ -13,12 +27,41 @@ public class Character : MonoBehaviour
 
 	void Update()
 	{
-
-	}
-
-	public void ClickInformation()
-	{
-
+		if (name == "Character")
+		{
+			if (SM.isLeeTaeyeon == true)
+			{
+				CLeeTaeyeon.SetActive(true);
+			}
+			else
+			{
+				CLeeTaeyeon.SetActive(false);
+			}
+			if (SM.isJeongSeoYoon == true)
+			{
+				CJeongSeoYoon.SetActive(true);
+			}
+			else
+			{
+				CJeongSeoYoon.SetActive(false);
+			}
+			if (SM.isLeeYerin == true)
+			{
+				CLeeYerin.SetActive(true);
+			}
+			else
+			{
+				CLeeYerin.SetActive(false);
+			}
+			if (SM.isSongYeonHa == true)
+			{
+				CSongYeonHa.SetActive(true);
+			}
+			else
+			{
+				CSongYeonHa.SetActive(false);
+			}
+		}
 	}
 
 	IEnumerator MoveCharacter()
@@ -59,7 +102,7 @@ public class Character : MonoBehaviour
 				yield return new WaitForSeconds(0.02f);
 			}
 			GetComponent<Animator>().SetTrigger("Idle");
-			yield return new WaitForSeconds(2f);
+			yield return new WaitForSeconds(Random.Range(1.5f, 3f));
 		}
 	}
 }
