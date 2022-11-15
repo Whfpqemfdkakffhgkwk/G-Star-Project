@@ -19,7 +19,7 @@ public class ButtonManager : MonoBehaviour
 
 	[SerializeField] private GameObject DiamondDirectingObj, GoldDirectingObj, ParticleObj;
 
-	[SerializeField] private GameObject canvas;
+	[SerializeField] private GameObject canvas, DiamondCanvas;
 
 	[SerializeField] private QuestManager questManager;
 
@@ -126,7 +126,7 @@ public class ButtonManager : MonoBehaviour
 		for (int i = 0; i < 50; i++)
 		{
 			GameObject SummonedObject = Instantiate(DiamondDirectingObj, cur);
-			SummonedObject.transform.SetParent(canvas.transform);
+			SummonedObject.transform.SetParent(DiamondCanvas.transform);
 			Vector2 RandomPos = new Vector2(SummonedObject.transform.localPosition.x + Random.Range(-200f, 200f),
 											SummonedObject.transform.localPosition.y + Random.Range(-100f, -400f));
 			SummonedObject.transform.DOLocalMove(RandomPos, 1.0f);
