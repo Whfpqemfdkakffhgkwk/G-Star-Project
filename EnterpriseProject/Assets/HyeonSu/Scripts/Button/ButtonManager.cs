@@ -109,6 +109,7 @@ public class ButtonManager : MonoBehaviour
 	{
 		if (saveVariables.gold >= (ulong)list[arr].UpgradeCost)
 		{
+			SoundManager.Instance.PlaySoundClip("SFX_UpgradeSound", SoundType.SFX);
 			//퀘스트 업그레이드
 			saveVariables.QU_Touch[arr]++;
 			//강화 비용 깎기
@@ -142,6 +143,7 @@ public class ButtonManager : MonoBehaviour
 		Image ClickImg = EventSystem.current.currentSelectedGameObject.transform.GetChild(1).GetComponent<Image>();
 		if (ClickImg.color == new Color(1, 1, 1, 1))
 		{
+			SoundManager.Instance.PlaySoundClip("SFX_QuestClick", SoundType.SFX);
 			DirectingDiamond(EventSystem.current.currentSelectedGameObject.transform);
 		}
 		questManager.ButtonState(ClickImg);
