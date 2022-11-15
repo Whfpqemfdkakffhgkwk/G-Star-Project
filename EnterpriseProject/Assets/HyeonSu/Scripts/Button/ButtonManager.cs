@@ -55,7 +55,7 @@ public class ButtonManager : MonoBehaviour
 	{
 		if (Application.platform == RuntimePlatform.Android)
 		{
-			if(Input.GetKeyDown(KeyCode.Escape))
+			if(Input.GetKey(KeyCode.Escape))
 			{
 				QuitWindow.transform.localScale = new Vector2(0, 0);
 				QuitWindow.SetActive(true);
