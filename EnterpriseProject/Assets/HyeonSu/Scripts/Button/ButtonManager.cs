@@ -222,8 +222,9 @@ public class ButtonManager : MonoBehaviour
             TalkerImages[1].sprite = TalkerSprs[1];
         if (saveVariables.isSongYeonHa)
             TalkerImages[2].sprite = TalkerSprs[2];
-        if (saveVariables.isSeongJunAh)
-            TalkerImages[3].sprite = TalkerSprs[3];
+        //오류나서 주석쳐둠
+        //if (saveVariables.isSeongJunAh)
+        //    TalkerImages[3].sprite = TalkerSprs[3];
     }
     IEnumerator DirectingDiamondCor(GameObject obj)
     {

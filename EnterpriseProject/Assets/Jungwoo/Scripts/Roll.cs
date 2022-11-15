@@ -120,9 +120,20 @@ public class Roll : MonoBehaviour
 		//TimerEnd = DateTime.Now.AddHours(9);
 		TimerEnd = DateTime.Now.AddSeconds(TimerHour * 3600 + TimerMin * 60 + TimerSec);
 		TimeSpan temp = TimerEnd - DateTime.Now;
-		Debug.Log((int)((temp.Hours * 3600 + temp.Minutes * 60 + temp.Seconds) / 32400f * 50) + " 만큼의 다이아 소모");
-		RollReady = false;
-		Refresh();
+		if (SaveManager.Instance.saveVariables.diamond >= (int)((temp.Hours * 3600 + temp.Minutes * 60 + temp.Seconds) / 32400f * 50))
+		{
+			SaveManager.Instance.saveVariables.diamond -= (int)((temp.Hours * 3600 + temp.Minutes * 60 + temp.Seconds) / 32400f * 50);
+			Debug.Log((int)((temp.Hours * 3600 + temp.Minutes * 60 + temp.Seconds) / 32400f * 50) + " 만큼의 다이아 소모");
+			RollReady = false;
+			Refresh();
+		}
+		else
+		{
+			TimerEnd = DateTime.Now.AddSeconds(-1);
+			GameObject.Find("RollFalse").SetActive(true);
+			GameObject.Find("TimeUpDown").SetActive(true);
+			GameObject.Find("RollTrue").SetActive(false);
+		}
 	}
 
 	public void RollSkip()
