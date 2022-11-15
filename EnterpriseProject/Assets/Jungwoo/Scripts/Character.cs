@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Character : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class Character : MonoBehaviour
 	public GameObject CharacterObj;
 	public GameObject EvFalse;
 	public GameObject EvTrue;
+	public GameObject EvText;
 
 	private SaveVariables SM;
 	public GameObject CLeeTaeyeon;
@@ -142,6 +144,10 @@ public class Character : MonoBehaviour
 					EvFalse.SetActive(true);
 					yield return new WaitForSeconds(2f);
 					EvFalse.SetActive(false);
+					EvText.SetActive(true);
+					EvText.GetComponent<TextMeshProUGUI>().text = LeeTaeyeonEvCount + " / 10 번 업그레이드 하기";
+					yield return new WaitForSeconds(2f);
+					EvText.SetActive(false);
 				}
 			}
 			if (name == "CJeongSeoYoon")
@@ -157,6 +163,10 @@ public class Character : MonoBehaviour
 					EvFalse.SetActive(true);
 					yield return new WaitForSeconds(2f);
 					EvFalse.SetActive(false);
+					EvText.SetActive(true);
+					EvText.GetComponent<TextMeshProUGUI>().text = JeongSeoYoonEvCount + " / 10 번 업그레이드 하기";
+					yield return new WaitForSeconds(2f);
+					EvText.SetActive(false);
 				}
 			}
 			if (name == "CLeeYerin")
@@ -172,6 +182,10 @@ public class Character : MonoBehaviour
 					EvFalse.SetActive(true);
 					yield return new WaitForSeconds(2f);
 					EvFalse.SetActive(false);
+					EvText.SetActive(true);
+					EvText.GetComponent<TextMeshProUGUI>().text = LeeYerinEvCount + " / 10 번 업그레이드 하기";
+					yield return new WaitForSeconds(2f);
+					EvText.SetActive(false);
 				}
 			}
 			if (name == "CSongYeonHa")
@@ -187,6 +201,10 @@ public class Character : MonoBehaviour
 					EvFalse.SetActive(true);
 					yield return new WaitForSeconds(2f);
 					EvFalse.SetActive(false);
+					EvText.SetActive(true);
+					EvText.GetComponent<TextMeshProUGUI>().text = SongYeonHaEvCount + " / 10 번 업그레이드 하기";
+					yield return new WaitForSeconds(2f);
+					EvText.SetActive(false);
 				}
 			}
 			yield return new WaitForSeconds(Random.Range(1f, 2f));
