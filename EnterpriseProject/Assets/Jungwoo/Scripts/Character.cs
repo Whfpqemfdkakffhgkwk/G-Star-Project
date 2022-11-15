@@ -164,7 +164,7 @@ public class Character : MonoBehaviour
 					yield return new WaitForSeconds(2f);
 					EvFalse.SetActive(false);
 					EvText.SetActive(true);
-					EvText.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "도서관 " + JeongSeoYoonEvCount + " / 10 번 업그레이드 하기";
+					EvText.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "도서실 " + JeongSeoYoonEvCount + " / 10 번 업그레이드 하기";
 					yield return new WaitForSeconds(2f);
 					EvText.SetActive(false);
 				}
@@ -202,7 +202,7 @@ public class Character : MonoBehaviour
 					yield return new WaitForSeconds(2f);
 					EvFalse.SetActive(false);
 					EvText.SetActive(true);
-					EvText.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "피씨방 " + SongYeonHaEvCount + " / 10 번 업그레이드 하기";
+					EvText.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "피시방 " + SongYeonHaEvCount + " / 10 번 업그레이드 하기";
 					yield return new WaitForSeconds(2f);
 					EvText.SetActive(false);
 				}

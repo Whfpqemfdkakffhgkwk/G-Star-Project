@@ -27,6 +27,8 @@ public class ButtonManager : MonoBehaviour
 
 	[SerializeField] private GameObject QuitWindow;
 
+	[SerializeField] private Character character;
+
 	SaveVariables saveVariables;
 
 	private bool OnQuest = false;
@@ -110,8 +112,24 @@ public class ButtonManager : MonoBehaviour
 		if (saveVariables.gold >= (ulong)list[arr].UpgradeCost)
 		{
 			SoundManager.Instance.PlaySoundClip("SFX_UpgradeSound", SoundType.SFX);
-			//퀘스트 업그레이드
-			saveVariables.QU_Touch[arr]++;
+			if(list == saveVariables.TouchType && arr == 2)
+			{
+				character.LeeTaeyeonEvCount++;
+			}
+            if (list == saveVariables.TouchType && arr == 1)
+            {
+                character.JeongSeoYoonEvCount++;
+            }
+            if (list == saveVariables.TouchType && arr == 0)
+            {
+                character.LeeYerinEvCount++;
+            }
+            if (list == saveVariables.TouchType && arr == 3)
+            {
+                character.SongYeonHaEvCount++;
+            }
+            //퀘스트 업그레이드
+            saveVariables.QU_Touch[arr]++;
 			//강화 비용 깎기
 			saveVariables.gold -= (ulong)list[arr].UpgradeCost;
 			//강화 수치(n강)
