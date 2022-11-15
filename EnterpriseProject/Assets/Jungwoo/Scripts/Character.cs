@@ -15,10 +15,10 @@ public class Character : MonoBehaviour
 	public GameObject CLeeYerin;
 	public GameObject CSongYeonHa;
 
-	private int LeeTaeyeonEvCount;
-	private int JeongSeoYoonEvCount;
-	private int LeeYerinEvCount;
-	private int SongYeonHaEvCount;
+	public int LeeTaeyeonEvCount;
+	public int JeongSeoYoonEvCount;
+	public int LeeYerinEvCount;
+	public int SongYeonHaEvCount;
 
 	void Awake()
 	{
@@ -120,7 +120,7 @@ public class Character : MonoBehaviour
 		{
 			if (name == "CLeeTaeyeon")
 			{
-				if (SM.LeeTaeyeonCrush >= 20)
+				if (GameObject.Find("Character").GetComponent<Character>().LeeTaeyeonEvCount >= 10)
 				{
 					EvFalse.SetActive(false);
 					EvTrue.SetActive(true);
@@ -135,7 +135,7 @@ public class Character : MonoBehaviour
 			}
 			if (name == "CJeongSeoYoon")
 			{
-				if (SM.JeongSeoYoonCrush >= 20)
+				if (GameObject.Find("Character").GetComponent<Character>().JeongSeoYoonEvCount >= 10)
 				{
 					EvFalse.SetActive(false);
 					EvTrue.SetActive(true);
@@ -150,7 +150,7 @@ public class Character : MonoBehaviour
 			}
 			if (name == "CLeeYerin")
 			{
-				if (SM.LeeYerinCrush >= 20)
+				if (GameObject.Find("Character").GetComponent<Character>().LeeYerinEvCount >= 10)
 				{
 					EvFalse.SetActive(false);
 					EvTrue.SetActive(true);
@@ -165,7 +165,7 @@ public class Character : MonoBehaviour
 			}
 			if (name == "CSongYeonHa")
 			{
-				if (SM.SongYeonHaCrush >= 20)
+				if (GameObject.Find("Character").GetComponent<Character>().SongYeonHaEvCount >= 10)
 				{
 					EvFalse.SetActive(false);
 					EvTrue.SetActive(true);
@@ -178,7 +178,8 @@ public class Character : MonoBehaviour
 					EvFalse.SetActive(false);
 				}
 			}
-			yield return new WaitForSeconds(Random.Range(10f, 20f));
+			yield return new WaitForSeconds(Random.Range(1f, 2f));
+			//yield return new WaitForSeconds(Random.Range(10f, 20f));
 		}
 	}
 
@@ -188,11 +189,8 @@ public class Character : MonoBehaviour
 	}
 	public void LeeTaeyeonEvTouch()
 	{
-		if (LeeTaeyeonEvCount > 10)
-		{
-			SM.LeeTaeyeonCrush += 20;
-			LeeTaeyeonEvCount -= 10;
-		}
+		SM.LeeTaeyeonCrush += 20;
+		LeeTaeyeonEvCount -= 10;
 	}
 	public void JeongSeoYoonEv()
 	{
@@ -200,11 +198,8 @@ public class Character : MonoBehaviour
 	}
 	public void JeongSeoYoonEvTouch()
 	{
-		if (JeongSeoYoonEvCount > 10)
-		{
-			SM.JeongSeoYoonCrush += 20;
-			JeongSeoYoonEvCount -= 10;
-		}
+		SM.JeongSeoYoonCrush += 20;
+		JeongSeoYoonEvCount -= 10;
 	}
 	public void LeeYerinEv()
 	{
@@ -212,11 +207,8 @@ public class Character : MonoBehaviour
 	}
 	public void LeeYerinEvTouch()
 	{
-		if (LeeYerinEvCount > 10)
-		{
-			SM.LeeYerinCrush += 20;
-			LeeYerinEvCount -= 10;
-		}
+		SM.LeeYerinCrush += 20;
+		LeeYerinEvCount -= 10;
 	}
 	public void SongYeonHaEv()
 	{
@@ -224,10 +216,7 @@ public class Character : MonoBehaviour
 	}
 	public void SongYeonHaEvTouch()
 	{
-		if (SongYeonHaEvCount > 10)
-		{
-			SM.SongYeonHaCrush += 20;
-			SongYeonHaEvCount -= 10;
-		}
+		SM.SongYeonHaCrush += 20;
+		SongYeonHaEvCount -= 10;
 	}
 }
