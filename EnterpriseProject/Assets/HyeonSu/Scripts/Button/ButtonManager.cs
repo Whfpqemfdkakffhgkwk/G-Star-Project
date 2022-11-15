@@ -40,7 +40,6 @@ public class ButtonManager : MonoBehaviour
 	}
 	public void MainClick()
 	{
-		GameObject.Find("Character").GetComponent<Character>().LeeTaeyeonEvCount += 5;
 		DirectingGold(Camera.main.ScreenToWorldPoint(Input.mousePosition));
 		StartCoroutine(GoldDelay());
 		GameObject particle = Instantiate(ParticleObj, canvas.transform);
@@ -94,7 +93,7 @@ public class ButtonManager : MonoBehaviour
 			//강화 비용 늘리기
 			list[arr].UpgradeCost += (ulong)(list[arr].UpgradeCost * ((ulong)list[arr].UpgradeStep));
 			//강화 적용하기
-			SaveManager.Instance.Combine();
+			SaveManager.Instance.AllGoodPlus(list, arr);
 		}
 	}
 	public void QuestMove()

@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.IO;
 using Unity.VisualScripting;
 using UnityEngine;
+using static SaveVariables;
 
 public class SaveManager : Singleton<SaveManager>
 {
     public SaveVariables saveVariables;
     //수정 필요
+
     #region 저장기능
     void LoadJson()
     {
@@ -28,20 +30,32 @@ public class SaveManager : Singleton<SaveManager>
 
     public void Combine()
     {
-        //임시 저장기능 만들면 이거 지워야함
-        #region 임시
-        saveVariables.AllSecondMoney = 0;
-        saveVariables.AllTouchMonmey = 0;
-        #endregion
         for (int i = 0; i < saveVariables.TouchType.Length; i++)
         {
             saveVariables.AllTouchMonmey +=
-                    ((ulong)saveVariables.TouchType[i].UpgradeStep * 3 * (ulong)(i + 1));
+                    (ulong)(saveVariables.TouchType[i].UpgradeStep * 3) * (ulong)(i + 1) *
+                    10; //이 10은 지스타용 부스터;
         }
         for (int i = 0; i < saveVariables.SecondType.Length; i++)
         {
             saveVariables.AllSecondMoney +=
-                    ((ulong)saveVariables.SecondType[i].UpgradeStep * 10 * (ulong)(i + 1));
+                    (ulong)saveVariables.SecondType[i].UpgradeStep * 10 * (ulong)(i + 1) *
+                    10; //이 10은 지스타용 부스터;
+        }
+    }
+    public void AllGoodPlus(GoodsList[] list, int arrayNum)
+    {
+        if(list == saveVariables.TouchType)
+        {
+            saveVariables.AllTouchMonmey +=
+                    (ulong)(list[arrayNum].UpgradeStep * 3) * (ulong)(arrayNum + 1) *
+                    10; //이 10은 지스타용 부스터;
+        }
+        else if(list == saveVariables.SecondType)
+        {
+            saveVariables.AllSecondMoney +=
+                    (ulong)list[arrayNum].UpgradeStep * 10 * (ulong)(arrayNum + 1) *
+                    10; //이 10은 지스타용 부스터;
         }
     }
     public IEnumerator AutoSave()

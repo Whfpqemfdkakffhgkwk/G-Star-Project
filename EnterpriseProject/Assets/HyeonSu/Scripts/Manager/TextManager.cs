@@ -62,7 +62,8 @@ public class TextManager : MonoBehaviour
     {
         for (int i = 0; i < texts.Length; i++)
         {
-            texts[i].text = "+ " + (ulong)(Goods[i].UpgradeCost * ((ulong)Goods[i].UpgradeStep + 1 / 10.0f));
+            texts[i].text = "+ " + (ulong)(saveVariables.TouchType[i].UpgradeStep + 1) * 3 * (ulong)(i + 1) *
+                10; //이 10은 지스타용 부스터
         }
     }
     void GoodsText(Text text, double good)

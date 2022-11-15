@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b45f88197feb43045b156003d10e3ff1, type: 3}
   m_Name: Stat
   m_EditorClassIdentifier: 
-  AllTouchMonmey: 9
-  AllSecondMoney: 10
-  gold: 10814
+  AllTouchMonmey: 690
+  AllSecondMoney: 100
+  gold: 98689100
   diamond: 0
-  QU_Touch: 0300000000000000000000000000000000000000000000000000000000000000
+  QU_Touch: 1800000001000000000000000000000000000000000000000000000000000000
   QU_Second: 0000000000000000000000000000000000000000000000000000000000000000
-  QU_Gold: 11314
-  QU_Click: 118
-  QU_PlayTime: 1031
+  QU_Gold: 42642
+  QU_Click: 140
+  QU_PlayTime: 1253
   QU_Draw: 0
   QUN_Touch: 0000000000000000000000000000000000000000000000000000000000000000
   QUN_Second: 0000000000000000000000000000000000000000000000000000000000000000
@@ -49,10 +49,10 @@ MonoBehaviour:
   MaxSongYeonHa: 20
   MaxSeongJunAh: 20
   TouchType:
-  - UpgradeStep: 3
-    UpgradeCost: 600
-  - UpgradeStep: 0
-    UpgradeCost: 500
+  - UpgradeStep: 1
+    UpgradeCost: 50
+  - UpgradeStep: 1
+    UpgradeCost: 1000
   - UpgradeStep: 0
     UpgradeCost: 5000
   - UpgradeStep: 0
