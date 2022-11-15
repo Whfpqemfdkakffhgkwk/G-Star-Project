@@ -135,7 +135,7 @@ public class ButtonManager : MonoBehaviour
 			//강화 수치(n강)
 			list[arr].UpgradeStep++;
 			//강화 비용 늘리기
-			list[arr].UpgradeCost += (ulong)(list[arr].UpgradeCost * 1.2f); //밸런싱 해야하는 부분
+			list[arr].UpgradeCost += (ulong)(list[arr].UpgradeCost * 0.1f); //밸런싱 해야하는 부분
 			//강화 적용하기
 			SaveManager.Instance.AllGoodPlus(list, arr);
 		}
