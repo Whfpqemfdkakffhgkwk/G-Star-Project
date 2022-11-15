@@ -27,7 +27,7 @@ public class ButtonManager : MonoBehaviour
 
 	[SerializeField] private GameObject QuitWindow;
 
-	[SerializeField] private Character character;
+ 	[SerializeField] private Character LeeTaecharacter, Jeongcharater, LeeYaecharater, Songcharater;
 
 	SaveVariables saveVariables;
 
@@ -114,19 +114,19 @@ public class ButtonManager : MonoBehaviour
 			SoundManager.Instance.PlaySoundClip("SFX_UpgradeSound", SoundType.SFX);
 			if(list == saveVariables.TouchType && arr == 2)
 			{
-				character.LeeTaeyeonEvCount++;
+				LeeTaecharacter.LeeTaeyeonEvCount++;
 			}
             if (list == saveVariables.TouchType && arr == 1)
             {
-                character.JeongSeoYoonEvCount++;
+                Jeongcharater.JeongSeoYoonEvCount++;
             }
             if (list == saveVariables.TouchType && arr == 0)
             {
-                character.LeeYerinEvCount++;
+                LeeYaecharater.LeeYerinEvCount++;
             }
             if (list == saveVariables.TouchType && arr == 3)
             {
-                character.SongYeonHaEvCount++;
+                Songcharater.SongYeonHaEvCount++;
             }
             //퀘스트 업그레이드
             saveVariables.QU_Touch[arr]++;
