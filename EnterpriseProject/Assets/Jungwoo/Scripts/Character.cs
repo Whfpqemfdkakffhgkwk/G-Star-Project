@@ -6,6 +6,8 @@ public class Character : MonoBehaviour
 {
 	public GameObject InformationPannel;
 	public GameObject CharacterObj;
+	public GameObject EvFalse;
+	public GameObject EvTrue;
 
 	private SaveVariables SM;
 	public GameObject CLeeTaeyeon;
@@ -20,10 +22,7 @@ public class Character : MonoBehaviour
 
 	void Awake()
 	{
-		if (name == "Character")
-		{
-			SM = SaveManager.Instance.saveVariables;
-		}
+		SM = SaveManager.Instance.saveVariables;
 	}
 	void Start()
 	{
@@ -117,44 +116,118 @@ public class Character : MonoBehaviour
 
 	IEnumerator Event()
 	{
-
-		yield return new WaitForSeconds(Random.Range(10f, 20f));
+		while (true)
+		{
+			if (name == "CLeeTaeyeon")
+			{
+				if (SM.LeeTaeyeonCrush >= 20)
+				{
+					EvFalse.SetActive(false);
+					EvTrue.SetActive(true);
+				}
+				else
+				{
+					EvTrue.SetActive(false);
+					EvFalse.SetActive(true);
+					yield return new WaitForSeconds(2f);
+					EvFalse.SetActive(false);
+				}
+			}
+			if (name == "CJeongSeoYoon")
+			{
+				if (SM.JeongSeoYoonCrush >= 20)
+				{
+					EvFalse.SetActive(false);
+					EvTrue.SetActive(true);
+				}
+				else
+				{
+					EvTrue.SetActive(false);
+					EvFalse.SetActive(true);
+					yield return new WaitForSeconds(2f);
+					EvFalse.SetActive(false);
+				}
+			}
+			if (name == "CLeeYerin")
+			{
+				if (SM.LeeYerinCrush >= 20)
+				{
+					EvFalse.SetActive(false);
+					EvTrue.SetActive(true);
+				}
+				else
+				{
+					EvTrue.SetActive(false);
+					EvFalse.SetActive(true);
+					yield return new WaitForSeconds(2f);
+					EvFalse.SetActive(false);
+				}
+			}
+			if (name == "CSongYeonHa")
+			{
+				if (SM.SongYeonHaCrush >= 20)
+				{
+					EvFalse.SetActive(false);
+					EvTrue.SetActive(true);
+				}
+				else
+				{
+					EvTrue.SetActive(false);
+					EvFalse.SetActive(true);
+					yield return new WaitForSeconds(2f);
+					EvFalse.SetActive(false);
+				}
+			}
+			yield return new WaitForSeconds(Random.Range(10f, 20f));
+		}
 	}
 
 	public void LeeTaeyeonEv()
 	{
 		LeeTaeyeonEvCount++;
+	}
+	public void LeeTaeyeonEvTouch()
+	{
 		if (LeeTaeyeonEvCount > 10)
 		{
 			SM.LeeTaeyeonCrush += 20;
-			LeeTaeyeonEvCount = 0;
+			LeeTaeyeonEvCount -= 10;
 		}
 	}
 	public void JeongSeoYoonEv()
 	{
 		JeongSeoYoonEvCount++;
+	}
+	public void JeongSeoYoonEvTouch()
+	{
 		if (JeongSeoYoonEvCount > 10)
 		{
 			SM.JeongSeoYoonCrush += 20;
-			JeongSeoYoonEvCount = 0;
+			JeongSeoYoonEvCount -= 10;
 		}
 	}
 	public void LeeYerinEv()
 	{
 		LeeYerinEvCount++;
+	}
+	public void LeeYerinEvTouch()
+	{
 		if (LeeYerinEvCount > 10)
 		{
 			SM.LeeYerinCrush += 20;
-			LeeYerinEvCount = 0;
+			LeeYerinEvCount -= 10;
 		}
 	}
 	public void SongYeonHaEv()
 	{
 		SongYeonHaEvCount++;
+	}
+	public void SongYeonHaEvTouch()
+	{
 		if (SongYeonHaEvCount > 10)
 		{
 			SM.SongYeonHaCrush += 20;
-			SongYeonHaEvCount = 0;
+			SongYeonHaEvCount -= 10;
 		}
 	}
 }
