@@ -78,6 +78,22 @@ public class Character : MonoBehaviour
 			}
 			GetComponent<RectTransform>().localPosition = new Vector3(Background.GetComponent<RectTransform>().localPosition.x, 0, 0);
 		}
+		else if (name == "CLeeTaeyeon")
+		{
+			EvText.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "헬스장 " + SM.QU_Touch[2] + " / " + (10 + (((int)SM.LeeTaeyeonCrush / 20) * 10)) + " 번 업그레이드 하기";
+		}
+		else if (name == "CJeongSeoYoon")
+		{
+			EvText.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "도서실 " + SM.QU_Touch[1] + " / " + (10 + (((int)SM.JeongSeoYoonCrush / 20) * 10)) + " 번 업그레이드 하기";
+		}
+		else if (name == "CLeeYerin")
+		{
+			EvText.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "노래방 " + SM.QU_Touch[0] + " / " + (10 + (((int)SM.LeeYerinCrush / 20) * 10)) + " 번 업그레이드 하기";
+		}
+		else if (name == "CSongYeonHa")
+		{
+			EvText.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "피시방 " + SM.QU_Touch[3] + " / " + (10 + (((int)SM.SongYeonHaCrush / 20) * 10)) + " 번 업그레이드 하기";
+		}
 	}
 
 	IEnumerator MoveCycle()
@@ -137,7 +153,7 @@ public class Character : MonoBehaviour
 		{
 			if (name == "CLeeTaeyeon")
 			{
-				if (GameObject.Find("Character").GetComponent<Character>().SM.QU_Touch[2] >= (10 + (((int)SM.LeeTaeyeonCrush / 20) * 10)))
+				if (SM.QU_Touch[2] >= (10 + (((int)SM.LeeTaeyeonCrush / 20) * 10)) && SM.LeeTaeyeonCrush <= 100)
 				{
 					EvFalse.SetActive(false);
 					EvTrue.SetActive(true);
@@ -149,14 +165,13 @@ public class Character : MonoBehaviour
 					yield return new WaitForSeconds(2f);
 					EvFalse.SetActive(false);
 					EvText.SetActive(true);
-					EvText.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "헬스장 " + SM.QU_Touch[2] + " / " + (10 + (((int)SM.LeeTaeyeonCrush / 20) * 10)) + " 번 업그레이드 하기";
 					yield return new WaitForSeconds(2f);
 					EvText.SetActive(false);
 				}
 			}
 			if (name == "CJeongSeoYoon")
 			{
-				if (GameObject.Find("Character").GetComponent<Character>().SM.QU_Touch[1] >= (10 + (((int)SM.JeongSeoYoonCrush / 20) * 10)))
+				if (SM.QU_Touch[1] >= (10 + (((int)SM.JeongSeoYoonCrush / 20) * 10)) && SM.JeongSeoYoonCrush <= 100)
 				{
 					EvFalse.SetActive(false);
 					EvTrue.SetActive(true);
@@ -168,14 +183,13 @@ public class Character : MonoBehaviour
 					yield return new WaitForSeconds(2f);
 					EvFalse.SetActive(false);
 					EvText.SetActive(true);
-					EvText.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "도서실 " + SM.QU_Touch[1] + " / " + (10 + (((int)SM.JeongSeoYoonCrush / 20) * 10)) + " 번 업그레이드 하기";
 					yield return new WaitForSeconds(2f);
 					EvText.SetActive(false);
 				}
 			}
 			if (name == "CLeeYerin")
 			{
-				if (GameObject.Find("Character").GetComponent<Character>().SM.QU_Touch[0] >= (10 + (((int)SM.LeeYerinCrush / 20) * 10)))
+				if (SM.QU_Touch[0] >= (10 + (((int)SM.LeeYerinCrush / 20) * 10)) && SM.LeeYerinCrush <= 100)
 				{
 					EvFalse.SetActive(false);
 					EvTrue.SetActive(true);
@@ -187,14 +201,13 @@ public class Character : MonoBehaviour
 					yield return new WaitForSeconds(2f);
 					EvFalse.SetActive(false);
 					EvText.SetActive(true);
-					EvText.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "노래방 " + SM.QU_Touch[0] + " / " + (10 + (((int)SM.LeeYerinCrush / 20) * 10)) + " 번 업그레이드 하기";
 					yield return new WaitForSeconds(2f);
 					EvText.SetActive(false);
 				}
 			}
 			if (name == "CSongYeonHa")
 			{
-				if (GameObject.Find("Character").GetComponent<Character>().SM.QU_Touch[3] >= (10 + (((int)SM.SongYeonHaCrush / 20) * 10)))
+				if (SM.QU_Touch[3] >= (10 + (((int)SM.SongYeonHaCrush / 20) * 10)) && SM.SongYeonHaCrush <= 100)
 				{
 					EvFalse.SetActive(false);
 					EvTrue.SetActive(true);
@@ -206,7 +219,6 @@ public class Character : MonoBehaviour
 					yield return new WaitForSeconds(2f);
 					EvFalse.SetActive(false);
 					EvText.SetActive(true);
-					EvText.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "피시방 " + SM.QU_Touch[3] + " / " + (10 + (((int)SM.SongYeonHaCrush / 20) * 10)) + " 번 업그레이드 하기";
 					yield return new WaitForSeconds(2f);
 					EvText.SetActive(false);
 				}
