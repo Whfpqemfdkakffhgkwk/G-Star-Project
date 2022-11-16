@@ -133,7 +133,7 @@ public class Character : MonoBehaviour
 		{
 			if (name == "CLeeTaeyeon")
 			{
-				if (GameObject.Find("Character").GetComponent<Character>().LeeTaeyeonEvCount >= 10)
+				if (GameObject.Find("Character").GetComponent<Character>().SM.QU_Touch[2] >= (10 + (((int)SM.LeeTaeyeonCrush / 20) * 10)))
 				{
 					EvFalse.SetActive(false);
 					EvTrue.SetActive(true);
@@ -145,14 +145,14 @@ public class Character : MonoBehaviour
 					yield return new WaitForSeconds(2f);
 					EvFalse.SetActive(false);
 					EvText.SetActive(true);
-					EvText.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "헬스장 " + LeeTaeyeonEvCount + " / 10 번 업그레이드 하기";
+					EvText.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "헬스장 " + SM.QU_Touch[2] + " / " + (10 + (((int)SM.LeeTaeyeonCrush / 20) * 10)) + " 번 업그레이드 하기";
 					yield return new WaitForSeconds(2f);
 					EvText.SetActive(false);
 				}
 			}
 			if (name == "CJeongSeoYoon")
 			{
-				if (GameObject.Find("Character").GetComponent<Character>().JeongSeoYoonEvCount >= 10)
+				if (GameObject.Find("Character").GetComponent<Character>().SM.QU_Touch[1] >= (10 + (((int)SM.JeongSeoYoonCrush / 20) * 10)))
 				{
 					EvFalse.SetActive(false);
 					EvTrue.SetActive(true);
@@ -164,14 +164,14 @@ public class Character : MonoBehaviour
 					yield return new WaitForSeconds(2f);
 					EvFalse.SetActive(false);
 					EvText.SetActive(true);
-					EvText.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "도서실 " + JeongSeoYoonEvCount + " / 10 번 업그레이드 하기";
+					EvText.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "도서실 " + SM.QU_Touch[1] + " / " + (10 + (((int)SM.JeongSeoYoonCrush / 20) * 10)) + " 번 업그레이드 하기";
 					yield return new WaitForSeconds(2f);
 					EvText.SetActive(false);
 				}
 			}
 			if (name == "CLeeYerin")
 			{
-				if (GameObject.Find("Character").GetComponent<Character>().LeeYerinEvCount >= 10)
+				if (GameObject.Find("Character").GetComponent<Character>().SM.QU_Touch[0] >= (10 + (((int)SM.LeeYerinCrush / 20) * 10)))
 				{
 					EvFalse.SetActive(false);
 					EvTrue.SetActive(true);
@@ -183,14 +183,14 @@ public class Character : MonoBehaviour
 					yield return new WaitForSeconds(2f);
 					EvFalse.SetActive(false);
 					EvText.SetActive(true);
-					EvText.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "노래방 " + LeeYerinEvCount + " / 10 번 업그레이드 하기";
+					EvText.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "노래방 " + SM.QU_Touch[0] + " / " + (10 + (((int)SM.LeeYerinCrush / 20) * 10)) + " 번 업그레이드 하기";
 					yield return new WaitForSeconds(2f);
 					EvText.SetActive(false);
 				}
 			}
 			if (name == "CSongYeonHa")
 			{
-				if (GameObject.Find("Character").GetComponent<Character>().SongYeonHaEvCount >= 10)
+				if (GameObject.Find("Character").GetComponent<Character>().SM.QU_Touch[3] >= (10 + (((int)SM.SongYeonHaCrush / 20) * 10)))
 				{
 					EvFalse.SetActive(false);
 					EvTrue.SetActive(true);
@@ -202,12 +202,13 @@ public class Character : MonoBehaviour
 					yield return new WaitForSeconds(2f);
 					EvFalse.SetActive(false);
 					EvText.SetActive(true);
-					EvText.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "피시방 " + SongYeonHaEvCount + " / 10 번 업그레이드 하기";
+					EvText.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "피시방 " + SM.QU_Touch[3] + " / " + (10 + (((int)SM.SongYeonHaCrush / 20) * 10)) + " 번 업그레이드 하기";
 					yield return new WaitForSeconds(2f);
 					EvText.SetActive(false);
 				}
 			}
-			yield return new WaitForSeconds(Random.Range(10f, 20f));
+			yield return new WaitForSeconds(Random.Range(1f, 2f));
+			//yield return new WaitForSeconds(Random.Range(10f, 20f));
 		}
 	}
 
