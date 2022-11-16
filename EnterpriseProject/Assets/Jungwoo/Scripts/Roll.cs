@@ -172,6 +172,7 @@ public class Roll : MonoBehaviour
 			SaveManager.Instance.saveVariables.isLeeYerin = SaveMG[2];
 			SaveManager.Instance.saveVariables.isSongYeonHa = SaveMG[3];
 			SaveManager.Instance.saveVariables.isSeongJunAh = SaveMG[4];
+			SaveManager.Instance.saveVariables.QU_Draw++;
 			RollReady = true;
 			Refresh();
 		}

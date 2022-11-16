@@ -137,7 +137,7 @@ public class QuestManager : MonoBehaviour
 
         Click.text = saveVariables.QU_Click.ToString() + "/" + ((300 * saveVariables.QUN_Click) + 300).ToString();
         ClickList.text = $"터치를 {(300 * saveVariables.QUN_Click) + 300}번 하기";
-        ClickSlider.value = (saveVariables.QU_Click - 300 * saveVariables.QU_Click) / 300;
+        ClickSlider.value = (saveVariables.QU_Click - 300f * saveVariables.QUN_Click) / 300; //
         if (saveVariables.QU_Click >= ((300 * saveVariables.QUN_Click) + 300))
             ClickStatus.color = new Color(1, 1, 1, 1);
 
