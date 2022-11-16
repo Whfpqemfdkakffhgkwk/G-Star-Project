@@ -15,7 +15,7 @@ public class SaveVariables : ScriptableObject
 	[Tooltip("퀘스트 - 획득골드")] public int QU_Gold;
 	[Tooltip("퀘스트 - 클릭횟수")] public int QU_Click;
 	[Tooltip("퀘스트 - 플레이타임")] public int QU_PlayTime;
-	[Tooltip("퀘스트 - 뽑은횟수")] public int QU_Draw; //아직 안함
+	[Tooltip("퀘스트 - 뽑은횟수")] public int QU_Draw;
 
 	[Tooltip("보상횟수 - 터치업그레이드")] public int[] QUN_Touch;
 	[Tooltip("보상횟수 - 초당업그레이드")] public int[] QUN_Second;

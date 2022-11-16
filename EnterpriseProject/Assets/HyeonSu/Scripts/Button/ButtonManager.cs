@@ -112,8 +112,11 @@ public class ButtonManager : MonoBehaviour
 		if (saveVariables.gold >= (ulong)list[arr].UpgradeCost)
 		{
 			SoundManager.Instance.PlaySoundClip("SFX_UpgradeSound", SoundType.SFX);
-            //퀘스트 업그레이드
-            saveVariables.QU_Touch[arr]++;
+			//퀘스트 업그레이드
+			if (list == saveVariables.TouchType)
+				saveVariables.QU_Touch[arr]++;
+			else if (list == saveVariables.SecondType)
+				saveVariables.QU_Second[arr]++;
 			//강화 비용 깎기
 			saveVariables.gold -= (ulong)list[arr].UpgradeCost;
 			//강화 수치(n강)
