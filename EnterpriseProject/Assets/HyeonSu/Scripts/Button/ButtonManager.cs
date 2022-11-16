@@ -112,22 +112,6 @@ public class ButtonManager : MonoBehaviour
 		if (saveVariables.gold >= (ulong)list[arr].UpgradeCost)
 		{
 			SoundManager.Instance.PlaySoundClip("SFX_UpgradeSound", SoundType.SFX);
-			if(list == saveVariables.TouchType && arr == 2)
-			{
-				LeeTaecharacter.LeeTaeyeonEvCount++;
-			}
-            if (list == saveVariables.TouchType && arr == 1)
-            {
-                Jeongcharater.JeongSeoYoonEvCount++;
-            }
-            if (list == saveVariables.TouchType && arr == 0)
-            {
-                LeeYaecharater.LeeYerinEvCount++;
-            }
-            if (list == saveVariables.TouchType && arr == 3)
-            {
-                Songcharater.SongYeonHaEvCount++;
-            }
             //퀘스트 업그레이드
             saveVariables.QU_Touch[arr]++;
 			//강화 비용 깎기

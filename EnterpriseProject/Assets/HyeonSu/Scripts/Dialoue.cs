@@ -178,26 +178,6 @@ public class Dialoue : MonoBehaviour
                 break;
             }
         }
-        if (TalkDic[TalkSelect][0].Talker == "이태연")
-        {
-            Character[1].sprite = CharacterSpr[0];
-        }
-        else if (TalkDic[TalkSelect][0].Talker == "정서윤")
-        {
-            Character[1].sprite = CharacterSpr[1];
-        }
-        else if (TalkDic[TalkSelect][0].Talker == "이예린")
-        {
-            Character[1].sprite = CharacterSpr[2];
-        }
-        else if (TalkDic[TalkSelect][0].Talker == "송연하")
-        {
-            Character[1].sprite = CharacterSpr[3];
-        }
-        else if (TalkDic[TalkSelect][0].Talker == "성준아")
-        {
-            Character[1].sprite = CharacterSpr[4];
-        }
     }
     void EmotionChange(string TalkSelect, string Talker, int arr)
     {
