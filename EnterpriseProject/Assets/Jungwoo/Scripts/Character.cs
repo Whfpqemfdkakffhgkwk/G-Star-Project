@@ -17,10 +17,15 @@ public class Character : MonoBehaviour
 	public GameObject CLeeYerin;
 	public GameObject CSongYeonHa;
 
+	public GameObject Background;
+
 	public int LeeTaeyeonEvCount;
 	public int JeongSeoYoonEvCount;
 	public int LeeYerinEvCount;
 	public int SongYeonHaEvCount;
+
+	private float XLoc;
+	private float YLoc;
 
 	void Awake()
 	{
@@ -30,7 +35,7 @@ public class Character : MonoBehaviour
 	{
 		if (name != "Character")
 		{
-			StartCoroutine(MoveCharacter());
+			StartCoroutine(MoveCycle());
 			StartCoroutine(Event());
 		}
 	}
@@ -71,19 +76,18 @@ public class Character : MonoBehaviour
 			{
 				CSongYeonHa.SetActive(false);
 			}
+			GetComponent<RectTransform>().localPosition = new Vector3(Background.GetComponent<RectTransform>().localPosition.x, 0, 0);
 		}
 	}
 
-	IEnumerator MoveCharacter()
+	IEnumerator MoveCycle()
 	{
 		int Temp = 0;
 		int LR = 0;
 		while (true)
 		{
-			//float XLoc = CharacterObj.GetComponent<RectTransform>().anchoredPosition.x;
-			float XLoc = CharacterObj.transform.localPosition.x;
-			//float YLoc = CharacterObj.GetComponent<RectTransform>().anchoredPosition.y;
-			float YLoc = CharacterObj.transform.localPosition.y;
+			XLoc = CharacterObj.transform.localPosition.x;
+			YLoc = CharacterObj.transform.localPosition.y;
 			Temp = Random.Range(15, 31);
 			if (Random.Range(0, 2) == 0)
 			{
@@ -118,7 +122,7 @@ public class Character : MonoBehaviour
 				}
 				else
 				{
-					CharacterObj.transform.localPosition = new Vector3(XLoc + i * 10 * LR, YLoc, -1);
+					CharacterObj.transform.localPosition = new Vector3((XLoc + i * 10 * LR), YLoc, -1);
 					yield return new WaitForSeconds(0.02f);
 				}
 			}
