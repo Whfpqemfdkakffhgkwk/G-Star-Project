@@ -151,9 +151,9 @@ public class Character : MonoBehaviour
 	{
 		while (true)
 		{
-			if (name == "CLeeTaeyeon")
+			if (name == "CLeeTaeyeon" && SM.LeeTaeyeonCrush <= 80)
 			{
-				if (SM.QU_Touch[2] >= (10 + (((int)SM.LeeTaeyeonCrush / 20) * 10)) && SM.LeeTaeyeonCrush <= 100)
+				if (SM.QU_Touch[2] >= (10 + (((int)SM.LeeTaeyeonCrush / 20) * 10)))
 				{
 					EvFalse.SetActive(false);
 					EvTrue.SetActive(true);
@@ -169,9 +169,9 @@ public class Character : MonoBehaviour
 					EvText.SetActive(false);
 				}
 			}
-			if (name == "CJeongSeoYoon")
+			if (name == "CJeongSeoYoon" && SM.JeongSeoYoonCrush <= 80)
 			{
-				if (SM.QU_Touch[1] >= (10 + (((int)SM.JeongSeoYoonCrush / 20) * 10)) && SM.JeongSeoYoonCrush <= 100)
+				if (SM.QU_Touch[1] >= (10 + (((int)SM.JeongSeoYoonCrush / 20) * 10)))
 				{
 					EvFalse.SetActive(false);
 					EvTrue.SetActive(true);
@@ -187,9 +187,9 @@ public class Character : MonoBehaviour
 					EvText.SetActive(false);
 				}
 			}
-			if (name == "CLeeYerin")
+			if (name == "CLeeYerin" && SM.LeeYerinCrush <= 80)
 			{
-				if (SM.QU_Touch[0] >= (10 + (((int)SM.LeeYerinCrush / 20) * 10)) && SM.LeeYerinCrush <= 100)
+				if (SM.QU_Touch[0] >= (10 + (((int)SM.LeeYerinCrush / 20) * 10)))
 				{
 					EvFalse.SetActive(false);
 					EvTrue.SetActive(true);
@@ -205,9 +205,9 @@ public class Character : MonoBehaviour
 					EvText.SetActive(false);
 				}
 			}
-			if (name == "CSongYeonHa")
+			if (name == "CSongYeonHa" && SM.SongYeonHaCrush <= 80)
 			{
-				if (SM.QU_Touch[3] >= (10 + (((int)SM.SongYeonHaCrush / 20) * 10)) && SM.SongYeonHaCrush <= 100)
+				if (SM.QU_Touch[3] >= (10 + (((int)SM.SongYeonHaCrush / 20) * 10)))
 				{
 					EvFalse.SetActive(false);
 					EvTrue.SetActive(true);
