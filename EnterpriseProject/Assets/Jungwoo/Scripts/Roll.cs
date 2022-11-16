@@ -29,6 +29,8 @@ public class Roll : MonoBehaviour
 	public GameObject RollFalse;
 	public GameObject TimeUpDown;
 
+	public TextMeshProUGUI Price;
+
 	void Start()
 	{
 		TimerEnd = default;
@@ -117,6 +119,7 @@ public class Roll : MonoBehaviour
 			RemainTime.text = Hour + " : " + Min + " : " + Sec;
 			RemainTimeBackground.sprite = OnImg;
 		}
+		Price.text = ((int)((TimerHour * 3600 + TimerMin * 60 + TimerSec) / 32400f * 50)).ToString();
 	}
 
 	public void RollStart()
