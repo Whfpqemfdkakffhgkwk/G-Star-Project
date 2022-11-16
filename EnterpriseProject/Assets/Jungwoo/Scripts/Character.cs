@@ -115,12 +115,12 @@ public class Character : MonoBehaviour
 				LR = 1;
 				GetComponent<SpriteRenderer>().flipX = false;
 			}
-			if (CharacterObj.transform.localPosition.x <= -550)
+			if (CharacterObj.transform.localPosition.x <= -3500)
 			{
 				LR = 1;
 				GetComponent<SpriteRenderer>().flipX = false;
 			}
-			else if (CharacterObj.transform.localPosition.x >= 550)
+			else if (CharacterObj.transform.localPosition.x >= 3500)
 			{
 				LR = -1;
 				GetComponent<SpriteRenderer>().flipX = true;
@@ -128,11 +128,11 @@ public class Character : MonoBehaviour
 			GetComponent<Animator>().SetTrigger("Walk");
 			for (int i = 0; i < Temp; i++)
 			{
-				if (CharacterObj.transform.localPosition.x >= 550 && LR == 1)
+				if (CharacterObj.transform.localPosition.x >= 3500 && LR == 1)
 				{
 
 				}
-				else if (CharacterObj.transform.localPosition.x <= -550 && LR == -1)
+				else if (CharacterObj.transform.localPosition.x <= -3500 && LR == -1)
 				{
 
 				}
