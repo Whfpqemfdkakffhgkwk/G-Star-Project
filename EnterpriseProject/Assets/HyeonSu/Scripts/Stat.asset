@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b45f88197feb43045b156003d10e3ff1, type: 3}
   m_Name: Stat
   m_EditorClassIdentifier: 
-  AllTouchMonmey: 0
+  AllTouchMonmey: 30
   AllSecondMoney: 0
   gold: 0
   diamond: 0
@@ -20,8 +20,8 @@ MonoBehaviour:
   QU_Second: 0000000000000000000000000000000000000000000000000000000000000000
   QU_Gold: 0
   QU_Click: 0
-  QU_PlayTime: 0
-  QU_Draw: 0
+  QU_PlayTime: 78
+  QU_Draw: 1
   QUN_Touch: 0000000000000000000000000000000000000000000000000000000000000000
   QUN_Second: 0000000000000000000000000000000000000000000000000000000000000000
   QUN_Gold: 0

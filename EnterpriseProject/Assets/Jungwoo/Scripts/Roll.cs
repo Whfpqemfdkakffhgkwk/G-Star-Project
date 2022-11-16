@@ -127,7 +127,8 @@ public class Roll : MonoBehaviour
 		//TimerEnd = DateTime.Now.AddHours(9);
 		TimerEnd = DateTime.Now.AddSeconds(TimerHour * 3600 + TimerMin * 60 + TimerSec);
 		TimeSpan temp = TimerEnd - DateTime.Now;
-		if (SaveManager.Instance.saveVariables.diamond >= 50 - (int)((temp.Hours * 3600 + temp.Minutes * 60 + temp.Seconds) / 32400f * 50) && (int)((temp.Hours * 3600 + temp.Minutes * 60 + temp.Seconds)) > 647)
+		//if (SaveManager.Instance.saveVariables.diamond >= 50 - (int)((temp.Hours * 3600 + temp.Minutes * 60 + temp.Seconds) / 32400f * 50) && (int)((temp.Hours * 3600 + temp.Minutes * 60 + temp.Seconds)) > 647)
+		if (SaveManager.Instance.saveVariables.diamond >= 50 - (int)((temp.Hours * 3600 + temp.Minutes * 60 + temp.Seconds) / 32400f * 50))
 		{
 			SaveManager.Instance.saveVariables.diamond -= (50 - (int)((temp.Hours * 3600 + temp.Minutes * 60 + temp.Seconds) / 32400f * 50));
 			RollReady = false;
