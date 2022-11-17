@@ -168,7 +168,7 @@ public class ButtonManager : MonoBehaviour
 	}
 	void DirectingGold(Vector3 cur)
 	{
-		for (int i = 0; i < 25; i++)
+		for (int i = 0; i < 12; i++)
 		{
 			GameObject SummonedObject = Instantiate(GoldDirectingObj, canvas.transform);
 			SummonedObject.transform.position = cur;
