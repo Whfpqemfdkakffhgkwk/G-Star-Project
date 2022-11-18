@@ -19,7 +19,7 @@ public class QuestManager : MonoBehaviour
     [SerializeField] private Text GoldList, ClickList, PlayTimeList, DrawList;
 
     [SerializeField] private Button TalkBtn;
-    [SerializeField] private GameObject Notice;
+    [SerializeField] private GameObject Notice, QuestNotice;
 
     [SerializeField] private Image[] TalkBtnImages;
     [SerializeField] private Sprite OnTalkBtnSpr, TalkBtnSpr;
@@ -111,13 +111,17 @@ public class QuestManager : MonoBehaviour
     }
     void OrganizeStatusText()
     {
+        QuestNotice.SetActive(false);
         for (int i = 0; i < Touch.Length; i++)
         {
             Touch[i].text = saveVariables.QU_Touch[i].ToString() + "/" + ((10 * saveVariables.QUN_Touch[i]) + 10).ToString();
             TouchLists[i].text = $"'{TouchName[i]}' 레벨을 {(10 * saveVariables.QUN_Touch[i]) + 10}레벨 올리기";
             TouchSliders[i].value = (saveVariables.QU_Touch[i] - 10f * saveVariables.QUN_Touch[i]) / 10;
             if (saveVariables.QU_Touch[i] >= ((10 * saveVariables.QUN_Touch[i]) + 10))
+            {
                 TouchStatus[i].color = new Color(1, 1, 1, 1);
+                QuestNotice.SetActive(true);
+            }
         }
 
         for (int i = 0; i < Second.Length; i++)
@@ -126,32 +130,47 @@ public class QuestManager : MonoBehaviour
             SecondLists[i].text = $"'{SecondName[i]}' 레벨을 {(10 * saveVariables.QUN_Second[i]) + 10}레벨 올리기";
             SecondSliders[i].value = (saveVariables.QU_Second[i] - 10f * saveVariables.QUN_Second[i]) / 10;
             if (saveVariables.QU_Second[i] >= ((10 * saveVariables.QUN_Second[i]) + 10))
+            {
                 SecondStatus[i].color = new Color(1, 1, 1, 1);
+                QuestNotice.SetActive(true);
+            }
         }
 
-        Gold.text = saveVariables.QU_Gold.ToString() + "/" + ((5000 * saveVariables.QUN_Gold) + 5000).ToString();
-        GoldList.text = $"골드를 {((5000 * saveVariables.QUN_Gold) + 5000)}원 획득하기";
-        GoldSlider.value = (saveVariables.QU_Gold - 5000f * saveVariables.QUN_Gold) / 5000;
-        if (saveVariables.QU_Gold >= ((5000 * saveVariables.QUN_Gold) + 5000))
+        Gold.text = saveVariables.QU_Gold.ToString() + "/" + (ulong)(1000 * Mathf.Pow(10, saveVariables.QUN_Gold + 1));
+        GoldList.text = $"골드를 {(ulong)(1000 * Mathf.Pow(10, saveVariables.QUN_Gold + 1))}원 획득하기";
+        GoldSlider.value = (saveVariables.QU_Gold) / (1000 * Mathf.Pow(10, saveVariables.QUN_Gold + 1));
+        if (saveVariables.QU_Gold >= (1000 * Mathf.Pow(10, saveVariables.QUN_Gold + 1)))
+        {
             GoldStatus.color = new Color(1, 1, 1, 1);
+            QuestNotice.SetActive(true);
+        }
 
         Click.text = saveVariables.QU_Click.ToString() + "/" + ((300 * saveVariables.QUN_Click) + 300).ToString();
         ClickList.text = $"터치를 {(300 * saveVariables.QUN_Click) + 300}번 하기";
         ClickSlider.value = (saveVariables.QU_Click - 300f * saveVariables.QUN_Click) / 300; //
         if (saveVariables.QU_Click >= ((300 * saveVariables.QUN_Click) + 300))
+        {
             ClickStatus.color = new Color(1, 1, 1, 1);
+            QuestNotice.SetActive(true);
+        }
 
         PlayTime.text = saveVariables.QU_PlayTime.ToString() + "/" + ((100 * saveVariables.QUN_PlayTime) + 100).ToString();
         PlayTimeList.text = $"{(100 * saveVariables.QUN_PlayTime) + 100}초 플레이하기";
         PlayTimeSlider.value = (saveVariables.QU_PlayTime - 100 * saveVariables.QUN_PlayTime) / 100;
         if (saveVariables.QU_PlayTime >= ((100 * saveVariables.QUN_PlayTime) + 100))
+        {
             PlayTimeStatus.color = new Color(1, 1, 1, 1);
+            QuestNotice.SetActive(true);
+        }
 
         Draw.text = saveVariables.QU_Draw.ToString() + "/" + ((1 * saveVariables.QUN_Draw) + 1).ToString();
         DrawList.text = $"캐릭터를 {(1 * saveVariables.QUN_Draw) + 1}번 뽑으세요";
         DrawSlider.value = (saveVariables.QU_Draw - 1f * saveVariables.QUN_Draw) / 1;
         if (saveVariables.QU_Draw >= ((1 * saveVariables.QUN_Draw) + 1))
+        {
             DrawStatus.color = new Color(1, 1, 1, 1);
+            QuestNotice.SetActive(true);
+        }
     }
     public void ButtonState(Image PressObj)//<- 누른 오브젝트
     {
@@ -181,6 +200,7 @@ public class QuestManager : MonoBehaviour
             if (PressObj == GoldStatus)
             {
                 GoldStatus.color = new Color(1, 1, 1, 0);
+                saveVariables.QU_Gold -= (ulong)(1000 * Mathf.Pow(10, saveVariables.QUN_Gold + 1));
                 saveVariables.QUN_Gold++;
                 StartCoroutine(QuestReward(10));
             }

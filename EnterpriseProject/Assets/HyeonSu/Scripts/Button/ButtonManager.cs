@@ -77,7 +77,7 @@ public class ButtonManager : MonoBehaviour
     public IEnumerator MainSecond()
 	{
 		saveVariables.gold += saveVariables.AllSecondMoney;
-		saveVariables.QU_Gold += (int)saveVariables.AllSecondMoney;
+		saveVariables.QU_Gold += (ulong)saveVariables.AllSecondMoney;
 		yield return new WaitForSeconds(1);
 		saveVariables.QU_PlayTime++;
 		StartCoroutine(MainSecond());
@@ -155,7 +155,7 @@ public class ButtonManager : MonoBehaviour
 	}
 	void DirectingDiamond(Transform cur)
 	{
-		for (int i = 0; i < 50; i++)
+		for (int i = 0; i < 25; i++)
 		{
 			GameObject SummonedObject = Instantiate(DiamondDirectingObj, cur);
 			SummonedObject.transform.SetParent(DiamondCanvas.transform);
@@ -272,7 +272,7 @@ public class ButtonManager : MonoBehaviour
 	{
 		yield return new WaitForSeconds(1.1f);
 		saveVariables.gold += saveVariables.AllTouchMonmey;
-		saveVariables.QU_Gold += (int)saveVariables.AllTouchMonmey;
+		saveVariables.QU_Gold += (ulong)saveVariables.AllTouchMonmey;
 		saveVariables.QU_Click++;
 	}
 }

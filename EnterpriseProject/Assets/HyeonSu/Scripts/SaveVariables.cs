@@ -12,14 +12,14 @@ public class SaveVariables : ScriptableObject
 	[Header("퀘스트")]
 	[Tooltip("퀘스트 - 터치업그레이드")] public int[] QU_Touch;
 	[Tooltip("퀘스트 - 초당업그레이드")] public int[] QU_Second;
-	[Tooltip("퀘스트 - 획득골드")] public int QU_Gold;
+	[Tooltip("퀘스트 - 획득골드")] public ulong QU_Gold;
 	[Tooltip("퀘스트 - 클릭횟수")] public int QU_Click;
 	[Tooltip("퀘스트 - 플레이타임")] public int QU_PlayTime;
 	[Tooltip("퀘스트 - 뽑은횟수")] public int QU_Draw;
 
 	[Tooltip("보상횟수 - 터치업그레이드")] public int[] QUN_Touch;
 	[Tooltip("보상횟수 - 초당업그레이드")] public int[] QUN_Second;
-	[Tooltip("보상횟수 - 획득골드")] public int QUN_Gold;
+	[Tooltip("보상횟수 - 획득골드")] public ulong QUN_Gold;
 	[Tooltip("보상횟수 - 클릭횟수")] public int QUN_Click;
 	[Tooltip("보상횟수 - 플레이타임")] public int QUN_PlayTime;
 	[Tooltip("보상횟수 - 뽑은횟수")] public int QUN_Draw;
