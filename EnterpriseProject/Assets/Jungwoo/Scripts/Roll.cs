@@ -11,7 +11,7 @@ using Random = UnityEngine.Random;
 public class Roll : MonoBehaviour
 {
 	DateTime TimerEnd;
-	public TextMeshProUGUI RemainTime;
+	public GameObject RemainTime;
 	public GameObject RollGetButtonOff;
 	public GameObject RollGetButton;
 	public Image RemainTimeBackground;
@@ -27,6 +27,7 @@ public class Roll : MonoBehaviour
 
 	public GameObject RollTrue;
 	public GameObject RollFalse;
+	public GameObject RollDenie;
 	public GameObject TimeUpDown;
 
 	public TextMeshProUGUI Price;
@@ -45,7 +46,7 @@ public class Roll : MonoBehaviour
 		Debug.Log((TimerEnd.Hour * 3600 + TimerEnd.Minute * 60 + TimerEnd.Second) / 32400f);*/
 	}
 
-	void Refresh()
+	public void Refresh()
 	{
 		string Hour;
 		string Min;
@@ -69,7 +70,7 @@ public class Roll : MonoBehaviour
 			{
 				Sec = "0" + Timercalc.Seconds;
 			}
-			RemainTime.text = Hour + " : " + Min + " : " + Sec;
+			RemainTime.transform.GetChild(3).GetComponent<TextMeshProUGUI>().text = Hour + " : " + Min + " : " + Sec;
 			//Debug.Log(Timercalc.Hours+" : "+ Timercalc.Minutes+" : "+ Timercalc.Seconds);
 			RollGetButtonOff.SetActive(true);
 			RollGetButton.SetActive(false);
@@ -77,7 +78,7 @@ public class Roll : MonoBehaviour
 		}
 		else if (RollReady == false)
 		{
-			RemainTime.text = "00 : 00 : 00";
+			RemainTime.transform.GetChild(3).GetComponent<TextMeshProUGUI>().text = "00 : 00 : 00";
 			RollGetButtonOff.SetActive(false);
 			RollGetButton.SetActive(true);
 			RemainTimeBackground.sprite = OnImg;
@@ -116,10 +117,17 @@ public class Roll : MonoBehaviour
 			{
 				Sec = "0" + TimerSec;
 			}
-			RemainTime.text = Hour + " : " + Min + " : " + Sec;
+			RemainTime.transform.GetChild(3).GetComponent<TextMeshProUGUI>().text = Hour + " : " + Min + " : " + Sec;
 			RemainTimeBackground.sprite = OnImg;
 		}
 		Price.text = (50 - (int)((TimerHour * 3600 + TimerMin * 60 + TimerSec) / 32400f * 50)).ToString();
+		if (SaveManager.Instance.saveVariables.isLeeTaeyeon && SaveManager.Instance.saveVariables.isJeongSeoYoon && SaveManager.Instance.saveVariables.isLeeYerin && SaveManager.Instance.saveVariables.isSongYeonHa)
+		{
+			RollDenie.SetActive(true);
+			RollFalse.SetActive(false);
+			RollTrue.SetActive(false);
+			RemainTime.SetActive(false);
+		}
 	}
 
 	public void RollStart()
