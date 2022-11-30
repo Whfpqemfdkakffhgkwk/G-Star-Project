@@ -157,27 +157,31 @@ public class ButtonManager : MonoBehaviour
 	{
 		for (int i = 0; i < 25; i++)
 		{
-			GameObject SummonedObject = Instantiate(DiamondDirectingObj, cur);
-			SummonedObject.transform.SetParent(DiamondCanvas.transform);
-			Vector2 RandomPos = new Vector2(SummonedObject.transform.localPosition.x + Random.Range(-200f, 200f),
-											SummonedObject.transform.localPosition.y + Random.Range(-100f, -400f));
-			SummonedObject.transform.DOLocalMove(RandomPos, 1.0f);
-			StartCoroutine(DirectingDiamondCor(SummonedObject));
-			Destroy(SummonedObject, 1.4f);
-		}
+            GameObject SummonedObject = ObjPool.GetObject(EPoolType.dia, cur.position);
+            #region 기본 세팅
+            SummonedObject.transform.SetParent(DiamondCanvas.transform);
+            SummonedObject.transform.localScale = new Vector3(1, 1, 1);
+            #endregion
+            Vector2 RandomPos = new Vector2(SummonedObject.transform.localPosition.x + Random.Range(-200f, 200f),
+                                            SummonedObject.transform.localPosition.y + Random.Range(-100f, -400f));
+            SummonedObject.transform.DOLocalMove(RandomPos, 1.0f);
+            StartCoroutine(DirectingDiamondCor(SummonedObject));
+        }
 	}
 	void DirectingGold(Vector3 cur)
 	{
 		for (int i = 0; i < 12; i++)
 		{
-			GameObject SummonedObject = Instantiate(GoldDirectingObj, canvas.transform);
+			GameObject SummonedObject = ObjPool.GetObject(EPoolType.gold, canvas.transform.position);
+            #region 기본 세팅
+            SummonedObject.transform.SetParent(canvas.transform);
+			SummonedObject.transform.localScale = new Vector3(1,1,1);
 			SummonedObject.transform.position = cur;
-			//SummonedObject.transform.SetParent(canvas.transform);
-			Vector2 RandomPos = new Vector2(SummonedObject.transform.localPosition.x + Random.Range(-200f, 200f),
+            #endregion
+            Vector2 RandomPos = new Vector2(SummonedObject.transform.localPosition.x + Random.Range(-200f, 200f),
 											SummonedObject.transform.localPosition.y + Random.Range(-100f, -400f));
 			SummonedObject.transform.DOLocalMove(RandomPos, 0.7f);
 			StartCoroutine(DirectingGoldCor(SummonedObject));
-			Destroy(SummonedObject, 1.1f);
 		}
 	}
 	public void TalkClick() //누른 버튼이 누구 버튼인지 알아내고 각 캐릭터의 for문 돌리면 될듯
@@ -261,12 +265,16 @@ public class ButtonManager : MonoBehaviour
 	IEnumerator DirectingDiamondCor(GameObject obj)
 	{
 		yield return new WaitForSeconds(1.0f);
-		obj.transform.DOLocalMove(new Vector2(264, 1347), 0.5f);
+        obj.transform.DOLocalMove(new Vector2(264, 1347), 0.5f);
+		yield return new WaitForSeconds(0.5f);
+        ObjPool.ReturnObject(EPoolType.dia, obj);
 	}
 	IEnumerator DirectingGoldCor(GameObject obj)
 	{
 		yield return new WaitForSeconds(0.7f);
-		obj.transform.DOLocalMove(new Vector2(-298, 1344), 0.5f);
+        obj.transform.DOLocalMove(new Vector2(-298, 1344), 0.5f);
+		yield return new WaitForSeconds(0.5f);
+        ObjPool.ReturnObject(EPoolType.gold, obj);
 	}
 	IEnumerator GoldDelay()
 	{
