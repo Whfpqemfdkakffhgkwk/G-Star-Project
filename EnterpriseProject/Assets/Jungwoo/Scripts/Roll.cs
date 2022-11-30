@@ -35,6 +35,8 @@ public class Roll : MonoBehaviour
 	public GameObject NotenougthDiamond;
 	public GameObject RollResult;
 
+	public Sprite[] ImageList;
+
 	void Start()
 	{
 		TimerEnd = default;
@@ -184,18 +186,28 @@ public class Roll : MonoBehaviour
 			{
 				case 0:
 					SaveManager.Instance.saveVariables.isLeeTaeyeon = true;
+					RollResult.transform.GetChild(0).GetComponent<Image>().sprite = ImageList[0];
+					RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'이태연'을 획득했습니다!";
 					break;
 				case 1:
 					SaveManager.Instance.saveVariables.isJeongSeoYoon = true;
+					RollResult.transform.GetChild(0).GetComponent<Image>().sprite = ImageList[1];
+					RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'정서윤'을 획득했습니다!";
 					break;
 				case 2:
 					SaveManager.Instance.saveVariables.isLeeYerin = true;
+					RollResult.transform.GetChild(0).GetComponent<Image>().sprite = ImageList[2];
+					RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'이예린'을 획득했습니다!";
 					break;
 				case 3:
 					SaveManager.Instance.saveVariables.isSongYeonHa = true;
+					RollResult.transform.GetChild(0).GetComponent<Image>().sprite = ImageList[3];
+					RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'송연하'을 획득했습니다!";
 					break;
 				case 4:
 					SaveManager.Instance.saveVariables.isSeongJunAh = true;
+					RollResult.transform.GetChild(0).GetComponent<Image>().sprite = ImageList[4];
+					RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'성준아'을 획득했습니다!";
 					break;
 			}
 			RollResult.SetActive(true);
