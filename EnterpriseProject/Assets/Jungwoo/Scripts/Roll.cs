@@ -32,6 +32,9 @@ public class Roll : MonoBehaviour
 
 	public TextMeshProUGUI Price;
 
+	public GameObject NotenougthDiamond;
+	public GameObject RollResult;
+
 	void Start()
 	{
 		TimerEnd = default;
@@ -151,6 +154,7 @@ public class Roll : MonoBehaviour
 			RollFalse.SetActive(true);
 			RollTrue.SetActive(false);
 			TimeUpDown.SetActive(true);
+			NotenougthDiamond.SetActive(true);
 		}
 	}
 
@@ -171,17 +175,30 @@ public class Roll : MonoBehaviour
 		SaveMG[4] = SaveManager.Instance.saveVariables.isSeongJunAh;
 		string[] CharacterName = { "RLeeTaeyeon", "RJeongSeoYoon", "RLeeYerin", "RSongYeonHa", "RSeongJunAh" };
 		TimerEnd = default;
-		int RollResult = Random.Range(0, 4);
-		if (SaveMG[RollResult] == false)
+		int RollResultData = Random.Range(0, 4);
+		if (SaveMG[RollResultData] == false)
 		{
-			SaveMG[RollResult] = true;
-			GameObject.Find(CharacterName[RollResult]).GetComponent<Animator>().SetTrigger("Happy");
-			SaveManager.Instance.saveVariables.isLeeTaeyeon = SaveMG[0];
-			SaveManager.Instance.saveVariables.isJeongSeoYoon = SaveMG[1];
-			SaveManager.Instance.saveVariables.isLeeYerin = SaveMG[2];
-			SaveManager.Instance.saveVariables.isSongYeonHa = SaveMG[3];
-			SaveManager.Instance.saveVariables.isSeongJunAh = SaveMG[4];
+			GameObject.Find(CharacterName[RollResultData]).GetComponent<Animator>().SetTrigger("Happy");
 			SaveManager.Instance.saveVariables.QU_Draw++;
+			switch (RollResultData)
+			{
+				case 0:
+					SaveManager.Instance.saveVariables.isLeeTaeyeon = true;
+					break;
+				case 1:
+					SaveManager.Instance.saveVariables.isJeongSeoYoon = true;
+					break;
+				case 2:
+					SaveManager.Instance.saveVariables.isLeeYerin = true;
+					break;
+				case 3:
+					SaveManager.Instance.saveVariables.isSongYeonHa = true;
+					break;
+				case 4:
+					SaveManager.Instance.saveVariables.isSeongJunAh = true;
+					break;
+			}
+			RollResult.SetActive(true);
 			RollReady = true;
 			Refresh();
 		}
