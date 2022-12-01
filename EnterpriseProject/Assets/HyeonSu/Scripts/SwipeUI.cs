@@ -8,6 +8,7 @@ public class SwipeUI : MonoBehaviour
     [SerializeField] private Scrollbar scrollbar; //스크롤바의 위치를 바탕으로 현재 페이지 검사
     [SerializeField] float swipeSpeed = 0.2f; // 페이지가 스와이프 되는 시간
     [SerializeField] float swipeDistance = 50.0f; //움직여야하는 최소거리
+    [SerializeField] private ButtonManager buttonManager;
 
     [Tooltip("각 페이지의 위치 값")]private float[] scrollPageValues;
     [Tooltip("각 페이지 사이의 거리")]private float valueDistance = 0;
@@ -33,6 +34,7 @@ public class SwipeUI : MonoBehaviour
     }
     private void Start()
     {
+        //처음 페이지 설정
         SetScrollBarValue(2);
     }
     private void Update()
@@ -64,6 +66,9 @@ public class SwipeUI : MonoBehaviour
         //너무 작은 거리를 움직였을 때는 Swipe X
         if(Mathf.Abs(startTouchX-endTouchX) < swipeDistance)
         {
+            //스와이프가 아니니 터치 돈벌기
+            buttonManager.MainClick();
+
             //원래 페이지로 스와이프해서 돌아간다
             StartCoroutine(OnSwipeOneStep(currentPage));
             return;
