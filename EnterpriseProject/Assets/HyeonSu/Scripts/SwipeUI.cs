@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class SwipeUI : MonoBehaviour
+public class SwipeUI : MonoBehaviour, IPointerDownHandler
 {
     [SerializeField] private Scrollbar scrollbar; //스크롤바의 위치를 바탕으로 현재 페이지 검사
     [SerializeField] float swipeSpeed = 0.2f; // 페이지가 스와이프 되는 시간
@@ -49,12 +50,8 @@ public class SwipeUI : MonoBehaviour
     void UpdateInput()
     {
         if (isSwipeMode == true) return;
-         
-        if(Input.GetMouseButtonDown(0))
-        {
-            startTouchX = Input.mousePosition.x;
-        }
-        else if(Input.GetMouseButtonUp(0))
+
+        if (Input.GetMouseButtonUp(0))
         {
             endTouchX = Input.mousePosition.x;
 
@@ -111,5 +108,12 @@ public class SwipeUI : MonoBehaviour
             yield return null;
         }
         isSwipeMode = false;
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        if (isSwipeMode == true) return;
+
+        startTouchX = Input.mousePosition.x;
     }
 }

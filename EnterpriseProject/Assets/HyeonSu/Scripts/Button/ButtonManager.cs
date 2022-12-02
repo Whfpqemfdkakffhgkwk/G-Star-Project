@@ -19,7 +19,7 @@ public class ButtonManager : MonoBehaviour
 
 	[SerializeField] private GameObject DiamondDirectingObj, GoldDirectingObj, ParticleObj;
 
-	[SerializeField] private GameObject canvas, DiamondCanvas;
+	[SerializeField] private GameObject canvas, DiamondCanvas, content;
 
 	[SerializeField] private QuestManager questManager;
 
@@ -48,7 +48,7 @@ public class ButtonManager : MonoBehaviour
         SoundManager.Instance.PlaySoundClip("SFX_MainClick", SoundType.SFX);
         DirectingGold(Camera.main.ScreenToWorldPoint(Input.mousePosition));
 		StartCoroutine(GoldDelay());
-		GameObject particle = Instantiate(ParticleObj, canvas.transform);
+		GameObject particle = Instantiate(ParticleObj, content.transform);
 		particle.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 		particle.transform.position = new Vector3(particle.transform.position.x, particle.transform.position.y, 0);
 		Destroy(particle, 0.8f);
@@ -174,7 +174,7 @@ public class ButtonManager : MonoBehaviour
 		{
 			GameObject SummonedObject = ObjPool.GetObject(EPoolType.gold, canvas.transform.position);
             #region 기본 세팅
-            SummonedObject.transform.SetParent(canvas.transform);
+            SummonedObject.transform.SetParent(content.transform);
 			SummonedObject.transform.localScale = new Vector3(1,1,1);
 			SummonedObject.transform.position = cur;
             #endregion
@@ -272,7 +272,7 @@ public class ButtonManager : MonoBehaviour
 	IEnumerator DirectingGoldCor(GameObject obj)
 	{
 		yield return new WaitForSeconds(0.7f);
-        obj.transform.DOLocalMove(new Vector2(-298, 1344), 0.5f);
+        obj.transform.DOMove(Camera.main.ScreenToWorldPoint(new Vector2(477.2f, 2796)), 0.5f);
 		yield return new WaitForSeconds(0.5f);
         ObjPool.ReturnObject(EPoolType.gold, obj);
 	}
