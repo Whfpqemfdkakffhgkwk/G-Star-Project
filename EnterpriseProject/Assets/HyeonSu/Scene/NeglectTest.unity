@@ -14406,7 +14406,7 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 1274, y: 180}
+  m_CellSize: {x: 1274, y: 200}
   m_Spacing: {x: 0, y: 14.7}
   m_Constraint: 1
   m_ConstraintCount: 1
@@ -15617,7 +15617,7 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 1274, y: 180}
+  m_CellSize: {x: 1274, y: 200}
   m_Spacing: {x: 0, y: 14.7}
   m_Constraint: 1
   m_ConstraintCount: 1
@@ -45723,7 +45723,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1564213726
 MonoBehaviour:
   m_ObjectHideFlags: 0
