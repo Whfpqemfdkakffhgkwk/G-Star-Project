@@ -77,22 +77,10 @@ public class Character : MonoBehaviour
 				CSongYeonHa.SetActive(false);
 			}
 			GetComponent<RectTransform>().localPosition = new Vector3(Background.GetComponent<RectTransform>().localPosition.x, 0, 0);
-		}
-		else if (name == "CLeeTaeyeon")
-		{
-			EvText.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "헬스장 " + SM.QU_Touch[2] + " / " + (10 + (((int)SM.LeeTaeyeonCrush / 20) * 10)) + " 번 업그레이드 하기";
-		}
-		else if (name == "CJeongSeoYoon")
-		{
-			EvText.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "도서실 " + SM.QU_Touch[1] + " / " + (10 + (((int)SM.JeongSeoYoonCrush / 20) * 10)) + " 번 업그레이드 하기";
-		}
-		else if (name == "CLeeYerin")
-		{
-			EvText.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "노래방 " + SM.QU_Touch[0] + " / " + (10 + (((int)SM.LeeYerinCrush / 20) * 10)) + " 번 업그레이드 하기";
-		}
-		else if (name == "CSongYeonHa")
-		{
-			EvText.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "피시방 " + SM.QU_Touch[3] + " / " + (10 + (((int)SM.SongYeonHaCrush / 20) * 10)) + " 번 업그레이드 하기";
+			CLeeTaeyeon.transform.GetChild(4).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "헬스장 " + SM.QU_Touch[2] + " / " + (10 + (((int)SM.LeeTaeyeonCrush / 20) * 10)) + " 번 업그레이드 하기";
+			CJeongSeoYoon.transform.GetChild(4).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "도서실 " + SM.QU_Touch[1] + " / " + (10 + (((int)SM.JeongSeoYoonCrush / 20) * 10)) + " 번 업그레이드 하기";
+			CLeeYerin.transform.GetChild(4).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "노래방 " + SM.QU_Touch[0] + " / " + (10 + (((int)SM.LeeYerinCrush / 20) * 10)) + " 번 업그레이드 하기";
+			CSongYeonHa.transform.GetChild(4).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "피시방 " + SM.QU_Touch[3] + " / " + (10 + (((int)SM.SongYeonHaCrush / 20) * 10)) + " 번 업그레이드 하기";
 		}
 	}
 
@@ -108,21 +96,49 @@ public class Character : MonoBehaviour
 			if (Random.Range(0, 2) == 0)
 			{
 				LR = -1;
-				GetComponent<SpriteRenderer>().flipX = true;
 			}
 			else
 			{
 				LR = 1;
-				GetComponent<SpriteRenderer>().flipX = false;
 			}
-			if (CharacterObj.transform.localPosition.x <= -3500)
+			if (this.name == "CLeeTaeyeon" && CharacterObj.transform.localPosition.x <= -550 - 1924 * 2)
 			{
 				LR = 1;
-				GetComponent<SpriteRenderer>().flipX = false;
 			}
-			else if (CharacterObj.transform.localPosition.x >= 3500)
+			else if (this.name == "CLeeTaeyeon" && CharacterObj.transform.localPosition.x >= 550 - 1924 * 2)
 			{
 				LR = -1;
+			}
+			else if (this.name == "CJeongSeoYoon" && CharacterObj.transform.localPosition.x <= -550 - 1924 * 1)
+			{
+				LR = 1;
+			}
+			else if (this.name == "CJeongSeoYoon" && CharacterObj.transform.localPosition.x >= 550 - 1924 * 1)
+			{
+				LR = -1;
+			}
+			else if (this.name == "CLeeYerin" && CharacterObj.transform.localPosition.x <= -550 + 1924 * 2)
+			{
+				LR = 1;
+			}
+			else if (this.name == "CLeeYerin" && CharacterObj.transform.localPosition.x >= 550 + 1924 * 2)
+			{
+				LR = -1;
+			}
+			else if (this.name == "CSongYeonHa" && CharacterObj.transform.localPosition.x <= -550 + 1924 * 1)
+			{
+				LR = 1;
+			}
+			else if (this.name == "CSongYeonHa" && CharacterObj.transform.localPosition.x >= 550 + 1924 * 1)
+			{
+				LR = -1;
+			}
+			if (LR == 1)
+			{
+				GetComponent<SpriteRenderer>().flipX = false;
+			}
+			else
+			{
 				GetComponent<SpriteRenderer>().flipX = true;
 			}
 			GetComponent<Animator>().SetTrigger("Walk");
