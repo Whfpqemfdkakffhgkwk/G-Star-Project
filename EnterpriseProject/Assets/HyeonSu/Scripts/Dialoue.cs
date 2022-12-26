@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.UI;
-using Unity.VisualScripting;
+using TMPro;
 using UnityEngine.EventSystems;
 using DG.Tweening;
 
@@ -47,7 +47,7 @@ public struct TalkDatas
 }
 public class Dialoue : MonoBehaviour
 {
-    [SerializeField] private Text TalkTxt;
+    [SerializeField] private TextMeshProUGUI TalkTxt;
     [SerializeField] private Text NameTxt;
     [SerializeField] private Image Background;
     [SerializeField] private Sprite[] BKspr;
@@ -56,10 +56,17 @@ public class Dialoue : MonoBehaviour
     [SerializeField] private Sprite ButlerSpr;
     [SerializeField] private Image Character;
     [SerializeField] private Button EndBtn;
+    private Color LeeTaeyeonColor, JeongSeoYoonColor, LeeYerinColor, SongYeonHaColor, SeongJunAhColor, NormalColor;
     Dictionary<string, List<TalkData>> TalkDic = new Dictionary<string, List<TalkData>>();
 
     private void Awake()
     {
+        ColorUtility.TryParseHtmlString("#ffffff", out NormalColor);
+        ColorUtility.TryParseHtmlString("#ec578d", out LeeTaeyeonColor);
+        ColorUtility.TryParseHtmlString("#fed59c", out JeongSeoYoonColor);
+        ColorUtility.TryParseHtmlString("#ffffff", out LeeYerinColor);
+        ColorUtility.TryParseHtmlString("#4f4857", out SongYeonHaColor);
+        ColorUtility.TryParseHtmlString("#ffffff", out SeongJunAhColor);
         var loadedJson = Resources.Load<TextAsset>("TalkData");
         var StoryData = JsonUtility.FromJson<TalkDatas>(loadedJson.ToString());
         #region 대화묶음들 가져오기
@@ -116,7 +123,7 @@ public class Dialoue : MonoBehaviour
         EndBtn.onClick.Invoke();
         gameObject.SetActive(false);
     }
-    IEnumerator Typing(Text text, string str)
+    IEnumerator Typing(TextMeshProUGUI text, string str)
     {
         var wait = new WaitForSeconds(0.05f);
         yield return wait;
@@ -159,22 +166,27 @@ public class Dialoue : MonoBehaviour
                 if (TalkDic[TalkSelect][i].Talker == "이태연")
                 {
                     Character.sprite = CharacterSpr[0];
+                    TalkTxt.colorGradient = new VertexGradient(LeeTaeyeonColor, LeeTaeyeonColor, NormalColor, NormalColor);
                 }
                 else if (TalkDic[TalkSelect][i].Talker == "정서윤")
                 {
                     Character.sprite = CharacterSpr[1];
+                    TalkTxt.colorGradient = new VertexGradient(JeongSeoYoonColor, JeongSeoYoonColor, NormalColor, NormalColor);
                 }
                 else if (TalkDic[TalkSelect][i].Talker == "이예린")
                 {
                     Character.sprite = CharacterSpr[2];
+                    TalkTxt.colorGradient = new VertexGradient(LeeYerinColor, LeeYerinColor, NormalColor, NormalColor);
                 }
                 else if (TalkDic[TalkSelect][i].Talker == "송연하")
                 {
                     Character.sprite = CharacterSpr[3];
+                    TalkTxt.colorGradient = new VertexGradient(SongYeonHaColor, SongYeonHaColor, NormalColor, NormalColor);
                 }
                 else if (TalkDic[TalkSelect][i].Talker == "성준아")
                 {
                     Character.sprite = CharacterSpr[4];
+                    TalkTxt.colorGradient = new VertexGradient(SeongJunAhColor, SeongJunAhColor, NormalColor, NormalColor);
                 }
                 break;
             }
@@ -257,17 +269,13 @@ public class Dialoue : MonoBehaviour
     {
         if (talker == "주인공")
         {
-            Character.DOColor(new Color(1, 1, 1, 1), 0.5f);
+            Character.rectTransform.DOScale(new Vector2(0.1f, 0.1f), 0.5f);
             Character.rectTransform.DOScale(new Vector2(1, 1), 0.5f);
-            Character.DOColor(new Color(180 / 255f, 180 / 255f, 180 / 255f, 0.8f), 0.5f);
-            Character.rectTransform.DOScale(new Vector2(0.9f, 0.9f), 0.5f);
         }
         else
         {
-            Character.DOColor(new Color(1, 1, 1, 1), 0.5f);
+            Character.rectTransform.DOScale(new Vector2(0.1f, 0.1f), 0.5f);
             Character.rectTransform.DOScale(new Vector2(1, 1), 0.5f);
-            Character.DOColor(new Color(180 / 255f, 180 / 255f, 180 / 255f, 0.8f), 0.5f);
-            Character.rectTransform.DOScale(new Vector2(0.9f, 0.9f), 0.5f);
         }
     }
 }
