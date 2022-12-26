@@ -52,10 +52,10 @@ public class Dialoue : MonoBehaviour
     [SerializeField] private Image Background;
     [SerializeField] private Sprite[] BKspr;
     [SerializeField, Tooltip("이태연, 정서윤, 이예린, 송연하, 성준아")] private Sprite[] CharacterSpr;
-    [SerializeField] private Sprite[] LeeTaeyeonSpr, JeongSeoYoonSpr, LeeYerinSpr, SongYeonHaSpr, SeongJunAhSpr, HeroSpr;
-    [SerializeField] private Image[] Character;
+    [SerializeField] private Sprite[] LeeTaeyeonSpr, JeongSeoYoonSpr, LeeYerinSpr, SongYeonHaSpr, SeongJunAhSpr;
+    [SerializeField] private Sprite ButlerSpr;
+    [SerializeField] private Image Character;
     [SerializeField] private Button EndBtn;
-    [SerializeField] private GameObject Butler;
     Dictionary<string, List<TalkData>> TalkDic = new Dictionary<string, List<TalkData>>();
 
     private void Awake()
@@ -155,25 +155,26 @@ public class Dialoue : MonoBehaviour
             if (TalkDic[TalkSelect][i].Talker != "주인공")
             {
                 TalkerChange(TalkDic[TalkSelect][i].Talker);
+
                 if (TalkDic[TalkSelect][i].Talker == "이태연")
                 {
-                    Character[1].sprite = CharacterSpr[0];
+                    Character.sprite = CharacterSpr[0];
                 }
                 else if (TalkDic[TalkSelect][i].Talker == "정서윤")
                 {
-                    Character[1].sprite = CharacterSpr[1];
+                    Character.sprite = CharacterSpr[1];
                 }
                 else if (TalkDic[TalkSelect][i].Talker == "이예린")
                 {
-                    Character[1].sprite = CharacterSpr[2];
+                    Character.sprite = CharacterSpr[2];
                 }
                 else if (TalkDic[TalkSelect][i].Talker == "송연하")
                 {
-                    Character[1].sprite = CharacterSpr[3];
+                    Character.sprite = CharacterSpr[3];
                 }
                 else if (TalkDic[TalkSelect][i].Talker == "성준아")
                 {
-                    Character[1].sprite = CharacterSpr[4];
+                    Character.sprite = CharacterSpr[4];
                 }
                 break;
             }
@@ -181,23 +182,13 @@ public class Dialoue : MonoBehaviour
     }
     void EmotionChange(string TalkSelect, string Talker, int arr)
     {
-        if(Talker == "주인공")
-        {
-            for (int v = 1; v <= 3; v++)
-            {
-                if (TalkDic[TalkSelect][arr].Emotion == v)
-                {
-                    Character[0].sprite = HeroSpr[v - 1];
-                }
-            }
-        }
-        else if (Talker == "이태연")
+        if (Talker == "이태연")
         {
             for (int v = 1; v <= 3; v++)//표정 개수 변동 필요
             {
                 if (TalkDic[TalkSelect][arr].Emotion == v)
                 {
-                    Character[1].sprite = LeeTaeyeonSpr[v - 1];
+                    Character.sprite = LeeTaeyeonSpr[v - 1];
                     //캐릭터 표정 바꾸기
                     return;
                 }
@@ -209,7 +200,7 @@ public class Dialoue : MonoBehaviour
             {
                 if (TalkDic[TalkSelect][arr].Emotion == v)
                 {
-                    Character[1].sprite = JeongSeoYoonSpr[v - 1];
+                    Character.sprite = JeongSeoYoonSpr[v - 1];
                     //캐릭터 표정 바꾸기
                     return;
                 }
@@ -222,7 +213,7 @@ public class Dialoue : MonoBehaviour
             {
                 if (TalkDic[TalkSelect][arr].Emotion == v)
                 {
-                    Character[1].sprite = LeeYerinSpr[v - 1];
+                    Character.sprite = LeeYerinSpr[v - 1];
                     //캐릭터 표정 바꾸기
                     return;
                 }
@@ -234,7 +225,7 @@ public class Dialoue : MonoBehaviour
             {
                 if (TalkDic[TalkSelect][arr].Emotion == v)
                 {
-                    Character[1].sprite = SongYeonHaSpr[v - 1];
+                    Character.sprite = SongYeonHaSpr[v - 1];
                     //캐릭터 표정 바꾸기
                     return;
                 }
@@ -247,39 +238,36 @@ public class Dialoue : MonoBehaviour
             {
                 if (TalkDic[TalkSelect][arr].Emotion == v)
                 {
-                    Character[1].sprite = SeongJunAhSpr[v - 1];
+                    Character.sprite = SeongJunAhSpr[v - 1];
                     //캐릭터 표정 바꾸기
                     return;
                 }
             }
         }
+        else if(Talker == "이예린 집사")
+        {
+            Character.sprite = ButlerSpr;
+        }
     }
+    /// <summary>
+    /// 이 함수 안에 주인공이 대화 중일 경우 연출 넣어야함
+    /// </summary>
+    /// <param name="talker"></param>
     void TalkerChange(string talker)
     {
         if (talker == "주인공")
         {
-            Character[0].DOColor(new Color(1, 1, 1, 1), 0.5f);
-            Character[0].rectTransform.DOScale(new Vector2(1, 1), 0.5f);
-            Character[1].DOColor(new Color(180 / 255f, 180 / 255f, 180 / 255f, 0.8f), 0.5f);
-            Character[1].rectTransform.DOScale(new Vector2(0.9f, 0.9f), 0.5f);
-        }
-        else if(talker ==  "이예린 집사")
-        {
-            Butler.SetActive(true);
-            Character[1].gameObject.SetActive(false);
-            Character[1].DOColor(new Color(180 / 255f, 180 / 255f, 180 / 255f, 0.8f), 0.5f);
-            Character[1].rectTransform.DOScale(new Vector2(0.9f, 0.9f), 0.5f);
-            Character[0].DOColor(new Color(180 / 255f, 180 / 255f, 180 / 255f, 0.8f), 0.5f);
-            Character[0].rectTransform.DOScale(new Vector2(0.9f, 0.9f), 0.5f);
+            Character.DOColor(new Color(1, 1, 1, 1), 0.5f);
+            Character.rectTransform.DOScale(new Vector2(1, 1), 0.5f);
+            Character.DOColor(new Color(180 / 255f, 180 / 255f, 180 / 255f, 0.8f), 0.5f);
+            Character.rectTransform.DOScale(new Vector2(0.9f, 0.9f), 0.5f);
         }
         else
         {
-            Butler.SetActive(false);
-            Character[1].gameObject.SetActive(true);
-            Character[1].DOColor(new Color(1, 1, 1, 1), 0.5f);
-            Character[1].rectTransform.DOScale(new Vector2(1, 1), 0.5f);
-            Character[0].DOColor(new Color(180 / 255f, 180 / 255f, 180 / 255f, 0.8f), 0.5f);
-            Character[0].rectTransform.DOScale(new Vector2(0.9f, 0.9f), 0.5f);
+            Character.DOColor(new Color(1, 1, 1, 1), 0.5f);
+            Character.rectTransform.DOScale(new Vector2(1, 1), 0.5f);
+            Character.DOColor(new Color(180 / 255f, 180 / 255f, 180 / 255f, 0.8f), 0.5f);
+            Character.rectTransform.DOScale(new Vector2(0.9f, 0.9f), 0.5f);
         }
     }
 }

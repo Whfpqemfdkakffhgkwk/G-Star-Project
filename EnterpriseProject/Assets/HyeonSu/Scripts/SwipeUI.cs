@@ -11,13 +11,13 @@ public class SwipeUI : MonoBehaviour, IPointerDownHandler
     [SerializeField] float swipeDistance = 50.0f; //움직여야하는 최소거리
     [SerializeField] private ButtonManager buttonManager;
 
-    [Tooltip("각 페이지의 위치 값")]private float[] scrollPageValues;
-    [Tooltip("각 페이지 사이의 거리")]private float valueDistance = 0;
-    [Tooltip("현재 페이지")]private int currentPage = 0;
-    [Tooltip("최대 페이지")]private int maxPage = 0;
-    [Tooltip("터치 시작 위치")]private float startTouchX;
-    [Tooltip("터치 종료 위치")]private float endTouchX;
-    [Tooltip("현재 Swipe가 되고 있는지 체크")]private bool isSwipeMode = false;
+    [Tooltip("각 페이지의 위치 값")] private float[] scrollPageValues;
+    [Tooltip("각 페이지 사이의 거리")] private float valueDistance = 0;
+    [Tooltip("현재 페이지")] private int currentPage = 0;
+    [Tooltip("최대 페이지")] private int maxPage = 0;
+    [Tooltip("터치 시작 위치")] private float startTouchX;
+    [Tooltip("터치 종료 위치")] private float endTouchX, endTouchY;
+    [Tooltip("현재 Swipe가 되고 있는지 체크")] private bool isSwipeMode = false;
 
     private void Awake()
     {
@@ -40,7 +40,8 @@ public class SwipeUI : MonoBehaviour, IPointerDownHandler
     }
     private void Update()
     {
-        UpdateInput();
+        if (startTouchX != 0)
+            UpdateInput();
     }
     public void SetScrollBarValue(int index)
     {
@@ -54,6 +55,7 @@ public class SwipeUI : MonoBehaviour, IPointerDownHandler
         if (Input.GetMouseButtonUp(0))
         {
             endTouchX = Input.mousePosition.x;
+            endTouchY = Input.mousePosition.y;
 
             UpdateSwipe();
         }
@@ -61,20 +63,23 @@ public class SwipeUI : MonoBehaviour, IPointerDownHandler
     void UpdateSwipe()
     {
         //너무 작은 거리를 움직였을 때는 Swipe X
-        if(Mathf.Abs(startTouchX-endTouchX) < swipeDistance)
+        if (Mathf.Abs(startTouchX - endTouchX) < swipeDistance)
         {
-            //스와이프가 아니니 터치 돈벌기
-            buttonManager.MainClick();
+            //스와이프가 아니고
+            //밑에서 터치가 끝난게 아니면 터치 돈벌기
+            if (endTouchY > 1200)
+                buttonManager.MainClick();
 
             //원래 페이지로 스와이프해서 돌아간다
             StartCoroutine(OnSwipeOneStep(currentPage));
+            startTouchX = 0;
             return;
         }
         //스와이프 방향
         bool isLeft = startTouchX < endTouchX ? true : false;
 
         //이동 방향이 왼쪽일때
-        if(isLeft)
+        if (isLeft)
         {
             //현재 페이지가 왼쪽 끝이면 종료
             if (currentPage == 0) return;
@@ -84,7 +89,7 @@ public class SwipeUI : MonoBehaviour, IPointerDownHandler
         else
         {
             //현재 페이지가 오른쪽 끝이면 종료
-            if(currentPage == maxPage - 1) return;
+            if (currentPage == maxPage - 1) return;
             //오른쪽으로 이동을 위해 현재 페이지를 1 증가
             currentPage++;
         }
