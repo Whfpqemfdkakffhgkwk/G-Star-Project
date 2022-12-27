@@ -3997,7 +3997,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -7557,8 +7557,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 249956540}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 90}
-  m_LocalScale: {x: 0.011, y: 0.011, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 26638.99}
+  m_LocalScale: {x: 0.77, y: 0.77, z: 295.99988}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1147705982}
@@ -7566,12 +7566,12 @@ RectTransform:
   - {fileID: 1748262403}
   - {fileID: 1253967915}
   - {fileID: 931529340}
-  m_Father: {fileID: 1145841638}
-  m_RootOrder: 5
+  m_Father: {fileID: 2106211147}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 6}
+  m_AnchoredPosition: {x: 0, y: 530}
   m_SizeDelta: {x: 1433.6, y: 512.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &249956542
@@ -7593,7 +7593,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -11332,8 +11332,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 364740223}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 90}
-  m_LocalScale: {x: 0.011, y: 0.011, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 26638.99}
+  m_LocalScale: {x: 0.77, y: 0.77, z: 295.99988}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 19326189}
@@ -11341,12 +11341,12 @@ RectTransform:
   - {fileID: 1974161598}
   - {fileID: 205283106}
   - {fileID: 149351528}
-  m_Father: {fileID: 943034617}
-  m_RootOrder: 5
+  m_Father: {fileID: 2106211147}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 6}
+  m_AnchoredPosition: {x: 0, y: 530}
   m_SizeDelta: {x: 1433.6, y: 512.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &364740225
@@ -11406,7 +11406,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -16608,9 +16608,8 @@ RectTransform:
   - {fileID: 384674252}
   - {fileID: 1572501772}
   - {fileID: 140781397}
-  - {fileID: 1131861076}
   m_Father: {fileID: 2106211147}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -16733,6 +16732,10 @@ MonoBehaviour:
   CLeeYerin: {fileID: 0}
   CSongYeonHa: {fileID: 0}
   Background: {fileID: 0}
+  Pannel1: {fileID: 0}
+  Pannel2: {fileID: 0}
+  Pannel3: {fileID: 0}
+  Pannel4: {fileID: 0}
   LeeTaeyeonEvCount: 0
   JeongSeoYoonEvCount: 0
   LeeYerinEvCount: 0
@@ -26174,6 +26177,10 @@ MonoBehaviour:
   CLeeYerin: {fileID: 0}
   CSongYeonHa: {fileID: 0}
   Background: {fileID: 0}
+  Pannel1: {fileID: 0}
+  Pannel2: {fileID: 0}
+  Pannel3: {fileID: 0}
+  Pannel4: {fileID: 0}
   LeeTaeyeonEvCount: 0
   JeongSeoYoonEvCount: 0
   LeeYerinEvCount: 0
@@ -26251,7 +26258,6 @@ RectTransform:
   - {fileID: 2107109977}
   - {fileID: 61552325}
   - {fileID: 432675766}
-  - {fileID: 364740224}
   m_Father: {fileID: 2106211147}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -30741,8 +30747,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1131861075}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 90}
-  m_LocalScale: {x: 0.011, y: 0.011, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 26638.99}
+  m_LocalScale: {x: 0.77, y: 0.77, z: 295.99988}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1606754340}
@@ -30750,12 +30756,12 @@ RectTransform:
   - {fileID: 1882030153}
   - {fileID: 2052154425}
   - {fileID: 75611244}
-  m_Father: {fileID: 602449468}
+  m_Father: {fileID: 2106211147}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 6}
+  m_AnchoredPosition: {x: 0, y: 530}
   m_SizeDelta: {x: 1433.6, y: 512.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1131861077
@@ -30777,7 +30783,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -31166,9 +31172,8 @@ RectTransform:
   - {fileID: 991419347}
   - {fileID: 600091578}
   - {fileID: 1901411500}
-  - {fileID: 249956541}
   m_Father: {fileID: 2106211147}
-  m_RootOrder: 3
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -31291,6 +31296,10 @@ MonoBehaviour:
   CLeeYerin: {fileID: 0}
   CSongYeonHa: {fileID: 0}
   Background: {fileID: 0}
+  Pannel1: {fileID: 0}
+  Pannel2: {fileID: 0}
+  Pannel3: {fileID: 0}
+  Pannel4: {fileID: 0}
   LeeTaeyeonEvCount: 0
   JeongSeoYoonEvCount: 0
   LeeYerinEvCount: 0
@@ -35139,8 +35148,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1264132994}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 90}
-  m_LocalScale: {x: 0.011, y: 0.011, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 26638.99}
+  m_LocalScale: {x: 0.77, y: 0.77, z: 295.99988}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 384087522}
@@ -35148,12 +35157,12 @@ RectTransform:
   - {fileID: 1745272028}
   - {fileID: 1456028250}
   - {fileID: 1546964958}
-  m_Father: {fileID: 1674607906}
-  m_RootOrder: 5
+  m_Father: {fileID: 2106211147}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 6}
+  m_AnchoredPosition: {x: 0, y: 530}
   m_SizeDelta: {x: 1433.6, y: 512.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1264132996
@@ -35175,7 +35184,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -45706,7 +45715,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1564213726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48833,9 +48842,8 @@ RectTransform:
   - {fileID: 380541346}
   - {fileID: 288096400}
   - {fileID: 820254753}
-  - {fileID: 1264132995}
   m_Father: {fileID: 2106211147}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -48958,6 +48966,10 @@ MonoBehaviour:
   CLeeYerin: {fileID: 0}
   CSongYeonHa: {fileID: 0}
   Background: {fileID: 0}
+  Pannel1: {fileID: 0}
+  Pannel2: {fileID: 0}
+  Pannel3: {fileID: 0}
+  Pannel4: {fileID: 0}
   LeeTaeyeonEvCount: 0
   JeongSeoYoonEvCount: 0
   LeeYerinEvCount: 0
@@ -63910,9 +63922,13 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 943034617}
+  - {fileID: 364740224}
   - {fileID: 1674607906}
+  - {fileID: 1264132995}
   - {fileID: 602449468}
+  - {fileID: 1131861076}
   - {fileID: 1145841638}
+  - {fileID: 249956541}
   m_Father: {fileID: 108474010}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -63943,6 +63959,10 @@ MonoBehaviour:
   CLeeYerin: {fileID: 602449467}
   CSongYeonHa: {fileID: 1145841637}
   Background: {fileID: 185707695}
+  Pannel1: {fileID: 364740223}
+  Pannel2: {fileID: 1264132994}
+  Pannel3: {fileID: 1131861075}
+  Pannel4: {fileID: 249956540}
   LeeTaeyeonEvCount: 0
   JeongSeoYoonEvCount: 0
   LeeYerinEvCount: 0
