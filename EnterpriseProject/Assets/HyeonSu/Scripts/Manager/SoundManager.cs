@@ -2,11 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using DG.Tweening;
-using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
-using Unity.VisualScripting.Antlr3.Runtime.Tree;
-using UnityEditor;
 
 [System.Serializable]
 public enum SoundType

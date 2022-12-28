@@ -43,7 +43,6 @@ public class QuestManager : MonoBehaviour
     private void Update()
     {
         OrganizeStatusText();
-        CrushUpdate();
     }
     void AddDictionary()
     {
@@ -103,11 +102,6 @@ public class QuestManager : MonoBehaviour
                 TalkBtnImages[4].sprite = OnTalkBtnSpr;
             }
         }
-        CrushSliders[0].value = saveVariables.LeeTaeyeonCrush;
-        CrushSliders[1].value = saveVariables.JeongSeoYoonCrush;
-        CrushSliders[2].value = saveVariables.LeeYerinCrush;
-        CrushSliders[3].value = saveVariables.SongYeonHaCrush;
-        CrushSliders[4].value = saveVariables.SeongJunAhCrush;
     }
     void OrganizeStatusText()
     {
