@@ -17,9 +17,13 @@ public class ButtonManager : MonoBehaviour
 
     private bool isPopup = false;
 
+    private string BtnChar;
+
     [SerializeField] private Image[] TalkerImages;
+    [SerializeField] private Sprite TalkBtnImgOn, TalkBtnImgOff;
     [SerializeField] private Sprite[] TalkerSprs;
     [SerializeField] private Slider[] TalkGauges;
+    [SerializeField] private Image[] TalkBtnImg;
 
     [SerializeField] private GameObject DiamondDirectingObj, GoldDirectingObj, ParticleObj;
 
@@ -188,6 +192,10 @@ public class ButtonManager : MonoBehaviour
             StartCoroutine(DirectingGoldCor(SummonedObject));
         }
     }
+    public void StartDialog()
+    {
+        StartCoroutine(dialoue.StoryStart($"{BtnChar}{EventSystem.current.currentSelectedGameObject.name}"));
+    }
     public void TalkOff()
     {
         TalkPopup.SetActive(false);
@@ -199,36 +207,92 @@ public class ButtonManager : MonoBehaviour
         if (!isPopup)
         {
             isPopup = true;
+            BtnChar = EventSystem.current.currentSelectedGameObject.name;
             switch (EventSystem.current.currentSelectedGameObject.name)
             {
                 case "LeeTaeyeon":
                     for (int i = 0; i < TalkGauges.Length; i++)
                     {
-                        TalkGauges[i].value = saveVariables.MaxLeeTaeyeon / ((i + 1) * 20);
+                        TalkGauges[i].value = saveVariables.CurLeeTaeyeon / ((i + 1) * 20);
+                        if (saveVariables.LeeTaeyeon[i])
+                        {
+                            TalkBtnImg[i].sprite = TalkBtnImgOn;
+                            print(TalkBtnImg[i].gameObject.transform.parent.name);
+                            TalkBtnImg[i].gameObject.transform.parent.GetComponent<Button>().enabled = true;
+                        }
+                        else
+                        {
+                            TalkBtnImg[i].sprite = TalkBtnImgOff;
+                            TalkBtnImg[i].gameObject.transform.parent.GetComponent<Button>().enabled = false;
+                        }
                     }
                     break;
                 case "JeongSeoYoon":
                     for (int i = 0; i < TalkGauges.Length; i++)
                     {
-                        TalkGauges[i].value = saveVariables.MaxJeongSeoYoon / ((i + 1) * 20);
+                        TalkGauges[i].value = saveVariables.CurJeongSeoYoon / ((i + 1) * 20);
+                        if (saveVariables.JeongSeoYoon[i])
+                        {
+                            TalkBtnImg[i].sprite = TalkBtnImgOn;
+                            print(TalkBtnImg[i].gameObject.transform.parent.name);
+                            TalkBtnImg[i].gameObject.transform.parent.GetComponent<Button>().enabled = true;
+                        }
+                        else
+                        {
+                            TalkBtnImg[i].sprite = TalkBtnImgOff;
+                            TalkBtnImg[i].gameObject.transform.parent.GetComponent<Button>().enabled = false;
+                        }
                     }
                     break;
                 case "LeeYerin":
                     for (int i = 0; i < TalkGauges.Length; i++)
                     {
-                        TalkGauges[i].value = saveVariables.MaxLeeYerin / ((i + 1) * 20);
+                        TalkGauges[i].value = saveVariables.CurLeeYerin / ((i + 1) * 20);
+                        if (saveVariables.LeeYerin[i])
+                        {
+                            TalkBtnImg[i].sprite = TalkBtnImgOn;
+                            print(TalkBtnImg[i].gameObject.transform.parent.name);
+                            TalkBtnImg[i].gameObject.transform.parent.GetComponent<Button>().enabled = true;
+                        }
+                        else
+                        {
+                            TalkBtnImg[i].sprite = TalkBtnImgOff;
+                            TalkBtnImg[i].gameObject.transform.parent.GetComponent<Button>().enabled = false;
+                        }
                     }
                     break;
                 case "SongYeonHa":
                     for (int i = 0; i < TalkGauges.Length; i++)
                     {
-                        TalkGauges[i].value = saveVariables.MaxSongYeonHa / ((i + 1) * 20);
+                        TalkGauges[i].value = saveVariables.CurSongYeonHa / ((i + 1) * 20);
+                        if (saveVariables.SongYeonHa[i])
+                        {
+                            TalkBtnImg[i].sprite = TalkBtnImgOn;
+                            print(TalkBtnImg[i].gameObject.transform.parent.name);
+                            TalkBtnImg[i].gameObject.transform.parent.GetComponent<Button>().enabled = true;
+                        }
+                        else
+                        {
+                            TalkBtnImg[i].sprite = TalkBtnImgOff;
+                            TalkBtnImg[i].gameObject.transform.parent.GetComponent<Button>().enabled = false;
+                        }
                     }
                     break;
                 case "SeongJunAh":
                     for (int i = 0; i < TalkGauges.Length; i++)
                     {
-                        TalkGauges[i].value = saveVariables.MaxSeongJunAh / ((i + 1) * 20);
+                        TalkGauges[i].value = saveVariables.CurSeongJunAh / ((i + 1) * 20);
+                        if (saveVariables.SeongJunAh[i])
+                        {
+                            TalkBtnImg[i].sprite = TalkBtnImgOn;
+                            print(TalkBtnImg[i].gameObject.transform.parent.name);
+                            TalkBtnImg[i].gameObject.transform.parent.GetComponent<Button>().enabled = true;
+                        }
+                        else
+                        {
+                            TalkBtnImg[i].sprite = TalkBtnImgOff;
+                            TalkBtnImg[i].gameObject.transform.parent.GetComponent<Button>().enabled = false;
+                        }
                     }
                     break;
                     //case "LeeTaeyeon":
