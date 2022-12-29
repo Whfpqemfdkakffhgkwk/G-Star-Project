@@ -216,6 +216,8 @@ public class Roll : MonoBehaviour
 		else if (RollResultData >= 4)
 		{
 			Debug.Log("부스터 획득");
+			RollResult.transform.GetChild(0).GetComponent<Image>().sprite = ImageList[4];
+			RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'부스터'를 획득했습니다!";
 		}
 		RollResult.SetActive(true);
 		RollReady = true;
