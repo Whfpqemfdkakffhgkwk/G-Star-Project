@@ -86,10 +86,10 @@ public class Character : MonoBehaviour
 			CJeongSeoYoon.transform.GetChild(4).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "도서실 " + SM.QU_Touch[1] + " / " + (10 + (((int)SM.JeongSeoYoonCrush / 20) * 10)) + " 번 업그레이드 하기";
 			CLeeYerin.transform.GetChild(4).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "노래방 " + SM.QU_Touch[0] + " / " + (10 + (((int)SM.LeeYerinCrush / 20) * 10)) + " 번 업그레이드 하기";
 			CSongYeonHa.transform.GetChild(4).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "피시방 " + SM.QU_Touch[3] + " / " + (10 + (((int)SM.SongYeonHaCrush / 20) * 10)) + " 번 업그레이드 하기";
-			Pannel1.GetComponent<RectTransform>().localPosition = new Vector3(-Background.GetComponent<RectTransform>().localPosition.x, 530, 0);
-			Pannel2.GetComponent<RectTransform>().localPosition = new Vector3(-Background.GetComponent<RectTransform>().localPosition.x, 530, 0);
-			Pannel3.GetComponent<RectTransform>().localPosition = new Vector3(-Background.GetComponent<RectTransform>().localPosition.x, 530, 0);
-			Pannel4.GetComponent<RectTransform>().localPosition = new Vector3(-Background.GetComponent<RectTransform>().localPosition.x, 530, 0);
+			//Pannel1.GetComponent<RectTransform>().localPosition = new Vector3(-Background.GetComponent<RectTransform>().localPosition.x, 530, 0);
+			//Pannel2.GetComponent<RectTransform>().localPosition = new Vector3(-Background.GetComponent<RectTransform>().localPosition.x, 530, 0);
+			//Pannel3.GetComponent<RectTransform>().localPosition = new Vector3(-Background.GetComponent<RectTransform>().localPosition.x, 530, 0);
+			//Pannel4.GetComponent<RectTransform>().localPosition = new Vector3(-Background.GetComponent<RectTransform>().localPosition.x, 530, 0);
 		}
 	}
 
