@@ -110,7 +110,7 @@ public class Character : MonoBehaviour
 			{
 				LR = 1;
 			}
-			if (this.name == "CLeeTaeyeon" && CharacterObj.transform.localPosition.x <= -550 - 1924 * 2)
+			if (this.name == "CLeeTaeyeon" && CharacterObj.transform.localPosition.x <= -550 - 1924.3f * 2)
 			{
 				LR = 1;
 			}
@@ -153,19 +153,8 @@ public class Character : MonoBehaviour
 			GetComponent<Animator>().SetTrigger("Walk");
 			for (int i = 0; i < Temp; i++)
 			{
-				if (CharacterObj.transform.localPosition.x >= 3500 && LR == 1)
-				{
-
-				}
-				else if (CharacterObj.transform.localPosition.x <= -3500 && LR == -1)
-				{
-
-				}
-				else
-				{
-					CharacterObj.transform.localPosition = new Vector3((XLoc + i * 10 * LR), YLoc, -1);
-					yield return new WaitForSeconds(0.02f);
-				}
+				CharacterObj.transform.localPosition = new Vector3((XLoc + i * 10 * LR), YLoc, -1);
+				yield return new WaitForSeconds(0.02f);
 			}
 			GetComponent<Animator>().SetTrigger("Idle");
 			yield return new WaitForSeconds(Random.Range(1.5f, 3f));
