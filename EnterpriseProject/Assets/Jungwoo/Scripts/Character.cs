@@ -261,6 +261,7 @@ public class Character : MonoBehaviour
 	{
 		SM.LeeTaeyeonCrush += 20;
 		LeeTaeyeonEvCount -= 10;
+		CLeeTaeyeon.GetComponent<Animator>().SetTrigger("Happy");
 	}
 	public void JeongSeoYoonEv()
 	{
@@ -270,6 +271,7 @@ public class Character : MonoBehaviour
 	{
 		SM.JeongSeoYoonCrush += 20;
 		JeongSeoYoonEvCount -= 10;
+		CJeongSeoYoon.GetComponent<Animator>().SetTrigger("Happy");
 	}
 	public void LeeYerinEv()
 	{
@@ -279,6 +281,7 @@ public class Character : MonoBehaviour
 	{
 		SM.LeeYerinCrush += 20;
 		LeeYerinEvCount -= 10;
+		CLeeYerin.GetComponent<Animator>().SetTrigger("Happy");
 	}
 	public void SongYeonHaEv()
 	{
@@ -288,5 +291,6 @@ public class Character : MonoBehaviour
 	{
 		SM.SongYeonHaCrush += 20;
 		SongYeonHaEvCount -= 10;
+		CSongYeonHa.GetComponent<Animator>().SetTrigger("Happy");
 	}
 }

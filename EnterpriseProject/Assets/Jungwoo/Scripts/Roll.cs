@@ -175,49 +175,51 @@ public class Roll : MonoBehaviour
 		SaveMG[2] = SaveManager.Instance.saveVariables.isLeeYerin;
 		SaveMG[3] = SaveManager.Instance.saveVariables.isSongYeonHa;
 		SaveMG[4] = SaveManager.Instance.saveVariables.isSeongJunAh;
-		string[] CharacterName = { "RLeeTaeyeon", "RJeongSeoYoon", "RLeeYerin", "RSongYeonHa", "RSeongJunAh" };
+		string[] CharacterName = { "RLeeTaeyeon", "RJeongSeoYoon", "RLeeYerin", "RSongYeonHa" };
 		TimerEnd = default;
-		int RollResultData = Random.Range(0, 4);
-		if (SaveMG[RollResultData] == false)
+		int RollResultData = Random.Range(0, 14);
+		if (RollResultData <= 3)
 		{
-			GameObject.Find(CharacterName[RollResultData]).GetComponent<Animator>().SetTrigger("Happy");
-			SaveManager.Instance.saveVariables.QU_Draw++;
-			switch (RollResultData)
+			if (SaveMG[RollResultData] == false)
 			{
-				case 0:
-					SaveManager.Instance.saveVariables.isLeeTaeyeon = true;
-					RollResult.transform.GetChild(0).GetComponent<Image>().sprite = ImageList[0];
-					RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'이태연'을 획득했습니다!";
-					break;
-				case 1:
-					SaveManager.Instance.saveVariables.isJeongSeoYoon = true;
-					RollResult.transform.GetChild(0).GetComponent<Image>().sprite = ImageList[1];
-					RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'정서윤'을 획득했습니다!";
-					break;
-				case 2:
-					SaveManager.Instance.saveVariables.isLeeYerin = true;
-					RollResult.transform.GetChild(0).GetComponent<Image>().sprite = ImageList[2];
-					RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'이예린'을 획득했습니다!";
-					break;
-				case 3:
-					SaveManager.Instance.saveVariables.isSongYeonHa = true;
-					RollResult.transform.GetChild(0).GetComponent<Image>().sprite = ImageList[3];
-					RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'송연하'을 획득했습니다!";
-					break;
-				case 4:
-					SaveManager.Instance.saveVariables.isSeongJunAh = true;
-					RollResult.transform.GetChild(0).GetComponent<Image>().sprite = ImageList[4];
-					RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'성준아'을 획득했습니다!";
-					break;
+				GameObject.Find(CharacterName[RollResultData]).GetComponent<Animator>().SetTrigger("Happy");
+				SaveManager.Instance.saveVariables.QU_Draw++;
+				switch (RollResultData)
+				{
+					case 0:
+						SaveManager.Instance.saveVariables.isLeeTaeyeon = true;
+						RollResult.transform.GetChild(0).GetComponent<Image>().sprite = ImageList[0];
+						RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'이태연'을 획득했습니다!";
+						break;
+					case 1:
+						SaveManager.Instance.saveVariables.isJeongSeoYoon = true;
+						RollResult.transform.GetChild(0).GetComponent<Image>().sprite = ImageList[1];
+						RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'정서윤'을 획득했습니다!";
+						break;
+					case 2:
+						SaveManager.Instance.saveVariables.isLeeYerin = true;
+						RollResult.transform.GetChild(0).GetComponent<Image>().sprite = ImageList[2];
+						RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'이예린'을 획득했습니다!";
+						break;
+					case 3:
+						SaveManager.Instance.saveVariables.isSongYeonHa = true;
+						RollResult.transform.GetChild(0).GetComponent<Image>().sprite = ImageList[3];
+						RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'송연하'을 획득했습니다!";
+						break;
+				}
 			}
-			RollResult.SetActive(true);
-			RollReady = true;
-			Refresh();
+			else
+			{
+				RollGet();
+			}
 		}
-		else
+		else if (RollResultData >= 4)
 		{
-			RollGet();
+			Debug.Log("부스터 획득");
 		}
+		RollResult.SetActive(true);
+		RollReady = true;
+		Refresh();
 	}
 
 	public void HourUp()
