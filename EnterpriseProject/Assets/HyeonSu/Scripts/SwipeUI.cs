@@ -19,6 +19,10 @@ public class SwipeUI : MonoBehaviour, IPointerDownHandler
     [Tooltip("터치 종료 위치")] private float endTouchX, endTouchY;
     [Tooltip("현재 Swipe가 되고 있는지 체크")] private bool isSwipeMode = false;
 
+    [Tooltip("현재 페이지 sprite들"), SerializeField] private Sprite[] MapSprs;
+    [SerializeField] private Image MapImg;
+    [SerializeField] private Text MapText;
+
     private void Awake()
     {
         //페이지 개수
@@ -37,6 +41,7 @@ public class SwipeUI : MonoBehaviour, IPointerDownHandler
     {
         //처음 페이지 설정
         SetScrollBarValue(2);
+        UIonthePage(currentPage);
     }
     private void Update()
     {
@@ -113,6 +118,40 @@ public class SwipeUI : MonoBehaviour, IPointerDownHandler
             yield return null;
         }
         isSwipeMode = false;
+        UIonthePage(currentPage);
+    }
+
+    void UIonthePage(int cur)
+    {
+        MapImg.sprite = MapSprs[cur];
+        switch (cur)
+        {
+            case 0:
+                MapImg.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 144.7f);
+                MapImg.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 72.6f);
+                MapText.text = "헬스장";
+                break;
+            case 1:
+                MapImg.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 164.5f);
+                MapImg.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 88.848f);
+                MapText.text = "도서실";
+                break;
+            case 2:
+                MapImg.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 170.9f);
+                MapImg.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 99.8f);
+                MapText.text = "침실";
+                break;
+            case 3:
+                MapImg.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 100);
+                MapImg.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 100);
+                MapText.text = "컴퓨터실";
+                break;
+            case 4:
+                MapImg.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 45.1f);
+                MapImg.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 116.8f);
+                MapText.text = "노래방";
+                break;
+        }
     }
 
     public void OnPointerDown(PointerEventData eventData)
