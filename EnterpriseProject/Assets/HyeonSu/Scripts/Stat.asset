@@ -14,20 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AllTouchMonmey: 180
   AllSecondMoney: 0
-  gold: 1000010340
-  diamond: 318
-  QU_Touch: 0a0000000a0000000000000000000000
+  gold: 1000011240
+  diamond: 1528
+  QU_Touch: 00000000000000000000000000000000
   QU_Second: 00000000000000000000000000000000
-  QU_Gold: 1490
-  QU_Click: 612
-  QU_PlayTime: 2230
-  QU_Draw: 4
+  QU_Gold: 0
+  QU_Click: 300
+  QU_PlayTime: 10456
+  QU_Draw: 1
   QUN_Touch: 01000000010000000000000000000000
   QUN_Second: 00000000000000000000000000000000
-  QUN_Gold: 1
-  QUN_Click: 2
-  QUN_PlayTime: 7
-  QUN_Draw: 4
+  QUN_Gold: 0
+  QUN_Click: 1
+  QUN_PlayTime: 19
+  QUN_Draw: 1
   LeeTaeyeon: 0100000000
   JeongSeoYoon: 0000000000
   LeeYerin: 0000000000

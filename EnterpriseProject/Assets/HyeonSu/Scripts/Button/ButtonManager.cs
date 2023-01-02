@@ -43,6 +43,7 @@ public class ButtonManager : MonoBehaviour
     private void Start()
     {
         saveVariables = SaveManager.Instance.saveVariables;
+        QuestClose();
         StartCoroutine(MainSecond());
     }
 
@@ -135,21 +136,15 @@ public class ButtonManager : MonoBehaviour
             SaveManager.Instance.AllGoodPlus(list, arr);
         }
     }
-    public void QuestMove()
+    public void QuestOpen()
     {
-        GameObject ClickObj = EventSystem.current.currentSelectedGameObject;
-        if (OnQuest == false)
-        {
-            ClickObj.transform.DOLocalMoveX(720, 1f);
-            QuestWindow.transform.DOLocalMoveX(696, 1f);
-            OnQuest = true;
-        }
-        else if (OnQuest == true)
-        {
-            ClickObj.transform.DOLocalMoveX(-295, 1f);
-            QuestWindow.transform.DOLocalMoveX(-315, 1f);
-            OnQuest = false;
-        }
+        QuestWindow.SetActive(true);
+        QuestWindow.transform.DOScale(new Vector2(1, 1), 0.7f);
+    }
+    public void QuestClose()
+    {
+        QuestWindow.SetActive(false);
+        QuestWindow.transform.localScale = new Vector2(0, 0);
     }
     public void QuestClick()
     {
