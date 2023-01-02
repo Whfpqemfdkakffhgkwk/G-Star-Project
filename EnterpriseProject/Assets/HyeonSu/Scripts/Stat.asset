@@ -14,20 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AllTouchMonmey: 180
   AllSecondMoney: 0
-  gold: 1000009980
-  diamond: 28
-  QU_Touch: 0100000002000000000000000000000000000000000000000000000000000000
-  QU_Second: 0000000000000000000000000000000000000000000000000000000000000000
-  QU_Gold: 1130
-  QU_Click: 310
-  QU_PlayTime: 1919
+  gold: 1000010340
+  diamond: 318
+  QU_Touch: 0a0000000a0000000000000000000000
+  QU_Second: 00000000000000000000000000000000
+  QU_Gold: 1490
+  QU_Click: 612
+  QU_PlayTime: 2230
   QU_Draw: 4
-  QUN_Touch: 0000000000000000000000000000000000000000000000000000000000000000
-  QUN_Second: 0000000000000000000000000000000000000000000000000000000000000000
+  QUN_Touch: 01000000010000000000000000000000
+  QUN_Second: 00000000000000000000000000000000
   QUN_Gold: 1
-  QUN_Click: 1
-  QUN_PlayTime: 1
-  QUN_Draw: 0
+  QUN_Click: 2
+  QUN_PlayTime: 7
+  QUN_Draw: 4
   LeeTaeyeon: 0100000000
   JeongSeoYoon: 0000000000
   LeeYerin: 0000000000
@@ -52,14 +52,6 @@ MonoBehaviour:
     UpgradeCost: 5000
   - UpgradeStep: 0
     UpgradeCost: 50000
-  - UpgradeStep: 0
-    UpgradeCost: 500000
-  - UpgradeStep: 0
-    UpgradeCost: 5000000
-  - UpgradeStep: 0
-    UpgradeCost: 50000000
-  - UpgradeStep: 0
-    UpgradeCost: 500000000
   SecondType:
   - UpgradeStep: 0
     UpgradeCost: 300
@@ -69,11 +61,3 @@ MonoBehaviour:
     UpgradeCost: 20000
   - UpgradeStep: 0
     UpgradeCost: 100000
-  - UpgradeStep: 0
-    UpgradeCost: 36900
-  - UpgradeStep: 0
-    UpgradeCost: 36900
-  - UpgradeStep: 0
-    UpgradeCost: 36900
-  - UpgradeStep: 0
-    UpgradeCost: 36900

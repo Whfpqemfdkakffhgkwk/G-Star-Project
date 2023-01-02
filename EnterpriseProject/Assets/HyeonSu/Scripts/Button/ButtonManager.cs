@@ -168,6 +168,7 @@ public class ButtonManager : MonoBehaviour
             GameObject SummonedObject = ObjPool.GetObject(EPoolType.dia, cur.position);
             #region 기본 세팅
             SummonedObject.transform.SetParent(DiamondCanvas.transform);
+            SummonedObject.transform.position = cur.position;
             SummonedObject.transform.localScale = new Vector3(1, 1, 1);
             #endregion
             Vector2 RandomPos = new Vector2(SummonedObject.transform.localPosition.x + Random.Range(-200f, 200f),

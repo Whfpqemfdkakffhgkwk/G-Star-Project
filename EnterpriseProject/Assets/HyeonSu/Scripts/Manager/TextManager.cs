@@ -8,14 +8,14 @@ using static SaveVariables;
 
 public class TextManager : MonoBehaviour
 {
-    [SerializeField, Tooltip("클릭 가격 배열")] private Text[] ClickPrice = new Text[8];
-    [SerializeField, Tooltip("클릭 단계 배열")] private Text[] ClickStep = new Text[8];
-    [SerializeField, Tooltip("클릭 증가량 배열")] private Text[] ClickInc = new Text[8];
-    [SerializeField, Tooltip("클릭 잠금이미지 배열")] private GameObject[] ClickRock = new GameObject[8];
+    [SerializeField, Tooltip("클릭 가격 배열")] private Text[] ClickPrice = new Text[4];
+    [SerializeField, Tooltip("클릭 단계 배열")] private Text[] ClickStep = new Text[4];
+    [SerializeField, Tooltip("클릭 증가량 배열")] private Text[] ClickInc = new Text[4];
+    [SerializeField, Tooltip("클릭 잠금이미지 배열")] private GameObject[] ClickRock = new GameObject[4];
 
-    [SerializeField, Tooltip("초당 가격 배열")] private Text[] SecondPrice = new Text[8];
-    [SerializeField, Tooltip("초당 단계 배열")] private Text[] SecondStep = new Text[8];
-    [SerializeField, Tooltip("초당 증가량 배열")] private Text[] SecondInc = new Text[8];
+    [SerializeField, Tooltip("초당 가격 배열")] private Text[] SecondPrice = new Text[4];
+    [SerializeField, Tooltip("초당 단계 배열")] private Text[] SecondStep = new Text[4];
+    [SerializeField, Tooltip("초당 증가량 배열")] private Text[] SecondInc = new Text[4];
 
     [SerializeField] private Text GoldText;
     [SerializeField] private Text DiamondText;
