@@ -29,7 +29,7 @@ public class ButtonManager : MonoBehaviour
     [SerializeField] private GameObject DiamondDirectingObj, GoldDirectingObj, ParticleObj;
     [SerializeField] private GameObject ItemWindow;
     [SerializeField] private Text UseItemExplan;
-    [SerializeField] private Button UseItemBtn;
+    [SerializeField] private Button UseItemBtn, ManyMoneyBtn, FeverBtn;
 
     [SerializeField] private GameObject canvas, DiamondCanvas, content;
 
@@ -55,6 +55,7 @@ public class ButtonManager : MonoBehaviour
     {
         TalkerOpen();
         QuitCheck();
+        ItemOpenCheck();
     }
     public void MainClick()
     {
@@ -170,10 +171,12 @@ public class ButtonManager : MonoBehaviour
     {
         saveVariables.gold += saveVariables.AllTouchMonmey * 1500;
         saveVariables.QU_Gold += (ulong)saveVariables.AllTouchMonmey * 1500;
+        saveVariables.ManyMoney--;
     }
     void UseItem_Fever()
     {
         saveVariables.ItemMultiply = 50;
+        saveVariables.Fever--;
         StartCoroutine(FeverEnd());
     }
     IEnumerator FeverEnd()
@@ -399,6 +402,29 @@ public class ButtonManager : MonoBehaviour
             }
             TalkPopup.SetActive(true);
             TalkPopup.transform.DOScale(new Vector2(1, 1), 0.5f);
+        }
+    }
+    void ItemOpenCheck()
+    {
+        if (saveVariables.ManyMoney > 0)
+        {
+            ManyMoneyBtn.enabled = true;
+            ManyMoneyBtn.GetComponent<Image>().color = new Color(1, 1, 1, 1);
+        }
+        else
+        {
+            ManyMoneyBtn.enabled = false;
+            ManyMoneyBtn.GetComponent<Image>().color = new Color(70 / 255f, 70 / 255f, 70 / 255f, 1);
+        }
+        if (saveVariables.Fever > 0)
+        {
+            FeverBtn.enabled = true;
+            FeverBtn.GetComponent<Image>().color = new Color(1, 1, 1, 1);
+        }
+        else
+        {
+            FeverBtn.enabled = false;
+            FeverBtn.GetComponent<Image>().color = new Color(70 / 255f, 70 / 255f, 70 / 255f, 1);
         }
     }
     void TalkerOpen()

@@ -51753,6 +51753,8 @@ MonoBehaviour:
   ItemWindow: {fileID: 1084370053}
   UseItemExplan: {fileID: 2049757908}
   UseItemBtn: {fileID: 20314691}
+  ManyMoneyBtn: {fileID: 2055726494}
+  FeverBtn: {fileID: 1180066760}
   canvas: {fileID: 108474005}
   DiamondCanvas: {fileID: 1857790348}
   content: {fileID: 185707695}
