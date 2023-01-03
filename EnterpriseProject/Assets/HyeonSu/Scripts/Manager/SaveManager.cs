@@ -40,7 +40,7 @@ public class SaveManager : Singleton<SaveManager>
         {
             saveVariables.AllSecondMoney +=
                     (ulong)saveVariables.SecondType[i].UpgradeStep * 10 * (ulong)(i + 1) *
-                    10 * saveVariables.ItemMultiply; //이 10은 지스타용 부스터;
+                    10; //이 10은 지스타용 부스터;
         }
     }
     public void AllGoodPlus(GoodsList[] list, int arrayNum)
@@ -55,7 +55,7 @@ public class SaveManager : Singleton<SaveManager>
         {
             saveVariables.AllSecondMoney +=
                     (ulong)list[arrayNum].UpgradeStep * 10 * (ulong)(arrayNum + 1) *
-                    10 * saveVariables.ItemMultiply; //이 10은 지스타용 부스터;
+                    10; //이 10은 지스타용 부스터;
         }
     }
     public IEnumerator AutoSave()

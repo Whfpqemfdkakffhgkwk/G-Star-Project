@@ -707,7 +707,7 @@ GameObject:
   - component: {fileID: 20314692}
   - component: {fileID: 20314691}
   m_Layer: 5
-  m_Name: Quit
+  m_Name: Use
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -777,19 +777,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 20314692}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1864762624}
-        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: QuitOrCancel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &20314692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27429,7 +27417,7 @@ RectTransform:
   m_GameObject: {fileID: 1084370053}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2049757906}
@@ -47390,7 +47378,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1864762624}
         m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: QuitOrCancel
+        m_MethodName: UseItemClose
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -51764,7 +51752,7 @@ MonoBehaviour:
   ParticleObj: {fileID: 100000, guid: c9fda59c7a8ae6541ba43453ee86c60e, type: 3}
   ItemWindow: {fileID: 1084370053}
   UseItemExplan: {fileID: 2049757908}
-  A: {fileID: 0}
+  UseItemBtn: {fileID: 20314691}
   canvas: {fileID: 108474005}
   DiamondCanvas: {fileID: 1857790348}
   content: {fileID: 185707695}

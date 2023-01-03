@@ -10,6 +10,10 @@ public class SaveVariables : ScriptableObject
 	public double gold;
 	public double diamond;
 	public float ItemMultiply;
+	public int ManyMoney;
+	public int Fever;
+	public float GodHand;
+	public float GoldenTicket;
     [Header("퀘스트")]
 	[Tooltip("퀘스트 - 터치업그레이드")] public int[] QU_Touch;
 	[Tooltip("퀘스트 - 초당업그레이드")] public int[] QU_Second;

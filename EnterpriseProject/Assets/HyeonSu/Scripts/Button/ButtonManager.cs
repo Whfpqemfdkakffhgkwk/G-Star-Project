@@ -5,6 +5,7 @@ using DG.Tweening;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using static SaveVariables;
+using System.Security.Cryptography;
 
 public class ButtonManager : MonoBehaviour
 {
@@ -28,7 +29,7 @@ public class ButtonManager : MonoBehaviour
     [SerializeField] private GameObject DiamondDirectingObj, GoldDirectingObj, ParticleObj;
     [SerializeField] private GameObject ItemWindow;
     [SerializeField] private Text UseItemExplan;
-    [SerializeField] private Button A;
+    [SerializeField] private Button UseItemBtn;
 
     [SerializeField] private GameObject canvas, DiamondCanvas, content;
 
@@ -139,28 +140,46 @@ public class ButtonManager : MonoBehaviour
             SaveManager.Instance.AllGoodPlus(list, arr);
         }
     }
+    public void UseItemClose()
+    {
+        ItemWindow.SetActive(false);
+        ItemWindow.transform.localScale = new Vector2(0, 0);
+    }
     public void UseItemOpen()
     {
         if(EventSystem.current.currentSelectedGameObject.name == "ManyMoney")
         {
             //아이템을 사용하시겠습니까?
             UseItemExplan.text = $"터치 수당의 1500배\n{saveVariables.AllTouchMonmey * 1500}를 획득합니다";
+            UseItemBtn.onClick.RemoveAllListeners();
+            UseItemBtn.onClick.AddListener(UseItem_ManyMoney);
+            UseItemBtn.onClick.AddListener(UseItemClose);
         }
         else
         {
             UseItemExplan.text = "3분동안 터치 수당이\n50배 증가합니다";
+            UseItemBtn.onClick.RemoveAllListeners();
+            UseItemBtn.onClick.AddListener(UseItem_Fever);
+            UseItemBtn.onClick.AddListener(UseItemClose);
         }
         ItemWindow.SetActive(true);
         ItemWindow.transform.DOScale(new Vector2(1, 1), 1);
     }
 
-    public void UseItem_ManyMoney()
+    void UseItem_ManyMoney()
     {
-
+        saveVariables.gold += saveVariables.AllTouchMonmey * 1500;
+        saveVariables.QU_Gold += (ulong)saveVariables.AllTouchMonmey * 1500;
     }
-    public void UseItem_Fever()
+    void UseItem_Fever()
     {
-
+        saveVariables.ItemMultiply = 50;
+        StartCoroutine(FeverEnd());
+    }
+    IEnumerator FeverEnd()
+    {
+        yield return new WaitForSeconds(300);
+        saveVariables.ItemMultiply = 1;
     }
     public void QuestOpen()
     {
