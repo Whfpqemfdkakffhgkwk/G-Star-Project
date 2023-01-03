@@ -9,7 +9,8 @@ public class SaveVariables : ScriptableObject
 	public double AllSecondMoney;
 	public double gold;
 	public double diamond;
-	[Header("퀘스트")]
+	public float ItemMultiply;
+    [Header("퀘스트")]
 	[Tooltip("퀘스트 - 터치업그레이드")] public int[] QU_Touch;
 	[Tooltip("퀘스트 - 초당업그레이드")] public int[] QU_Second;
 	[Tooltip("퀘스트 - 획득골드")] public ulong QU_Gold;

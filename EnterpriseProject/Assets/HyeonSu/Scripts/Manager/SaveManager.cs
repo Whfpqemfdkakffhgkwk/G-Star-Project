@@ -34,13 +34,13 @@ public class SaveManager : Singleton<SaveManager>
         {
             saveVariables.AllTouchMonmey +=
                     (ulong)(saveVariables.TouchType[i].UpgradeStep * 3) * (ulong)(i + 1) *
-                    10; //이 10은 지스타용 부스터;
+                    10 * saveVariables.ItemMultiply; //이 10은 지스타용 부스터;
         }
         for (int i = 0; i < saveVariables.SecondType.Length; i++)
         {
             saveVariables.AllSecondMoney +=
                     (ulong)saveVariables.SecondType[i].UpgradeStep * 10 * (ulong)(i + 1) *
-                    10; //이 10은 지스타용 부스터;
+                    10 * saveVariables.ItemMultiply; //이 10은 지스타용 부스터;
         }
     }
     public void AllGoodPlus(GoodsList[] list, int arrayNum)
@@ -49,13 +49,13 @@ public class SaveManager : Singleton<SaveManager>
         {
             saveVariables.AllTouchMonmey +=
                     (ulong)(list[arrayNum].UpgradeStep * 3) * (ulong)(arrayNum + 1) *
-                    10; //이 10은 지스타용 부스터;
+                    10 * saveVariables.ItemMultiply; //이 10은 지스타용 부스터;
         }
         else if(list == saveVariables.SecondType)
         {
             saveVariables.AllSecondMoney +=
                     (ulong)list[arrayNum].UpgradeStep * 10 * (ulong)(arrayNum + 1) *
-                    10; //이 10은 지스타용 부스터;
+                    10 * saveVariables.ItemMultiply; //이 10은 지스타용 부스터;
         }
     }
     public IEnumerator AutoSave()

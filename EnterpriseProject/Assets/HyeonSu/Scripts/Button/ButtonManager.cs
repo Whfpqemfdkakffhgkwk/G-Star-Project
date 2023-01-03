@@ -26,6 +26,9 @@ public class ButtonManager : MonoBehaviour
     [SerializeField] private Image[] TalkBtnImg;
 
     [SerializeField] private GameObject DiamondDirectingObj, GoldDirectingObj, ParticleObj;
+    [SerializeField] private GameObject ItemWindow;
+    [SerializeField] private Text UseItemExplan;
+    [SerializeField] private Button A;
 
     [SerializeField] private GameObject canvas, DiamondCanvas, content;
 
@@ -135,6 +138,29 @@ public class ButtonManager : MonoBehaviour
                                                                             //강화 적용하기
             SaveManager.Instance.AllGoodPlus(list, arr);
         }
+    }
+    public void UseItemOpen()
+    {
+        if(EventSystem.current.currentSelectedGameObject.name == "ManyMoney")
+        {
+            //아이템을 사용하시겠습니까?
+            UseItemExplan.text = $"터치 수당의 1500배\n{saveVariables.AllTouchMonmey * 1500}를 획득합니다";
+        }
+        else
+        {
+            UseItemExplan.text = "3분동안 터치 수당이\n50배 증가합니다";
+        }
+        ItemWindow.SetActive(true);
+        ItemWindow.transform.DOScale(new Vector2(1, 1), 1);
+    }
+
+    public void UseItem_ManyMoney()
+    {
+
+    }
+    public void UseItem_Fever()
+    {
+
     }
     public void QuestOpen()
     {
