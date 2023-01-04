@@ -1,0 +1,118 @@
+{
+    "AllTouchMonmey": 30.0,
+    "AllSecondMoney": 0.0,
+    "gold": 1000000000.0,
+    "diamond": 1528.0,
+    "ItemMultiply": 1.0,
+    "ManyMoney": 0,
+    "Fever": 0,
+    "GodHand": 0.0,
+    "GoldenTicket": 0.0,
+    "QU_Touch": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "QU_Second": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "QU_Gold": 13000,
+    "QU_Click": 313,
+    "QU_PlayTime": 11178,
+    "QU_Draw": 1,
+    "QUN_Touch": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "QUN_Second": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "QUN_Gold": 0,
+    "QUN_Click": 1,
+    "QUN_PlayTime": 19,
+    "QUN_Draw": 1,
+    "LeeTaeyeon": [
+        true,
+        false,
+        false,
+        false,
+        false
+    ],
+    "JeongSeoYoon": [
+        false,
+        false,
+        false,
+        false,
+        false
+    ],
+    "LeeYerin": [
+        false,
+        false,
+        false,
+        false,
+        false
+    ],
+    "SongYeonHa": [],
+    "SeongJunAh": [
+        false,
+        false,
+        false,
+        false,
+        false
+    ],
+    "isLeeTaeyeon": true,
+    "isJeongSeoYoon": false,
+    "isLeeYerin": false,
+    "isSongYeonHa": false,
+    "isSeongJunAh": false,
+    "CurLeeTaeyeon": 20.0,
+    "CurJeongSeoYoon": 0.0,
+    "CurLeeYerin": 0.0,
+    "CurSongYeonHa": 0.0,
+    "CurSeongJunAh": 0.0,
+    "TouchType": [
+        {
+            "UpgradeStep": 1,
+            "UpgradeCost": 50.0
+        },
+        {
+            "UpgradeStep": 0,
+            "UpgradeCost": 500.0
+        },
+        {
+            "UpgradeStep": 0,
+            "UpgradeCost": 5000.0
+        },
+        {
+            "UpgradeStep": 0,
+            "UpgradeCost": 50000.0
+        }
+    ],
+    "SecondType": [
+        {
+            "UpgradeStep": 0,
+            "UpgradeCost": 1500.0
+        },
+        {
+            "UpgradeStep": 0,
+            "UpgradeCost": 15000.0
+        },
+        {
+            "UpgradeStep": 0,
+            "UpgradeCost": 50000.0
+        },
+        {
+            "UpgradeStep": 0,
+            "UpgradeCost": 100000.0
+        }
+    ]
+}

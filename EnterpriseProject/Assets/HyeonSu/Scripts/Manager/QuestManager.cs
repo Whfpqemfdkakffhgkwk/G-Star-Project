@@ -39,15 +39,11 @@ public class QuestManager : MonoBehaviour
 
     SaveVariables saveVariables;
 
-    private void Awake()
+    private void Start()
     {
         saveVariables = SaveManager.Instance.saveVariables;
         isTouch = new bool[4];
         isSecond = new bool[4];
-    }
-
-    private void Start()
-    {
         AddDictionary();
     }
     private void Update()

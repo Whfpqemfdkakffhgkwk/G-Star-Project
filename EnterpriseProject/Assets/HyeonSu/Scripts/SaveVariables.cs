@@ -1,8 +1,7 @@
 using UnityEngine;
 
-
-[CreateAssetMenu(fileName = "Stat", menuName = "Scriptable Object Asset/Stat")]
-public class SaveVariables : ScriptableObject
+[System.Serializable]
+public class SaveVariables
 {
 	[Header("재화")]
 	public double AllTouchMonmey;

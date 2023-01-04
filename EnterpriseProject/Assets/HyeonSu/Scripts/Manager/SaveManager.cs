@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 using static SaveVariables;
 
@@ -10,22 +11,26 @@ public class SaveManager : Singleton<SaveManager>
     public SaveVariables saveVariables;
     //수정 필요
 
+    private void Start()
+    {
+        LoadJson();
+    }
+
     #region 저장기능
     void LoadJson()
     {
-        string path = Path.Combine(Application.dataPath + "/SaveData.json");
+        saveVariables = new SaveVariables();
+        string path = "Assets/Resources/save.json";
         string jsonData = File.ReadAllText(path);
-        saveVariables.TouchType = JsonUtility.FromJson<SaveVariables.GoodsList[]>(jsonData);
+        saveVariables = JsonUtility.FromJson<SaveVariables>(jsonData);
     }
     void SaveJson()
     {
-        string jsonData = "";
-        for (int i = 0; i < saveVariables.TouchType.Length; i++)
-        {
-            jsonData += JsonUtility.ToJson(saveVariables.TouchType[i]);
-        }
-        string path = Path.Combine(Application.dataPath + "/SaveData.json");
+        string path = "Assets/Resources/save.json";
+        string jsonData = JsonUtility.ToJson(saveVariables, true);
+        Debug.Log(jsonData);
         File.WriteAllText(path, jsonData);
+        
     }
 
     public void Combine()

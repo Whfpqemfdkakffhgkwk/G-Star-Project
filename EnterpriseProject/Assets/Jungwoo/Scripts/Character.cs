@@ -32,12 +32,9 @@ public class Character : MonoBehaviour
 	private float XLoc;
 	private float YLoc;
 
-	void Awake()
-	{
-		SM = SaveManager.Instance.saveVariables;
-	}
 	void Start()
 	{
+		SM = SaveManager.Instance.saveVariables;
 		if (name != "Character")
 		{
 			StartCoroutine(MoveCycle());

@@ -1167,10 +1167,10 @@ RectTransform:
   m_Father: {fileID: 508187956}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 637, y: -529.4}
+  m_SizeDelta: {x: 1274, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &34704423
 MonoBehaviour:
@@ -3994,7 +3994,61 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9962395f134eb4e4bb6c2d776be1f198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  saveVariables: {fileID: 11400000, guid: 8fb977b3369c27f42a8ce4c4f3ec7c39, type: 2}
+  saveVariables:
+    AllTouchMonmey: 900
+    AllSecondMoney: 0
+    gold: 1000000000
+    diamond: 1528
+    ItemMultiply: 1
+    ManyMoney: 0
+    Fever: 0
+    GodHand: 0
+    GoldenTicket: 0
+    QU_Touch: 00000000000000000000000000000000
+    QU_Second: 4d0000002e0000004f0000002b000000
+    QU_Gold: 13000
+    QU_Click: 313
+    QU_PlayTime: 11163
+    QU_Draw: 1
+    QUN_Touch: 00000000000000000000000000000000
+    QUN_Second: 00000000000000000000000000000000
+    QUN_Gold: 0
+    QUN_Click: 1
+    QUN_PlayTime: 19
+    QUN_Draw: 1
+    LeeTaeyeon: 0100000000
+    JeongSeoYoon: 0000000000
+    LeeYerin: 0000000000
+    SongYeonHa: 
+    SeongJunAh: 0000000000
+    isLeeTaeyeon: 1
+    isJeongSeoYoon: 0
+    isLeeYerin: 0
+    isSongYeonHa: 0
+    isSeongJunAh: 0
+    CurLeeTaeyeon: 20
+    CurJeongSeoYoon: 0
+    CurLeeYerin: 0
+    CurSongYeonHa: 0
+    CurSeongJunAh: 0
+    TouchType:
+    - UpgradeStep: 1
+      UpgradeCost: 50
+    - UpgradeStep: 0
+      UpgradeCost: 500
+    - UpgradeStep: 0
+      UpgradeCost: 5000
+    - UpgradeStep: 0
+      UpgradeCost: 50000
+    SecondType:
+    - UpgradeStep: 0
+      UpgradeCost: 1500
+    - UpgradeStep: 0
+      UpgradeCost: 15000
+    - UpgradeStep: 0
+      UpgradeCost: 50000
+    - UpgradeStep: 0
+      UpgradeCost: 100000
 --- !u!4 &107030237
 Transform:
   m_ObjectHideFlags: 0
@@ -17321,10 +17375,10 @@ RectTransform:
   m_Father: {fileID: 508187956}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 637, y: -100}
+  m_SizeDelta: {x: 1274, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &665359317
 MonoBehaviour:
@@ -19538,10 +19592,10 @@ RectTransform:
   m_Father: {fileID: 508187956}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 637, y: -744.1}
+  m_SizeDelta: {x: 1274, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &758058937
 MonoBehaviour:
@@ -29603,7 +29657,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 0.00012207031, y: 682}
+  m_AnchoredPosition: {x: 0.00024414062, y: 682}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1180066760
@@ -54165,10 +54219,10 @@ RectTransform:
   m_Father: {fileID: 508187956}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 637, y: -314.7}
+  m_SizeDelta: {x: 1274, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1961741881
 MonoBehaviour:
@@ -57733,7 +57787,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 0.00012207031, y: 1027}
+  m_AnchoredPosition: {x: 0.00024414062, y: 1027}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &2055726494
