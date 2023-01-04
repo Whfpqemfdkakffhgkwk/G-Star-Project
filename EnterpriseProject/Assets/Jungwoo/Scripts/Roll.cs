@@ -177,7 +177,7 @@ public class Roll : MonoBehaviour
 		SaveMG[4] = SaveManager.Instance.saveVariables.isSeongJunAh;
 		string[] CharacterName = { "RLeeTaeyeon", "RJeongSeoYoon", "RLeeYerin", "RSongYeonHa" };
 		TimerEnd = default;
-		int RollResultData = Random.Range(0, 14);
+		int RollResultData = Random.Range(0, 12);
 		if (RollResultData <= 3)
 		{
 			if (SaveMG[RollResultData] == false)
@@ -204,7 +204,7 @@ public class Roll : MonoBehaviour
 					case 3:
 						SaveManager.Instance.saveVariables.isSongYeonHa = true;
 						RollResult.transform.GetChild(0).GetComponent<Image>().sprite = ImageList[3];
-						RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'송연하'을 획득했습니다!";
+						RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'송연하'를 획득했습니다!";
 						break;
 				}
 			}
@@ -213,11 +213,29 @@ public class Roll : MonoBehaviour
 				RollGet();
 			}
 		}
-		else if (RollResultData >= 4)
+		else if (RollResultData >= 4 && RollResultData <= 5)
 		{
-			Debug.Log("부스터 획득");
+			SaveManager.Instance.saveVariables.ManyMoney += 1;
 			RollResult.transform.GetChild(0).GetComponent<Image>().sprite = ImageList[4];
-			RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'부스터'를 획득했습니다!";
+			RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'골드'를 획득했습니다!";
+		}
+		else if (RollResultData >= 6 && RollResultData <= 7)
+		{
+			SaveManager.Instance.saveVariables.Fever += 1;
+			RollResult.transform.GetChild(0).GetComponent<Image>().sprite = ImageList[5];
+			RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'피버'를 획득했습니다!";
+		}
+		else if (RollResultData >= 8 && RollResultData <= 9)
+		{
+			SaveManager.Instance.saveVariables.GodHand += 0.2f;
+			RollResult.transform.GetChild(0).GetComponent<Image>().sprite = ImageList[6];
+			RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'신의 손'을 획득했습니다!";
+		}
+		else if (RollResultData >= 10 && RollResultData <= 11)
+		{
+			SaveManager.Instance.saveVariables.GoldenTicket += 0.2f;
+			RollResult.transform.GetChild(0).GetComponent<Image>().sprite = ImageList[7];
+			RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'황금 티켓'을 획득했습니다!";
 		}
 		RollResult.SetActive(true);
 		RollReady = true;
