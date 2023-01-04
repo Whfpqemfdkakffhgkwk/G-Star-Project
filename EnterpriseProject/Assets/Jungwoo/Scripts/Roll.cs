@@ -46,9 +46,7 @@ public class Roll : MonoBehaviour
 
 	void Update()
 	{
-		/*Debug.Log(TimerEnd.Hour + " / " + TimerEnd.Minute + " / " + TimerEnd.Second);
-		Debug.Log((TimerEnd.Hour * 3600 + TimerEnd.Minute * 60 + TimerEnd.Second));
-		Debug.Log((TimerEnd.Hour * 3600 + TimerEnd.Minute * 60 + TimerEnd.Second) / 32400f);*/
+
 	}
 
 	public void Refresh()
