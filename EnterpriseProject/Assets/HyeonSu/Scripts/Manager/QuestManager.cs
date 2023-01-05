@@ -164,10 +164,10 @@ public class QuestManager : MonoBehaviour
         Gold.text = saveVariables.QU_Gold.ToString() + "/" + (ulong)(1000 * Mathf.Pow(10, saveVariables.QUN_Gold + 1));
         GoldList.text = $"골드를 {(ulong)(1000 * Mathf.Pow(10, saveVariables.QUN_Gold + 1))}원 획득하기";
         GoldSlider.value = (saveVariables.QU_Gold) / (1000 * Mathf.Pow(10, saveVariables.QUN_Gold + 1));
+            QuestNotice.SetActive(true);
         if (saveVariables.QU_Gold >= (1000 * Mathf.Pow(10, saveVariables.QUN_Gold + 1)) && !isGold)
         {
             isGold = true;
-            QuestNotice.SetActive(true);
             GoldStatus.color = new Color(1, 1, 1, 1);
             ListRefresh(GoldCannes, isGold);
         }

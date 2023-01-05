@@ -127,9 +127,9 @@ public class SwipeUI : MonoBehaviour, IPointerDownHandler
         switch (cur)
         {
             case 0:
-                MapImg.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 144.7f);
-                MapImg.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 72.6f);
-                MapText.text = "헬스장";
+                MapImg.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 170.9f);
+                MapImg.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 99.8f);
+                MapText.text = "침실";
                 break;
             case 1:
                 MapImg.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 164.5f);
@@ -137,9 +137,9 @@ public class SwipeUI : MonoBehaviour, IPointerDownHandler
                 MapText.text = "도서실";
                 break;
             case 2:
-                MapImg.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 170.9f);
-                MapImg.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 99.8f);
-                MapText.text = "침실";
+                MapImg.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 144.7f);
+                MapImg.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 72.6f);
+                MapText.text = "헬스장";
                 break;
             case 3:
                 MapImg.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 100);
