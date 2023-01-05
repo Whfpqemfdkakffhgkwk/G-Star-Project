@@ -1,7 +1,7 @@
 {
     "AllTouchMonmey": 30.0,
     "AllSecondMoney": 0.0,
-    "gold": 1000000000.0,
+    "gold": 1000000060.0,
     "diamond": 1528.0,
     "ItemMultiply": 1.0,
     "ManyMoney": 0,
@@ -20,9 +20,9 @@
         0,
         0
     ],
-    "QU_Gold": 13000,
-    "QU_Click": 313,
-    "QU_PlayTime": 11178,
+    "QU_Gold": 13060,
+    "QU_Click": 315,
+    "QU_PlayTime": 11183,
     "QU_Draw": 1,
     "QUN_Touch": [
         0,
