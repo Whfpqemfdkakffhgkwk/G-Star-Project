@@ -131,6 +131,14 @@ public class QuestManager : MonoBehaviour
     //        }
     //    }
     //}
+
+    void QuestNoticeUpdate(bool NoticeState)
+    {
+        if(NoticeState)
+        {
+            QuestNotice.SetActive(NoticeState);
+        }
+    }
     void OrganizeStatusText()
     {
         for (int i = 0; i < Touch.Length; i++)
@@ -138,10 +146,10 @@ public class QuestManager : MonoBehaviour
             Touch[i].text = saveVariables.QU_Touch[i].ToString() + "/" + ((10 * saveVariables.QUN_Touch[i]) + 10).ToString();
             TouchLists[i].text = $"'{TouchName[i]}' 레벨을 {(10 * saveVariables.QUN_Touch[i]) + 10}레벨 올리기";
             TouchSliders[i].value = (saveVariables.QU_Touch[i] - 10f * saveVariables.QUN_Touch[i]) / 10;
+            QuestNoticeUpdate(saveVariables.QU_Touch[i] >= (10 * saveVariables.QUN_Touch[i]) + 10);
             if (saveVariables.QU_Touch[i] >= ((10 * saveVariables.QUN_Touch[i]) + 10) && !isTouch[i])
             {
                 isTouch[i] = true;
-                QuestNotice.SetActive(true);
                 TouchStatus[i].color = new Color(1, 1, 1, 1);
                 ListRefresh(TouchCannes[i], isTouch[i]);
             }
@@ -152,10 +160,10 @@ public class QuestManager : MonoBehaviour
             Second[i].text = saveVariables.QU_Second[i].ToString() + "/" + ((10 * saveVariables.QUN_Second[i]) + 10).ToString();
             SecondLists[i].text = $"'{SecondName[i]}' 레벨을 {(10 * saveVariables.QUN_Second[i]) + 10}레벨 올리기";
             SecondSliders[i].value = (saveVariables.QU_Second[i] - 10f * saveVariables.QUN_Second[i]) / 10;
+            QuestNoticeUpdate(saveVariables.QU_Second[i] >= (10 * saveVariables.QUN_Second[i]) + 10);
             if (saveVariables.QU_Second[i] >= ((10 * saveVariables.QUN_Second[i]) + 10) && !isSecond[i])
             {
                 isSecond[i] = true;
-                QuestNotice.SetActive(true);
                 SecondStatus[i].color = new Color(1, 1, 1, 1);
                 ListRefresh(SecondCannes[i], isSecond[i]);
             }
@@ -164,7 +172,7 @@ public class QuestManager : MonoBehaviour
         Gold.text = saveVariables.QU_Gold.ToString() + "/" + (ulong)(1000 * Mathf.Pow(10, saveVariables.QUN_Gold + 1));
         GoldList.text = $"골드를 {(ulong)(1000 * Mathf.Pow(10, saveVariables.QUN_Gold + 1))}원 획득하기";
         GoldSlider.value = (saveVariables.QU_Gold) / (1000 * Mathf.Pow(10, saveVariables.QUN_Gold + 1));
-            QuestNotice.SetActive(true);
+        QuestNoticeUpdate(saveVariables.QU_Gold >= (1000 * Mathf.Pow(10, saveVariables.QUN_Gold + 1)));
         if (saveVariables.QU_Gold >= (1000 * Mathf.Pow(10, saveVariables.QUN_Gold + 1)) && !isGold)
         {
             isGold = true;
@@ -175,10 +183,10 @@ public class QuestManager : MonoBehaviour
         Click.text = saveVariables.QU_Click.ToString() + "/" + ((300 * saveVariables.QUN_Click) + 300).ToString();
         ClickList.text = $"터치를 {(300 * saveVariables.QUN_Click) + 300}번 하기";
         ClickSlider.value = (saveVariables.QU_Click - 300f * saveVariables.QUN_Click) / 300; //
+        QuestNoticeUpdate(saveVariables.QU_Click >= ((300 * saveVariables.QUN_Click) + 300));
         if (saveVariables.QU_Click >= ((300 * saveVariables.QUN_Click) + 300) && !isClick)
         {
             isClick = true;
-            QuestNotice.SetActive(true);
             ClickStatus.color = new Color(1, 1, 1, 1);
             ListRefresh(ClickCannes, isClick);
         }
@@ -186,10 +194,10 @@ public class QuestManager : MonoBehaviour
         PlayTime.text = saveVariables.QU_PlayTime.ToString() + "/" + ((100 * saveVariables.QUN_PlayTime) + 100).ToString();
         PlayTimeList.text = $"{(100 * saveVariables.QUN_PlayTime) + 100}초 플레이하기";
         PlayTimeSlider.value = (saveVariables.QU_PlayTime - 100 * saveVariables.QUN_PlayTime) / 100;
+        QuestNoticeUpdate(saveVariables.QU_PlayTime >= ((100 * saveVariables.QUN_PlayTime) + 100));
         if (saveVariables.QU_PlayTime >= ((100 * saveVariables.QUN_PlayTime) + 100) && !isPlayTime)
         {
             isPlayTime = true;
-            QuestNotice.SetActive(true);
             PlayTimeStatus.color = new Color(1, 1, 1, 1);
             ListRefresh(PlayTimeCannes, isPlayTime);
         }
@@ -197,10 +205,10 @@ public class QuestManager : MonoBehaviour
         Draw.text = saveVariables.QU_Draw.ToString() + "/" + ((1 * saveVariables.QUN_Draw) + 1).ToString();
         DrawList.text = $"캐릭터를 {(1 * saveVariables.QUN_Draw) + 1}번 뽑으세요";
         DrawSlider.value = (saveVariables.QU_Draw - 1f * saveVariables.QUN_Draw) / 1;
+        QuestNoticeUpdate(saveVariables.QU_Draw >= ((1 * saveVariables.QUN_Draw) + 1));
         if (saveVariables.QU_Draw >= ((1 * saveVariables.QUN_Draw) + 1) && !isDraw)
         {
             isDraw = true;
-            QuestNotice.SetActive(true);
             DrawStatus.color = new Color(1, 1, 1, 1);
             ListRefresh(DrawCannes, isDraw);
         }

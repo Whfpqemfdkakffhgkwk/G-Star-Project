@@ -1,10 +1,10 @@
 {
     "AllTouchMonmey": 30.0,
     "AllSecondMoney": 0.0,
-    "gold": 1000000090.0,
-    "diamond": 1578.0,
+    "gold": 1000000150.0,
+    "diamond": 2468.0,
     "ItemMultiply": 1.0,
-    "ManyMoney": 0,
+    "ManyMoney": 1,
     "Fever": 0,
     "GodHand": 0.0,
     "GoldenTicket": 0.0,
@@ -20,10 +20,10 @@
         0,
         0
     ],
-    "QU_Gold": 3090,
-    "QU_Click": 316,
-    "QU_PlayTime": 11232,
-    "QU_Draw": 1,
+    "QU_Gold": 0,
+    "QU_Click": 0,
+    "QU_PlayTime": 5,
+    "QU_Draw": 0,
     "QUN_Touch": [
         0,
         0,
@@ -36,10 +36,10 @@
         0,
         0
     ],
-    "QUN_Gold": 1,
-    "QUN_Click": 1,
-    "QUN_PlayTime": 23,
-    "QUN_Draw": 1,
+    "QUN_Gold": 0,
+    "QUN_Click": 0,
+    "QUN_PlayTime": 0,
+    "QUN_Draw": 0,
     "LeeTaeyeon": [
         true,
         false,
