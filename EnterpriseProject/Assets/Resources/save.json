@@ -5,7 +5,7 @@
     "diamond": 2468.0,
     "ItemMultiply": 1.0,
     "ManyMoney": 99,
-    "Fever": 8,
+    "Fever": 6,
     "GodHand": 0.0,
     "GoldenTicket": 0.0,
     "QU_Touch": [
@@ -22,7 +22,7 @@
     ],
     "QU_Gold": 2370,
     "QU_Click": 79,
-    "QU_PlayTime": 603,
+    "QU_PlayTime": 629,
     "QU_Draw": 0,
     "QUN_Touch": [
         0,

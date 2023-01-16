@@ -9,11 +9,11 @@ using static SaveVariables;
 public class SaveManager : Singleton<SaveManager>
 {
     public SaveVariables saveVariables;
-    //수정 필요
 
     private void Start()
     {
         LoadJson();
+        saveVariables.ItemMultiply = 1f;
     }
 
     #region 저장기능
