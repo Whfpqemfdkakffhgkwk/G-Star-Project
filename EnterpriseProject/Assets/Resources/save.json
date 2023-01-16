@@ -1,11 +1,11 @@
 {
     "AllTouchMonmey": 30.0,
     "AllSecondMoney": 0.0,
-    "gold": 1000000150.0,
+    "gold": 1000002520.0,
     "diamond": 2468.0,
     "ItemMultiply": 1.0,
-    "ManyMoney": 1,
-    "Fever": 0,
+    "ManyMoney": 99,
+    "Fever": 8,
     "GodHand": 0.0,
     "GoldenTicket": 0.0,
     "QU_Touch": [
@@ -20,9 +20,9 @@
         0,
         0
     ],
-    "QU_Gold": 0,
-    "QU_Click": 0,
-    "QU_PlayTime": 5,
+    "QU_Gold": 2370,
+    "QU_Click": 79,
+    "QU_PlayTime": 603,
     "QU_Draw": 0,
     "QUN_Touch": [
         0,

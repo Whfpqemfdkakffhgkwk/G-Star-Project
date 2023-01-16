@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using static SaveVariables;
 using System.Security.Cryptography;
+using UnityEditorInternal;
 
 public class ButtonManager : MonoBehaviour
 {
@@ -28,7 +29,7 @@ public class ButtonManager : MonoBehaviour
 
     [SerializeField] private GameObject DiamondDirectingObj, GoldDirectingObj, ParticleObj;
     [SerializeField] private GameObject ItemWindow;
-    [SerializeField] private Text UseItemExplan;
+    [SerializeField] private Text UseItemExplan, GoldItemCountTxt, FeverItemCountTxt;
     [SerializeField] private Button UseItemBtn, ManyMoneyBtn, FeverBtn;
 
     [SerializeField] private GameObject canvas, DiamondCanvas, content;
@@ -44,6 +45,7 @@ public class ButtonManager : MonoBehaviour
     SaveVariables saveVariables;
 
     private bool OnQuest = false;
+    private float RemainingItemTime;
     private void Start()
     {
         saveVariables = SaveManager.Instance.saveVariables;
@@ -53,6 +55,8 @@ public class ButtonManager : MonoBehaviour
 
     private void FixedUpdate()
     {
+        RemainingItemTime -= Time.deltaTime;
+        ItemCountUpdate();
         TalkerOpen();
         QuitCheck();
         ItemOpenCheck();
@@ -141,6 +145,19 @@ public class ButtonManager : MonoBehaviour
             SaveManager.Instance.AllGoodPlus(list, arr);
         }
     }
+    void ItemCountUpdate()
+    {
+
+        GoldItemCountTxt.text = $"{saveVariables.ManyMoney}개 보유중";
+        if (saveVariables.ItemMultiply == 1)
+        {
+            FeverItemCountTxt.text = $"{saveVariables.Fever}개 보유중";
+        }
+        else
+        {
+            FeverItemCountTxt.text = $"{System.Math.Truncate(RemainingItemTime)} / 300";
+        }
+    }
     public void UseItemClose()
     {
         ItemWindow.SetActive(false);
@@ -148,7 +165,7 @@ public class ButtonManager : MonoBehaviour
     }
     public void UseItemOpen()
     {
-        if(EventSystem.current.currentSelectedGameObject.name == "ManyMoney")
+        if (EventSystem.current.currentSelectedGameObject.name == "ManyMoney")
         {
             //아이템을 사용하시겠습니까?
             UseItemExplan.text = $"터치 수당의 1500배\n{saveVariables.AllTouchMonmey * 1500}를 획득합니다";
@@ -181,6 +198,7 @@ public class ButtonManager : MonoBehaviour
     }
     IEnumerator FeverEnd()
     {
+        RemainingItemTime = 300;
         yield return new WaitForSeconds(300);
         saveVariables.ItemMultiply = 1;
     }
