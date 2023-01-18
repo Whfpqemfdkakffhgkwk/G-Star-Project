@@ -79,10 +79,10 @@ public class Character : MonoBehaviour
 				CSongYeonHa.SetActive(false);
 			}
 			GetComponent<RectTransform>().localPosition = new Vector3(Background.GetComponent<RectTransform>().localPosition.x, 0, 0);
-			CLeeTaeyeon.transform.GetChild(4).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "í—¬ìŠ¤ì¥ " + SM.QU_Touch[2] + " / " + (10 + (((int)SM.LeeTaeyeonCrush / 20) * 10)) + " ë²ˆ ì—…ê·¸ë ˆì´ë“œ í•˜ê¸°";
-			CJeongSeoYoon.transform.GetChild(4).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "ë„ì„œì‹¤ " + SM.QU_Touch[1] + " / " + (10 + (((int)SM.JeongSeoYoonCrush / 20) * 10)) + " ë²ˆ ì—…ê·¸ë ˆì´ë“œ í•˜ê¸°";
-			CLeeYerin.transform.GetChild(4).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "ë…¸ë˜ë°© " + SM.QU_Touch[0] + " / " + (10 + (((int)SM.LeeYerinCrush / 20) * 10)) + " ë²ˆ ì—…ê·¸ë ˆì´ë“œ í•˜ê¸°";
-			CSongYeonHa.transform.GetChild(4).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "í”¼ì‹œë°© " + SM.QU_Touch[3] + " / " + (10 + (((int)SM.SongYeonHaCrush / 20) * 10)) + " ë²ˆ ì—…ê·¸ë ˆì´ë“œ í•˜ê¸°";
+			CLeeTaeyeon.transform.GetChild(4).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Çï½ºÀå " + SM.QU_Touch[2] + " / " + (10 + (((int)SM.LeeTaeyeonCrush / 20) * 10)) + " ¹ø ¾÷±×·¹ÀÌµå ÇÏ±â";
+			CJeongSeoYoon.transform.GetChild(4).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "µµ¼­½Ç " + SM.QU_Touch[1] + " / " + (10 + (((int)SM.JeongSeoYoonCrush / 20) * 10)) + " ¹ø ¾÷±×·¹ÀÌµå ÇÏ±â";
+			CLeeYerin.transform.GetChild(4).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "³ë·¡¹æ " + SM.QU_Touch[0] + " / " + (10 + (((int)SM.LeeYerinCrush / 20) * 10)) + " ¹ø ¾÷±×·¹ÀÌµå ÇÏ±â";
+			CSongYeonHa.transform.GetChild(4).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "ÇÇ½Ã¹æ " + SM.QU_Touch[3] + " / " + (10 + (((int)SM.SongYeonHaCrush / 20) * 10)) + " ¹ø ¾÷±×·¹ÀÌµå ÇÏ±â";
 			//Pannel1.GetComponent<RectTransform>().localPosition = new Vector3(-Background.GetComponent<RectTransform>().localPosition.x, 530, 0);
 			//Pannel2.GetComponent<RectTransform>().localPosition = new Vector3(-Background.GetComponent<RectTransform>().localPosition.x, 530, 0);
 			//Pannel3.GetComponent<RectTransform>().localPosition = new Vector3(-Background.GetComponent<RectTransform>().localPosition.x, 530, 0);
@@ -107,35 +107,35 @@ public class Character : MonoBehaviour
 			{
 				LR = 1;
 			}
-			if (this.name == "CLeeTaeyeon" && CharacterObj.transform.localPosition.x <= -550 - 1924.3f * 2)
+			if (this.name == "CLeeTaeyeon" && CharacterObj.transform.localPosition.x <= -550 - 1923.25f * 2 + 1923.25f * 2)
 			{
 				LR = 1;
 			}
-			else if (this.name == "CLeeTaeyeon" && CharacterObj.transform.localPosition.x >= 550 - 1924 * 2)
+			else if (this.name == "CLeeTaeyeon" && CharacterObj.transform.localPosition.x >= 550 - 1923.25f * 2 + 1923.25f * 2)
 			{
 				LR = -1;
 			}
-			else if (this.name == "CJeongSeoYoon" && CharacterObj.transform.localPosition.x <= -550 - 1924 * 1)
+			else if (this.name == "CJeongSeoYoon" && CharacterObj.transform.localPosition.x <= -550 - 1923.25f * 2 + 1923.25f * 1)
 			{
 				LR = 1;
 			}
-			else if (this.name == "CJeongSeoYoon" && CharacterObj.transform.localPosition.x >= 550 - 1924 * 1)
+			else if (this.name == "CJeongSeoYoon" && CharacterObj.transform.localPosition.x >= 550 - 1923.25f * 2 + 1923.25f * 1)
 			{
 				LR = -1;
 			}
-			else if (this.name == "CLeeYerin" && CharacterObj.transform.localPosition.x <= -550 + 1924 * 2)
+			else if (this.name == "CLeeYerin" && CharacterObj.transform.localPosition.x <= -550 - 1923.25f * 2 + 1923.25f * 4)
 			{
 				LR = 1;
 			}
-			else if (this.name == "CLeeYerin" && CharacterObj.transform.localPosition.x >= 550 + 1924 * 2)
+			else if (this.name == "CLeeYerin" && CharacterObj.transform.localPosition.x >= 550 - 1923.25f * 2 + 1923.25f * 4)
 			{
 				LR = -1;
 			}
-			else if (this.name == "CSongYeonHa" && CharacterObj.transform.localPosition.x <= -550 + 1924 * 1)
+			else if (this.name == "CSongYeonHa" && CharacterObj.transform.localPosition.x <= -550 - 1923.25f * 2 + 1923.25f * 3)
 			{
 				LR = 1;
 			}
-			else if (this.name == "CSongYeonHa" && CharacterObj.transform.localPosition.x >= 550 + 1924 * 1)
+			else if (this.name == "CSongYeonHa" && CharacterObj.transform.localPosition.x >= 550 - 1923.25f * 2 + 1923.25f * 3)
 			{
 				LR = -1;
 			}
@@ -154,7 +154,8 @@ public class Character : MonoBehaviour
 				yield return new WaitForSeconds(0.02f);
 			}
 			GetComponent<Animator>().SetTrigger("Idle");
-			yield return new WaitForSeconds(Random.Range(1.5f, 3f));
+			//yield return new WaitForSeconds(Random.Range(1.5f, 3f));
+			yield return new WaitForSeconds(0.5f);
 		}
 	}
 

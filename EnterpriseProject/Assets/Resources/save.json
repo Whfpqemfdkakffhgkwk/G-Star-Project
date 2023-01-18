@@ -1,7 +1,7 @@
 {
     "AllTouchMonmey": 30.0,
     "AllSecondMoney": 0.0,
-    "gold": 1000002520.0,
+    "gold": 1000002910.0,
     "diamond": 2468.0,
     "ItemMultiply": 1.0,
     "ManyMoney": 99,
@@ -20,9 +20,9 @@
         0,
         0
     ],
-    "QU_Gold": 2370,
-    "QU_Click": 79,
-    "QU_PlayTime": 629,
+    "QU_Gold": 2760,
+    "QU_Click": 92,
+    "QU_PlayTime": 834,
     "QU_Draw": 0,
     "QUN_Touch": [
         0,
@@ -70,10 +70,10 @@
         false
     ],
     "isLeeTaeyeon": true,
-    "isJeongSeoYoon": false,
-    "isLeeYerin": false,
-    "isSongYeonHa": false,
-    "isSeongJunAh": false,
+    "isJeongSeoYoon": true,
+    "isLeeYerin": true,
+    "isSongYeonHa": true,
+    "isSeongJunAh": true,
     "CurLeeTaeyeon": 20.0,
     "CurJeongSeoYoon": 0.0,
     "CurLeeYerin": 0.0,
