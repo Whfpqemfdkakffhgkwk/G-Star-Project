@@ -154,8 +154,7 @@ public class Character : MonoBehaviour
 				yield return new WaitForSeconds(0.02f);
 			}
 			GetComponent<Animator>().SetTrigger("Idle");
-			//yield return new WaitForSeconds(Random.Range(1.5f, 3f));
-			yield return new WaitForSeconds(0.5f);
+			yield return new WaitForSeconds(Random.Range(1.5f, 3f));
 		}
 	}
 
