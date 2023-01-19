@@ -40,7 +40,7 @@ public class Roll : MonoBehaviour
 	void Start()
 	{
 		TimerEnd = default;
-		//1ì´ˆë§ˆë‹¤ ìˆ«ì ë³€ê²½í•˜ê²Œ ë°˜ë³µ
+		//1ÃÊ¸¶´Ù ¼ıÀÚ º¯°æÇÏ°Ô ¹İº¹
 		InvokeRepeating("Refresh", 0, 1);
 	}
 
@@ -124,13 +124,14 @@ public class Roll : MonoBehaviour
 			RemainTimeBackground.sprite = OnImg;
 		}
 		Price.text = (50 - (int)((TimerHour * 3600 + TimerMin * 60 + TimerSec) / 32400f * 50)).ToString();
-		if (SaveManager.Instance.saveVariables.isLeeTaeyeon && SaveManager.Instance.saveVariables.isJeongSeoYoon && SaveManager.Instance.saveVariables.isLeeYerin && SaveManager.Instance.saveVariables.isSongYeonHa)
-		{
-			RollDenie.SetActive(true);
-			RollFalse.SetActive(false);
-			RollTrue.SetActive(false);
-			RemainTime.SetActive(false);
-		}
+		//Ä³¸¯ÅÍ ´Ù »Ì¾ÒÀ» ½Ã »Ì±â ¸·´Â ±â´É
+		//if (SaveManager.Instance.saveVariables.isLeeTaeyeon && SaveManager.Instance.saveVariables.isJeongSeoYoon && SaveManager.Instance.saveVariables.isLeeYerin && SaveManager.Instance.saveVariables.isSongYeonHa)
+		//{
+		//	RollDenie.SetActive(true);
+		//	RollFalse.SetActive(false);
+		//	RollTrue.SetActive(false);
+		//	RemainTime.SetActive(false);
+		//}
 	}
 
 	public void RollStart()
@@ -160,7 +161,7 @@ public class Roll : MonoBehaviour
 
 	public void RollSkip()
 	{
-		//ëŒ€ì¶© ê´‘ê³  ë³¸ í›„
+		//´ëÃæ ±¤°í º» ÈÄ
 		TimerEnd = DateTime.Now.AddSeconds(-1);
 		Refresh();
 	}
@@ -187,22 +188,26 @@ public class Roll : MonoBehaviour
 					case 0:
 						SaveManager.Instance.saveVariables.isLeeTaeyeon = true;
 						RollResult.transform.GetChild(0).GetComponent<Image>().sprite = ImageList[0];
-						RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'ì´íƒœì—°'ì„ íšë“í–ˆìŠµë‹ˆë‹¤!";
+						RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'ÀÌÅÂ¿¬'À» È¹µæÇß½À´Ï´Ù!";
+						RollResult.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = "";
 						break;
 					case 1:
 						SaveManager.Instance.saveVariables.isJeongSeoYoon = true;
 						RollResult.transform.GetChild(0).GetComponent<Image>().sprite = ImageList[1];
-						RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'ì •ì„œìœ¤'ì„ íšë“í–ˆìŠµë‹ˆë‹¤!";
+						RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'Á¤¼­À±'À» È¹µæÇß½À´Ï´Ù!";
+						RollResult.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = "";
 						break;
 					case 2:
 						SaveManager.Instance.saveVariables.isLeeYerin = true;
 						RollResult.transform.GetChild(0).GetComponent<Image>().sprite = ImageList[2];
-						RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'ì´ì˜ˆë¦°'ì„ íšë“í–ˆìŠµë‹ˆë‹¤!";
+						RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'ÀÌ¿¹¸°'À» È¹µæÇß½À´Ï´Ù!";
+						RollResult.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = "";
 						break;
 					case 3:
 						SaveManager.Instance.saveVariables.isSongYeonHa = true;
 						RollResult.transform.GetChild(0).GetComponent<Image>().sprite = ImageList[3];
-						RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'ì†¡ì—°í•˜'ë¥¼ íšë“í–ˆìŠµë‹ˆë‹¤!";
+						RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'¼Û¿¬ÇÏ'¸¦ È¹µæÇß½À´Ï´Ù!";
+						RollResult.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = "";
 						break;
 				}
 			}
@@ -215,25 +220,29 @@ public class Roll : MonoBehaviour
 		{
 			SaveManager.Instance.saveVariables.ManyMoney += 1;
 			RollResult.transform.GetChild(0).GetComponent<Image>().sprite = ImageList[4];
-			RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'ê³¨ë“œ'ë¥¼ íšë“í–ˆìŠµë‹ˆë‹¤!";
+			RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'Å«µ· È¹µæ'À» È¹µæÇß½À´Ï´Ù!";
+			RollResult.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = "ÅÍÄ¡ ¼ö´çÀÇ 1500¹è È¹µæ ÇÒ ¼ö ÀÖ´Â ¾ÆÀÌÅÛ";
 		}
 		else if (RollResultData >= 6 && RollResultData <= 7)
 		{
 			SaveManager.Instance.saveVariables.Fever += 1;
 			RollResult.transform.GetChild(0).GetComponent<Image>().sprite = ImageList[5];
-			RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'í”¼ë²„'ë¥¼ íšë“í–ˆìŠµë‹ˆë‹¤!";
+			RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'ÇÇ¹ö'¸¦ È¹µæÇß½À´Ï´Ù!";
+			RollResult.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = "3ºĞµ¿¾È ÅÍÄ¡ ¼ö´çÀÌ Áõ°¡ÇÏ´Â ¾ÆÀÌÅÛ";
 		}
 		else if (RollResultData >= 8 && RollResultData <= 9)
 		{
 			SaveManager.Instance.saveVariables.GodHand += 0.2f;
 			RollResult.transform.GetChild(0).GetComponent<Image>().sprite = ImageList[6];
-			RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'ì‹ ì˜ ì†'ì„ íšë“í–ˆìŠµë‹ˆë‹¤!";
+			RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'½ÅÀÇ ¼Õ'À» È¹µæÇß½À´Ï´Ù!";
+			RollResult.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = "ÅÍÄ¡ ¼ö´ç ¿µ±¸ÀûÀ¸·Î 0.2%Áõ°¡, ÁßÃ¸ O";
 		}
 		else if (RollResultData >= 10 && RollResultData <= 11)
 		{
 			SaveManager.Instance.saveVariables.GoldenTicket += 0.2f;
 			RollResult.transform.GetChild(0).GetComponent<Image>().sprite = ImageList[7];
-			RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'í™©ê¸ˆ í‹°ì¼“'ì„ íšë“í–ˆìŠµë‹ˆë‹¤!";
+			RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'È²±İ Æ¼ÄÏ'À» È¹µæÇß½À´Ï´Ù!";
+			RollResult.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = "¹Ì´Ï°ÔÀÓ ¼ö´ç ¿µ±¸ÀûÀ¸·Î 0.2%Áõ°¡, ÁßÃ¸ O";
 		}
 		RollResult.SetActive(true);
 		RollReady = true;
