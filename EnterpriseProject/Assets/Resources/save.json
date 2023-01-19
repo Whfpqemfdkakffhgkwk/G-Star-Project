@@ -22,7 +22,7 @@
     ],
     "QU_Gold": 48060,
     "QU_Click": 102,
-    "QU_PlayTime": 950,
+    "QU_PlayTime": 960,
     "QU_Draw": 3,
     "QUN_Touch": [
         0,
@@ -70,9 +70,9 @@
         false
     ],
     "isLeeTaeyeon": true,
-    "isJeongSeoYoon": true,
-    "isLeeYerin": true,
-    "isSongYeonHa": true,
+    "isJeongSeoYoon": false,
+    "isLeeYerin": false,
+    "isSongYeonHa": false,
     "isSeongJunAh": false,
     "CurLeeTaeyeon": 20.0,
     "CurJeongSeoYoon": 0.0,

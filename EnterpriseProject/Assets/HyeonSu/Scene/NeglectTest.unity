@@ -4098,10 +4098,10 @@ MonoBehaviour:
     SongYeonHa: 
     SeongJunAh: 0000000000
     isLeeTaeyeon: 1
-    isJeongSeoYoon: 1
-    isLeeYerin: 1
-    isSongYeonHa: 1
-    isSeongJunAh: 1
+    isJeongSeoYoon: 0
+    isLeeYerin: 0
+    isSongYeonHa: 0
+    isSeongJunAh: 0
     CurLeeTaeyeon: 20
     CurJeongSeoYoon: 0
     CurLeeYerin: 0

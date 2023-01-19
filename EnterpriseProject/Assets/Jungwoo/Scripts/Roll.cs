@@ -176,7 +176,7 @@ public class Roll : MonoBehaviour
 		SaveMG[4] = SaveManager.Instance.saveVariables.isSeongJunAh;
 		string[] CharacterName = { "RLeeTaeyeon", "RJeongSeoYoon", "RLeeYerin", "RSongYeonHa" };
 		TimerEnd = default;
-		int RollResultData = Random.Range(0, 12);
+		int RollResultData = Random.Range(0, 24);
 		if (RollResultData <= 3)
 		{
 			if (SaveMG[RollResultData] == false)
@@ -216,28 +216,28 @@ public class Roll : MonoBehaviour
 				RollGet();
 			}
 		}
-		else if (RollResultData >= 4 && RollResultData <= 5)
+		else if (RollResultData >= 4 && RollResultData <= 10)
 		{
 			SaveManager.Instance.saveVariables.ManyMoney += 1;
 			RollResult.transform.GetChild(0).GetComponent<Image>().sprite = ImageList[4];
 			RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'큰돈 획득'을 획득했습니다!";
 			RollResult.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = "터치 수당의 1500배 획득 할 수 있는 아이템";
 		}
-		else if (RollResultData >= 6 && RollResultData <= 7)
+		else if (RollResultData >= 11 && RollResultData <= 17)
 		{
 			SaveManager.Instance.saveVariables.Fever += 1;
 			RollResult.transform.GetChild(0).GetComponent<Image>().sprite = ImageList[5];
 			RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'피버'를 획득했습니다!";
 			RollResult.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = "3분동안 터치 수당이 증가하는 아이템";
 		}
-		else if (RollResultData >= 8 && RollResultData <= 9)
+		else if (RollResultData >= 18 && RollResultData <= 20)
 		{
 			SaveManager.Instance.saveVariables.GodHand += 0.2f;
 			RollResult.transform.GetChild(0).GetComponent<Image>().sprite = ImageList[6];
 			RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'신의 손'을 획득했습니다!";
 			RollResult.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = "터치 수당 영구적으로 0.2%증가, 중첩 O";
 		}
-		else if (RollResultData >= 10 && RollResultData <= 11)
+		else if (RollResultData >= 21 && RollResultData <= 23)
 		{
 			SaveManager.Instance.saveVariables.GoldenTicket += 0.2f;
 			RollResult.transform.GetChild(0).GetComponent<Image>().sprite = ImageList[7];
