@@ -29,17 +29,11 @@ public class PlayAdvertisement : Singleton<PlayAdvertisement>
     /// </summary>
     public void PlayingAd()
     {
-        if(this.interstitial.IsLoaded())
+        if (this.interstitial.IsLoaded())
         {
             this.interstitial.Show();
         }
-        else
-        {
-            //광고 다시 로드하기
-            Advertisement();
-            //광고가 준비되지 않았으니 다음에 다시 시도해주세요.
-            //라는 창 띄우기
-        }
+        Advertisement();
     }
 
     public void HandleOnAdClosed(object sender, EventArgs args)
