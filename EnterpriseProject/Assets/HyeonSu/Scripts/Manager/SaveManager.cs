@@ -38,13 +38,13 @@ public class SaveManager : Singleton<SaveManager>
         for (int i = 0; i < saveVariables.TouchType.Length; i++)
         {
             saveVariables.AllTouchMonmey +=
-                    (ulong)(saveVariables.TouchType[i].UpgradeStep * 3) * (ulong)(i + 1) *
+                    (ulong)(saveVariables.TouchType[i].UpgradeStep * 2.7f) * (ulong)(i + 1) *
                     10 * saveVariables.ItemMultiply; //이 10은 지스타용 부스터;
         }
         for (int i = 0; i < saveVariables.SecondType.Length; i++)
         {
             saveVariables.AllSecondMoney +=
-                    (ulong)saveVariables.SecondType[i].UpgradeStep * 10 * (ulong)(i + 1) *
+                    (ulong)saveVariables.SecondType[i].UpgradeStep * 24 * (ulong)(i + 1) *
                     10; //이 10은 지스타용 부스터;
         }
     }

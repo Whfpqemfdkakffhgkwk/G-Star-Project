@@ -169,10 +169,10 @@ public class QuestManager : MonoBehaviour
             }
         }
 
-        Gold.text = saveVariables.QU_Gold.ToString() + "/" + (ulong)(1000 * Mathf.Pow(10, saveVariables.QUN_Gold + 1));
+        Gold.text = saveVariables.QU_Gold.ToString() + "/" + (ulong)(10000 * Mathf.Pow(10, saveVariables.QUN_Gold + 1));
         GoldList.text = $"골드를 {(ulong)(1000 * Mathf.Pow(10, saveVariables.QUN_Gold + 1))}원 획득하기";
-        GoldSlider.value = (saveVariables.QU_Gold) / (1000 * Mathf.Pow(10, saveVariables.QUN_Gold + 1));
-        QuestNoticeUpdate(saveVariables.QU_Gold >= (1000 * Mathf.Pow(10, saveVariables.QUN_Gold + 1)));
+        GoldSlider.value = (saveVariables.QU_Gold) / (10000 * Mathf.Pow(10, saveVariables.QUN_Gold + 1));
+        QuestNoticeUpdate(saveVariables.QU_Gold >= (10000 * Mathf.Pow(10, saveVariables.QUN_Gold + 1)));
         if (saveVariables.QU_Gold >= (1000 * Mathf.Pow(10, saveVariables.QUN_Gold + 1)) && !isGold)
         {
             isGold = true;
@@ -180,22 +180,22 @@ public class QuestManager : MonoBehaviour
             ListRefresh(GoldCannes, isGold);
         }
 
-        Click.text = saveVariables.QU_Click.ToString() + "/" + ((300 * saveVariables.QUN_Click) + 300).ToString();
-        ClickList.text = $"터치를 {(300 * saveVariables.QUN_Click) + 300}번 하기";
-        ClickSlider.value = (saveVariables.QU_Click - 300f * saveVariables.QUN_Click) / 300; //
-        QuestNoticeUpdate(saveVariables.QU_Click >= ((300 * saveVariables.QUN_Click) + 300));
-        if (saveVariables.QU_Click >= ((300 * saveVariables.QUN_Click) + 300) && !isClick)
+        Click.text = saveVariables.QU_Click.ToString() + "/" + ((700 * saveVariables.QUN_Click) + 700).ToString();
+        ClickList.text = $"터치를 {(700 * saveVariables.QUN_Click) + 700}번 하기";
+        ClickSlider.value = (saveVariables.QU_Click - 700f * saveVariables.QUN_Click) / 700; //
+        QuestNoticeUpdate(saveVariables.QU_Click >= ((700 * saveVariables.QUN_Click) + 700));
+        if (saveVariables.QU_Click >= ((700 * saveVariables.QUN_Click) + 700) && !isClick)
         {
             isClick = true;
             ClickStatus.color = new Color(1, 1, 1, 1);
             ListRefresh(ClickCannes, isClick);
         }
 
-        PlayTime.text = saveVariables.QU_PlayTime.ToString() + "/" + ((100 * saveVariables.QUN_PlayTime) + 100).ToString();
-        PlayTimeList.text = $"{(100 * saveVariables.QUN_PlayTime) + 100}초 플레이하기";
-        PlayTimeSlider.value = (saveVariables.QU_PlayTime - 100 * saveVariables.QUN_PlayTime) / 100;
-        QuestNoticeUpdate(saveVariables.QU_PlayTime >= ((100 * saveVariables.QUN_PlayTime) + 100));
-        if (saveVariables.QU_PlayTime >= ((100 * saveVariables.QUN_PlayTime) + 100) && !isPlayTime)
+        PlayTime.text = saveVariables.QU_PlayTime.ToString() + "/" + ((500 * saveVariables.QUN_PlayTime) + 500).ToString();
+        PlayTimeList.text = $"{(500 * saveVariables.QUN_PlayTime) + 500}초 플레이하기";
+        PlayTimeSlider.value = (saveVariables.QU_PlayTime - 500 * saveVariables.QUN_PlayTime) / 500;
+        QuestNoticeUpdate(saveVariables.QU_PlayTime >= ((500 * saveVariables.QUN_PlayTime) + 500));
+        if (saveVariables.QU_PlayTime >= ((500 * saveVariables.QUN_PlayTime) + 500) && !isPlayTime)
         {
             isPlayTime = true;
             PlayTimeStatus.color = new Color(1, 1, 1, 1);
