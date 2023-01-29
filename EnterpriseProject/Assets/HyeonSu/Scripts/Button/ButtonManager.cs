@@ -22,6 +22,7 @@ public class ButtonManager : MonoBehaviour
     private string BtnChar;
 
     [SerializeField] private Image[] TalkerImages;
+    [SerializeField] private Text[] SpecialStoryCharacter;
     [SerializeField] private Sprite TalkBtnImgOn, TalkBtnImgOff;
     [SerializeField] private Sprite[] TalkerSprs;
     [SerializeField] private Slider[] TalkGauges;
@@ -288,6 +289,10 @@ public class ButtonManager : MonoBehaviour
                             TalkBtnImg[i].gameObject.transform.parent.GetComponent<Button>().enabled = false;
                         }
                     }
+                    for (int i = 0; i < SpecialStoryCharacter.Length; i++)
+                    {
+                        SpecialStoryCharacter[i].text = "'이태연'의 과거 이야기를\r\n 웹툰으로 만나보세요!";
+                    }
                     break;
                 case "JeongSeoYoon":
                     for (int i = 0; i < TalkGauges.Length; i++)
@@ -304,6 +309,10 @@ public class ButtonManager : MonoBehaviour
                             TalkBtnImg[i].sprite = TalkBtnImgOff;
                             TalkBtnImg[i].gameObject.transform.parent.GetComponent<Button>().enabled = false;
                         }
+                    }
+                    for (int i = 0; i < SpecialStoryCharacter.Length; i++)
+                    {
+                        SpecialStoryCharacter[i].text = "'정서윤'의 과거 이야기를\r\n 웹툰으로 만나보세요!";
                     }
                     break;
                 case "LeeYerin":
@@ -322,6 +331,10 @@ public class ButtonManager : MonoBehaviour
                             TalkBtnImg[i].gameObject.transform.parent.GetComponent<Button>().enabled = false;
                         }
                     }
+                    for (int i = 0; i < SpecialStoryCharacter.Length; i++)
+                    {
+                        SpecialStoryCharacter[i].text = "'이예린'의 과거 이야기를\r\n 웹툰으로 만나보세요!";
+                    }
                     break;
                 case "SongYeonHa":
                     for (int i = 0; i < TalkGauges.Length; i++)
@@ -338,6 +351,10 @@ public class ButtonManager : MonoBehaviour
                             TalkBtnImg[i].sprite = TalkBtnImgOff;
                             TalkBtnImg[i].gameObject.transform.parent.GetComponent<Button>().enabled = false;
                         }
+                    }
+                    for (int i = 0; i < SpecialStoryCharacter.Length; i++)
+                    {
+                        SpecialStoryCharacter[i].text = "'송연하'의 과거 이야기를\r\n 웹툰으로 만나보세요!";
                     }
                     break;
                 case "SeongJunAh":
@@ -453,9 +470,6 @@ public class ButtonManager : MonoBehaviour
             TalkerImages[1].sprite = TalkerSprs[1];
         if (saveVariables.isSongYeonHa)
             TalkerImages[2].sprite = TalkerSprs[2];
-        //오류나서 주석쳐둠
-        //if (saveVariables.isSeongJunAh)
-        //    TalkerImages[3].sprite = TalkerSprs[3];
     }
     IEnumerator DirectingDiamondCor(GameObject obj)
     {
