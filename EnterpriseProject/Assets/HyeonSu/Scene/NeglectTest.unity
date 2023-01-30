@@ -17148,7 +17148,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e8b1424d1f10c9b4b980be52822aa58a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4c6d45301c2cfc546abcc6e61cadf07f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -28468,7 +28468,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e8b1424d1f10c9b4b980be52822aa58a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4c6d45301c2cfc546abcc6e61cadf07f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -41358,7 +41358,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e8b1424d1f10c9b4b980be52822aa58a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4c6d45301c2cfc546abcc6e61cadf07f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -54813,6 +54813,10 @@ MonoBehaviour:
   - {fileID: 2015380737}
   - {fileID: 1201975604}
   - {fileID: 1218845258}
+  TalkBtnImages:
+  - {fileID: 1053259595}
+  - {fileID: 1444412474}
+  - {fileID: 608777846}
   SpecialStoryCharacter:
   - {fileID: 311307911}
   - {fileID: 1957509283}

@@ -21,7 +21,7 @@ public class ButtonManager : MonoBehaviour
 
     private string BtnChar;
 
-    [SerializeField] private Image[] TalkerImages;
+    [SerializeField] private Image[] TalkerImages, TalkBtnImages;
     [SerializeField] private Text[] SpecialStoryCharacter;
     [SerializeField] private Sprite TalkBtnImgOn, TalkBtnImgOff;
     [SerializeField] private Sprite[] TalkerSprs;
@@ -465,11 +465,20 @@ public class ButtonManager : MonoBehaviour
     void TalkerOpen()
     {
         if (saveVariables.isJeongSeoYoon)
+        {
             TalkerImages[0].sprite = TalkerSprs[0];
+            TalkBtnImages[0].sprite = TalkBtnImgOn;
+        }
         if (saveVariables.isLeeYerin)
+        {
             TalkerImages[1].sprite = TalkerSprs[1];
+            TalkBtnImg[1].sprite = TalkBtnImgOn;
+        }
         if (saveVariables.isSongYeonHa)
+        {
             TalkerImages[2].sprite = TalkerSprs[2];
+            TalkBtnImg[2].sprite = TalkBtnImgOn;
+        }
     }
     IEnumerator DirectingDiamondCor(GameObject obj)
     {
