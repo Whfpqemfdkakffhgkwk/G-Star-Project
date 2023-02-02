@@ -45,8 +45,10 @@ public class SaveVariables
 	[Tooltip("캐릭터 뽑았는지 확인하는 bool값")] public bool isLeeYerin;
 	[Tooltip("캐릭터 뽑았는지 확인하는 bool값")] public bool isSongYeonHa;
 	[Tooltip("캐릭터 뽑았는지 확인하는 bool값")] public bool isSeongJunAh;
+	[Header("캐릭터 스페셜대화[캐릭터][각 대화]")]
+	[Tooltip("[캐릭터][대화]")] public bool[][] SpecialTalks;
 
-	[Tooltip("호감대화 했던 단계")] public float CurLeeTaeyeon, CurJeongSeoYoon, CurLeeYerin, CurSongYeonHa, CurSeongJunAh;
+    [Tooltip("호감대화 했던 단계")] public float CurLeeTaeyeon, CurJeongSeoYoon, CurLeeYerin, CurSongYeonHa, CurSeongJunAh;
 
 	[Space(10)]
 	public GoodsList[] TouchType;
