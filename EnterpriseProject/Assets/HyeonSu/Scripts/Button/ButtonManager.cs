@@ -15,7 +15,7 @@ public class ButtonManager : MonoBehaviour
     [SerializeField] private GameObject TouchWindow;
     [SerializeField] private GameObject QuestWindow;
     [SerializeField] private GameObject TalkPopup;
-    [SerializeField] private GameObject[] TouchBtns, SecondBtns;
+    [SerializeField] private GameObject[] TouchBtns, SecondBtns, SpecialBtns;
 
     private bool isPopup = false;
 
@@ -28,7 +28,7 @@ public class ButtonManager : MonoBehaviour
     [SerializeField] private Slider[] TalkGauges;
     [SerializeField] private Image[] TalkBtnImg;
 
-    [SerializeField] private GameObject DiamondDirectingObj, GoldDirectingObj, ParticleObj;
+    [SerializeField] private GameObject DiamondDirectingObj, GoldDirectingObj, ParticleObj, NotenoughtDiamondPopup;
     [SerializeField] private GameObject ItemWindow;
     [SerializeField] private Text UseItemExplan, GoldItemCountTxt, FeverItemCountTxt;
     [SerializeField] private Button UseItemBtn, ManyMoneyBtn, FeverBtn;
@@ -265,6 +265,25 @@ public class ButtonManager : MonoBehaviour
         TalkPopup.transform.localScale = new Vector3(0, 0, 0);
         isPopup = false;
     }
+    void SpecialBtnAddListener(bool open)
+    {
+        if (open)
+        {
+            EventSystem.current.currentSelectedGameObject.GetComponent<Button>().onClick.RemoveAllListeners();
+            EventSystem.current.currentSelectedGameObject.GetComponent<Button>().onClick.AddListener(() =>
+            {
+
+            });
+        }
+        else
+        {
+            EventSystem.current.currentSelectedGameObject.GetComponent<Button>().onClick.RemoveAllListeners();
+            EventSystem.current.currentSelectedGameObject.GetComponent<Button>().onClick.AddListener(() =>
+            {
+
+            });
+        }
+    }
     public void TalkClick() //누른 버튼이 누구 버튼인지 알아내고 각 캐릭터의 for문 돌리면 될듯
     {
         if (!isPopup)
@@ -461,6 +480,35 @@ public class ButtonManager : MonoBehaviour
             FeverBtn.enabled = false;
             FeverBtn.GetComponent<Image>().color = new Color(70 / 255f, 70 / 255f, 70 / 255f, 1);
         }
+    }
+    void BuySpecialPopup()
+    {
+        for (int i = 0; i < SpecialBtns.Length; i++)
+        {
+            if (EventSystem.current.currentSelectedGameObject == SpecialBtns[i])
+            {
+                if (saveVariables.diamond >= SpecialTalkPrice(i))
+                {
+                    saveVariables.diamond -= SpecialTalkPrice(i);
+                    EventSystem.current.currentSelectedGameObject.transform.GetChild(1).GetComponent<Image>().sprite = TalkBtnImgOn;
+                }
+                else
+                    //다이아 부족 팝업
+                    NotenoughtDiamondPopup.SetActive(true);
+                break;
+            }
+        }
+    }
+    int SpecialTalkPrice(int i)
+    {
+        if (i == 0)
+            return 100;
+        else if (i == 1)
+            return 300;
+        else if (i == 2)
+            return 500;
+
+        return 0;
     }
     void TalkerOpen()
     {
