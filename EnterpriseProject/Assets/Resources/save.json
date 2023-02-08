@@ -2,10 +2,10 @@
     "AllTouchMonmey": 20.0,
     "AllSecondMoney": 0.0,
     "gold": 1000051870.0,
-    "diamond": 1212.0,
+    "diamond": 1112.0,
     "ItemMultiply": 1.0,
     "ManyMoney": 100,
-    "Fever": 8,
+    "Fever": 9,
     "GodHand": 0.4000000059604645,
     "GoldenTicket": 1.4000000953674317,
     "QU_Touch": [
@@ -22,7 +22,7 @@
     ],
     "QU_Gold": 51720,
     "QU_Click": 224,
-    "QU_PlayTime": 1547,
+    "QU_PlayTime": 1556,
     "QU_Draw": 3,
     "QUN_Touch": [
         0,
@@ -69,6 +69,7 @@
         false,
         false
     ],
+    "QU_TouchHeart": [],
     "isLeeTaeyeon": true,
     "isJeongSeoYoon": false,
     "isLeeYerin": false,

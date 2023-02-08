@@ -161,7 +161,7 @@ public class Roll : MonoBehaviour
 
 	public void RollSkip()
 	{
-		//대충 광고 본 후
+		PlayAdvertisement.Instance.PlayingAd();
 		TimerEnd = DateTime.Now.AddSeconds(-1);
 		Refresh();
 	}
