@@ -43,9 +43,12 @@ public class ButtonManager : MonoBehaviour
 
     [SerializeField] private Character LeeTaecharacter, Jeongcharater, LeeYaecharater, Songcharater;
 
+    [SerializeField] private WebtoonManager webtoonManager;
+
     SaveVariables saveVariables;
 
     private bool OnQuest = false;
+    private int BtnNum;
     private float RemainingItemTime;
     private void Start()
     {
@@ -265,24 +268,79 @@ public class ButtonManager : MonoBehaviour
         TalkPopup.transform.localScale = new Vector3(0, 0, 0);
         isPopup = false;
     }
-    void SpecialBtnAddListener(bool open)
+    void SpecialBtnAddListener(int num)
     {
-        if (open)
-        {
             EventSystem.current.currentSelectedGameObject.GetComponent<Button>().onClick.RemoveAllListeners();
             EventSystem.current.currentSelectedGameObject.GetComponent<Button>().onClick.AddListener(() =>
             {
-
+                webtoonManager.Webtoons[ReturnWebtoon(BtnNum, num)].SetActive(true);
+                webtoonManager.transform.parent.gameObject.SetActive(true);
             });
-        }
-        else
+        
+    }
+    int ReturnWebtoon(int Char, int Num)
+    {
+        if(Char == 0)
         {
-            EventSystem.current.currentSelectedGameObject.GetComponent<Button>().onClick.RemoveAllListeners();
-            EventSystem.current.currentSelectedGameObject.GetComponent<Button>().onClick.AddListener(() =>
+            if(Num == 0)
             {
-
-            });
+                return 0;
+            }
+            else if(Num == 1)
+            {
+                return 1;
+            }
+            else
+            {
+                return 2;
+            }
         }
+        else if (Char == 1)
+        {
+            if (Num == 0)
+            {
+                return 3;
+            }
+            else if (Num == 1)
+            {
+                return 4;
+            }
+            else
+            {
+                return 5;
+            }
+        }
+        else if (Char == 2)
+        {
+            if (Num == 0)
+            {
+                return 6;
+            }
+            else if (Num == 1)
+            {
+                return 7;
+            }
+            else
+            {
+                return 8;
+            }
+        }
+        else if (Char == 3)
+        {
+            if (Num == 0)
+            {
+                return 9;
+            }
+            else if (Num == 1)
+            {
+                return 10;
+            }
+            else
+            {
+                return 11;
+            }
+        }
+        return 0;
     }
     public void TalkClick() //누른 버튼이 누구 버튼인지 알아내고 각 캐릭터의 for문 돌리면 될듯
     {
@@ -296,6 +354,7 @@ public class ButtonManager : MonoBehaviour
                     for (int i = 0; i < TalkGauges.Length; i++)
                     {
                         TalkGauges[i].value = saveVariables.CurLeeTaeyeon / ((i + 1) * 20);
+                        BtnNum = 0;
                         if (saveVariables.LeeTaeyeon[i])
                         {
                             TalkBtnImg[i].sprite = TalkBtnImgOn;
@@ -317,6 +376,7 @@ public class ButtonManager : MonoBehaviour
                     for (int i = 0; i < TalkGauges.Length; i++)
                     {
                         TalkGauges[i].value = saveVariables.CurJeongSeoYoon / ((i + 1) * 20);
+                        BtnNum = 1;
                         if (saveVariables.JeongSeoYoon[i])
                         {
                             TalkBtnImg[i].sprite = TalkBtnImgOn;
@@ -338,6 +398,7 @@ public class ButtonManager : MonoBehaviour
                     for (int i = 0; i < TalkGauges.Length; i++)
                     {
                         TalkGauges[i].value = saveVariables.CurLeeYerin / ((i + 1) * 20);
+                        BtnNum = 2;
                         if (saveVariables.LeeYerin[i])
                         {
                             TalkBtnImg[i].sprite = TalkBtnImgOn;
@@ -359,6 +420,7 @@ public class ButtonManager : MonoBehaviour
                     for (int i = 0; i < TalkGauges.Length; i++)
                     {
                         TalkGauges[i].value = saveVariables.CurSongYeonHa / ((i + 1) * 20);
+                        BtnNum = 3;
                         if (saveVariables.SongYeonHa[i])
                         {
                             TalkBtnImg[i].sprite = TalkBtnImgOn;
@@ -481,7 +543,7 @@ public class ButtonManager : MonoBehaviour
             FeverBtn.GetComponent<Image>().color = new Color(70 / 255f, 70 / 255f, 70 / 255f, 1);
         }
     }
-    void BuySpecialPopup()
+    public void BuySpecialPopup()
     {
         for (int i = 0; i < SpecialBtns.Length; i++)
         {
@@ -491,6 +553,7 @@ public class ButtonManager : MonoBehaviour
                 {
                     saveVariables.diamond -= SpecialTalkPrice(i);
                     EventSystem.current.currentSelectedGameObject.transform.GetChild(1).GetComponent<Image>().sprite = TalkBtnImgOn;
+                    SpecialBtnAddListener(i);
                 }
                 else
                     //다이아 부족 팝업
@@ -512,20 +575,15 @@ public class ButtonManager : MonoBehaviour
     }
     void TalkerOpen()
     {
-        if (saveVariables.isJeongSeoYoon)
+        bool[] OpenCheck = new bool[3] {saveVariables.isJeongSeoYoon, saveVariables.isLeeYerin, saveVariables.isSongYeonHa };
+        for (int i = 0; i < OpenCheck.Length; i++)
         {
-            TalkerImages[0].sprite = TalkerSprs[0];
-            TalkBtnImages[0].sprite = TalkBtnImgOn;
-        }
-        if (saveVariables.isLeeYerin)
-        {
-            TalkerImages[1].sprite = TalkerSprs[1];
-            TalkBtnImg[1].sprite = TalkBtnImgOn;
-        }
-        if (saveVariables.isSongYeonHa)
-        {
-            TalkerImages[2].sprite = TalkerSprs[2];
-            TalkBtnImg[2].sprite = TalkBtnImgOn;
+            if (OpenCheck[i])
+            {
+                TalkerImages[i].sprite = TalkerSprs[i];
+                TalkBtnImages[i].sprite = TalkBtnImgOn;
+                TalkBtnImages[i].GetComponent<Button>().enabled = true;
+            }
         }
     }
     IEnumerator DirectingDiamondCor(GameObject obj)

@@ -8,8 +8,7 @@ public class WebtoonManager : MonoBehaviour
 {
     Scrollbar VerticalBar;
 
-    [SerializeField]
-    private GameObject[] Webtoons; 
+    public GameObject[] Webtoons; 
 
     [SerializeField]
     private RectTransform Content;
@@ -24,6 +23,10 @@ public class WebtoonManager : MonoBehaviour
         {
             gameObject.SetActive(false);
             FinishBtn.gameObject.SetActive(false);
+            for (int i = 0; i < Webtoons.Length; i++)
+            {
+                Webtoons[i].SetActive(false);
+            }
             VerticalBar.value = 1;
         });
     }
