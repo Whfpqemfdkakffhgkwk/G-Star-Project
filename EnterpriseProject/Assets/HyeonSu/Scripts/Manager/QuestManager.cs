@@ -6,8 +6,8 @@ using UnityEngine.Rendering;
 using UnityEngine.UI;
 public class QuestManager : MonoBehaviour
 {
-    [Tooltip("í€˜ìŠ¤íŠ¸ í´ë¦¬ì–´ê°€ ëëŠ”ì§€ í™•ì¸í•˜ëŠ” boolê°’")] private bool[] isTouch, isSecond;
-    [Tooltip("í€˜ìŠ¤íŠ¸ í´ë¦¬ì–´ê°€ ëëŠ”ì§€ í™•ì¸í•˜ëŠ” boolê°’")] private bool isGold, isClick, isPlayTime, isDraw;
+    [Tooltip("Äù½ºÆ® Å¬¸®¾î°¡ µÆ´ÂÁö È®ÀÎÇÏ´Â bool°ª")] private bool[] isTouch, isSecond;
+    [Tooltip("Äù½ºÆ® Å¬¸®¾î°¡ µÆ´ÂÁö È®ÀÎÇÏ´Â bool°ª")] private bool isGold, isClick, isPlayTime, isDraw;
 
     [SerializeField] private GameObject[] TouchCannes, SecondCannes;
     [SerializeField] private GameObject GoldCannes, ClickCannes, PlayTimeCannes, DrawCannes;
@@ -52,20 +52,20 @@ public class QuestManager : MonoBehaviour
     }
     void AddDictionary()
     {
-        TouchName.Add(0, "ë…¸ë˜ë°©");
-        TouchName.Add(1, "ë„ì„œì‹¤");
-        TouchName.Add(2, "í—¬ìŠ¤ì¥");
-        TouchName.Add(3, "í”¼ì‹œë°©");
-        SecondName.Add(0, "ë°˜ì§€í•˜");
-        SecondName.Add(1, "ìŠ¤íƒ ë‹¤ë“œë£¸");
-        SecondName.Add(2, "ë”œëŸ­ìŠ¤ë£¸");
-        SecondName.Add(3, "ìŠ¤ìœ„íŠ¸ë£¸");
+        TouchName.Add(0, "³ë·¡¹æ");
+        TouchName.Add(1, "µµ¼­½Ç");
+        TouchName.Add(2, "Çï½ºÀå");
+        TouchName.Add(3, "ÇÇ½Ã¹æ");
+        SecondName.Add(0, "¹İÁöÇÏ");
+        SecondName.Add(1, "½ºÅÄ´Ùµå·ë");
+        SecondName.Add(2, "µô·°½º·ë");
+        SecondName.Add(3, "½ºÀ§Æ®·ë");
     }
     /// <summary>
-    /// ë¦¬ìŠ¤íŠ¸ ìƒˆë¡œê³ ì¹¨
+    /// ¸®½ºÆ® »õ·Î°íÄ§
     /// </summary>
-    /// <param name="Proceed">ìƒˆë¡œê³ ì¹  í€˜ìŠ¤íŠ¸ ì¹¸</param>
-    /// <param name="RefreshKinds">ì–´ë–»ê²Œ ê³ ì¹ ì§€ ì¢…ë¥˜(í™œì„±í™”, ë¹„í™œì„±í™”)</param>
+    /// <param name="Proceed">»õ·Î°íÄ¥ Äù½ºÆ® Ä­</param>
+    /// <param name="RefreshKinds">¾î¶»°Ô °íÄ¥Áö Á¾·ù(È°¼ºÈ­, ºñÈ°¼ºÈ­)</param>
     public void ListRefresh(GameObject Proceed, bool RefreshKinds)
     {
         if (RefreshKinds)
@@ -134,7 +134,7 @@ public class QuestManager : MonoBehaviour
 
     void QuestNoticeUpdate(bool NoticeState)
     {
-        if(NoticeState)
+        if (NoticeState)
         {
             QuestNotice.SetActive(NoticeState);
         }
@@ -144,7 +144,7 @@ public class QuestManager : MonoBehaviour
         for (int i = 0; i < Touch.Length; i++)
         {
             Touch[i].text = saveVariables.QU_Touch[i].ToString() + "/" + ((10 * saveVariables.QUN_Touch[i]) + 10).ToString();
-            TouchLists[i].text = $"'{TouchName[i]}' ë ˆë²¨ì„ {(10 * saveVariables.QUN_Touch[i]) + 10}ë ˆë²¨ ì˜¬ë¦¬ê¸°";
+            TouchLists[i].text = $"'{TouchName[i]}' ·¹º§À» {(10 * saveVariables.QUN_Touch[i]) + 10}·¹º§ ¿Ã¸®±â";
             TouchSliders[i].value = (saveVariables.QU_Touch[i] - 10f * saveVariables.QUN_Touch[i]) / 10;
             QuestNoticeUpdate(saveVariables.QU_Touch[i] >= (10 * saveVariables.QUN_Touch[i]) + 10);
             if (saveVariables.QU_Touch[i] >= ((10 * saveVariables.QUN_Touch[i]) + 10) && !isTouch[i])
@@ -158,7 +158,7 @@ public class QuestManager : MonoBehaviour
         for (int i = 0; i < Second.Length; i++)
         {
             Second[i].text = saveVariables.QU_Second[i].ToString() + "/" + ((10 * saveVariables.QUN_Second[i]) + 10).ToString();
-            SecondLists[i].text = $"'{SecondName[i]}' ë ˆë²¨ì„ {(10 * saveVariables.QUN_Second[i]) + 10}ë ˆë²¨ ì˜¬ë¦¬ê¸°";
+            SecondLists[i].text = $"'{SecondName[i]}' ·¹º§À» {(10 * saveVariables.QUN_Second[i]) + 10}·¹º§ ¿Ã¸®±â";
             SecondSliders[i].value = (saveVariables.QU_Second[i] - 10f * saveVariables.QUN_Second[i]) / 10;
             QuestNoticeUpdate(saveVariables.QU_Second[i] >= (10 * saveVariables.QUN_Second[i]) + 10);
             if (saveVariables.QU_Second[i] >= ((10 * saveVariables.QUN_Second[i]) + 10) && !isSecond[i])
@@ -170,7 +170,7 @@ public class QuestManager : MonoBehaviour
         }
 
         Gold.text = saveVariables.QU_Gold.ToString() + "/" + (ulong)(10000 * Mathf.Pow(10, saveVariables.QUN_Gold + 1));
-        GoldList.text = $"ê³¨ë“œë¥¼ {(ulong)(1000 * Mathf.Pow(10, saveVariables.QUN_Gold + 1))}ì› íšë“í•˜ê¸°";
+        GoldList.text = $"°ñµå¸¦ {(ulong)(1000 * Mathf.Pow(10, saveVariables.QUN_Gold + 1))}¿ø È¹µæÇÏ±â";
         GoldSlider.value = (saveVariables.QU_Gold) / (10000 * Mathf.Pow(10, saveVariables.QUN_Gold + 1));
         QuestNoticeUpdate(saveVariables.QU_Gold >= (10000 * Mathf.Pow(10, saveVariables.QUN_Gold + 1)));
         if (saveVariables.QU_Gold >= (1000 * Mathf.Pow(10, saveVariables.QUN_Gold + 1)) && !isGold)
@@ -181,7 +181,7 @@ public class QuestManager : MonoBehaviour
         }
 
         Click.text = saveVariables.QU_Click.ToString() + "/" + ((700 * saveVariables.QUN_Click) + 700).ToString();
-        ClickList.text = $"í„°ì¹˜ë¥¼ {(700 * saveVariables.QUN_Click) + 700}ë²ˆ í•˜ê¸°";
+        ClickList.text = $"ÅÍÄ¡¸¦ {(700 * saveVariables.QUN_Click) + 700}¹ø ÇÏ±â";
         ClickSlider.value = (saveVariables.QU_Click - 700f * saveVariables.QUN_Click) / 700; //
         QuestNoticeUpdate(saveVariables.QU_Click >= ((700 * saveVariables.QUN_Click) + 700));
         if (saveVariables.QU_Click >= ((700 * saveVariables.QUN_Click) + 700) && !isClick)
@@ -192,7 +192,7 @@ public class QuestManager : MonoBehaviour
         }
 
         PlayTime.text = saveVariables.QU_PlayTime.ToString() + "/" + ((500 * saveVariables.QUN_PlayTime) + 500).ToString();
-        PlayTimeList.text = $"{(500 * saveVariables.QUN_PlayTime) + 500}ì´ˆ í”Œë ˆì´í•˜ê¸°";
+        PlayTimeList.text = $"{(500 * saveVariables.QUN_PlayTime) + 500}ÃÊ ÇÃ·¹ÀÌÇÏ±â";
         PlayTimeSlider.value = (saveVariables.QU_PlayTime - 500 * saveVariables.QUN_PlayTime) / 500;
         QuestNoticeUpdate(saveVariables.QU_PlayTime >= ((500 * saveVariables.QUN_PlayTime) + 500));
         if (saveVariables.QU_PlayTime >= ((500 * saveVariables.QUN_PlayTime) + 500) && !isPlayTime)
@@ -203,7 +203,7 @@ public class QuestManager : MonoBehaviour
         }
 
         Draw.text = saveVariables.QU_Draw.ToString() + "/" + ((1 * saveVariables.QUN_Draw) + 1).ToString();
-        DrawList.text = $"ìºë¦­í„°ë¥¼ {(1 * saveVariables.QUN_Draw) + 1}ë²ˆ ë½‘ìœ¼ì„¸ìš”";
+        DrawList.text = $"Ä³¸¯ÅÍ¸¦ {(1 * saveVariables.QUN_Draw) + 1}¹ø »ÌÀ¸¼¼¿ä";
         DrawSlider.value = (saveVariables.QU_Draw - 1f * saveVariables.QUN_Draw) / 1;
         QuestNoticeUpdate(saveVariables.QU_Draw >= ((1 * saveVariables.QUN_Draw) + 1));
         if (saveVariables.QU_Draw >= ((1 * saveVariables.QUN_Draw) + 1) && !isDraw)
@@ -213,7 +213,7 @@ public class QuestManager : MonoBehaviour
             ListRefresh(DrawCannes, isDraw);
         }
     }
-    public void ButtonState(Image PressObj)//<- ëˆ„ë¥¸ ì˜¤ë¸Œì íŠ¸
+    public void ButtonState(Image PressObj)//<- ´©¸¥ ¿ÀºêÁ§Æ®
     {
         if (PressObj.color == new Color(1, 1, 1, 1))
         {
@@ -282,10 +282,10 @@ public class QuestManager : MonoBehaviour
                 StartCoroutine(QuestReward(50));
             }
         }
-        //if ëˆ„ë¥¸ ì˜¤ë¸Œì íŠ¸ê°€ ìƒ‰ì´ 1,1,1,1ì´ë©´
-        //ëˆ„ë¥¸ ì˜¤ë¸Œì íŠ¸ ì°¾ê³ 
-        //ìƒ‰ 50/255ë¡œ ë°”ê¾¸ê³ 
-        //ì¹´ìš´íŠ¸ 1ì¶”ê°€í•œë‹¤
+        //if ´©¸¥ ¿ÀºêÁ§Æ®°¡ »öÀÌ 1,1,1,1ÀÌ¸é
+        //´©¸¥ ¿ÀºêÁ§Æ® Ã£°í
+        //»ö 50/255·Î ¹Ù²Ù°í
+        //Ä«¿îÆ® 1Ãß°¡ÇÑ´Ù
     }
     IEnumerator QuestReward(int GetDia)
     {

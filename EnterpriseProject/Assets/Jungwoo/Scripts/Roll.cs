@@ -161,7 +161,7 @@ public class Roll : MonoBehaviour
 
 	public void RollSkip()
 	{
-		//¥Î√Ê ±§∞Ì ∫ª »ƒ
+		PlayAdvertisement.Instance.PlayingAd();
 		TimerEnd = DateTime.Now.AddSeconds(-1);
 		Refresh();
 	}
@@ -190,24 +190,28 @@ public class Roll : MonoBehaviour
 						RollResult.transform.GetChild(0).GetComponent<Image>().sprite = ImageList[0];
 						RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'¿Ã≈¬ø¨'¿ª »πµÊ«ﬂΩ¿¥œ¥Ÿ!";
 						RollResult.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = "";
+						SaveManager.Instance.saveVariables.QU_TouchHeart[2] = 0;
 						break;
 					case 1:
 						SaveManager.Instance.saveVariables.isJeongSeoYoon = true;
 						RollResult.transform.GetChild(0).GetComponent<Image>().sprite = ImageList[1];
 						RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'¡§º≠¿±'¿ª »πµÊ«ﬂΩ¿¥œ¥Ÿ!";
 						RollResult.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = "";
+						SaveManager.Instance.saveVariables.QU_TouchHeart[1] = 0;
 						break;
 					case 2:
 						SaveManager.Instance.saveVariables.isLeeYerin = true;
 						RollResult.transform.GetChild(0).GetComponent<Image>().sprite = ImageList[2];
 						RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'¿Ãøπ∏∞'¿ª »πµÊ«ﬂΩ¿¥œ¥Ÿ!";
 						RollResult.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = "";
+						SaveManager.Instance.saveVariables.QU_TouchHeart[0] = 0;
 						break;
 					case 3:
 						SaveManager.Instance.saveVariables.isSongYeonHa = true;
 						RollResult.transform.GetChild(0).GetComponent<Image>().sprite = ImageList[3];
 						RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'º€ø¨«œ'∏¶ »πµÊ«ﬂΩ¿¥œ¥Ÿ!";
 						RollResult.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = "";
+						SaveManager.Instance.saveVariables.QU_TouchHeart[3] = 0;
 						break;
 				}
 			}
