@@ -3,7 +3,7 @@ using UnityEngine;
 [System.Serializable]
 public class SaveVariables
 {
-	[Header("ì¬í™”")]
+	[Header("ÀçÈ­")]
 	public double AllTouchMonmey;
 	public double AllSecondMoney;
 	public double gold;
@@ -13,42 +13,44 @@ public class SaveVariables
 	public int Fever;
 	public float GodHand;
 	public float GoldenTicket;
-    [Header("í€˜ìŠ¤íŠ¸")]
-	[Tooltip("í€˜ìŠ¤íŠ¸ - í„°ì¹˜ì—…ê·¸ë ˆì´ë“œ")] public int[] QU_Touch;
-	[Tooltip("í€˜ìŠ¤íŠ¸ - ì´ˆë‹¹ì—…ê·¸ë ˆì´ë“œ")] public int[] QU_Second;
-	[Tooltip("í€˜ìŠ¤íŠ¸ - íšë“ê³¨ë“œ")] public ulong QU_Gold;
-	[Tooltip("í€˜ìŠ¤íŠ¸ - í´ë¦­íšŸìˆ˜")] public int QU_Click;
-	[Tooltip("í€˜ìŠ¤íŠ¸ - í”Œë ˆì´íƒ€ì„")] public int QU_PlayTime;
-	[Tooltip("í€˜ìŠ¤íŠ¸ - ë½‘ì€íšŸìˆ˜")] public int QU_Draw;
+	[Header("Äù½ºÆ®")]
+	[Tooltip("Äù½ºÆ® - ÅÍÄ¡¾÷±×·¹ÀÌµå")] public int[] QU_Touch;
+	[Tooltip("Äù½ºÆ® - ÃÊ´ç¾÷±×·¹ÀÌµå")] public int[] QU_Second;
+	[Tooltip("Äù½ºÆ® - È¹µæ°ñµå")] public ulong QU_Gold;
+	[Tooltip("Äù½ºÆ® - Å¬¸¯È½¼ö")] public int QU_Click;
+	[Tooltip("Äù½ºÆ® - ÇÃ·¹ÀÌÅ¸ÀÓ")] public int QU_PlayTime;
+	[Tooltip("Äù½ºÆ® - »ÌÀºÈ½¼ö")] public int QU_Draw;
 
-	[Tooltip("ë³´ìƒíšŸìˆ˜ - í„°ì¹˜ì—…ê·¸ë ˆì´ë“œ")] public int[] QUN_Touch;
-	[Tooltip("ë³´ìƒíšŸìˆ˜ - ì´ˆë‹¹ì—…ê·¸ë ˆì´ë“œ")] public int[] QUN_Second;
-	[Tooltip("ë³´ìƒíšŸìˆ˜ - íšë“ê³¨ë“œ")] public ulong QUN_Gold;
-	[Tooltip("ë³´ìƒíšŸìˆ˜ - í´ë¦­íšŸìˆ˜")] public int QUN_Click;
-	[Tooltip("ë³´ìƒíšŸìˆ˜ - í”Œë ˆì´íƒ€ì„")] public int QUN_PlayTime;
-	[Tooltip("ë³´ìƒíšŸìˆ˜ - ë½‘ì€íšŸìˆ˜")] public int QUN_Draw;
-	[Header("í˜¸ê°ë„ í€˜ìŠ¤íŠ¸")]
+	[Tooltip("º¸»óÈ½¼ö - ÅÍÄ¡¾÷±×·¹ÀÌµå")] public int[] QUN_Touch;
+	[Tooltip("º¸»óÈ½¼ö - ÃÊ´ç¾÷±×·¹ÀÌµå")] public int[] QUN_Second;
+	[Tooltip("º¸»óÈ½¼ö - È¹µæ°ñµå")] public ulong QUN_Gold;
+	[Tooltip("º¸»óÈ½¼ö - Å¬¸¯È½¼ö")] public int QUN_Click;
+	[Tooltip("º¸»óÈ½¼ö - ÇÃ·¹ÀÌÅ¸ÀÓ")] public int QUN_PlayTime;
+	[Tooltip("º¸»óÈ½¼ö - »ÌÀºÈ½¼ö")] public int QUN_Draw;
+	[Header("È£°¨µµ Äù½ºÆ®")]
 	public bool[] LeeTaeyeon;
 	public bool[] JeongSeoYoon;
 	public bool[] LeeYerin;
 	public bool[] SongYeonHa;
 	public bool[] SeongJunAh;
-	[Header("í˜¸ê°ë„ í€˜ìŠ¤íŠ¸ ë‹¨ê³„")] //í•˜íŠ¸ ë§í’ì„  í´ë¦­ì‹œ í˜¸ê°ë„ ì˜¤ë¥´ë©´ ë ë“¯
+	[Header("È£°¨µµ Äù½ºÆ® ´Ü°è")] //ÇÏÆ® ¸»Ç³¼± Å¬¸¯½Ã È£°¨µµ ¿À¸£¸é µÉµí
 	private float leeTaeyeonCrush;
 	private float jeongSeoYoonCrush;
 	private float leeYerinCrush;
 	private float songYeonHaCrush;
 	private float seongJunAhCrush;
-	[Header("ìºë¦­í„° ì ê¸ˆ")]
-	[Tooltip("ìºë¦­í„° ë½‘ì•˜ëŠ”ì§€ í™•ì¸í•˜ëŠ” boolê°’")] public bool isLeeTaeyeon;
-	[Tooltip("ìºë¦­í„° ë½‘ì•˜ëŠ”ì§€ í™•ì¸í•˜ëŠ” boolê°’")] public bool isJeongSeoYoon;
-	[Tooltip("ìºë¦­í„° ë½‘ì•˜ëŠ”ì§€ í™•ì¸í•˜ëŠ” boolê°’")] public bool isLeeYerin;
-	[Tooltip("ìºë¦­í„° ë½‘ì•˜ëŠ”ì§€ í™•ì¸í•˜ëŠ” boolê°’")] public bool isSongYeonHa;
-	[Tooltip("ìºë¦­í„° ë½‘ì•˜ëŠ”ì§€ í™•ì¸í•˜ëŠ” boolê°’")] public bool isSeongJunAh;
-	[Header("ìºë¦­í„° ìŠ¤í˜ì…œëŒ€í™”[ìºë¦­í„°][ê° ëŒ€í™”]")]
-	[Tooltip("[ìºë¦­í„°][ëŒ€í™”]")] public bool[][] SpecialTalks;
+	[Header("È£°¨µµ Äù½ºÆ® ´Ş¼º Ä«¿îÆ®")]
+	public int[] QU_TouchHeart;
+	[Header("Ä³¸¯ÅÍ Àá±İ")]
+	[Tooltip("Ä³¸¯ÅÍ »Ì¾Ò´ÂÁö È®ÀÎÇÏ´Â bool°ª")] public bool isLeeTaeyeon;
+	[Tooltip("Ä³¸¯ÅÍ »Ì¾Ò´ÂÁö È®ÀÎÇÏ´Â bool°ª")] public bool isJeongSeoYoon;
+	[Tooltip("Ä³¸¯ÅÍ »Ì¾Ò´ÂÁö È®ÀÎÇÏ´Â bool°ª")] public bool isLeeYerin;
+	[Tooltip("Ä³¸¯ÅÍ »Ì¾Ò´ÂÁö È®ÀÎÇÏ´Â bool°ª")] public bool isSongYeonHa;
+	[Tooltip("Ä³¸¯ÅÍ »Ì¾Ò´ÂÁö È®ÀÎÇÏ´Â bool°ª")] public bool isSeongJunAh;
+	[Header("Ä³¸¯ÅÍ ½ºÆä¼È´ëÈ­[Ä³¸¯ÅÍ][°¢ ´ëÈ­]")]
+	[Tooltip("[Ä³¸¯ÅÍ][´ëÈ­]")] public bool[][] SpecialTalks;
 
-    [Tooltip("í˜¸ê°ëŒ€í™” í–ˆë˜ ë‹¨ê³„")] public float CurLeeTaeyeon, CurJeongSeoYoon, CurLeeYerin, CurSongYeonHa, CurSeongJunAh;
+	[Tooltip("È£°¨´ëÈ­ Çß´ø ´Ü°è")] public float CurLeeTaeyeon, CurJeongSeoYoon, CurLeeYerin, CurSongYeonHa, CurSeongJunAh;
 
 	[Space(10)]
 	public GoodsList[] TouchType;
@@ -178,13 +180,13 @@ public class SaveVariables
 	//[Header("Money")]
 	//public ulong gold;
 	//[Header("Facility")]
-	//public int facilityUpgrade; //ì—…ê·¸ë ˆì´ë“œ ë‹¨ê³„
-	//public ulong facilityUpgradePrice; //ì—…ê·¸ë ˆì´ë“œ ê°€ê²©
-	//public ulong facilityUpgradePriceMagnification; //ì—…ê·¸ë ˆì´ë“œ ë°°ìœ¨
+	//public int facilityUpgrade; //¾÷±×·¹ÀÌµå ´Ü°è
+	//public ulong facilityUpgradePrice; //¾÷±×·¹ÀÌµå °¡°İ
+	//public ulong facilityUpgradePriceMagnification; //¾÷±×·¹ÀÌµå ¹èÀ²
 	//[Header("Room")]
-	//public int roomUpgrade; //ì—…ê·¸ë ˆì´ë“œ ë‹¨ê³„
-	//public int roomUpgradePrice; //ì—…ê·¸ë ˆì´ë“œ ê°€ê²©
-	//public ulong roomUpgradePriceMagnification; //ì—…ê·¸ë ˆì´ë“œ ë°°ìœ¨
+	//public int roomUpgrade; //¾÷±×·¹ÀÌµå ´Ü°è
+	//public int roomUpgradePrice; //¾÷±×·¹ÀÌµå °¡°İ
+	//public ulong roomUpgradePriceMagnification; //¾÷±×·¹ÀÌµå ¹èÀ²
 	////[Header("Teacher")]
 	//[Header("TotalUpgrade")]
 	//public ulong totalTouchGold;

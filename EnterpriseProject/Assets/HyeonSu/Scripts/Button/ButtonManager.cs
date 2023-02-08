@@ -131,28 +131,31 @@ public class ButtonManager : MonoBehaviour
         if (saveVariables.gold >= (ulong)list[arr].UpgradeCost)
         {
             SoundManager.Instance.PlaySoundClip("SFX_UpgradeSound", SoundType.SFX);
-            //í€˜ìŠ¤íŠ¸ ì—…ê·¸ë ˆì´ë“œ
+            //Äù½ºÆ® ¾÷±×·¹ÀÌµå
             if (list == saveVariables.TouchType)
+            {
                 saveVariables.QU_Touch[arr]++;
+                saveVariables.QU_TouchHeart[arr]++;
+            }
             else if (list == saveVariables.SecondType)
                 saveVariables.QU_Second[arr]++;
-            //ê°•í™” ë¹„ìš© ê¹ê¸°
+            //°­È­ ºñ¿ë ±ğ±â
             saveVariables.gold -= (ulong)list[arr].UpgradeCost;
-            //ê°•í™” ìˆ˜ì¹˜(nê°•)
+            //°­È­ ¼öÄ¡(n°­)
             list[arr].UpgradeStep++;
-            //ê°•í™” ë¹„ìš© ëŠ˜ë¦¬ê¸°
-            list[arr].UpgradeCost += (ulong)(list[arr].UpgradeCost * 0.2f); //ë°¸ëŸ°ì‹± í•´ì•¼í•˜ëŠ” ë¶€ë¶„
-                                                                            //ê°•í™” ì ìš©í•˜ê¸°
+            //°­È­ ºñ¿ë ´Ã¸®±â
+            list[arr].UpgradeCost += (ulong)(list[arr].UpgradeCost * 0.2f); //¹ë·±½Ì ÇØ¾ßÇÏ´Â ºÎºĞ
+                                                                            //°­È­ Àû¿ëÇÏ±â
             SaveManager.Instance.AllGoodPlus(list, arr);
         }
     }
     void ItemCountUpdate()
     {
 
-        GoldItemCountTxt.text = $"{saveVariables.ManyMoney}ê°œ ë³´ìœ ì¤‘";
+        GoldItemCountTxt.text = $"{saveVariables.ManyMoney}°³ º¸À¯Áß";
         if (saveVariables.ItemMultiply == 1)
         {
-            FeverItemCountTxt.text = $"{saveVariables.Fever}ê°œ ë³´ìœ ì¤‘";
+            FeverItemCountTxt.text = $"{saveVariables.Fever}°³ º¸À¯Áß";
         }
         else
         {
@@ -168,15 +171,15 @@ public class ButtonManager : MonoBehaviour
     {
         if (EventSystem.current.currentSelectedGameObject.name == "ManyMoney")
         {
-            //ì•„ì´í…œì„ ì‚¬ìš©í•˜ì‹œê² ìŠµë‹ˆê¹Œ?
-            UseItemExplan.text = $"í„°ì¹˜ ìˆ˜ë‹¹ì˜ 1500ë°°\n{saveVariables.AllTouchMonmey * 1500}ë¥¼ íšë“í•©ë‹ˆë‹¤";
+            //¾ÆÀÌÅÛÀ» »ç¿ëÇÏ½Ã°Ú½À´Ï±î?
+            UseItemExplan.text = $"ÅÍÄ¡ ¼ö´çÀÇ 1500¹è\n{saveVariables.AllTouchMonmey * 1500}¸¦ È¹µæÇÕ´Ï´Ù";
             UseItemBtn.onClick.RemoveAllListeners();
             UseItemBtn.onClick.AddListener(UseItem_ManyMoney);
             UseItemBtn.onClick.AddListener(UseItemClose);
         }
         else
         {
-            UseItemExplan.text = "3ë¶„ë™ì•ˆ í„°ì¹˜ ìˆ˜ë‹¹ì´\n50ë°° ì¦ê°€í•©ë‹ˆë‹¤";
+            UseItemExplan.text = "3ºĞµ¿¾È ÅÍÄ¡ ¼ö´çÀÌ\n50¹è Áõ°¡ÇÕ´Ï´Ù";
             UseItemBtn.onClick.RemoveAllListeners();
             UseItemBtn.onClick.AddListener(UseItem_Fever);
             UseItemBtn.onClick.AddListener(UseItemClose);
@@ -228,7 +231,7 @@ public class ButtonManager : MonoBehaviour
         for (int i = 0; i < 25; i++)
         {
             GameObject SummonedObject = ObjPool.GetObject(EPoolType.dia, cur.position);
-            #region ê¸°ë³¸ ì„¸íŒ…
+            #region ±âº» ¼¼ÆÃ
             SummonedObject.transform.SetParent(DiamondCanvas.transform);
             SummonedObject.transform.position = cur.position;
             SummonedObject.transform.localScale = new Vector3(1, 1, 1);
@@ -244,7 +247,7 @@ public class ButtonManager : MonoBehaviour
         for (int i = 0; i < 12; i++)
         {
             GameObject SummonedObject = ObjPool.GetObject(EPoolType.gold, canvas.transform.position);
-            #region ê¸°ë³¸ ì„¸íŒ…
+            #region ±âº» ¼¼ÆÃ
             SummonedObject.transform.SetParent(content.transform);
             SummonedObject.transform.localScale = new Vector3(1, 1, 1);
             SummonedObject.transform.position = cur;
@@ -284,7 +287,7 @@ public class ButtonManager : MonoBehaviour
             });
         }
     }
-    public void TalkClick() //ëˆ„ë¥¸ ë²„íŠ¼ì´ ëˆ„êµ¬ ë²„íŠ¼ì¸ì§€ ì•Œì•„ë‚´ê³  ê° ìºë¦­í„°ì˜ forë¬¸ ëŒë¦¬ë©´ ë ë“¯
+    public void TalkClick() //´©¸¥ ¹öÆ°ÀÌ ´©±¸ ¹öÆ°ÀÎÁö ¾Ë¾Æ³»°í °¢ Ä³¸¯ÅÍÀÇ for¹® µ¹¸®¸é µÉµí
     {
         if (!isPopup)
         {
@@ -310,7 +313,7 @@ public class ButtonManager : MonoBehaviour
                     }
                     for (int i = 0; i < SpecialStoryCharacter.Length; i++)
                     {
-                        SpecialStoryCharacter[i].text = "'ì´íƒœì—°'ì˜ ê³¼ê±° ì´ì•¼ê¸°ë¥¼\r\n ì›¹íˆ°ìœ¼ë¡œ ë§Œë‚˜ë³´ì„¸ìš”!";
+                        SpecialStoryCharacter[i].text = "'ÀÌÅÂ¿¬'ÀÇ °ú°Å ÀÌ¾ß±â¸¦\r\n À¥Å÷À¸·Î ¸¸³ªº¸¼¼¿ä!";
                     }
                     break;
                 case "JeongSeoYoon":
@@ -331,7 +334,7 @@ public class ButtonManager : MonoBehaviour
                     }
                     for (int i = 0; i < SpecialStoryCharacter.Length; i++)
                     {
-                        SpecialStoryCharacter[i].text = "'ì •ì„œìœ¤'ì˜ ê³¼ê±° ì´ì•¼ê¸°ë¥¼\r\n ì›¹íˆ°ìœ¼ë¡œ ë§Œë‚˜ë³´ì„¸ìš”!";
+                        SpecialStoryCharacter[i].text = "'Á¤¼­À±'ÀÇ °ú°Å ÀÌ¾ß±â¸¦\r\n À¥Å÷À¸·Î ¸¸³ªº¸¼¼¿ä!";
                     }
                     break;
                 case "LeeYerin":
@@ -352,7 +355,7 @@ public class ButtonManager : MonoBehaviour
                     }
                     for (int i = 0; i < SpecialStoryCharacter.Length; i++)
                     {
-                        SpecialStoryCharacter[i].text = "'ì´ì˜ˆë¦°'ì˜ ê³¼ê±° ì´ì•¼ê¸°ë¥¼\r\n ì›¹íˆ°ìœ¼ë¡œ ë§Œë‚˜ë³´ì„¸ìš”!";
+                        SpecialStoryCharacter[i].text = "'ÀÌ¿¹¸°'ÀÇ °ú°Å ÀÌ¾ß±â¸¦\r\n À¥Å÷À¸·Î ¸¸³ªº¸¼¼¿ä!";
                     }
                     break;
                 case "SongYeonHa":
@@ -373,7 +376,7 @@ public class ButtonManager : MonoBehaviour
                     }
                     for (int i = 0; i < SpecialStoryCharacter.Length; i++)
                     {
-                        SpecialStoryCharacter[i].text = "'ì†¡ì—°í•˜'ì˜ ê³¼ê±° ì´ì•¼ê¸°ë¥¼\r\n ì›¹íˆ°ìœ¼ë¡œ ë§Œë‚˜ë³´ì„¸ìš”!";
+                        SpecialStoryCharacter[i].text = "'¼Û¿¬ÇÏ'ÀÇ °ú°Å ÀÌ¾ß±â¸¦\r\n À¥Å÷À¸·Î ¸¸³ªº¸¼¼¿ä!";
                     }
                     break;
                 case "SeongJunAh":
@@ -493,7 +496,7 @@ public class ButtonManager : MonoBehaviour
                     EventSystem.current.currentSelectedGameObject.transform.GetChild(1).GetComponent<Image>().sprite = TalkBtnImgOn;
                 }
                 else
-                    //ë‹¤ì´ì•„ ë¶€ì¡± íŒì—…
+                    //´ÙÀÌ¾Æ ºÎÁ· ÆË¾÷
                     NotenoughtDiamondPopup.SetActive(true);
                 break;
             }

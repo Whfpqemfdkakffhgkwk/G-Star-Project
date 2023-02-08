@@ -79,10 +79,10 @@ public class Character : MonoBehaviour
 				CSongYeonHa.SetActive(false);
 			}
 			GetComponent<RectTransform>().localPosition = new Vector3(Background.GetComponent<RectTransform>().localPosition.x, 0, 0);
-			CLeeTaeyeon.transform.GetChild(4).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "헬스장 " + SM.QU_Touch[2] + " / " + (10 + (((int)SM.LeeTaeyeonCrush / 20) * 10)) + " 번 업그레이드 하기";
-			CJeongSeoYoon.transform.GetChild(4).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "도서실 " + SM.QU_Touch[1] + " / " + (10 + (((int)SM.JeongSeoYoonCrush / 20) * 10)) + " 번 업그레이드 하기";
-			CLeeYerin.transform.GetChild(4).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "노래방 " + SM.QU_Touch[0] + " / " + (10 + (((int)SM.LeeYerinCrush / 20) * 10)) + " 번 업그레이드 하기";
-			CSongYeonHa.transform.GetChild(4).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "피시방 " + SM.QU_Touch[3] + " / " + (10 + (((int)SM.SongYeonHaCrush / 20) * 10)) + " 번 업그레이드 하기";
+			CLeeTaeyeon.transform.GetChild(4).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "헬스장 " + SM.QU_TouchHeart[2] + " / " + (10 + (((int)SM.LeeTaeyeonCrush / 20) * 10)) + " 번 업그레이드 하기";
+			CJeongSeoYoon.transform.GetChild(4).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "도서실 " + SM.QU_TouchHeart[1] + " / " + (10 + (((int)SM.JeongSeoYoonCrush / 20) * 10)) + " 번 업그레이드 하기";
+			CLeeYerin.transform.GetChild(4).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "노래방 " + SM.QU_TouchHeart[0] + " / " + (10 + (((int)SM.LeeYerinCrush / 20) * 10)) + " 번 업그레이드 하기";
+			CSongYeonHa.transform.GetChild(4).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "피시방 " + SM.QU_TouchHeart[3] + " / " + (10 + (((int)SM.SongYeonHaCrush / 20) * 10)) + " 번 업그레이드 하기";
 			//Pannel1.GetComponent<RectTransform>().localPosition = new Vector3(-Background.GetComponent<RectTransform>().localPosition.x, 530, 0);
 			//Pannel2.GetComponent<RectTransform>().localPosition = new Vector3(-Background.GetComponent<RectTransform>().localPosition.x, 530, 0);
 			//Pannel3.GetComponent<RectTransform>().localPosition = new Vector3(-Background.GetComponent<RectTransform>().localPosition.x, 530, 0);
@@ -164,7 +164,7 @@ public class Character : MonoBehaviour
 		{
 			if (name == "CLeeTaeyeon" && SM.LeeTaeyeonCrush <= 80)
 			{
-				if (SM.QU_Touch[2] >= (10 + (((int)SM.LeeTaeyeonCrush / 20) * 10)))
+				if (SM.QU_TouchHeart[2] >= (10 + (((int)SM.LeeTaeyeonCrush / 20) * 10)))
 				{
 					EvFalse.SetActive(false);
 					EvTrue.SetActive(true);
@@ -182,7 +182,7 @@ public class Character : MonoBehaviour
 			}
 			if (name == "CJeongSeoYoon" && SM.JeongSeoYoonCrush <= 80)
 			{
-				if (SM.QU_Touch[1] >= (10 + (((int)SM.JeongSeoYoonCrush / 20) * 10)))
+				if (SM.QU_TouchHeart[1] >= (10 + (((int)SM.JeongSeoYoonCrush / 20) * 10)))
 				{
 					EvFalse.SetActive(false);
 					EvTrue.SetActive(true);
@@ -200,7 +200,7 @@ public class Character : MonoBehaviour
 			}
 			if (name == "CLeeYerin" && SM.LeeYerinCrush <= 80)
 			{
-				if (SM.QU_Touch[0] >= (10 + (((int)SM.LeeYerinCrush / 20) * 10)))
+				if (SM.QU_TouchHeart[0] >= (10 + (((int)SM.LeeYerinCrush / 20) * 10)))
 				{
 					EvFalse.SetActive(false);
 					EvTrue.SetActive(true);
@@ -218,7 +218,7 @@ public class Character : MonoBehaviour
 			}
 			if (name == "CSongYeonHa" && SM.SongYeonHaCrush <= 80)
 			{
-				if (SM.QU_Touch[3] >= (10 + (((int)SM.SongYeonHaCrush / 20) * 10)))
+				if (SM.QU_TouchHeart[3] >= (10 + (((int)SM.SongYeonHaCrush / 20) * 10)))
 				{
 					EvFalse.SetActive(false);
 					EvTrue.SetActive(true);
