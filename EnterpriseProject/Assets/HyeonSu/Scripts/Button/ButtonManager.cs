@@ -5,8 +5,6 @@ using DG.Tweening;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using static SaveVariables;
-using System.Security.Cryptography;
-using UnityEditorInternal;
 
 public class ButtonManager : MonoBehaviour
 {
@@ -14,7 +12,7 @@ public class ButtonManager : MonoBehaviour
 
     [SerializeField] private GameObject TouchWindow;
     [SerializeField] private GameObject QuestWindow;
-    [SerializeField] private GameObject TalkPopup;
+    [SerializeField] private GameObject[] TalkPopup;
     [SerializeField] private GameObject[] TouchBtns, SecondBtns, SpecialBtns;
 
     private bool isPopup = false;
@@ -22,13 +20,10 @@ public class ButtonManager : MonoBehaviour
     private string BtnChar;
 
     [SerializeField] private Image[] TalkerImages, TalkBtnImages;
-    [SerializeField] private Text[] SpecialStoryCharacter;
-    [SerializeField] private Sprite TalkBtnImgOn, TalkBtnImgOff;
     [SerializeField] private Sprite[] TalkerSprs;
-    [SerializeField] private Slider[] TalkGauges;
-    [SerializeField] private Image[] TalkBtnImg;
+    [SerializeField] private Sprite TalkBtnImgOn;
 
-    [SerializeField] private GameObject DiamondDirectingObj, GoldDirectingObj, ParticleObj, NotenoughtDiamondPopup;
+    [SerializeField] private GameObject DiamondDirectingObj, GoldDirectingObj, ParticleObj;
     [SerializeField] private GameObject ItemWindow;
     [SerializeField] private Text UseItemExplan, GoldItemCountTxt, FeverItemCountTxt;
     [SerializeField] private Button UseItemBtn, ManyMoneyBtn, FeverBtn;
@@ -43,12 +38,8 @@ public class ButtonManager : MonoBehaviour
 
     [SerializeField] private Character LeeTaecharacter, Jeongcharater, LeeYaecharater, Songcharater;
 
-    [SerializeField] private WebtoonManager webtoonManager;
-
     SaveVariables saveVariables;
 
-    private bool OnQuest = false;
-    private int BtnNum;
     private float RemainingItemTime;
     private void Start()
     {
@@ -265,87 +256,17 @@ public class ButtonManager : MonoBehaviour
     {
         StartCoroutine(dialoue.StoryStart($"{BtnChar}{EventSystem.current.currentSelectedGameObject.name}"));
     }
+    int TalkPopupArr(GameObject CurrentObj)
+    {
+        return int.Parse(CurrentObj.name) - 1;  
+    }
     public void TalkOff()
     {
-        TalkPopup.SetActive(false);
-        TalkPopup.transform.localScale = new Vector3(0, 0, 0);
+        TalkPopup[TalkPopupArr(EventSystem.current.currentSelectedGameObject.transform.parent.gameObject)].SetActive(false);
+        TalkPopup[TalkPopupArr(EventSystem.current.currentSelectedGameObject.transform.parent.gameObject)].transform.localScale = new Vector2(0, 0);
         isPopup = false;
     }
-    void SpecialBtnAddListener(int num)
-    {
-            EventSystem.current.currentSelectedGameObject.GetComponent<Button>().onClick.RemoveAllListeners();
-            EventSystem.current.currentSelectedGameObject.GetComponent<Button>().onClick.AddListener(() =>
-            {
-                webtoonManager.Webtoons[ReturnWebtoon(BtnNum, num)].SetActive(true);
-                webtoonManager.transform.parent.gameObject.SetActive(true);
-            });
-        
-    }
-    int ReturnWebtoon(int Char, int Num)
-    {
-        if(Char == 0)
-        {
-            if(Num == 0)
-            {
-                return 0;
-            }
-            else if(Num == 1)
-            {
-                return 1;
-            }
-            else
-            {
-                return 2;
-            }
-        }
-        else if (Char == 1)
-        {
-            if (Num == 0)
-            {
-                return 3;
-            }
-            else if (Num == 1)
-            {
-                return 4;
-            }
-            else
-            {
-                return 5;
-            }
-        }
-        else if (Char == 2)
-        {
-            if (Num == 0)
-            {
-                return 6;
-            }
-            else if (Num == 1)
-            {
-                return 7;
-            }
-            else
-            {
-                return 8;
-            }
-        }
-        else if (Char == 3)
-        {
-            if (Num == 0)
-            {
-                return 9;
-            }
-            else if (Num == 1)
-            {
-                return 10;
-            }
-            else
-            {
-                return 11;
-            }
-        }
-        return 0;
-    }
-    public void TalkClick() //누른 버튼이 누구 버튼인지 알아내고 각 캐릭터의 for문 돌리면 될듯
+    public void TalkClick()
     {
         if (!isPopup)
         {
@@ -354,173 +275,22 @@ public class ButtonManager : MonoBehaviour
             switch (EventSystem.current.currentSelectedGameObject.name)
             {
                 case "LeeTaeyeon":
-                    for (int i = 0; i < TalkGauges.Length; i++)
-                    {
-                        TalkGauges[i].value = saveVariables.CurLeeTaeyeon / ((i + 1) * 20);
-                        BtnNum = 0;
-                        if (saveVariables.LeeTaeyeon[i])
-                        {
-                            TalkBtnImg[i].sprite = TalkBtnImgOn;
-                            print(TalkBtnImg[i].gameObject.transform.parent.name);
-                            TalkBtnImg[i].gameObject.transform.parent.GetComponent<Button>().enabled = true;
-                        }
-                        else
-                        {
-                            TalkBtnImg[i].sprite = TalkBtnImgOff;
-                            TalkBtnImg[i].gameObject.transform.parent.GetComponent<Button>().enabled = false;
-                        }
-                    }
-                    for (int i = 0; i < SpecialStoryCharacter.Length; i++)
-                    {
-                        SpecialStoryCharacter[i].text = "'이태연'의 과거 이야기를\r\n 웹툰으로 만나보세요!";
-                    }
+                    TalkPopup[0].SetActive(true);
+                    TalkPopup[0].transform.DOScale(new Vector2(1, 1), 0.5f);
                     break;
                 case "JeongSeoYoon":
-                    for (int i = 0; i < TalkGauges.Length; i++)
-                    {
-                        TalkGauges[i].value = saveVariables.CurJeongSeoYoon / ((i + 1) * 20);
-                        BtnNum = 1;
-                        if (saveVariables.JeongSeoYoon[i])
-                        {
-                            TalkBtnImg[i].sprite = TalkBtnImgOn;
-                            print(TalkBtnImg[i].gameObject.transform.parent.name);
-                            TalkBtnImg[i].gameObject.transform.parent.GetComponent<Button>().enabled = true;
-                        }
-                        else
-                        {
-                            TalkBtnImg[i].sprite = TalkBtnImgOff;
-                            TalkBtnImg[i].gameObject.transform.parent.GetComponent<Button>().enabled = false;
-                        }
-                    }
-                    for (int i = 0; i < SpecialStoryCharacter.Length; i++)
-                    {
-                        SpecialStoryCharacter[i].text = "'정서윤'의 과거 이야기를\r\n 웹툰으로 만나보세요!";
-                    }
+                    TalkPopup[1].SetActive(true);
+                    TalkPopup[1].transform.DOScale(new Vector2(1, 1), 0.5f);
                     break;
                 case "LeeYerin":
-                    for (int i = 0; i < TalkGauges.Length; i++)
-                    {
-                        TalkGauges[i].value = saveVariables.CurLeeYerin / ((i + 1) * 20);
-                        BtnNum = 2;
-                        if (saveVariables.LeeYerin[i])
-                        {
-                            TalkBtnImg[i].sprite = TalkBtnImgOn;
-                            print(TalkBtnImg[i].gameObject.transform.parent.name);
-                            TalkBtnImg[i].gameObject.transform.parent.GetComponent<Button>().enabled = true;
-                        }
-                        else
-                        {
-                            TalkBtnImg[i].sprite = TalkBtnImgOff;
-                            TalkBtnImg[i].gameObject.transform.parent.GetComponent<Button>().enabled = false;
-                        }
-                    }
-                    for (int i = 0; i < SpecialStoryCharacter.Length; i++)
-                    {
-                        SpecialStoryCharacter[i].text = "'이예린'의 과거 이야기를\r\n 웹툰으로 만나보세요!";
-                    }
+                    TalkPopup[2].SetActive(true);
+                    TalkPopup[2].transform.DOScale(new Vector2(1, 1), 0.5f);
                     break;
                 case "SongYeonHa":
-                    for (int i = 0; i < TalkGauges.Length; i++)
-                    {
-                        TalkGauges[i].value = saveVariables.CurSongYeonHa / ((i + 1) * 20);
-                        BtnNum = 3;
-                        if (saveVariables.SongYeonHa[i])
-                        {
-                            TalkBtnImg[i].sprite = TalkBtnImgOn;
-                            print(TalkBtnImg[i].gameObject.transform.parent.name);
-                            TalkBtnImg[i].gameObject.transform.parent.GetComponent<Button>().enabled = true;
-                        }
-                        else
-                        {
-                            TalkBtnImg[i].sprite = TalkBtnImgOff;
-                            TalkBtnImg[i].gameObject.transform.parent.GetComponent<Button>().enabled = false;
-                        }
-                    }
-                    for (int i = 0; i < SpecialStoryCharacter.Length; i++)
-                    {
-                        SpecialStoryCharacter[i].text = "'송연하'의 과거 이야기를\r\n 웹툰으로 만나보세요!";
-                    }
+                    TalkPopup[3].SetActive(true);
+                    TalkPopup[3].transform.DOScale(new Vector2(1, 1), 0.5f);
                     break;
-                case "SeongJunAh":
-                    for (int i = 0; i < TalkGauges.Length; i++)
-                    {
-                        TalkGauges[i].value = saveVariables.CurSeongJunAh / ((i + 1) * 20);
-                        if (saveVariables.SeongJunAh[i])
-                        {
-                            TalkBtnImg[i].sprite = TalkBtnImgOn;
-                            print(TalkBtnImg[i].gameObject.transform.parent.name);
-                            TalkBtnImg[i].gameObject.transform.parent.GetComponent<Button>().enabled = true;
-                        }
-                        else
-                        {
-                            TalkBtnImg[i].sprite = TalkBtnImgOff;
-                            TalkBtnImg[i].gameObject.transform.parent.GetComponent<Button>().enabled = false;
-                        }
-                    }
-                    break;
-                    //case "LeeTaeyeon":
-                    //	for (int i = 0; i < saveVariables.LeeTaeyeon.Length; i++)
-                    //	{
-                    //		if (saveVariables.LeeTaeyeon[i])
-                    //		{
-                    //			saveVariables.LeeTaeyeon[i] = false;
-                    //			StartCoroutine(dialoue.StoryStart($"LeeTaeyeon{i + 1}"));
-                    //			saveVariables.LeeTaeyeonCrush++;
-                    //			return;
-                    //		}
-                    //	}
-                    //	break;
-                    //case "JeongSeoYoon":
-                    //	for (int i = 0; i < saveVariables.JeongSeoYoon.Length; i++)
-                    //	{
-                    //		if (saveVariables.JeongSeoYoon[i])
-                    //		{
-                    //			saveVariables.JeongSeoYoon[i] = false;
-                    //			StartCoroutine(dialoue.StoryStart($"JeongSeoYoon{i + 1}"));
-                    //			saveVariables.JeongSeoYoonCrush++;
-                    //			return;
-                    //		}
-                    //	}
-                    //	break;
-                    //case "LeeYerin":
-                    //	for (int i = 0; i < saveVariables.LeeYerin.Length; i++)
-                    //	{
-                    //		if (saveVariables.LeeYerin[i])
-                    //		{
-                    //			saveVariables.LeeYerin[i] = false;
-                    //			StartCoroutine(dialoue.StoryStart($"LeeYerin{i + 1}"));
-                    //			saveVariables.LeeYerinCrush++;
-                    //			return;
-                    //		}
-                    //	}
-                    //	break;
-                    //case "SongYeonHa":
-                    //	for (int i = 0; i < saveVariables.SongYeonHa.Length; i++)
-                    //	{
-                    //		if (saveVariables.SongYeonHa[i])
-                    //		{
-                    //			saveVariables.SongYeonHa[i] = false;
-                    //			StartCoroutine(dialoue.StoryStart($"SongYeonHa{i + 1}"));
-                    //			saveVariables.SongYeonHaCrush++;
-                    //			return;
-                    //		}
-                    //	}
-                    //	break;
-                    //case "SeongJunAh":
-                    //	for (int i = 0; i < saveVariables.SeongJunAh.Length; i++)
-                    //	{
-                    //		if (saveVariables.SeongJunAh[i])
-                    //		{
-                    //			saveVariables.SeongJunAh[i] = false;
-                    //			StartCoroutine(dialoue.StoryStart($"SeongJunAh{i + 1}"));
-                    //			saveVariables.SeongJunAhCrush++;
-                    //			return;
-                    //		}
-                    //	}
-                    //	break;
             }
-            TalkPopup.SetActive(true);
-            TalkPopup.transform.DOScale(new Vector2(1, 1), 0.5f);
         }
     }
     void ItemOpenCheck()
@@ -545,36 +315,6 @@ public class ButtonManager : MonoBehaviour
             FeverBtn.enabled = false;
             FeverBtn.GetComponent<Image>().color = new Color(70 / 255f, 70 / 255f, 70 / 255f, 1);
         }
-    }
-    public void BuySpecialPopup()
-    {
-        for (int i = 0; i < SpecialBtns.Length; i++)
-        {
-            if (EventSystem.current.currentSelectedGameObject == SpecialBtns[i])
-            {
-                if (saveVariables.diamond >= SpecialTalkPrice(i))
-                {
-                    saveVariables.diamond -= SpecialTalkPrice(i);
-                    EventSystem.current.currentSelectedGameObject.transform.GetChild(1).GetComponent<Image>().sprite = TalkBtnImgOn;
-                    SpecialBtnAddListener(i);
-                }
-                else
-                    //다이아 부족 팝업
-                    NotenoughtDiamondPopup.SetActive(true);
-                break;
-            }
-        }
-    }
-    int SpecialTalkPrice(int i)
-    {
-        if (i == 0)
-            return 100;
-        else if (i == 1)
-            return 300;
-        else if (i == 2)
-            return 500;
-
-        return 0;
     }
     void TalkerOpen()
     {

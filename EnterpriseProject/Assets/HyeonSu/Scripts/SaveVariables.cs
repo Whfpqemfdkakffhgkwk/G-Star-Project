@@ -32,15 +32,19 @@ public class SaveVariables
 	public bool[] JeongSeoYoon;
 	public bool[] LeeYerin;
 	public bool[] SongYeonHa;
-	public bool[] SeongJunAh;
 	[Header("호감도 퀘스트 단계")] //하트 말풍선 클릭시 호감도 오르면 될듯
 	private float leeTaeyeonCrush;
 	private float jeongSeoYoonCrush;
 	private float leeYerinCrush;
 	private float songYeonHaCrush;
-	private float seongJunAhCrush;
 	[Header("호감도 퀘스트 달성 카운트")]
 	public int[] QU_TouchHeart;
+	[Header("웹툰 구매 카운트")]
+	public bool[] LeeTaeyeonWebtoonBuy;
+	public bool[] JeongSeoYoonWebtoonBuy;
+	public bool[] LeeYerinWebtoonBuy;
+	public bool[] SongYeonHaWebtoonBuy;
+
 	[Header("캐릭터 잠금")]
 	[Tooltip("캐릭터 뽑았는지 확인하는 bool값")] public bool isLeeTaeyeon;
 	[Tooltip("캐릭터 뽑았는지 확인하는 bool값")] public bool isJeongSeoYoon;
@@ -145,29 +149,6 @@ public class SaveVariables
 				else if (CurSongYeonHa == 100)
 					SongYeonHa[4] = true;
 				CurSongYeonHa += 20;
-			}
-		}
-	}
-	public float SeongJunAhCrush
-	{
-		get { return seongJunAhCrush; }
-
-		set
-		{
-			seongJunAhCrush = value;
-			if (seongJunAhCrush >= CurSeongJunAh)
-			{
-				if (CurSeongJunAh == 20)
-					SeongJunAh[0] = true;
-				else if (CurSeongJunAh == 40)
-					SeongJunAh[1] = true;
-				else if (CurSeongJunAh == 60)
-					SeongJunAh[2] = true;
-				else if (CurSeongJunAh == 80)
-					SeongJunAh[3] = true;
-				else if (CurSeongJunAh == 100)
-					SeongJunAh[4] = true;
-				CurSeongJunAh += 20;
 			}
 		}
 	}

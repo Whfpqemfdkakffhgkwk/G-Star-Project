@@ -28,7 +28,6 @@ public class SaveManager : Singleton<SaveManager>
     {
         string path = "Assets/Resources/save.json";
         string jsonData = JsonUtility.ToJson(saveVariables, true);
-        Debug.Log(jsonData);
         File.WriteAllText(path, jsonData);
         
     }
