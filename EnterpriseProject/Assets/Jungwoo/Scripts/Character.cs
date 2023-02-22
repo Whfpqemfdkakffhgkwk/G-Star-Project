@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using DG.Tweening;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class Character : MonoBehaviour
 {
@@ -279,4 +282,40 @@ public class Character : MonoBehaviour
 		SongYeonHaEvCount -= 10;
 		CSongYeonHa.GetComponent<Animator>().SetTrigger("Happy");
 	}
+
+	public void InformationButton()
+	{
+		GameObject Temp = EventSystem.current.currentSelectedGameObject;
+		if (Temp.gameObject.transform.parent.name == "CLeeTaeyeon")
+		{
+			Pannel1.transform.GetChild(0).transform.localScale = new Vector2(0.5f, 0.5f);
+			Pannel1.SetActive(true);
+			Pannel1.transform.GetChild(0).transform.DOScale(new Vector2(1, 1), 0.5f);
+		}
+		if (Temp.gameObject.transform.parent.name == "CJeongSeoYoon")
+		{
+			Pannel2.transform.GetChild(0).transform.localScale = new Vector2(0.5f, 0.5f);
+			Pannel2.SetActive(true);
+			Pannel2.transform.GetChild(0).transform.DOScale(new Vector2(1, 1), 0.5f);
+		}
+		if (Temp.gameObject.transform.parent.name == "CLeeYerin")
+		{
+			Pannel3.transform.GetChild(0).transform.localScale = new Vector2(0.5f, 0.5f);
+			Pannel3.SetActive(true);
+			Pannel3.transform.GetChild(0).transform.DOScale(new Vector2(1, 1), 0.5f);
+		}
+		if (Temp.gameObject.transform.parent.name == "CSongYeonHa")
+		{
+			Pannel4.transform.GetChild(0).transform.localScale = new Vector2(0.5f, 0.5f);
+			Pannel4.SetActive(true);
+			Pannel4.transform.GetChild(0).transform.DOScale(new Vector2(1, 1), 0.5f);
+		}
+	}
+
+	/*public void CloseInformation()
+	{
+		GameObject Temp = EventSystem.current.currentSelectedGameObject;
+		Temp.SetActive(false);
+		Temp.transform.GetChild(0).transform.localScale = new Vector2(0.5f, 0.5f);
+	}*/
 }

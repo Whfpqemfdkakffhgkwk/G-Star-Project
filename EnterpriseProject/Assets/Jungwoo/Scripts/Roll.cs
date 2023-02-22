@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 using Random = UnityEngine.Random;
 
@@ -155,7 +156,9 @@ public class Roll : MonoBehaviour
 			RollFalse.SetActive(true);
 			RollTrue.SetActive(false);
 			TimeUpDown.SetActive(true);
-			NotenougthDiamond.SetActive(true);
+			NotenougthDiamond.transform.localScale = new Vector2(0.5f, 0.5f);
+			NotenougthDiamond.transform.parent.gameObject.SetActive(true);
+			NotenougthDiamond.transform.DOScale(new Vector2(1, 1), 0.5f);
 		}
 	}
 
