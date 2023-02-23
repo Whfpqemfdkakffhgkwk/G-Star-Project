@@ -20,15 +20,14 @@ public class SaveManager : Singleton<SaveManager>
     void LoadJson()
     {
         saveVariables = new SaveVariables();
-        string path = "Assets/Resources/save.json";
+        string path = Application.persistentDataPath + "/save.json";
         string jsonData = File.ReadAllText(path);
         saveVariables = JsonUtility.FromJson<SaveVariables>(jsonData);
     }
     void SaveJson()
     {
-        string path = "Assets/Resources/save.json";
         string jsonData = JsonUtility.ToJson(saveVariables, true);
-        File.WriteAllText(path, jsonData);
+        File.WriteAllText(Application.persistentDataPath + "/save.json", jsonData);
         
     }
 
