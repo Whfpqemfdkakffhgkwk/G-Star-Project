@@ -9,9 +9,11 @@ using static SaveVariables;
 public class SaveManager : Singleton<SaveManager>
 {
     public SaveVariables saveVariables;
+    string path;
 
     private void Start()
     {
+        path = Application.persistentDataPath + "/save.json";
         LoadJson();
         saveVariables.ItemMultiply = 1f;
     }
@@ -19,18 +21,25 @@ public class SaveManager : Singleton<SaveManager>
     #region 저장기능
     void LoadJson()
     {
+        if (!File.Exists(path)) { ResetFile(); return; }
         saveVariables = new SaveVariables();
-        string path = Application.persistentDataPath + "/save.json";
-        string jsonData = File.ReadAllText(path);
+        var jsonData = File.ReadAllText(path);
         saveVariables = JsonUtility.FromJson<SaveVariables>(jsonData);
     }
     void SaveJson()
     {
-        string jsonData = JsonUtility.ToJson(saveVariables, true);
-        File.WriteAllText(Application.persistentDataPath + "/save.json", jsonData);
+        var jsonData = JsonUtility.ToJson(saveVariables, true);
+        File.WriteAllText(path, jsonData);
         
     }
+    void ResetFile()
+    {
+        var a = Resources.Load<TextAsset>("save");
+        saveVariables = JsonUtility.FromJson<SaveVariables>(a.ToString());
 
+        SaveJson();
+        LoadJson();
+    }
     public void Combine()
     {
         for (int i = 0; i < saveVariables.TouchType.Length; i++)
