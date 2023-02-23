@@ -1,7 +1,7 @@
 {
-    "AllTouchMonmey": 140.0,
+    "AllTouchMonmey": 5530.0,
     "AllSecondMoney": 0.0,
-    "gold": 1000046760.0,
+    "gold": 90602806.0,
     "diamond": 0.0,
     "ItemMultiply": 1.0,
     "ManyMoney": 100,
@@ -9,10 +9,10 @@
     "GodHand": 0.4000000059604645,
     "GoldenTicket": 1.4000000953674317,
     "QU_Touch": [
-        2,
-        0,
-        1,
-        0
+        83,
+        20,
+        17,
+        8
     ],
     "QU_Second": [
         0,
@@ -20,9 +20,9 @@
         0,
         0
     ],
-    "QU_Gold": 51720,
-    "QU_Click": 224,
-    "QU_PlayTime": 3014,
+    "QU_Gold": 213600,
+    "QU_Click": 240,
+    "QU_PlayTime": 3380,
     "QU_Draw": 3,
     "QUN_Touch": [
         0,
@@ -69,10 +69,10 @@
         false
     ],
     "QU_TouchHeart": [
-        2,
-        0,
-        1,
-        0
+        83,
+        20,
+        17,
+        8
     ],
     "LeeTaeyeonWebtoonBuy": [
         true,
@@ -95,31 +95,31 @@
         false
     ],
     "isLeeTaeyeon": true,
-    "isJeongSeoYoon": false,
-    "isLeeYerin": false,
+    "isJeongSeoYoon": true,
+    "isLeeYerin": true,
     "isSongYeonHa": false,
     "isSeongJunAh": false,
-    "CurLeeTaeyeon": 20.0,
+    "CurLeeTaeyeon": 40.0,
     "CurJeongSeoYoon": 0.0,
     "CurLeeYerin": 0.0,
     "CurSongYeonHa": 0.0,
     "CurSeongJunAh": 0.0,
     "TouchType": [
         {
-            "UpgradeStep": 3,
-            "UpgradeCost": 72.0
+            "UpgradeStep": 84,
+            "UpgradeCost": 181632679.0
         },
         {
-            "UpgradeStep": 0,
-            "UpgradeCost": 500.0
+            "UpgradeStep": 20,
+            "UpgradeCost": 19123.0
         },
         {
-            "UpgradeStep": 1,
-            "UpgradeCost": 6000.0
+            "UpgradeStep": 17,
+            "UpgradeCost": 110906.0
         },
         {
-            "UpgradeStep": 0,
-            "UpgradeCost": 50000.0
+            "UpgradeStep": 8,
+            "UpgradeCost": 214989.0
         }
     ],
     "SecondType": [
