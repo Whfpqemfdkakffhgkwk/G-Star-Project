@@ -40,10 +40,10 @@ public class SaveVariables
 	[Header("호감도 퀘스트 달성 카운트")]
 	public int[] QU_TouchHeart;
 	[Header("웹툰 구매 카운트")]
-	public bool[] LeeTaeyeonWebtoonBuy;
-	public bool[] JeongSeoYoonWebtoonBuy;
-	public bool[] LeeYerinWebtoonBuy;
-	public bool[] SongYeonHaWebtoonBuy;
+	public bool LeeTaeyeonWebtoonBuy;
+	public bool JeongSeoYoonWebtoonBuy;
+	public bool LeeYerinWebtoonBuy;
+	public bool SongYeonHaWebtoonBuy;
 
 	[Header("캐릭터 잠금")]
 	[Tooltip("캐릭터 뽑았는지 확인하는 bool값")] public bool isLeeTaeyeon;

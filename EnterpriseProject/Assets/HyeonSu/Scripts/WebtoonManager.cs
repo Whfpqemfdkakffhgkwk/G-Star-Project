@@ -37,8 +37,9 @@ public class WebtoonManager : MonoBehaviour
         {
             if(Webtoons[i].activeSelf == true)
             {
+                Content.transform.position = new Vector2(0, 0);
                 Content.sizeDelta = new Vector2(1440, 
-                    Webtoons[i].GetComponent<RectTransform>().rect.height);
+                    Webtoons[i].GetComponent<RectTransform>().rect.height - 200);
 
                 return;
             }
