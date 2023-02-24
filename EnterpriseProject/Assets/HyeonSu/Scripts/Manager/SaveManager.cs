@@ -40,36 +40,36 @@ public class SaveManager : Singleton<SaveManager>
         SaveJson();
         LoadJson();
     }
-    public void Combine()
-    {
-        for (int i = 0; i < saveVariables.TouchType.Length; i++)
-        {
-            saveVariables.AllTouchMonmey +=
-                    (ulong)(saveVariables.TouchType[i].UpgradeStep * 2.7f) * (ulong)(i + 1) *
-                    10 * saveVariables.ItemMultiply; //이 10은 지스타용 부스터;
-        }
-        for (int i = 0; i < saveVariables.SecondType.Length; i++)
-        {
-            saveVariables.AllSecondMoney +=
-                    (ulong)saveVariables.SecondType[i].UpgradeStep * 24 * (ulong)(i + 1) *
-                    10; //이 10은 지스타용 부스터;
-        }
-    }
-    public void AllGoodPlus(GoodsList[] list, int arrayNum)
-    {
-        if(list == saveVariables.TouchType)
-        {
-            saveVariables.AllTouchMonmey +=
-                    (ulong)(list[arrayNum].UpgradeStep * 3) * (ulong)(arrayNum + 1) *
-                    10 * saveVariables.ItemMultiply; //이 10은 지스타용 부스터;
-        }
-        else if(list == saveVariables.SecondType)
-        {
-            saveVariables.AllSecondMoney +=
-                    (ulong)list[arrayNum].UpgradeStep * 10 * (ulong)(arrayNum + 1) *
-                    10; //이 10은 지스타용 부스터;
-        }
-    }
+    //public void Combine()
+    //{
+    //    for (int i = 0; i < saveVariables.TouchType.Length; i++)
+    //    {
+    //        saveVariables.AllTouchMonmey +=
+    //                (ulong)(saveVariables.TouchType[i].UpgradeStep * 2.7f) * (ulong)(i + 1) *
+    //                10 * saveVariables.ItemMultiply; //이 10은 지스타용 부스터;
+    //    }
+    //    for (int i = 0; i < saveVariables.SecondType.Length; i++)
+    //    {
+    //        saveVariables.AllSecondMoney +=
+    //                (ulong)saveVariables.SecondType[i].UpgradeStep * 24 * (ulong)(i + 1) *
+    //                10; //이 10은 지스타용 부스터;
+    //    }
+    //}
+    //public void AllGoodPlus(GoodsList[] list, int arrayNum)
+    //{
+    //    if(list == saveVariables.TouchType)
+    //    {
+    //        saveVariables.AllTouchMonmey +=
+    //                (ulong)(list[arrayNum].UpgradeStep * 3) * (ulong)(arrayNum + 1) *
+    //                10 * saveVariables.ItemMultiply; //이 10은 지스타용 부스터;
+    //    }
+    //    else if(list == saveVariables.SecondType)
+    //    {
+    //        saveVariables.AllSecondMoney +=
+    //                (ulong)list[arrayNum].UpgradeStep * 10 * (ulong)(arrayNum + 1) *
+    //                10; //이 10은 지스타용 부스터;
+    //    }
+    //}
     public IEnumerator AutoSave()
     {
         SaveJson();

@@ -5350,7 +5350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   saveVariables:
-    AllTouchMonmey: 900
+    AllTouchMonmey: 2
     AllSecondMoney: 0
     gold: 1000000000
     diamond: 1528
@@ -16440,7 +16440,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f696a928a61f699458e4524e43b85d4f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d4659d29b09d153419c440849569adb0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -16476,7 +16476,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 2107, y: 3043}
+  m_SizeDelta: {x: 6095, y: 2965.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &437089166
 GameObject:
@@ -70419,6 +70419,7 @@ MonoBehaviour:
   DiamondCanvas: {fileID: 1857790348}
   content: {fileID: 185707695}
   questManager: {fileID: 409152145}
+  textManager: {fileID: 313957571}
   dialoue: {fileID: 1564213726}
   QuitWindow: {fileID: 1356439443}
   LeeTaecharacter: {fileID: 943034615}

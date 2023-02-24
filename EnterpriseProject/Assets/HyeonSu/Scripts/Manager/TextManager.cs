@@ -17,7 +17,7 @@ public class TextManager : MonoBehaviour
     [SerializeField, Tooltip("초당 단계 배열")] private Text[] SecondStep = new Text[4];
     [SerializeField, Tooltip("초당 증가량 배열")] private Text[] SecondInc = new Text[4];
 
-    [SerializeField] private Text GoldText;
+    [SerializeField] public Text GoldText;
     [SerializeField] private Text DiamondText;
     [SerializeField] private Text TouchText;
     [SerializeField] private Text PerSecText;
@@ -36,7 +36,6 @@ public class TextManager : MonoBehaviour
         PriceText(SecondPrice, SecondStep, null, saveVariables.SecondType);
         IncrementText(SecondInc, saveVariables.SecondType);
 
-        GoodsText(GoldText, saveVariables.gold);
         GoodsText(DiamondText, saveVariables.diamond);
         GoodsText(TouchText, saveVariables.AllTouchMonmey);
         GoodsText(PerSecText, saveVariables.AllSecondMoney);

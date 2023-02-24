@@ -240,6 +240,7 @@ public class Roll : MonoBehaviour
 		else if (RollResultData >= 18 && RollResultData <= 20)
 		{
 			SaveManager.Instance.saveVariables.GodHand += 0.2f;
+            SaveManager.Instance.saveVariables.AllTouchMonmey += SaveManager.Instance.saveVariables.AllTouchMonmey * 0.2f;
 			RollResult.transform.GetChild(0).GetComponent<Image>().sprite = ImageList[6];
 			RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'신의 손'을 획득했습니다!";
 			RollResult.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = "터치 수당 영구적으로 0.2%증가, 중첩 O";
@@ -247,9 +248,10 @@ public class Roll : MonoBehaviour
 		else if (RollResultData >= 21 && RollResultData <= 23)
 		{
 			SaveManager.Instance.saveVariables.GoldenTicket += 0.2f;
-			RollResult.transform.GetChild(0).GetComponent<Image>().sprite = ImageList[7];
+            SaveManager.Instance.saveVariables.AllSecondMoney += SaveManager.Instance.saveVariables.AllSecondMoney * 0.2f;
+            RollResult.transform.GetChild(0).GetComponent<Image>().sprite = ImageList[7];
 			RollResult.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "'황금 티켓'을 획득했습니다!";
-			RollResult.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = "미니게임 수당 영구적으로 0.2%증가, 중첩 O";
+			RollResult.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = "매초 수당 영구적으로 0.2%증가, 중첩 O";
 		}
 		RollResult.SetActive(true);
 		RollReady = true;
