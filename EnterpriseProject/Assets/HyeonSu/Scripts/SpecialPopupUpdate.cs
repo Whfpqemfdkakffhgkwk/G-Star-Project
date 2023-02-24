@@ -19,7 +19,7 @@ public class SpecialPopupUpdate : MonoBehaviour
     [SerializeField] private WebtoonManager webtoonManager;
     SaveVariables SV;
 
-    private void Start()
+    private void Awake()
     {
         SV = SaveManager.Instance.saveVariables;
         for (int i = 0; i < WebtoonBtns.Length; i++)
@@ -27,7 +27,6 @@ public class SpecialPopupUpdate : MonoBehaviour
             WebtoonBtns[i].onClick.AddListener(BuySpecialPopup);
         }
         gameObject.transform.localScale = new Vector2(0, 0);
-        gameObject.SetActive(false);
     }
 
     public void OnEnable()

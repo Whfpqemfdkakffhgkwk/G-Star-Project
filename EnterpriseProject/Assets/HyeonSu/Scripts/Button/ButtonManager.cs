@@ -12,6 +12,7 @@ public class ButtonManager : MonoBehaviour
 
 	[SerializeField] private GameObject TouchWindow;
 	[SerializeField] private GameObject QuestWindow;
+	[SerializeField] private ScrollRect QuestScroll;
 	[SerializeField] private GameObject[] TalkPopup;
 	[SerializeField] private GameObject[] TouchBtns, SecondBtns, SpecialBtns;
 
@@ -24,7 +25,7 @@ public class ButtonManager : MonoBehaviour
 	[SerializeField] private Sprite TalkBtnImgOn;
 
 	[SerializeField] private GameObject DiamondDirectingObj, GoldDirectingObj, ParticleObj;
-	[SerializeField] private GameObject ItemWindow;
+	[SerializeField] private GameObject ItemWindow, SettingWindow;
 	[SerializeField] private Text UseItemExplan, GoldItemCountTxt, FeverItemCountTxt;
 	[SerializeField] private Button UseItemBtn, ManyMoneyBtn, FeverBtn;
 
@@ -74,7 +75,7 @@ public class ButtonManager : MonoBehaviour
 			{
 				QuitWindow.transform.localScale = new Vector2(0, 0);
 				QuitWindow.SetActive(true);
-				QuitWindow.transform.DOScale(new Vector2(1, 1), 0.7f);
+				QuitWindow.transform.DOScale(new Vector2(1, 1), 0.5f);
 			}
 		}
 	}
@@ -200,7 +201,7 @@ public class ButtonManager : MonoBehaviour
 	public void UseItemClose()
 	{
 		ItemWindow.SetActive(false);
-		ItemWindow.transform.localScale = new Vector2(0, 0);
+		ItemWindow.transform.GetChild(0).transform.localScale = new Vector2(0, 0);
 	}
 	public void UseItemOpen()
 	{
@@ -220,7 +221,8 @@ public class ButtonManager : MonoBehaviour
 			UseItemBtn.onClick.AddListener(UseItemClose);
 		}
 		ItemWindow.SetActive(true);
-		ItemWindow.transform.DOScale(new Vector2(1, 1), 1);
+        ItemWindow.transform.SetAsLastSibling();
+        ItemWindow.transform.GetChild(0).transform.DOScale(new Vector2(1, 1), 0.5f);
 	}
 
 	void UseItem_ManyMoney()
@@ -241,15 +243,37 @@ public class ButtonManager : MonoBehaviour
 		yield return new WaitForSeconds(300);
 		saveVariables.ItemMultiply = 1;
 	}
+	public void SettingOpen()
+	{
+		SettingWindow.SetActive(true);
+		SettingWindow.transform.SetAsLastSibling();
+		SettingWindow.transform.GetChild(0).DOScale(new Vector3(1, 1), 0.5f);
+	}
+	public void SettingClose()
+	{
+        SettingWindow.SetActive(false);
+        SettingWindow.transform.GetChild(0).localScale = new Vector2(0, 0);
+    }
+
 	public void QuestOpen()
 	{
-		QuestWindow.SetActive(true);
-		QuestWindow.transform.DOScale(new Vector2(1, 1), 0.7f);
-	}
+		QuestScroll.enabled = false;
+		StartCoroutine(HandleOn());
+        QuestWindow.SetActive(true);
+        QuestWindow.transform.SetAsLastSibling();
+		QuestWindow.transform.GetChild(0).DOScale(new Vector2(1, 1), 0.5f);
+
+        IEnumerator HandleOn()
+        {
+            yield return new WaitForSeconds(0.01f);
+            QuestScroll.enabled = true;
+        }
+    }
 	public void QuestClose()
 	{
 		QuestWindow.SetActive(false);
-		QuestWindow.transform.localScale = new Vector2(0, 0);
+
+        QuestWindow.transform.GetChild(0).localScale = new Vector2(0, 0);
 	}
 	public void QuestClick()
 	{
@@ -304,7 +328,7 @@ public class ButtonManager : MonoBehaviour
 	public void TalkOff()
 	{
 		TalkPopup[TalkPopupArr(EventSystem.current.currentSelectedGameObject.transform.parent.gameObject)].SetActive(false);
-		TalkPopup[TalkPopupArr(EventSystem.current.currentSelectedGameObject.transform.parent.gameObject)].transform.localScale = new Vector2(0, 0);
+		TalkPopup[TalkPopupArr(EventSystem.current.currentSelectedGameObject.transform.parent.gameObject)].transform.GetChild(0).localScale = new Vector2(0, 0);
 		isPopup = false;
 	}
 	public void TalkClick()
@@ -317,19 +341,23 @@ public class ButtonManager : MonoBehaviour
 			{
 				case "LeeTaeyeon":
 					TalkPopup[0].SetActive(true);
-					TalkPopup[0].transform.DOScale(new Vector2(1, 1), 0.5f);
+					TalkPopup[0].transform.SetAsLastSibling();
+                    TalkPopup[0].transform.GetChild(0).DOScale(new Vector2(1, 1), 0.5f);
 					break;
 				case "JeongSeoYoon":
 					TalkPopup[1].SetActive(true);
-					TalkPopup[1].transform.DOScale(new Vector2(1, 1), 0.5f);
+					TalkPopup[1].transform.SetAsLastSibling();
+					TalkPopup[1].transform.GetChild(0).DOScale(new Vector2(1, 1), 0.5f);
 					break;
 				case "LeeYerin":
 					TalkPopup[2].SetActive(true);
-					TalkPopup[2].transform.DOScale(new Vector2(1, 1), 0.5f);
+					TalkPopup[2].transform.SetAsLastSibling();
+					TalkPopup[2].transform.GetChild(0).DOScale(new Vector2(1, 1), 0.5f);
 					break;
 				case "SongYeonHa":
 					TalkPopup[3].SetActive(true);
-					TalkPopup[3].transform.DOScale(new Vector2(1, 1), 0.5f);
+					TalkPopup[3].transform.SetAsLastSibling();
+					TalkPopup[3].transform.GetChild(0).DOScale(new Vector2(1, 1), 0.5f);
 					break;
 			}
 		}
