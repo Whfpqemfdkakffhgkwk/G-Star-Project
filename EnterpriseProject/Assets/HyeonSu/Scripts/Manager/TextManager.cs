@@ -27,6 +27,7 @@ public class TextManager : MonoBehaviour
     private void Start()
     {
         saveVariables = SaveManager.Instance.saveVariables;
+        GoldText.text = saveVariables.gold.ToString();//string.Format("{0:####억 ####만 ####원}", (int)saveVariables.gold).ToString();
     }
     private void FixedUpdate()
     {

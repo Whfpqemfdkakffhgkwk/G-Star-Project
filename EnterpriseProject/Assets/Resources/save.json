@@ -1,18 +1,18 @@
 {
-    "AllTouchMonmey": 5530.0,
+    "AllTouchMonmey": 2.0,
     "AllSecondMoney": 0.0,
-    "gold": 90602806.0,
+    "gold": 0.0,
     "diamond": 0.0,
     "ItemMultiply": 1.0,
-    "ManyMoney": 100,
-    "Fever": 8,
-    "GodHand": 0.4000000059604645,
-    "GoldenTicket": 1.4000000953674317,
+    "ManyMoney": 0,
+    "Fever": 0,
+    "GodHand": 1.0,
+    "GoldenTicket": 1.0,
     "QU_Touch": [
-        83,
-        20,
-        17,
-        8
+        0,
+        0,
+        0,
+        0
     ],
     "QU_Second": [
         0,
@@ -20,10 +20,10 @@
         0,
         0
     ],
-    "QU_Gold": 213600,
-    "QU_Click": 240,
-    "QU_PlayTime": 3385,
-    "QU_Draw": 3,
+    "QU_Gold": 0,
+    "QU_Click": 0,
+    "QU_PlayTime": 0,
+    "QU_Draw": 0,
     "QUN_Touch": [
         0,
         0,
@@ -41,7 +41,7 @@
     "QUN_PlayTime": 0,
     "QUN_Draw": 0,
     "LeeTaeyeon": [
-        true,
+        false,
         false,
         false,
         false,
@@ -69,75 +69,59 @@
         false
     ],
     "QU_TouchHeart": [
-        83,
-        20,
-        17,
-        8
+        0,
+        0,
+        0,
+        0
     ],
-    "LeeTaeyeonWebtoonBuy": [
-        true,
-        false,
-        false
-    ],
-    "JeongSeoYoonWebtoonBuy": [
-        false,
-        false,
-        false
-    ],
-    "LeeYerinWebtoonBuy": [
-        false,
-        false,
-        false
-    ],
-    "SongYeonHaWebtoonBuy": [
-        false,
-        false,
-        false
-    ],
+    "LeeTaeyeonWebtoonBuy": false,
+    "JeongSeoYoonWebtoonBuy": false,
+    "LeeYerinWebtoonBuy": false,
+    "SongYeonHaWebtoonBuy": false,
     "isLeeTaeyeon": true,
-    "isJeongSeoYoon": true,
-    "isLeeYerin": true,
+    "isJeongSeoYoon": false,
+    "isLeeYerin": false,
     "isSongYeonHa": false,
     "isSeongJunAh": false,
-    "CurLeeTaeyeon": 40.0,
+    "CurLeeTaeyeon": 0.0,
     "CurJeongSeoYoon": 0.0,
     "CurLeeYerin": 0.0,
     "CurSongYeonHa": 0.0,
     "CurSeongJunAh": 0.0,
     "TouchType": [
         {
-            "UpgradeStep": 84,
-            "UpgradeCost": 181632679.0
+            "UpgradeStep": 1,
+            "UpgradeCost": 40.0
         },
         {
-            "UpgradeStep": 20,
-            "UpgradeCost": 19123.0
+            "UpgradeStep": 0,
+            "UpgradeCost": 120.0
         },
         {
-            "UpgradeStep": 17,
-            "UpgradeCost": 110906.0
+            "UpgradeStep": 0,
+            "UpgradeCost": 160.0
         },
         {
-            "UpgradeStep": 8,
-            "UpgradeCost": 214989.0
+            "UpgradeStep": 0,
+            "UpgradeCost": 200.0
         }
     ],
     "SecondType": [
         {
             "UpgradeStep": 0,
-            "UpgradeCost": 1500.0
+            "UpgradeCost": 300.0
         },
         {
             "UpgradeStep": 0,
-            "UpgradeCost": 15000.0
+            "UpgradeCost": 400.0
         },
         {
             "UpgradeStep": 0,
-            "UpgradeCost": 50000.0
+            "UpgradeCost": 500.0
         },
         {
             "UpgradeStep": 0,
-            "UpgradeCost": 100000.0
+            "UpgradeCost": 600.0
         }
     ]
 }

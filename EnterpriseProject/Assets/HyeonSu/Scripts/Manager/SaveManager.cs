@@ -14,6 +14,7 @@ public class SaveManager : Singleton<SaveManager>
     private void Start()
     {
         path = Application.persistentDataPath + "/save.json";
+        print(path);
         LoadJson();
         saveVariables.ItemMultiply = 1f;
     }

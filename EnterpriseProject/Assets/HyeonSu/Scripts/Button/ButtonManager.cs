@@ -410,6 +410,16 @@ public class ButtonManager : MonoBehaviour
             }
         }
     }
+
+    public void TestGold()
+    {
+        saveVariables.gold += 100000;
+    }
+    public void TestDia()
+    {
+        saveVariables.diamond += 1000;
+    }
+
     IEnumerator DirectingDiamondCor(GameObject obj)
     {
         yield return new WaitForSeconds(1.0f);
@@ -442,12 +452,12 @@ public class ButtonManager : MonoBehaviour
             while (current < target)
             {
                 current += offset * Time.deltaTime;
-                textManager.GoldText.text = ((int)current).ToString();
+                textManager.GoldText.text = ((int)current).ToString();// string.Format("{0:####억 ####만 ####원}", (int)current).ToString();
                 yield return null;
 
             }
             current = target;
-            textManager.GoldText.text = ((int)current).ToString();
+            textManager.GoldText.text = ((int)current).ToString(); // string.Format("{0:####억 ####만 ####원}", (int)current).ToString();
 
         }
     }
